@@ -1,0 +1,23 @@
+name: AMPopTip, nameSpecified: , owner: andreamazz, version: 4.5.0
+
+name: Charts, nameSpecified: , owner: danielgindi, version: v3.5.0
+
+name: Eureka, nameSpecified: , owner: xmartlabs, version: 5.2.1
+
+name: FSCalendar, nameSpecified: , owner: WenchaoD, version: 2.8.1
+
+name: Instructions, nameSpecified: , owner: ephread, version: 2.0.0
+
+name: lottie-ios, nameSpecified: , owner: airbnb, version: 4e58774
+
+name: realm-cocoa, nameSpecified: , owner: realm, version: v5.1.0
+
+name: Siren, nameSpecified: , owner: ArtSabintsev, version: 5.4.4
+
+name: SwiftTheme, nameSpecified: , owner: wxxsw, version: 0.5.2
+
+name: SwiftyStoreKit, nameSpecified: , owner: bizz84, version: 0.16.0
+
+add-version-numbers: false
+
+LicensePlist Version: 1.8.3

@@ -1,0 +1,705 @@
+2020-05-04 07:34:31 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7fa41d553a40; archive(resolved)='<IDEArchive: 0x7fa43af4c580>', distributionTask(resolved)='2', distributionDestination(resolved)='2', distributionMethod(resolved)='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fa439f4eed0>', team(resolved)='<IDEProvisioningDisambiguatableBasicTeam: 0x7fa433034b80; teamID='CDMS73DTWZ', teamName='OHANA INC.', teamType='Company', username='camellia@dear-ohana.com', isFreeProvisioningTeam='0'>'>
+	Chain (13, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7fa41d553a40; archive = '<IDEArchive: 0x7fa43af4c580>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fa439f4eed0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fa433034b80; teamID='CDMS73DTWZ', teamName='OHANA INC.', teamType='Company', username='camellia@dear-ohana.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7fa42f652300; archive = '<IDEArchive: 0x7fa43af4c580>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fa439f4eed0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fa433034b80; teamID='CDMS73DTWZ', teamName='OHANA INC.', teamType='Company', username='camellia@dear-ohana.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fa4202fdb80; archive = '<IDEArchive: 0x7fa43af4c580>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fa439f4eed0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fa433034b80; teamID='CDMS73DTWZ', teamName='OHANA INC.', teamType='Company', username='camellia@dear-ohana.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fa41fd10de0; archive = '<IDEArchive: 0x7fa43af4c580>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fa439f4eed0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fa433034b80; teamID='CDMS73DTWZ', teamName='OHANA INC.', teamType='Company', username='camellia@dear-ohana.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fa420279300; archive = '<IDEArchive: 0x7fa43af4c580>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fa439f4eed0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fa433034b80; teamID='CDMS73DTWZ', teamName='OHANA INC.', teamType='Company', username='camellia@dear-ohana.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fa41d7a5410; archive = '<IDEArchive: 0x7fa43af4c580>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fa439f4eed0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fa433034b80; teamID='CDMS73DTWZ', teamName='OHANA INC.', teamType='Company', username='camellia@dear-ohana.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fa41be14e30; archive = '<IDEArchive: 0x7fa43af4c580>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fa439f4eed0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fa433034b80; teamID='CDMS73DTWZ', teamName='OHANA INC.', teamType='Company', username='camellia@dear-ohana.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fa43b54c8d0; archive = '<IDEArchive: 0x7fa43af4c580>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fa439f4eed0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fa433034b80; teamID='CDMS73DTWZ', teamName='OHANA INC.', teamType='Company', username='camellia@dear-ohana.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fa41e18e8b0; archive = '<IDEArchive: 0x7fa43af4c580>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fa439f4eed0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fa433034b80; teamID='CDMS73DTWZ', teamName='OHANA INC.', teamType='Company', username='camellia@dear-ohana.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fa43b5f5d90; archive = '<IDEArchive: 0x7fa43af4c580>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fa439f4eed0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fa433034b80; teamID='CDMS73DTWZ', teamName='OHANA INC.', teamType='Company', username='camellia@dear-ohana.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fa42020b0f0; archive = '<IDEArchive: 0x7fa43af4c580>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fa439f4eed0>', team='(null)'>
+	<IDEDistributionContext: 0x7fa41f9c8e20; archive = '<IDEArchive: 0x7fa43af4c580>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fa439f4eed0>', team='(null)'>
+	<IDEDistributionContext: 0x7fa41f99e860; archive = '<IDEArchive: 0x7fa43af4c580>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7fa41d553a40>
+2020-05-04 07:34:31 +0000  Processing step: IDEDistributionCreateDestRootStep
+2020-05-04 07:34:31 +0000  Processing step: IDEDistributionCopyItemStep
+2020-05-04 07:34:31 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app'
+2020-05-04 07:34:31 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app 
+2020-05-04 07:34:31 +0000  copying file ./_CodeSignature/CodeResources ... 
+2020-05-04 07:34:31 +0000  22957 bytes for ./_CodeSignature/CodeResources
+2020-05-04 07:34:31 +0000  copying file ./com.mono0926.LicensePlist.plist ... 
+2020-05-04 07:34:31 +0000  562 bytes for ./com.mono0926.LicensePlist.plist
+2020-05-04 07:34:31 +0000  copying file ./Settings.bundle/ja.lproj/Root.strings ... 
+2020-05-04 07:34:31 +0000  296 bytes for ./Settings.bundle/ja.lproj/Root.strings
+2020-05-04 07:34:31 +0000  copying file ./Settings.bundle/en.lproj/Root.strings ... 
+2020-05-04 07:34:31 +0000  266 bytes for ./Settings.bundle/en.lproj/Root.strings
+2020-05-04 07:34:31 +0000  copying file ./Settings.bundle/com.mono0926.LicensePlist.plist ... 
+2020-05-04 07:34:31 +0000  1676 bytes for ./Settings.bundle/com.mono0926.LicensePlist.plist
+2020-05-04 07:34:31 +0000  copying file ./Settings.bundle/com.mono0926.LicensePlist/realm-cocoa.plist ... 
+2020-05-04 07:34:31 +0000  14018 bytes for ./Settings.bundle/com.mono0926.LicensePlist/realm-cocoa.plist
+2020-05-04 07:34:31 +0000  copying file ./Settings.bundle/com.mono0926.LicensePlist/Charts.plist ... 
+2020-05-04 07:34:31 +0000  11703 bytes for ./Settings.bundle/com.mono0926.LicensePlist/Charts.plist
+copying file ./Settings.bundle/com.mono0926.LicensePlist/Eureka.plist ... 
+2020-05-04 07:34:31 +0000  1437 bytes for ./Settings.bundle/com.mono0926.LicensePlist/Eureka.plist
+copying file ./Settings.bundle/com.mono0926.LicensePlist/FSCalendar.plist ... 
+2020-05-04 07:34:31 +0000  1461 bytes for ./Settings.bundle/com.mono0926.LicensePlist/FSCalendar.plist
+copying file ./Settings.bundle/com.mono0926.LicensePlist/UIColor-Hex-Swift.plist ... 
+2020-05-04 07:34:31 +0000  1435 bytes for ./Settings.bundle/com.mono0926.LicensePlist/UIColor-Hex-Swift.plist
+copying file ./Settings.bundle/com.mono0926.LicensePlist/lottie-ios.plist ... 
+2020-05-04 07:34:31 +0000  11705 bytes for ./Settings.bundle/com.mono0926.LicensePlist/lottie-ios.plist
+2020-05-04 07:34:31 +0000  copying file ./Settings.bundle/com.mono0926.LicensePlist/SwiftyStoreKit.plist ... 
+2020-05-04 07:34:31 +0000  1442 bytes for ./Settings.bundle/com.mono0926.LicensePlist/SwiftyStoreKit.plist
+2020-05-04 07:34:31 +0000  copying file ./Settings.bundle/com.mono0926.LicensePlist/SwiftTheme.plist ... 
+2020-05-04 07:34:31 +0000  1433 bytes for ./Settings.bundle/com.mono0926.LicensePlist/SwiftTheme.plist
+2020-05-04 07:34:31 +0000  copying file ./Settings.bundle/Root.plist ... 
+2020-05-04 07:34:31 +0000  840 bytes for ./Settings.bundle/Root.plist
+2020-05-04 07:34:31 +0000  copying file ./AppIcon60x60@2x.png ... 
+2020-05-04 07:34:31 +0000  7878 bytes for ./AppIcon60x60@2x.png
+2020-05-04 07:34:31 +0000  copying file ./Cartfile ... 
+2020-05-04 07:34:31 +0000  219 bytes for ./Cartfile
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/cC7-0t-L4l-view-MzK-qV-xQE.nib ... 
+2020-05-04 07:34:31 +0000  1197 bytes for ./Base.lproj/PageMain.storyboardc/cC7-0t-L4l-view-MzK-qV-xQE.nib
+copying file ./Base.lproj/PageMain.storyboardc/UIViewController-SxK-62-ECn.nib ... 
+2020-05-04 07:34:31 +0000  1062 bytes for ./Base.lproj/PageMain.storyboardc/UIViewController-SxK-62-ECn.nib
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/SxK-62-ECn-view-Fu1-nH-ivd.nib ... 
+2020-05-04 07:34:31 +0000  1197 bytes for ./Base.lproj/PageMain.storyboardc/SxK-62-ECn-view-Fu1-nH-ivd.nib
+copying file ./Base.lproj/PageMain.storyboardc/UIViewController-xEh-S3-8X9.nib ... 
+2020-05-04 07:34:31 +0000  1987 bytes for ./Base.lproj/PageMain.storyboardc/UIViewController-xEh-S3-8X9.nib
+copying file ./Base.lproj/PageMain.storyboardc/UINavigationController-wOX-Fi-CfC.nib ... 
+2020-05-04 07:34:31 +0000  3337 bytes for ./Base.lproj/PageMain.storyboardc/UINavigationController-wOX-Fi-CfC.nib
+copying file ./Base.lproj/PageMain.storyboardc/Ver-hK-Y1j-view-jYE-3i-Tv2.nib ... 
+2020-05-04 07:34:31 +0000  8180 bytes for ./Base.lproj/PageMain.storyboardc/Ver-hK-Y1j-view-jYE-3i-Tv2.nib
+copying file ./Base.lproj/PageMain.storyboardc/UIViewController-oSv-Z6-d1w.nib ... 
+2020-05-04 07:34:31 +0000  1019 bytes for ./Base.lproj/PageMain.storyboardc/UIViewController-oSv-Z6-d1w.nib
+copying file ./Base.lproj/PageMain.storyboardc/bBt-8y-dQ0-view-ag6-Im-D9G.nib ... 
+2020-05-04 07:34:31 +0000  1197 bytes for ./Base.lproj/PageMain.storyboardc/bBt-8y-dQ0-view-ag6-Im-D9G.nib
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/UIViewController-Dzx-5K-xh7.nib ... 
+2020-05-04 07:34:31 +0000  1327 bytes for ./Base.lproj/PageMain.storyboardc/UIViewController-Dzx-5K-xh7.nib
+copying file ./Base.lproj/PageMain.storyboardc/oSv-Z6-d1w-view-56t-2T-JJ4.nib ... 
+2020-05-04 07:34:31 +0000  1197 bytes for ./Base.lproj/PageMain.storyboardc/oSv-Z6-d1w-view-56t-2T-JJ4.nib
+copying file ./Base.lproj/PageMain.storyboardc/ubL-kc-hMd-view-EyR-Nq-PI5.nib ... 
+2020-05-04 07:34:31 +0000  8343 bytes for ./Base.lproj/PageMain.storyboardc/ubL-kc-hMd-view-EyR-Nq-PI5.nib
+copying file ./Base.lproj/PageMain.storyboardc/rh7-k7-evK-view-PKi-Xb-dKT.nib ... 
+2020-05-04 07:34:31 +0000  8014 bytes for ./Base.lproj/PageMain.storyboardc/rh7-k7-evK-view-PKi-Xb-dKT.nib
+copying file ./Base.lproj/PageMain.storyboardc/UIViewController-rh7-k7-evK.nib ... 
+2020-05-04 07:34:31 +0000  1072 bytes for ./Base.lproj/PageMain.storyboardc/UIViewController-rh7-k7-evK.nib
+copying file ./Base.lproj/PageMain.storyboardc/UIViewController-Ver-hK-Y1j.nib ... 
+2020-05-04 07:34:31 +0000  1506 bytes for ./Base.lproj/PageMain.storyboardc/UIViewController-Ver-hK-Y1j.nib
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/UIViewController-IkU-I4-Ot1.nib ... 
+2020-05-04 07:34:31 +0000  1676 bytes for ./Base.lproj/PageMain.storyboardc/UIViewController-IkU-I4-Ot1.nib
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/xEh-S3-8X9-view-spP-ir-mcA.nib ... 
+2020-05-04 07:34:31 +0000  1197 bytes for ./Base.lproj/PageMain.storyboardc/xEh-S3-8X9-view-spP-ir-mcA.nib
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/UIViewController-bBt-8y-dQ0.nib ... 
+2020-05-04 07:34:31 +0000  1674 bytes for ./Base.lproj/PageMain.storyboardc/UIViewController-bBt-8y-dQ0.nib
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/UIViewController-k4B-rr-EmZ.nib ... 
+2020-05-04 07:34:31 +0000  1138 bytes for ./Base.lproj/PageMain.storyboardc/UIViewController-k4B-rr-EmZ.nib
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/IkU-I4-Ot1-view-JZ9-ex-mmD.nib ... 
+2020-05-04 07:34:31 +0000  8934 bytes for ./Base.lproj/PageMain.storyboardc/IkU-I4-Ot1-view-JZ9-ex-mmD.nib
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/UIViewController-u2s-U7-KmS.nib ... 
+2020-05-04 07:34:31 +0000  1652 bytes for ./Base.lproj/PageMain.storyboardc/UIViewController-u2s-U7-KmS.nib
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/u2s-U7-KmS-view-NYI-dt-kPE.nib ... 
+2020-05-04 07:34:31 +0000  4333 bytes for ./Base.lproj/PageMain.storyboardc/u2s-U7-KmS-view-NYI-dt-kPE.nib
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/UIViewController-cC7-0t-L4l.nib ... 
+2020-05-04 07:34:31 +0000  1019 bytes for ./Base.lproj/PageMain.storyboardc/UIViewController-cC7-0t-L4l.nib
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/Info.plist ... 
+2020-05-04 07:34:31 +0000  1011 bytes for ./Base.lproj/PageMain.storyboardc/Info.plist
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/k4B-rr-EmZ-view-DTC-sH-mXt.nib ... 
+2020-05-04 07:34:31 +0000  3556 bytes for ./Base.lproj/PageMain.storyboardc/k4B-rr-EmZ-view-DTC-sH-mXt.nib
+2020-05-04 07:34:31 +0000  copying file ./Base.lproj/PageMain.storyboardc/Dzx-5K-xh7-view-e8J-ca-rfT.nib ... 
+2020-05-04 07:34:31 +0000  1197 bytes for ./Base.lproj/PageMain.storyboardc/Dzx-5K-xh7-view-e8J-ca-rfT.nib
+2020-05-04 07:34:31 +0000  copying file ./3152-star-success.json ... 
+2020-05-04 07:34:31 +0000  180896 bytes for ./3152-star-success.json
+copying file ./DrinkControl ... 
+2020-05-04 07:34:31 +0000  2152176 bytes for ./DrinkControl
+copying file ./Assets.car ... 
+2020-05-04 07:34:31 +0000  560479 bytes for ./Assets.car
+2020-05-04 07:34:31 +0000  copying file ./LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2020-05-04 07:34:31 +0000  2389 bytes for ./LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2020-05-04 07:34:31 +0000  896 bytes for ./LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./LaunchScreen.storyboardc/Info.plist ... 
+2020-05-04 07:34:31 +0000  258 bytes for ./LaunchScreen.storyboardc/Info.plist
+2020-05-04 07:34:31 +0000  copying file ./Frameworks/RealmSwift.framework/_CodeSignature/CodeResources ... 
+2020-05-04 07:34:31 +0000  1798 bytes for ./Frameworks/RealmSwift.framework/_CodeSignature/CodeResources
+2020-05-04 07:34:31 +0000  copying file ./Frameworks/RealmSwift.framework/RealmSwift ... 
+2020-05-04 07:34:31 +0000  6253712 bytes for ./Frameworks/RealmSwift.framework/RealmSwift
+copying file ./Frameworks/RealmSwift.framework/Info.plist ... 
+2020-05-04 07:34:31 +0000  862 bytes for ./Frameworks/RealmSwift.framework/Info.plist
+copying file ./Frameworks/Realm.framework/_CodeSignature/CodeResources ... 
+2020-05-04 07:34:31 +0000  2656 bytes for ./Frameworks/Realm.framework/_CodeSignature/CodeResources
+2020-05-04 07:34:31 +0000  copying file ./Frameworks/Realm.framework/LICENSE ... 
+2020-05-04 07:34:31 +0000  13657 bytes for ./Frameworks/Realm.framework/LICENSE
+copying file ./Frameworks/Realm.framework/CHANGELOG.md ... 
+2020-05-04 07:34:31 +0000  185718 bytes for ./Frameworks/Realm.framework/CHANGELOG.md
+copying file ./Frameworks/Realm.framework/strip-frameworks.sh ... 
+2020-05-04 07:34:31 +0000  2569 bytes for ./Frameworks/Realm.framework/strip-frameworks.sh
+2020-05-04 07:34:31 +0000  copying file ./Frameworks/Realm.framework/Info.plist ... 
+2020-05-04 07:34:31 +0000  851 bytes for ./Frameworks/Realm.framework/Info.plist
+2020-05-04 07:34:31 +0000  copying file ./Frameworks/Realm.framework/Realm ... 
+2020-05-04 07:34:31 +0000  77675744 bytes for ./Frameworks/Realm.framework/Realm
+2020-05-04 07:34:31 +0000  copying file ./Frameworks/FSCalendar.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Frameworks/FSCalendar.framework/_CodeSignature/CodeResources
+copying file ./Frameworks/FSCalendar.framework/FSCalendar ... 
+2020-05-04 07:34:31 +0000  3243120 bytes for ./Frameworks/FSCalendar.framework/FSCalendar
+copying file ./Frameworks/FSCalendar.framework/Info.plist ... 
+2020-05-04 07:34:31 +0000  736 bytes for ./Frameworks/FSCalendar.framework/Info.plist
+2020-05-04 07:34:31 +0000  copying file ./Frameworks/SwiftyStoreKit.framework/_CodeSignature/CodeResources ... 
+2020-05-04 07:34:31 +0000  1798 bytes for ./Frameworks/SwiftyStoreKit.framework/_CodeSignature/CodeResources
+2020-05-04 07:34:31 +0000  copying file ./Frameworks/SwiftyStoreKit.framework/SwiftyStoreKit ... 
+2020-05-04 07:34:31 +0000  3280656 bytes for ./Frameworks/SwiftyStoreKit.framework/SwiftyStoreKit
+2020-05-04 07:34:31 +0000  copying file ./Frameworks/SwiftyStoreKit.framework/Info.plist ... 
+755 bytes for ./Frameworks/SwiftyStoreKit.framework/Info.plist
+2020-05-04 07:34:31 +0000  copying file ./Frameworks/Eureka.framework/_CodeSignature/CodeResources ... 
+2020-05-04 07:34:31 +0000  1798 bytes for ./Frameworks/Eureka.framework/_CodeSignature/CodeResources
+2020-05-04 07:34:31 +0000  copying file ./Frameworks/Eureka.framework/Eureka ... 
+2020-05-04 07:34:31 +0000  18789856 bytes for ./Frameworks/Eureka.framework/Eureka
+copying file ./Frameworks/Eureka.framework/Info.plist ... 
+2020-05-04 07:34:31 +0000  735 bytes for ./Frameworks/Eureka.framework/Info.plist
+copying file ./Frameworks/SwiftTheme.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Frameworks/SwiftTheme.framework/_CodeSignature/CodeResources
+copying file ./Frameworks/SwiftTheme.framework/SwiftTheme ... 
+2020-05-04 07:34:31 +0000  4437376 bytes for ./Frameworks/SwiftTheme.framework/SwiftTheme
+copying file ./Frameworks/SwiftTheme.framework/Info.plist ... 
+2020-05-04 07:34:31 +0000  736 bytes for ./Frameworks/SwiftTheme.framework/Info.plist
+2020-05-04 07:34:31 +0000  copying file ./Frameworks/Charts.framework/_CodeSignature/CodeResources ... 
+2020-05-04 07:34:31 +0000  1798 bytes for ./Frameworks/Charts.framework/_CodeSignature/CodeResources
+2020-05-04 07:34:31 +0000  copying file ./Frameworks/Charts.framework/Charts ... 
+2020-05-04 07:34:31 +0000  31923056 bytes for ./Frameworks/Charts.framework/Charts
+copying file ./Frameworks/Charts.framework/Info.plist ... 
+2020-05-04 07:34:31 +0000  727 bytes for ./Frameworks/Charts.framework/Info.plist
+copying file ./Frameworks/Lottie.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Frameworks/Lottie.framework/_CodeSignature/CodeResources
+copying file ./Frameworks/Lottie.framework/Lottie ... 
+2020-05-04 07:34:31 +0000  15743552 bytes for ./Frameworks/Lottie.framework/Lottie
+copying file ./Frameworks/Lottie.framework/Info.plist ... 
+2020-05-04 07:34:31 +0000  703 bytes for ./Frameworks/Lottie.framework/Info.plist
+copying file ./embedded.mobileprovision ... 
+9383 bytes for ./embedded.mobileprovision
+copying file ./Info.plist ... 
+1172 bytes for ./Info.plist
+copying file ./PkgInfo ... 
+8 bytes for ./PkgInfo
+2020-05-04 07:34:31 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:31 +0000  Processing step: IDEDistributionEmbedProfileStep
+2020-05-04 07:34:31 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fa41fe7fe90; bundleID='com.dcg.Charts', path='<DVTFilePath:0x7fa41d728c10:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Charts.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202bf170; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa4202984c0; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.dcg.Charts', executablePath='<DVTFilePath:0x7fa42025be80:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Charts.framework/Charts'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:31 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fa41ddce710; bundleID='com.xmartlabs.Eureka', path='<DVTFilePath:0x7fa420050c70:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Eureka.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202e3b90; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa420015a20; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.xmartlabs.Eureka', executablePath='<DVTFilePath:0x7fa4200503c0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Eureka.framework/Eureka'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:31 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fa41e4946d0; bundleID='com.wenchaod.FSCalendar', path='<DVTFilePath:0x7fa41fe36ce0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/FSCalendar.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa42022c490; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa42020f660; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.wenchaod.FSCalendar', executablePath='<DVTFilePath:0x7fa41e6130c0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/FSCalendar.framework/FSCalendar'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:31 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fa41ddce6a0; bundleID='com.airbnb.Lottie-iOS', path='<DVTFilePath:0x7fa43b281040:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Lottie.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202e39e0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa43b642c80; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.airbnb.Lottie-iOS', executablePath='<DVTFilePath:0x7fa420213350:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Lottie.framework/Lottie'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:31 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fa41ff17bb0; bundleID='io.Realm.Realm', path='<DVTFilePath:0x7fa41cf44dc0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Realm.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa431fc1380; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41bdf0870; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='io.Realm.Realm', executablePath='<DVTFilePath:0x7fa41fbe29d0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Realm.framework/Realm'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:31 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fa4202ff140; bundleID='io.realm.RealmSwit', path='<DVTFilePath:0x7fa4202f3fa0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/RealmSwift.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa438bcd030; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa42020fef0; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='io.realm.RealmSwit', executablePath='<DVTFilePath:0x7fa43b53b360:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/RealmSwift.framework/RealmSwift'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:31 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fa41fa66a80; bundleID='me.gesen.SwiftTheme', path='<DVTFilePath:0x7fa42033d190:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftTheme.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa420217b80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41bdf0870; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='me.gesen.SwiftTheme', executablePath='<DVTFilePath:0x7fa41fcd8a10:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftTheme.framework/SwiftTheme'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:31 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fa41c8d9890; bundleID='com.musevisions.iOS.SwiftyStoreKit', path='<DVTFilePath:0x7fa41ce45290:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftyStoreKit.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202a1050; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41e5df570; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.musevisions.iOS.SwiftyStoreKit', executablePath='<DVTFilePath:0x7fa41f882900:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftyStoreKit.framework/SwiftyStoreKit'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:31 +0000  Processing step: IDEDistributionItemRemovalStep
+2020-05-04 07:34:31 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2020-05-04 07:34:31 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2020-05-04 07:34:31 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2020-05-04 07:34:31 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2020-05-04 07:34:31 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2020-05-04 07:34:32 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/DA98BFF0-27E3-38EC-B1C9-DE8ED0FF162B.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/DA98BFF0-27E3-38EC-B1C9-DE8ED0FF162B.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/DA98BFF0-27E3-38EC-B1C9-DE8ED0FF162B.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./DA98BFF0-27E3-38EC-B1C9-DE8ED0FF162B.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  762106 bytes for ./DA98BFF0-27E3-38EC-B1C9-DE8ED0FF162B.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/F6B94BEB-C02A-3E63-98A1-1931F06E68C3.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/F6B94BEB-C02A-3E63-98A1-1931F06E68C3.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/F6B94BEB-C02A-3E63-98A1-1931F06E68C3.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./F6B94BEB-C02A-3E63-98A1-1931F06E68C3.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  743153 bytes for ./F6B94BEB-C02A-3E63-98A1-1931F06E68C3.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/C162958B-01CF-3977-8DBA-386C0B83A9A4.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/C162958B-01CF-3977-8DBA-386C0B83A9A4.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/C162958B-01CF-3977-8DBA-386C0B83A9A4.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./C162958B-01CF-3977-8DBA-386C0B83A9A4.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  634901 bytes for ./C162958B-01CF-3977-8DBA-386C0B83A9A4.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/7044FF66-0C1A-3C8D-B4DF-A1F1262088A6.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/7044FF66-0C1A-3C8D-B4DF-A1F1262088A6.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/7044FF66-0C1A-3C8D-B4DF-A1F1262088A6.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./7044FF66-0C1A-3C8D-B4DF-A1F1262088A6.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  626963 bytes for ./7044FF66-0C1A-3C8D-B4DF-A1F1262088A6.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/57F3AABB-469F-3175-8C1F-0073B77F900F.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/57F3AABB-469F-3175-8C1F-0073B77F900F.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/57F3AABB-469F-3175-8C1F-0073B77F900F.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./57F3AABB-469F-3175-8C1F-0073B77F900F.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  54742 bytes for ./57F3AABB-469F-3175-8C1F-0073B77F900F.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/1B11C140-3CE1-366F-9E1B-58DE246C431B.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/1B11C140-3CE1-366F-9E1B-58DE246C431B.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/1B11C140-3CE1-366F-9E1B-58DE246C431B.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./1B11C140-3CE1-366F-9E1B-58DE246C431B.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  51429 bytes for ./1B11C140-3CE1-366F-9E1B-58DE246C431B.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/7A078948-E4C4-39CD-B396-853CE029A27E.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/7A078948-E4C4-39CD-B396-853CE029A27E.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/7A078948-E4C4-39CD-B396-853CE029A27E.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./7A078948-E4C4-39CD-B396-853CE029A27E.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  759769 bytes for ./7A078948-E4C4-39CD-B396-853CE029A27E.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/87ABFA72-C5ED-3896-846E-4B3281B8A7B4.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/87ABFA72-C5ED-3896-846E-4B3281B8A7B4.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/87ABFA72-C5ED-3896-846E-4B3281B8A7B4.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./87ABFA72-C5ED-3896-846E-4B3281B8A7B4.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  754584 bytes for ./87ABFA72-C5ED-3896-846E-4B3281B8A7B4.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/D812FB85-1211-38D5-81AE-1D022718CE0C.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/D812FB85-1211-38D5-81AE-1D022718CE0C.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/D812FB85-1211-38D5-81AE-1D022718CE0C.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./D812FB85-1211-38D5-81AE-1D022718CE0C.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  1280633 bytes for ./D812FB85-1211-38D5-81AE-1D022718CE0C.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/1909091D-FD4B-3922-AF14-CF4BD046DA5E.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/1909091D-FD4B-3922-AF14-CF4BD046DA5E.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/1909091D-FD4B-3922-AF14-CF4BD046DA5E.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./1909091D-FD4B-3922-AF14-CF4BD046DA5E.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  1331047 bytes for ./1909091D-FD4B-3922-AF14-CF4BD046DA5E.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/72A6A16B-A497-36E2-A85E-D657AB0A5AF0.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/72A6A16B-A497-36E2-A85E-D657AB0A5AF0.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/72A6A16B-A497-36E2-A85E-D657AB0A5AF0.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./72A6A16B-A497-36E2-A85E-D657AB0A5AF0.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  309507 bytes for ./72A6A16B-A497-36E2-A85E-D657AB0A5AF0.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/1A53CEA0-8C75-37F6-A7A4-BF357AF6D54A.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/1A53CEA0-8C75-37F6-A7A4-BF357AF6D54A.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/1A53CEA0-8C75-37F6-A7A4-BF357AF6D54A.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./1A53CEA0-8C75-37F6-A7A4-BF357AF6D54A.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  299064 bytes for ./1A53CEA0-8C75-37F6-A7A4-BF357AF6D54A.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/794DD2FE-1F06-3A87-B7D8-122A56F7E706.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/794DD2FE-1F06-3A87-B7D8-122A56F7E706.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/794DD2FE-1F06-3A87-B7D8-122A56F7E706.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./794DD2FE-1F06-3A87-B7D8-122A56F7E706.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  167748 bytes for ./794DD2FE-1F06-3A87-B7D8-122A56F7E706.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/C56B738E-0601-3EAE-B80E-83D598ABAC4C.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/C56B738E-0601-3EAE-B80E-83D598ABAC4C.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/C56B738E-0601-3EAE-B80E-83D598ABAC4C.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./C56B738E-0601-3EAE-B80E-83D598ABAC4C.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  161697 bytes for ./C56B738E-0601-3EAE-B80E-83D598ABAC4C.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/4C2ED232-8D51-3E51-8E56-0076D5724A52.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/4C2ED232-8D51-3E51-8E56-0076D5724A52.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/4C2ED232-8D51-3E51-8E56-0076D5724A52.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./4C2ED232-8D51-3E51-8E56-0076D5724A52.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  217686 bytes for ./4C2ED232-8D51-3E51-8E56-0076D5724A52.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/13852E30-BD7B-3235-902A-CFAE07DF2B4A.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/13852E30-BD7B-3235-902A-CFAE07DF2B4A.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/13852E30-BD7B-3235-902A-CFAE07DF2B4A.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./13852E30-BD7B-3235-902A-CFAE07DF2B4A.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  212687 bytes for ./13852E30-BD7B-3235-902A-CFAE07DF2B4A.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Running /usr/bin/ditto '-V' '/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/379AF7E5-EC11-3CBC-A4D2-AE804EACCBBA.bcsymbolmap' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/BCSymbolMaps/379AF7E5-EC11-3CBC-A4D2-AE804EACCBBA.bcsymbolmap'
+2020-05-04 07:34:32 +0000  >>> Copying /Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/BCSymbolMaps/379AF7E5-EC11-3CBC-A4D2-AE804EACCBBA.bcsymbolmap 
+2020-05-04 07:34:32 +0000  copying file ./379AF7E5-EC11-3CBC-A4D2-AE804EACCBBA.bcsymbolmap ... 
+2020-05-04 07:34:32 +0000  225998 bytes for ./379AF7E5-EC11-3CBC-A4D2-AE804EACCBBA.bcsymbolmap
+2020-05-04 07:34:32 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:32 +0000  Processing step: IDEDistributionSymbolsStep
+2020-05-04 07:34:32 +0000  Excluding symbols for Charts.framework
+2020-05-04 07:34:32 +0000  Excluding symbols for Eureka.framework
+2020-05-04 07:34:32 +0000  Excluding symbols for FSCalendar.framework
+2020-05-04 07:34:32 +0000  Excluding symbols for Lottie.framework
+2020-05-04 07:34:32 +0000  Excluding symbols for Realm.framework
+2020-05-04 07:34:32 +0000  Excluding symbols for RealmSwift.framework
+2020-05-04 07:34:32 +0000  Excluding symbols for SwiftTheme.framework
+2020-05-04 07:34:32 +0000  Excluding symbols for SwiftyStoreKit.framework
+2020-05-04 07:34:32 +0000  Excluding symbols for DrinkControl.app
+2020-05-04 07:34:32 +0000  Processing step: IDEDistributionCopyAppleProvidedContentStep
+2020-05-04 07:34:32 +0000  Processing step: IDEDistributionAppThinningStep
+2020-05-04 07:34:32 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2020-05-04 07:34:32 +0000  Processing step: IDEDistributionArchThinningStep
+2020-05-04 07:34:32 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/Charts.framework/Charts' '-verify_arch' 'arm64e'
+2020-05-04 07:34:32 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-05-04 07:34:32 +0000  Skipping architecture thinning for item "Charts" because arch "arm64e" wasn't found
+2020-05-04 07:34:32 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/Eureka.framework/Eureka' '-verify_arch' 'arm64e'
+2020-05-04 07:34:32 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-05-04 07:34:32 +0000  Skipping architecture thinning for item "Eureka" because arch "arm64e" wasn't found
+2020-05-04 07:34:32 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/FSCalendar.framework/FSCalendar' '-verify_arch' 'arm64e'
+2020-05-04 07:34:32 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-05-04 07:34:32 +0000  Skipping architecture thinning for item "FSCalendar" because arch "arm64e" wasn't found
+2020-05-04 07:34:32 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/Lottie.framework/Lottie' '-verify_arch' 'arm64e'
+2020-05-04 07:34:32 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-05-04 07:34:32 +0000  Skipping architecture thinning for item "Lottie" because arch "arm64e" wasn't found
+2020-05-04 07:34:32 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/Realm.framework/Realm' '-verify_arch' 'arm64e'
+2020-05-04 07:34:32 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-05-04 07:34:32 +0000  Skipping architecture thinning for item "Realm" because arch "arm64e" wasn't found
+2020-05-04 07:34:32 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/RealmSwift.framework/RealmSwift' '-verify_arch' 'arm64e'
+2020-05-04 07:34:32 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-05-04 07:34:32 +0000  Skipping architecture thinning for item "RealmSwift" because arch "arm64e" wasn't found
+2020-05-04 07:34:32 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/SwiftTheme.framework/SwiftTheme' '-verify_arch' 'arm64e'
+2020-05-04 07:34:32 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-05-04 07:34:32 +0000  Skipping architecture thinning for item "SwiftTheme" because arch "arm64e" wasn't found
+2020-05-04 07:34:32 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/SwiftyStoreKit.framework/SwiftyStoreKit' '-verify_arch' 'arm64e'
+2020-05-04 07:34:32 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-05-04 07:34:32 +0000  Skipping architecture thinning for item "SwiftyStoreKit" because arch "arm64e" wasn't found
+2020-05-04 07:34:32 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/DrinkControl' '-verify_arch' 'arm64e'
+2020-05-04 07:34:32 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-05-04 07:34:32 +0000  Skipping architecture thinning for item "DrinkControl" because arch "arm64e" wasn't found
+2020-05-04 07:34:32 +0000  Processing step: IDEDistributionODRStep
+2020-05-04 07:34:32 +0000  Processing step: IDEDistributionStripXattrsStep
+2020-05-04 07:34:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fa41fe7fe90; bundleID='com.dcg.Charts', path='<DVTFilePath:0x7fa41d728c10:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Charts.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202bf170; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41fe29cd0; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.dcg.Charts', executablePath='<DVTFilePath:0x7fa42025be80:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Charts.framework/Charts'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fa41ddce710; bundleID='com.xmartlabs.Eureka', path='<DVTFilePath:0x7fa420050c70:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Eureka.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202e3b90; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa432150900; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.xmartlabs.Eureka', executablePath='<DVTFilePath:0x7fa4200503c0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Eureka.framework/Eureka'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fa41e4946d0; bundleID='com.wenchaod.FSCalendar', path='<DVTFilePath:0x7fa41fe36ce0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/FSCalendar.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa42022c490; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa432150900; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.wenchaod.FSCalendar', executablePath='<DVTFilePath:0x7fa41e6130c0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/FSCalendar.framework/FSCalendar'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fa41ddce6a0; bundleID='com.airbnb.Lottie-iOS', path='<DVTFilePath:0x7fa43b281040:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Lottie.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202e39e0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa4202ee2a0; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.airbnb.Lottie-iOS', executablePath='<DVTFilePath:0x7fa420213350:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Lottie.framework/Lottie'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fa41ff17bb0; bundleID='io.Realm.Realm', path='<DVTFilePath:0x7fa41cf44dc0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Realm.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa431fc1380; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41e632040; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='io.Realm.Realm', executablePath='<DVTFilePath:0x7fa41fbe29d0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Realm.framework/Realm'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fa4202ff140; bundleID='io.realm.RealmSwit', path='<DVTFilePath:0x7fa4202f3fa0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/RealmSwift.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa438bcd030; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41fe24d50; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='io.realm.RealmSwit', executablePath='<DVTFilePath:0x7fa43b53b360:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/RealmSwift.framework/RealmSwift'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fa41fa66a80; bundleID='me.gesen.SwiftTheme', path='<DVTFilePath:0x7fa42033d190:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftTheme.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa420217b80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41fe29cd0; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='me.gesen.SwiftTheme', executablePath='<DVTFilePath:0x7fa41fcd8a10:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftTheme.framework/SwiftTheme'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:32 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fa41c8d9890; bundleID='com.musevisions.iOS.SwiftyStoreKit', path='<DVTFilePath:0x7fa41ce45290:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftyStoreKit.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202a1050; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41fe29cd0; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.musevisions.iOS.SwiftyStoreKit', executablePath='<DVTFilePath:0x7fa41f882900:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftyStoreKit.framework/SwiftyStoreKit'>', hardenedRuntime='0'>'>
+2020-05-04 07:34:32 +0000  Running /usr/bin/xattr '-crs' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app'
+2020-05-04 07:34:33 +0000  /usr/bin/xattr exited with 0
+2020-05-04 07:34:33 +0000  Processing step: IDEDistributionCodesignStep
+2020-05-04 07:34:33 +0000  Entitlements for <IDEDistributionItem: 0x7fa41fe7fe90; bundleID='com.dcg.Charts', path='<DVTFilePath:0x7fa41d728c10:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Charts.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202bf170; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41fe59c50; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.dcg.Charts', executablePath='<DVTFilePath:0x7fa42025be80:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Charts.framework/Charts'>', hardenedRuntime='0'>'>: {
+}
+2020-05-04 07:34:33 +0000  Writing entitlements for <IDEDistributionItem: 0x7fa41fe7fe90; bundleID='com.dcg.Charts', path='<DVTFilePath:0x7fa41d728c10:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Charts.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202bf170; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41fe90400; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.dcg.Charts', executablePath='<DVTFilePath:0x7fa42025be80:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Charts.framework/Charts'>', hardenedRuntime='0'>'> to: /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~KJcXXT
+2020-05-04 07:34:33 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '62D58141254961DBCDADF44566E7393894212A72' '--entitlements' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~KJcXXT' '--preserve-metadata=identifier,flags,runtime' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/Charts.framework'
+2020-05-04 07:34:33 +0000  /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/Charts.framework: signed bundle with Mach-O universal (armv7 arm64) [com.dcg.Charts]
+2020-05-04 07:34:33 +0000  /usr/bin/codesign exited with 0
+2020-05-04 07:34:33 +0000  Entitlements for <IDEDistributionItem: 0x7fa41ddce710; bundleID='com.xmartlabs.Eureka', path='<DVTFilePath:0x7fa420050c70:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Eureka.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202e3b90; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41febc170; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.xmartlabs.Eureka', executablePath='<DVTFilePath:0x7fa4200503c0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Eureka.framework/Eureka'>', hardenedRuntime='0'>'>: {
+}
+2020-05-04 07:34:33 +0000  Writing entitlements for <IDEDistributionItem: 0x7fa41ddce710; bundleID='com.xmartlabs.Eureka', path='<DVTFilePath:0x7fa420050c70:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Eureka.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202e3b90; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41fe8fae0; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.xmartlabs.Eureka', executablePath='<DVTFilePath:0x7fa4200503c0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Eureka.framework/Eureka'>', hardenedRuntime='0'>'> to: /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~IBkM4a
+2020-05-04 07:34:33 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '62D58141254961DBCDADF44566E7393894212A72' '--entitlements' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~IBkM4a' '--preserve-metadata=identifier,flags,runtime' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/Eureka.framework'
+2020-05-04 07:34:33 +0000  /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/Eureka.framework: signed bundle with Mach-O universal (armv7 arm64) [com.xmartlabs.Eureka]
+2020-05-04 07:34:33 +0000  /usr/bin/codesign exited with 0
+2020-05-04 07:34:33 +0000  Entitlements for <IDEDistributionItem: 0x7fa41e4946d0; bundleID='com.wenchaod.FSCalendar', path='<DVTFilePath:0x7fa41fe36ce0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/FSCalendar.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa42022c490; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa43b0aed30; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.wenchaod.FSCalendar', executablePath='<DVTFilePath:0x7fa41e6130c0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/FSCalendar.framework/FSCalendar'>', hardenedRuntime='0'>'>: {
+}
+2020-05-04 07:34:33 +0000  Writing entitlements for <IDEDistributionItem: 0x7fa41e4946d0; bundleID='com.wenchaod.FSCalendar', path='<DVTFilePath:0x7fa41fe36ce0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/FSCalendar.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa42022c490; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa420281200; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.wenchaod.FSCalendar', executablePath='<DVTFilePath:0x7fa41e6130c0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/FSCalendar.framework/FSCalendar'>', hardenedRuntime='0'>'> to: /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~oGuID3
+2020-05-04 07:34:33 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '62D58141254961DBCDADF44566E7393894212A72' '--entitlements' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~oGuID3' '--preserve-metadata=identifier,flags,runtime' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/FSCalendar.framework'
+2020-05-04 07:34:33 +0000  /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/FSCalendar.framework: signed bundle with Mach-O universal (armv7 arm64) [com.wenchaod.FSCalendar]
+2020-05-04 07:34:33 +0000  /usr/bin/codesign exited with 0
+2020-05-04 07:34:33 +0000  Entitlements for <IDEDistributionItem: 0x7fa41ddce6a0; bundleID='com.airbnb.Lottie-iOS', path='<DVTFilePath:0x7fa43b281040:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Lottie.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202e39e0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41caf94c0; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.airbnb.Lottie-iOS', executablePath='<DVTFilePath:0x7fa420213350:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Lottie.framework/Lottie'>', hardenedRuntime='0'>'>: {
+}
+2020-05-04 07:34:33 +0000  Writing entitlements for <IDEDistributionItem: 0x7fa41ddce6a0; bundleID='com.airbnb.Lottie-iOS', path='<DVTFilePath:0x7fa43b281040:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Lottie.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202e39e0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41d9080a0; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.airbnb.Lottie-iOS', executablePath='<DVTFilePath:0x7fa420213350:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Lottie.framework/Lottie'>', hardenedRuntime='0'>'> to: /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~yJdT4C
+2020-05-04 07:34:33 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '62D58141254961DBCDADF44566E7393894212A72' '--entitlements' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~yJdT4C' '--preserve-metadata=identifier,flags,runtime' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/Lottie.framework'
+2020-05-04 07:34:34 +0000  /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/Lottie.framework: signed bundle with Mach-O universal (armv7 arm64) [com.airbnb.Lottie-iOS]
+2020-05-04 07:34:34 +0000  /usr/bin/codesign exited with 0
+2020-05-04 07:34:34 +0000  Entitlements for <IDEDistributionItem: 0x7fa41ff17bb0; bundleID='io.Realm.Realm', path='<DVTFilePath:0x7fa41cf44dc0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Realm.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa431fc1380; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41fefb0a0; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='io.Realm.Realm', executablePath='<DVTFilePath:0x7fa41fbe29d0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Realm.framework/Realm'>', hardenedRuntime='0'>'>: {
+}
+2020-05-04 07:34:34 +0000  Writing entitlements for <IDEDistributionItem: 0x7fa41ff17bb0; bundleID='io.Realm.Realm', path='<DVTFilePath:0x7fa41cf44dc0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Realm.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa431fc1380; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa420281200; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='io.Realm.Realm', executablePath='<DVTFilePath:0x7fa41fbe29d0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/Realm.framework/Realm'>', hardenedRuntime='0'>'> to: /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~h3Og09
+2020-05-04 07:34:34 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '62D58141254961DBCDADF44566E7393894212A72' '--entitlements' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~h3Og09' '--preserve-metadata=identifier,flags,runtime' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/Realm.framework'
+2020-05-04 07:34:34 +0000  /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/Realm.framework: signed bundle with Mach-O universal (armv7 arm64) [io.Realm.Realm]
+2020-05-04 07:34:34 +0000  /usr/bin/codesign exited with 0
+2020-05-04 07:34:34 +0000  Entitlements for <IDEDistributionItem: 0x7fa4202ff140; bundleID='io.realm.RealmSwit', path='<DVTFilePath:0x7fa4202f3fa0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/RealmSwift.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa438bcd030; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41fefb0a0; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='io.realm.RealmSwit', executablePath='<DVTFilePath:0x7fa43b53b360:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/RealmSwift.framework/RealmSwift'>', hardenedRuntime='0'>'>: {
+}
+2020-05-04 07:34:34 +0000  Writing entitlements for <IDEDistributionItem: 0x7fa4202ff140; bundleID='io.realm.RealmSwit', path='<DVTFilePath:0x7fa4202f3fa0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/RealmSwift.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa438bcd030; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa420281200; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='io.realm.RealmSwit', executablePath='<DVTFilePath:0x7fa43b53b360:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/RealmSwift.framework/RealmSwift'>', hardenedRuntime='0'>'> to: /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~JJQAZi
+2020-05-04 07:34:34 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '62D58141254961DBCDADF44566E7393894212A72' '--entitlements' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~JJQAZi' '--preserve-metadata=identifier,flags,runtime' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/RealmSwift.framework'
+2020-05-04 07:34:34 +0000  /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/RealmSwift.framework: signed bundle with Mach-O universal (armv7 arm64) [io.realm.RealmSwit]
+2020-05-04 07:34:34 +0000  /usr/bin/codesign exited with 0
+2020-05-04 07:34:34 +0000  Entitlements for <IDEDistributionItem: 0x7fa41fa66a80; bundleID='me.gesen.SwiftTheme', path='<DVTFilePath:0x7fa42033d190:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftTheme.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa420217b80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41fefb0a0; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='me.gesen.SwiftTheme', executablePath='<DVTFilePath:0x7fa41fcd8a10:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftTheme.framework/SwiftTheme'>', hardenedRuntime='0'>'>: {
+}
+2020-05-04 07:34:34 +0000  Writing entitlements for <IDEDistributionItem: 0x7fa41fa66a80; bundleID='me.gesen.SwiftTheme', path='<DVTFilePath:0x7fa42033d190:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftTheme.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa420217b80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa420281200; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='me.gesen.SwiftTheme', executablePath='<DVTFilePath:0x7fa41fcd8a10:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftTheme.framework/SwiftTheme'>', hardenedRuntime='0'>'> to: /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~YzE5mV
+2020-05-04 07:34:34 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '62D58141254961DBCDADF44566E7393894212A72' '--entitlements' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~YzE5mV' '--preserve-metadata=identifier,flags,runtime' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/SwiftTheme.framework'
+2020-05-04 07:34:34 +0000  /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/SwiftTheme.framework: signed bundle with Mach-O universal (armv7 arm64) [me.gesen.SwiftTheme]
+2020-05-04 07:34:34 +0000  /usr/bin/codesign exited with 0
+2020-05-04 07:34:34 +0000  Entitlements for <IDEDistributionItem: 0x7fa41c8d9890; bundleID='com.musevisions.iOS.SwiftyStoreKit', path='<DVTFilePath:0x7fa41ce45290:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftyStoreKit.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202a1050; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41fefb0a0; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.musevisions.iOS.SwiftyStoreKit', executablePath='<DVTFilePath:0x7fa41f882900:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftyStoreKit.framework/SwiftyStoreKit'>', hardenedRuntime='0'>'>: {
+}
+2020-05-04 07:34:34 +0000  Writing entitlements for <IDEDistributionItem: 0x7fa41c8d9890; bundleID='com.musevisions.iOS.SwiftyStoreKit', path='<DVTFilePath:0x7fa41ce45290:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftyStoreKit.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202a1050; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa420281200; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='(null)', teamID='CDMS73DTWZ', identifier='com.musevisions.iOS.SwiftyStoreKit', executablePath='<DVTFilePath:0x7fa41f882900:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/Frameworks/SwiftyStoreKit.framework/SwiftyStoreKit'>', hardenedRuntime='0'>'> to: /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~2m5dXb
+2020-05-04 07:34:34 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '62D58141254961DBCDADF44566E7393894212A72' '--entitlements' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~2m5dXb' '--preserve-metadata=identifier,flags,runtime' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/SwiftyStoreKit.framework'
+2020-05-04 07:34:35 +0000  /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app/Frameworks/SwiftyStoreKit.framework: signed bundle with Mach-O universal (armv7 arm64) [com.musevisions.iOS.SwiftyStoreKit]
+2020-05-04 07:34:35 +0000  /usr/bin/codesign exited with 0
+2020-05-04 07:34:35 +0000  Entitlements for <IDEDistributionItem: 0x7fa41feaebd0; bundleID='com.ohanainc.drinkcontrol', path='<DVTFilePath:0x7fa41ce7faf0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202183f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa41d713f00; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='{
+    "application-identifier" = "CDMS73DTWZ.com.ohanainc.drinkcontrol";
+    "com.apple.developer.team-identifier" = CDMS73DTWZ;
+    "get-task-allow" = 1;
+}', teamID='CDMS73DTWZ', identifier='com.ohanainc.drinkcontrol', executablePath='<DVTFilePath:0x7fa41cab1830:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/DrinkControl'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "CDMS73DTWZ.com.ohanainc.drinkcontrol";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = CDMS73DTWZ;
+    "get-task-allow" = 0;
+}
+2020-05-04 07:34:35 +0000  Writing entitlements for <IDEDistributionItem: 0x7fa41feaebd0; bundleID='com.ohanainc.drinkcontrol', path='<DVTFilePath:0x7fa41ce7faf0:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fa4202183f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fa420281200; name='Apple Development: Fumiaki Tsurumi (J527SLRFG9)', hash='4B774B9CCA37557C1571BA35FC137818B566D289', serialNumber='3876163BF289C8B3', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-26 01:32:33 +0000''>', entitlements='{
+    "application-identifier" = "CDMS73DTWZ.com.ohanainc.drinkcontrol";
+    "com.apple.developer.team-identifier" = CDMS73DTWZ;
+    "get-task-allow" = 1;
+}', teamID='CDMS73DTWZ', identifier='com.ohanainc.drinkcontrol', executablePath='<DVTFilePath:0x7fa41cab1830:'/Users/tsurumifumiaki/Library/Developer/Xcode/Archives/2020-05-04/DrinkControl 2020-05-04 16.32.xcarchive/Products/Applications/DrinkControl.app/DrinkControl'>', hardenedRuntime='0'>'> to: /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~J1nfY5
+2020-05-04 07:34:35 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '62D58141254961DBCDADF44566E7393894212A72' '--entitlements' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/entitlements~~~J1nfY5' '--preserve-metadata=identifier,flags,runtime' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app'
+2020-05-04 07:34:35 +0000  /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root/Payload/DrinkControl.app: signed app bundle with Mach-O thin (arm64) [com.ohanainc.drinkcontrol]
+2020-05-04 07:34:35 +0000  /usr/bin/codesign exited with 0
+2020-05-04 07:34:35 +0000  Processing step: IDEDistributionZipODRItemStep
+2020-05-04 07:34:35 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-05-04 07:34:35 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-05-04 07:34:35 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-05-04 07:34:35 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-05-04 07:34:35 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-05-04 07:34:35 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-05-04 07:34:35 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-05-04 07:34:35 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-05-04 07:34:35 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-05-04 07:34:35 +0000  Processing step: IDEDistributionCreateIPAStep
+2020-05-04 07:34:35 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root' '/var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Packages/DrinkControl.ipa'
+2020-05-04 07:34:35 +0000  >>> Copying /var/folders/xn/yy2nv8tn7mz_zdcfzlwfg9b80000gn/T/XcodeDistPipeline.~~~uI6xUY/Root 
+2020-05-04 07:34:35 +0000  copying file ./BCSymbolMaps/72A6A16B-A497-36E2-A85E-D657AB0A5AF0.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  309507 bytes for ./BCSymbolMaps/72A6A16B-A497-36E2-A85E-D657AB0A5AF0.bcsymbolmap
+2020-05-04 07:34:35 +0000  copying file ./BCSymbolMaps/57F3AABB-469F-3175-8C1F-0073B77F900F.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  54742 bytes for ./BCSymbolMaps/57F3AABB-469F-3175-8C1F-0073B77F900F.bcsymbolmap
+copying file ./BCSymbolMaps/87ABFA72-C5ED-3896-846E-4B3281B8A7B4.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  754584 bytes for ./BCSymbolMaps/87ABFA72-C5ED-3896-846E-4B3281B8A7B4.bcsymbolmap
+copying file ./BCSymbolMaps/794DD2FE-1F06-3A87-B7D8-122A56F7E706.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  167748 bytes for ./BCSymbolMaps/794DD2FE-1F06-3A87-B7D8-122A56F7E706.bcsymbolmap
+copying file ./BCSymbolMaps/7044FF66-0C1A-3C8D-B4DF-A1F1262088A6.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  626963 bytes for ./BCSymbolMaps/7044FF66-0C1A-3C8D-B4DF-A1F1262088A6.bcsymbolmap
+2020-05-04 07:34:35 +0000  copying file ./BCSymbolMaps/13852E30-BD7B-3235-902A-CFAE07DF2B4A.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  212687 bytes for ./BCSymbolMaps/13852E30-BD7B-3235-902A-CFAE07DF2B4A.bcsymbolmap
+copying file ./BCSymbolMaps/C162958B-01CF-3977-8DBA-386C0B83A9A4.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  634901 bytes for ./BCSymbolMaps/C162958B-01CF-3977-8DBA-386C0B83A9A4.bcsymbolmap
+2020-05-04 07:34:35 +0000  copying file ./BCSymbolMaps/1A53CEA0-8C75-37F6-A7A4-BF357AF6D54A.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  299064 bytes for ./BCSymbolMaps/1A53CEA0-8C75-37F6-A7A4-BF357AF6D54A.bcsymbolmap
+2020-05-04 07:34:35 +0000  copying file ./BCSymbolMaps/F6B94BEB-C02A-3E63-98A1-1931F06E68C3.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  743153 bytes for ./BCSymbolMaps/F6B94BEB-C02A-3E63-98A1-1931F06E68C3.bcsymbolmap
+copying file ./BCSymbolMaps/1909091D-FD4B-3922-AF14-CF4BD046DA5E.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  1331047 bytes for ./BCSymbolMaps/1909091D-FD4B-3922-AF14-CF4BD046DA5E.bcsymbolmap
+copying file ./BCSymbolMaps/C56B738E-0601-3EAE-B80E-83D598ABAC4C.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  161697 bytes for ./BCSymbolMaps/C56B738E-0601-3EAE-B80E-83D598ABAC4C.bcsymbolmap
+2020-05-04 07:34:35 +0000  copying file ./BCSymbolMaps/1B11C140-3CE1-366F-9E1B-58DE246C431B.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  51429 bytes for ./BCSymbolMaps/1B11C140-3CE1-366F-9E1B-58DE246C431B.bcsymbolmap
+2020-05-04 07:34:35 +0000  copying file ./BCSymbolMaps/DA98BFF0-27E3-38EC-B1C9-DE8ED0FF162B.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  762106 bytes for ./BCSymbolMaps/DA98BFF0-27E3-38EC-B1C9-DE8ED0FF162B.bcsymbolmap
+2020-05-04 07:34:35 +0000  copying file ./BCSymbolMaps/7A078948-E4C4-39CD-B396-853CE029A27E.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  759769 bytes for ./BCSymbolMaps/7A078948-E4C4-39CD-B396-853CE029A27E.bcsymbolmap
+2020-05-04 07:34:35 +0000  copying file ./BCSymbolMaps/379AF7E5-EC11-3CBC-A4D2-AE804EACCBBA.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  225998 bytes for ./BCSymbolMaps/379AF7E5-EC11-3CBC-A4D2-AE804EACCBBA.bcsymbolmap
+2020-05-04 07:34:35 +0000  copying file ./BCSymbolMaps/D812FB85-1211-38D5-81AE-1D022718CE0C.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  1280633 bytes for ./BCSymbolMaps/D812FB85-1211-38D5-81AE-1D022718CE0C.bcsymbolmap
+copying file ./BCSymbolMaps/4C2ED232-8D51-3E51-8E56-0076D5724A52.bcsymbolmap ... 
+2020-05-04 07:34:35 +0000  217686 bytes for ./BCSymbolMaps/4C2ED232-8D51-3E51-8E56-0076D5724A52.bcsymbolmap
+2020-05-04 07:34:35 +0000  copying file ./Payload/DrinkControl.app/_CodeSignature/CodeResources ... 
+2020-05-04 07:34:35 +0000  22957 bytes for ./Payload/DrinkControl.app/_CodeSignature/CodeResources
+2020-05-04 07:34:35 +0000  copying file ./Payload/DrinkControl.app/com.mono0926.LicensePlist.plist ... 
+562 bytes for ./Payload/DrinkControl.app/com.mono0926.LicensePlist.plist
+2020-05-04 07:34:35 +0000  copying file ./Payload/DrinkControl.app/Settings.bundle/ja.lproj/Root.strings ... 
+2020-05-04 07:34:35 +0000  296 bytes for ./Payload/DrinkControl.app/Settings.bundle/ja.lproj/Root.strings
+2020-05-04 07:34:35 +0000  copying file ./Payload/DrinkControl.app/Settings.bundle/en.lproj/Root.strings ... 
+2020-05-04 07:34:35 +0000  266 bytes for ./Payload/DrinkControl.app/Settings.bundle/en.lproj/Root.strings
+2020-05-04 07:34:35 +0000  copying file ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist.plist ... 
+1676 bytes for ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist.plist
+2020-05-04 07:34:35 +0000  copying file ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/realm-cocoa.plist ... 
+2020-05-04 07:34:35 +0000  14018 bytes for ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/realm-cocoa.plist
+copying file ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/Charts.plist ... 
+2020-05-04 07:34:35 +0000  11703 bytes for ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/Charts.plist
+2020-05-04 07:34:35 +0000  copying file ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/Eureka.plist ... 
+2020-05-04 07:34:35 +0000  1437 bytes for ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/Eureka.plist
+copying file ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/FSCalendar.plist ... 
+2020-05-04 07:34:35 +0000  1461 bytes for ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/FSCalendar.plist
+2020-05-04 07:34:35 +0000  copying file ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/UIColor-Hex-Swift.plist ... 
+2020-05-04 07:34:35 +0000  1435 bytes for ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/UIColor-Hex-Swift.plist
+copying file ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/lottie-ios.plist ... 
+2020-05-04 07:34:35 +0000  11705 bytes for ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/lottie-ios.plist
+copying file ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/SwiftyStoreKit.plist ... 
+2020-05-04 07:34:35 +0000  1442 bytes for ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/SwiftyStoreKit.plist
+copying file ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/SwiftTheme.plist ... 
+2020-05-04 07:34:35 +0000  1433 bytes for ./Payload/DrinkControl.app/Settings.bundle/com.mono0926.LicensePlist/SwiftTheme.plist
+copying file ./Payload/DrinkControl.app/Settings.bundle/Root.plist ... 
+840 bytes for ./Payload/DrinkControl.app/Settings.bundle/Root.plist
+copying file ./Payload/DrinkControl.app/AppIcon60x60@2x.png ... 
+2020-05-04 07:34:35 +0000  7878 bytes for ./Payload/DrinkControl.app/AppIcon60x60@2x.png
+copying file ./Payload/DrinkControl.app/Cartfile ... 
+2020-05-04 07:34:35 +0000  219 bytes for ./Payload/DrinkControl.app/Cartfile
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/cC7-0t-L4l-view-MzK-qV-xQE.nib ... 
+2020-05-04 07:34:35 +0000  1197 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/cC7-0t-L4l-view-MzK-qV-xQE.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-SxK-62-ECn.nib ... 
+2020-05-04 07:34:35 +0000  1062 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-SxK-62-ECn.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/SxK-62-ECn-view-Fu1-nH-ivd.nib ... 
+2020-05-04 07:34:35 +0000  1197 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/SxK-62-ECn-view-Fu1-nH-ivd.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-xEh-S3-8X9.nib ... 
+2020-05-04 07:34:35 +0000  1987 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-xEh-S3-8X9.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UINavigationController-wOX-Fi-CfC.nib ... 
+2020-05-04 07:34:35 +0000  3337 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UINavigationController-wOX-Fi-CfC.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/Ver-hK-Y1j-view-jYE-3i-Tv2.nib ... 
+2020-05-04 07:34:35 +0000  8180 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/Ver-hK-Y1j-view-jYE-3i-Tv2.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-oSv-Z6-d1w.nib ... 
+2020-05-04 07:34:35 +0000  1019 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-oSv-Z6-d1w.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/bBt-8y-dQ0-view-ag6-Im-D9G.nib ... 
+2020-05-04 07:34:35 +0000  1197 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/bBt-8y-dQ0-view-ag6-Im-D9G.nib
+2020-05-04 07:34:35 +0000  copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-Dzx-5K-xh7.nib ... 
+2020-05-04 07:34:35 +0000  1327 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-Dzx-5K-xh7.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/oSv-Z6-d1w-view-56t-2T-JJ4.nib ... 
+1197 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/oSv-Z6-d1w-view-56t-2T-JJ4.nib
+2020-05-04 07:34:35 +0000  copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/ubL-kc-hMd-view-EyR-Nq-PI5.nib ... 
+2020-05-04 07:34:35 +0000  8343 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/ubL-kc-hMd-view-EyR-Nq-PI5.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/rh7-k7-evK-view-PKi-Xb-dKT.nib ... 
+2020-05-04 07:34:35 +0000  8014 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/rh7-k7-evK-view-PKi-Xb-dKT.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-rh7-k7-evK.nib ... 
+2020-05-04 07:34:35 +0000  1072 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-rh7-k7-evK.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-Ver-hK-Y1j.nib ... 
+2020-05-04 07:34:35 +0000  1506 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-Ver-hK-Y1j.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-IkU-I4-Ot1.nib ... 
+2020-05-04 07:34:35 +0000  1676 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-IkU-I4-Ot1.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/xEh-S3-8X9-view-spP-ir-mcA.nib ... 
+2020-05-04 07:34:35 +0000  1197 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/xEh-S3-8X9-view-spP-ir-mcA.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-bBt-8y-dQ0.nib ... 
+2020-05-04 07:34:35 +0000  1674 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-bBt-8y-dQ0.nib
+2020-05-04 07:34:35 +0000  copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-k4B-rr-EmZ.nib ... 
+2020-05-04 07:34:35 +0000  1138 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-k4B-rr-EmZ.nib
+2020-05-04 07:34:35 +0000  copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/IkU-I4-Ot1-view-JZ9-ex-mmD.nib ... 
+2020-05-04 07:34:35 +0000  8934 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/IkU-I4-Ot1-view-JZ9-ex-mmD.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-u2s-U7-KmS.nib ... 
+2020-05-04 07:34:35 +0000  1652 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-u2s-U7-KmS.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/u2s-U7-KmS-view-NYI-dt-kPE.nib ... 
+2020-05-04 07:34:35 +0000  4333 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/u2s-U7-KmS-view-NYI-dt-kPE.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-cC7-0t-L4l.nib ... 
+2020-05-04 07:34:35 +0000  1019 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/UIViewController-cC7-0t-L4l.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/Info.plist ... 
+2020-05-04 07:34:35 +0000  1011 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/Info.plist
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/k4B-rr-EmZ-view-DTC-sH-mXt.nib ... 
+2020-05-04 07:34:35 +0000  3556 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/k4B-rr-EmZ-view-DTC-sH-mXt.nib
+copying file ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/Dzx-5K-xh7-view-e8J-ca-rfT.nib ... 
+2020-05-04 07:34:35 +0000  1197 bytes for ./Payload/DrinkControl.app/Base.lproj/PageMain.storyboardc/Dzx-5K-xh7-view-e8J-ca-rfT.nib
+copying file ./Payload/DrinkControl.app/3152-star-success.json ... 
+2020-05-04 07:34:35 +0000  180896 bytes for ./Payload/DrinkControl.app/3152-star-success.json
+copying file ./Payload/DrinkControl.app/DrinkControl ... 
+2020-05-04 07:34:36 +0000  1738848 bytes for ./Payload/DrinkControl.app/DrinkControl
+copying file ./Payload/DrinkControl.app/Assets.car ... 
+2020-05-04 07:34:36 +0000  560479 bytes for ./Payload/DrinkControl.app/Assets.car
+2020-05-04 07:34:36 +0000  copying file ./Payload/DrinkControl.app/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2389 bytes for ./Payload/DrinkControl.app/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+2020-05-04 07:34:36 +0000  copying file ./Payload/DrinkControl.app/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+896 bytes for ./Payload/DrinkControl.app/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Payload/DrinkControl.app/LaunchScreen.storyboardc/Info.plist ... 
+2020-05-04 07:34:36 +0000  258 bytes for ./Payload/DrinkControl.app/LaunchScreen.storyboardc/Info.plist
+2020-05-04 07:34:36 +0000  copying file ./Payload/DrinkControl.app/Frameworks/RealmSwift.framework/_CodeSignature/CodeResources ... 
+2020-05-04 07:34:36 +0000  1798 bytes for ./Payload/DrinkControl.app/Frameworks/RealmSwift.framework/_CodeSignature/CodeResources
+copying file ./Payload/DrinkControl.app/Frameworks/RealmSwift.framework/RealmSwift ... 
+2020-05-04 07:34:36 +0000  4182576 bytes for ./Payload/DrinkControl.app/Frameworks/RealmSwift.framework/RealmSwift
+copying file ./Payload/DrinkControl.app/Frameworks/RealmSwift.framework/Info.plist ... 
+2020-05-04 07:34:36 +0000  862 bytes for ./Payload/DrinkControl.app/Frameworks/RealmSwift.framework/Info.plist
+copying file ./Payload/DrinkControl.app/Frameworks/Realm.framework/_CodeSignature/CodeResources ... 
+2656 bytes for ./Payload/DrinkControl.app/Frameworks/Realm.framework/_CodeSignature/CodeResources
+copying file ./Payload/DrinkControl.app/Frameworks/Realm.framework/LICENSE ... 
+2020-05-04 07:34:36 +0000  13657 bytes for ./Payload/DrinkControl.app/Frameworks/Realm.framework/LICENSE
+copying file ./Payload/DrinkControl.app/Frameworks/Realm.framework/CHANGELOG.md ... 
+2020-05-04 07:34:36 +0000  185718 bytes for ./Payload/DrinkControl.app/Frameworks/Realm.framework/CHANGELOG.md
+copying file ./Payload/DrinkControl.app/Frameworks/Realm.framework/strip-frameworks.sh ... 
+2020-05-04 07:34:36 +0000  2569 bytes for ./Payload/DrinkControl.app/Frameworks/Realm.framework/strip-frameworks.sh
+copying file ./Payload/DrinkControl.app/Frameworks/Realm.framework/Info.plist ... 
+2020-05-04 07:34:36 +0000  851 bytes for ./Payload/DrinkControl.app/Frameworks/Realm.framework/Info.plist
+copying file ./Payload/DrinkControl.app/Frameworks/Realm.framework/Realm ... 
+2020-05-04 07:34:38 +0000  61019312 bytes for ./Payload/DrinkControl.app/Frameworks/Realm.framework/Realm
+2020-05-04 07:34:38 +0000  copying file ./Payload/DrinkControl.app/Frameworks/FSCalendar.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Payload/DrinkControl.app/Frameworks/FSCalendar.framework/_CodeSignature/CodeResources
+copying file ./Payload/DrinkControl.app/Frameworks/FSCalendar.framework/FSCalendar ... 
+2020-05-04 07:34:38 +0000  2484352 bytes for ./Payload/DrinkControl.app/Frameworks/FSCalendar.framework/FSCalendar
+copying file ./Payload/DrinkControl.app/Frameworks/FSCalendar.framework/Info.plist ... 
+2020-05-04 07:34:38 +0000  736 bytes for ./Payload/DrinkControl.app/Frameworks/FSCalendar.framework/Info.plist
+copying file ./Payload/DrinkControl.app/Frameworks/SwiftyStoreKit.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Payload/DrinkControl.app/Frameworks/SwiftyStoreKit.framework/_CodeSignature/CodeResources
+copying file ./Payload/DrinkControl.app/Frameworks/SwiftyStoreKit.framework/SwiftyStoreKit ... 
+2020-05-04 07:34:38 +0000  2279440 bytes for ./Payload/DrinkControl.app/Frameworks/SwiftyStoreKit.framework/SwiftyStoreKit
+copying file ./Payload/DrinkControl.app/Frameworks/SwiftyStoreKit.framework/Info.plist ... 
+2020-05-04 07:34:38 +0000  755 bytes for ./Payload/DrinkControl.app/Frameworks/SwiftyStoreKit.framework/Info.plist
+copying file ./Payload/DrinkControl.app/Frameworks/Eureka.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Payload/DrinkControl.app/Frameworks/Eureka.framework/_CodeSignature/CodeResources
+copying file ./Payload/DrinkControl.app/Frameworks/Eureka.framework/Eureka ... 
+2020-05-04 07:34:39 +0000  12876032 bytes for ./Payload/DrinkControl.app/Frameworks/Eureka.framework/Eureka
+copying file ./Payload/DrinkControl.app/Frameworks/Eureka.framework/Info.plist ... 
+2020-05-04 07:34:39 +0000  735 bytes for ./Payload/DrinkControl.app/Frameworks/Eureka.framework/Info.plist
+copying file ./Payload/DrinkControl.app/Frameworks/SwiftTheme.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Payload/DrinkControl.app/Frameworks/SwiftTheme.framework/_CodeSignature/CodeResources
+copying file ./Payload/DrinkControl.app/Frameworks/SwiftTheme.framework/SwiftTheme ... 
+2020-05-04 07:34:39 +0000  3104848 bytes for ./Payload/DrinkControl.app/Frameworks/SwiftTheme.framework/SwiftTheme
+copying file ./Payload/DrinkControl.app/Frameworks/SwiftTheme.framework/Info.plist ... 
+2020-05-04 07:34:39 +0000  736 bytes for ./Payload/DrinkControl.app/Frameworks/SwiftTheme.framework/Info.plist
+copying file ./Payload/DrinkControl.app/Frameworks/Charts.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Payload/DrinkControl.app/Frameworks/Charts.framework/_CodeSignature/CodeResources
+copying file ./Payload/DrinkControl.app/Frameworks/Charts.framework/Charts ... 
+2020-05-04 07:34:40 +0000  23498976 bytes for ./Payload/DrinkControl.app/Frameworks/Charts.framework/Charts
+copying file ./Payload/DrinkControl.app/Frameworks/Charts.framework/Info.plist ... 
+2020-05-04 07:34:40 +0000  727 bytes for ./Payload/DrinkControl.app/Frameworks/Charts.framework/Info.plist
+2020-05-04 07:34:40 +0000  copying file ./Payload/DrinkControl.app/Frameworks/Lottie.framework/_CodeSignature/CodeResources ... 
+2020-05-04 07:34:40 +0000  1798 bytes for ./Payload/DrinkControl.app/Frameworks/Lottie.framework/_CodeSignature/CodeResources
+2020-05-04 07:34:40 +0000  copying file ./Payload/DrinkControl.app/Frameworks/Lottie.framework/Lottie ... 
+2020-05-04 07:34:40 +0000  11218080 bytes for ./Payload/DrinkControl.app/Frameworks/Lottie.framework/Lottie
+copying file ./Payload/DrinkControl.app/Frameworks/Lottie.framework/Info.plist ... 
+2020-05-04 07:34:40 +0000  703 bytes for ./Payload/DrinkControl.app/Frameworks/Lottie.framework/Info.plist
+copying file ./Payload/DrinkControl.app/embedded.mobileprovision ... 
+7351 bytes for ./Payload/DrinkControl.app/embedded.mobileprovision
+2020-05-04 07:34:40 +0000  copying file ./Payload/DrinkControl.app/Info.plist ... 
+1172 bytes for ./Payload/DrinkControl.app/Info.plist
+copying file ./Payload/DrinkControl.app/PkgInfo ... 
+2020-05-04 07:34:40 +0000  8 bytes for ./Payload/DrinkControl.app/PkgInfo
+2020-05-04 07:34:40 +0000  /usr/bin/ditto exited with 0
+2020-05-04 07:34:40 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2020-05-04 07:34:40 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2020-05-04 07:34:40 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2020-05-04 07:34:40 +0000  Processing step: IDEDistributionCreateManifestStep
+2020-05-04 07:34:40 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so

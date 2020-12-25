@@ -1,0 +1,97 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Charts",
+        "repositoryURL": "https://github.com/danielgindi/Charts.git",
+        "state": {
+          "branch": null,
+          "revision": "66546404a6739173b8e436ab6bc1f2897cd08594",
+          "version": "3.6.0"
+        }
+      },
+      {
+        "package": "Eureka",
+        "repositoryURL": "https://github.com/xmartlabs/Eureka.git",
+        "state": {
+          "branch": null,
+          "revision": "81f3ea3d69dc99f8684b8bce1224908e101c679f",
+          "version": "5.3.2"
+        }
+      },
+      {
+        "package": "FSCalendar",
+        "repositoryURL": "https://github.com/WenchaoD/FSCalendar.git",
+        "state": {
+          "branch": null,
+          "revision": "4e79a201fad268408a4fd9e2ef429497def9594f",
+          "version": "2.8.2"
+        }
+      },
+      {
+        "package": "Instructions",
+        "repositoryURL": "https://github.com/ephread/Instructions.git",
+        "state": {
+          "branch": null,
+          "revision": "a1ee7a2f1d0f890981b8a3cfaadc52cf55160d55",
+          "version": "2.0.0"
+        }
+      },
+      {
+        "package": "Lottie",
+        "repositoryURL": "https://github.com/airbnb/lottie-ios.git",
+        "state": {
+          "branch": null,
+          "revision": "e02e82c7c1b472e85e641a7624e99c855e21add1",
+          "version": "3.1.9"
+        }
+      },
+      {
+        "package": "Realm",
+        "repositoryURL": "https://github.com/realm/realm-cocoa.git",
+        "state": {
+          "branch": null,
+          "revision": "c236b2c1270fe41ba7c101a1d17ef56494987cb9",
+          "version": "10.5.0"
+        }
+      },
+      {
+        "package": "RealmDatabase",
+        "repositoryURL": "https://github.com/realm/realm-core",
+        "state": {
+          "branch": null,
+          "revision": "7390723ae39b432bd00f093ea84e3b79534a202c",
+          "version": "10.3.2"
+        }
+      },
+      {
+        "package": "SwiftTheme",
+        "repositoryURL": "https://github.com/wxxsw/SwiftTheme.git",
+        "state": {
+          "branch": null,
+          "revision": "bff18e6e90f70f5482812ffd545ffd753ff30bc1",
+          "version": "0.5.5"
+        }
+      },
+      {
+        "package": "SwiftyStoreKit",
+        "repositoryURL": "https://github.com/bizz84/SwiftyStoreKit.git",
+        "state": {
+          "branch": null,
+          "revision": "9974acf07b31b6f5bf363d5118dc1bd4fcac6122",
+          "version": "0.16.1"
+        }
+      },
+      {
+        "package": "WhatsNewKit",
+        "repositoryURL": "https://github.com/SvenTiigi/WhatsNewKit.git",
+        "state": {
+          "branch": null,
+          "revision": "92a9d6f5f6754aba0df972514fd7686f1de03bcc",
+          "version": "1.3.7"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

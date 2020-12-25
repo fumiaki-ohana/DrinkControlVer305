@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CAN-gk-tn9">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeUIView-->
+        <scene sceneID="XdY-7k-xw1">
+            <objects>
+                <viewController title="HomeUIView" modalPresentationStyle="fullScreen" id="ubL-kc-hMd" customClass="HomeViewController" customModule="DrinkControl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EyR-Nq-PI5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PrM-48-53c" customClass="FSCalendar">
+                                <rect key="frame" x="10" y="54" width="300" height="191"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="191" id="If0-AC-hlL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="headerDateFormat" value="yyyy年MM月"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ubL-kc-hMd" id="M21-ZA-Z8z"/>
+                                    <outlet property="delegate" destination="ubL-kc-hMd" id="DrD-sW-7Rb"/>
+                                </connections>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TAi-AK-kuZ">
+                                <rect key="frame" x="10" y="255" width="300" height="254"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="KF4-7h-1Ke" detailTextLabel="YI7-Kc-zQu" style="IBUITableViewCellStyleValue1" id="fsu-EC-Ymr">
+                                        <rect key="frame" x="0.0" y="28" width="300" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fsu-EC-Ymr" id="cl5-LS-Bpp">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KF4-7h-1Ke">
+                                                    <rect key="frame" x="16" y="12" width="33" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YI7-Kc-zQu">
+                                                    <rect key="frame" x="240" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ubL-kc-hMd" id="wcO-lc-5mQ"/>
+                                    <outlet property="delegate" destination="ubL-kc-hMd" id="fFa-2f-uOc"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14P-rv-AZ9">
+                                <rect key="frame" x="10" y="255" width="300" height="254"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCv-W3-cSp">
+                                        <rect key="frame" x="100" y="77" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Fyi-l8-oeK"/>
+                                            <constraint firstAttribute="width" constant="100" id="JuP-r2-YS1"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="bgh-FY-KVK"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="hp5-3y-r8z"/>
+                                        </constraints>
+                                        <state key="normal" image="Add">
+                                            <attributedString key="attributedTitle"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressAddButton:" destination="ubL-kc-hMd" eventType="touchUpInside" id="UkA-Sf-NUN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="SCv-W3-cSp" firstAttribute="centerY" secondItem="14P-rv-AZ9" secondAttribute="centerY" id="8Wa-mJ-rLD"/>
+                                    <constraint firstItem="SCv-W3-cSp" firstAttribute="centerX" secondItem="14P-rv-AZ9" secondAttribute="centerX" id="Lp0-Fz-sZn"/>
+                                    <constraint firstItem="SCv-W3-cSp" firstAttribute="centerX" secondItem="14P-rv-AZ9" secondAttribute="centerX" id="XRz-cY-OrA"/>
+                                    <constraint firstItem="SCv-W3-cSp" firstAttribute="centerY" secondItem="14P-rv-AZ9" secondAttribute="centerY" id="lNT-D9-NDY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TfK-id-n8O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="14P-rv-AZ9" firstAttribute="top" secondItem="PrM-48-53c" secondAttribute="bottom" constant="10" id="1vv-J5-WBe"/>
+                            <constraint firstItem="TfK-id-n8O" firstAttribute="trailing" secondItem="TAi-AK-kuZ" secondAttribute="trailing" constant="10" id="3yp-Mr-Tjd"/>
+                            <constraint firstItem="14P-rv-AZ9" firstAttribute="leading" secondItem="TfK-id-n8O" secondAttribute="leading" constant="10" id="7UY-M2-FZn"/>
+                            <constraint firstItem="TAi-AK-kuZ" firstAttribute="top" secondItem="PrM-48-53c" secondAttribute="bottom" constant="10" id="7mL-gc-Qco"/>
+                            <constraint firstItem="TAi-AK-kuZ" firstAttribute="leading" secondItem="TfK-id-n8O" secondAttribute="leading" constant="10" id="G6Y-e7-oVm"/>
+                            <constraint firstItem="TfK-id-n8O" firstAttribute="trailing" secondItem="PrM-48-53c" secondAttribute="trailing" constant="10" id="P6b-Ph-6S3"/>
+                            <constraint firstItem="TfK-id-n8O" firstAttribute="trailing" secondItem="14P-rv-AZ9" secondAttribute="trailing" constant="10" id="TbT-dI-qVZ"/>
+                            <constraint firstItem="PrM-48-53c" firstAttribute="top" secondItem="TfK-id-n8O" secondAttribute="top" constant="10" id="bh2-Oa-qId"/>
+                            <constraint firstItem="PrM-48-53c" firstAttribute="leading" secondItem="TfK-id-n8O" secondAttribute="leading" constant="10" id="gKp-wC-IrR"/>
+                            <constraint firstItem="TAi-AK-kuZ" firstAttribute="bottom" secondItem="EyR-Nq-PI5" secondAttribute="bottom" constant="-59" id="m0e-MZ-XRh"/>
+                            <constraint firstAttribute="bottom" secondItem="14P-rv-AZ9" secondAttribute="bottom" constant="59" id="s95-bz-BUL"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Home" leftItemsSupplementBackButton="YES" id="sBz-a6-qfH">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="NyY-ys-ZTZ">
+                            <connections>
+                                <action selector="press_deleteButton:" destination="ubL-kc-hMd" id="Es5-ms-nzE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Edit" id="Au5-Za-ZS2">
+                            <connections>
+                                <action selector="editDataEntry:" destination="ubL-kc-hMd" id="ueM-E7-k3z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="EmptyStateView" destination="14P-rv-AZ9" id="jtX-S0-Tt1"/>
+                        <outlet property="addButton" destination="SCv-W3-cSp" id="Cge-7A-RRr"/>
+                        <outlet property="backGround" destination="EyR-Nq-PI5" id="8cC-1u-gK5"/>
+                        <outlet property="calendarHeight" destination="EyR-Nq-PI5" id="CKp-ld-F3S"/>
+                        <outlet property="deleteButton" destination="NyY-ys-ZTZ" id="f2M-yw-OFK"/>
+                        <outlet property="drinkCalendar" destination="PrM-48-53c" id="pZx-rq-6NO"/>
+                        <outlet property="editButton" destination="Au5-Za-ZS2" id="6vk-72-Y37"/>
+                        <outlet property="tableview" destination="TAi-AK-kuZ" id="sK3-vH-U3U"/>
+                        <segue destination="bBt-8y-dQ0" kind="show" identifier="showDailyDrinkRecord" id="sVY-RF-nhB"/>
+                        <segue destination="zUu-fa-g1d" kind="show" identifier="showPurchaseFromHome" id="IxI-Sn-DpE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GhE-gh-09e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="806.25" y="-1752.4647887323945"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="TFo-PC-5sv">
+            <objects>
+                <viewController title="設定" id="xEh-S3-8X9" customClass="SettingViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="spP-ir-mcA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gZB-fA-HlN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ukZ-f1-mmg">
+                        <barButtonItem key="leftBarButtonItem" image="Cancel" id="eWw-9G-hpX">
+                            <connections>
+                                <action selector="pressCancel:" destination="xEh-S3-8X9" id="f4S-6F-F7j"/>
+                                <segue destination="oQ9-No-gcP" kind="unwind" unwindAction="unwindToHomeViewWithSender:" id="c62-RX-J69"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="oSv-Z6-d1w" kind="show" identifier="aboutViewControllerSegue" id="23q-Nd-N2Y"/>
+                        <segue destination="SxK-62-ECn" kind="show" identifier="alchoolSettingSegue" id="KrQ-ac-XVg"/>
+                        <segue destination="HSZ-z4-scU" kind="show" identifier="showCalendarSettingSegue" id="rje-IV-fzq"/>
+                        <segue destination="FYB-4b-9ug" kind="show" identifier="showNamingSegue" id="Azc-K8-qbS"/>
+                        <segue destination="zUu-fa-g1d" kind="show" identifier="showPurchaseIntro" id="f3U-Qc-WDM"/>
+                        <segue destination="xWQ-mT-JoM" kind="show" identifier="showNotificationSettingSegue" id="HZC-mP-3Rc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QmM-gZ-QOX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="oQ9-No-gcP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2478.75" y="-894.71830985915494"/>
+        </scene>
+        <!--Intro In Purchase View Controller-->
+        <scene sceneID="IgB-LQ-ne6">
+            <objects>
+                <viewController id="zUu-fa-g1d" customClass="IntroInPurchaseViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tns-M8-wGl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DMa-HH-jJX">
+                                <rect key="frame" x="20" y="64" width="280" height="256"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="APP内課金の説明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obA-5p-P2U">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="次の画面に進み、１度だけApp内課金を購入すると、保存回数の制限が解除されます。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ev-cF-EV9">
+                                        <rect key="frame" x="0.0" y="50" width="280" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqg-NO-npX">
+                                        <rect key="frame" x="0.0" y="131" width="280" height="30"/>
+                                        <state key="normal" title="App内購入画面へ進む"/>
+                                        <connections>
+                                            <segue destination="rh7-k7-evK" kind="show" identifier="showPurchase" id="71a-Qd-OfF"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWF-Ts-p7S">
+                                        <rect key="frame" x="0.0" y="181" width="280" height="54"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="上のボタンを押しても、すぐに">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="課金はされません。">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="14" name="HiraginoSans-W3"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="次の画面に進んでも、">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <font key="NSOriginalFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="購入ボタンを押すまでは">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="中止">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="できます。">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="既に購入済みのかたは、次の画面で【復元する】を選んでください。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-AP-cfd">
+                                        <rect key="frame" x="0.0" y="255" width="280" height="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iOJ-1f-A4d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iOJ-1f-A4d" firstAttribute="bottom" secondItem="DMa-HH-jJX" secondAttribute="bottom" constant="150" id="0ik-sR-8SI"/>
+                            <constraint firstItem="DMa-HH-jJX" firstAttribute="top" secondItem="iOJ-1f-A4d" secondAttribute="top" constant="20" id="aCu-Ee-T4w"/>
+                            <constraint firstItem="DMa-HH-jJX" firstAttribute="leading" secondItem="iOJ-1f-A4d" secondAttribute="leading" constant="20" id="j5U-Yk-ZNm"/>
+                            <constraint firstItem="iOJ-1f-A4d" firstAttribute="trailing" secondItem="DMa-HH-jJX" secondAttribute="trailing" constant="20" id="p2g-Ng-nD0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="d7N-xm-Q9F">
+                        <barButtonItem key="leftBarButtonItem" image="Cancel" id="4Dv-cS-2dL">
+                            <connections>
+                                <action selector="pressCancel:" destination="zUu-fa-g1d" id="BWz-Ys-DWP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="L1" destination="obA-5p-P2U" id="QrH-lh-cuO"/>
+                        <outlet property="L2" destination="9ev-cF-EV9" id="BwU-i9-7HY"/>
+                        <outlet property="L3" destination="CcO-AP-cfd" id="Phz-ha-SdA"/>
+                        <outlet property="L4" destination="AWF-Ts-p7S" id="fXd-VX-YjQ"/>
+                        <outlet property="purchaseButton" destination="yqg-NO-npX" id="0I0-PB-C36"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLj-Dc-Y3o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2056.875" y="-1752.4647887323945"/>
+        </scene>
+        <!--Third Chart View Controller-->
+        <scene sceneID="pMU-GK-ldA">
+            <objects>
+                <viewController id="lRS-Lx-KRR" customClass="ThirdChartViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="maz-bU-Mg4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OxQ-bn-hST"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2DO-7l-oqg">
+                        <barButtonItem key="leftBarButtonItem" image="Cancel" id="y8a-lW-U9r">
+                            <connections>
+                                <action selector="pushCancel:" destination="lRS-Lx-KRR" id="VAm-eG-XQh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ik2-I5-eHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2629" y="986"/>
+        </scene>
+        <!--Second Chart View Controller-->
+        <scene sceneID="dfp-AU-SjA">
+            <objects>
+                <viewController id="16L-Ya-r4b" customClass="SecondChartViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iqa-cx-NKG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wFk-Wl-NEy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qda-QL-wEe">
+                        <barButtonItem key="leftBarButtonItem" image="Cancel" id="RQ8-Yu-37p">
+                            <connections>
+                                <action selector="pushCancel:" destination="16L-Ya-r4b" id="AMJ-h8-PMk"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="反省へ" id="iuQ-CQ-u66">
+                            <connections>
+                                <segue destination="lRS-Lx-KRR" kind="show" identifier="showThirdChart" id="S07-Fw-Qd0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H1p-qz-wWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1924" y="176"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="Oik-C7-Tzn">
+            <objects>
+                <viewController id="oSv-Z6-d1w" customClass="AboutViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="56t-2T-JJ4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="e4j-NH-SNr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7qJ-9c-l1k"/>
+                    <connections>
+                        <segue destination="Dzx-5K-xh7" kind="show" identifier="showTutorSegue" id="R8y-qk-p64"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LON-JG-tU3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1221" y="181"/>
+        </scene>
+        <!--Setting Alchool View Controller-->
+        <scene sceneID="iA0-44-Xmg">
+            <objects>
+                <viewController id="SxK-62-ECn" customClass="SettingAlchoolViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fu1-nH-ivd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="esi-r8-Wcw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="uTb-Gn-euu"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwO-dF-Oco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-511" y="177"/>
+        </scene>
+        <!--Calander Setting View Controller-->
+        <scene sceneID="v5A-8n-ME8">
+            <objects>
+                <viewController id="HSZ-z4-scU" customClass="CalanderSettingViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2CU-0d-ry9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="14y-XE-Ch9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="S8p-CU-n4b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SjM-2x-yls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="181"/>
+        </scene>
+        <!--Naming View Controller-->
+        <scene sceneID="mDM-t8-fdd">
+            <objects>
+                <viewController id="FYB-4b-9ug" customClass="NamingViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xZ1-wa-KYD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xps-9p-lkA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CHA-6w-4ch">
+                        <barButtonItem key="leftBarButtonItem" image="Cancel" id="Q6m-nl-ZCo">
+                            <connections>
+                                <action selector="pressCancel:" destination="FYB-4b-9ug" id="eiV-Ag-EBl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnZ-HL-3OZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016" y="178"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="JYJ-DR-w8N">
+            <objects>
+                <viewController id="xWQ-mT-JoM" customClass="NotificationViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="39m-dm-XzI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9Rg-w1-PRw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Moo-2c-ISb">
+                        <barButtonItem key="leftBarButtonItem" image="Cancel" id="RxZ-eH-xER">
+                            <connections>
+                                <action selector="NoticeBtonTapped:" destination="xWQ-mT-JoM" id="I9q-GE-isL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n1I-Tn-VdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794" y="179"/>
+        </scene>
+        <!--Tutor View Controller-->
+        <scene sceneID="coJ-Lj-RBr">
+            <objects>
+                <viewController id="Dzx-5K-xh7" customClass="TutorViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e8J-ca-rfT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qSr-i6-Y33"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5t7-0c-t06"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vz-IX-oGT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1489" y="953"/>
+        </scene>
+        <!--In Purchase View Controller-->
+        <scene sceneID="h0Y-AJ-z9x">
+            <objects>
+                <viewController id="rh7-k7-evK" customClass="InPurchaseViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PKi-Xb-dKT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sOn-ho-07A" userLabel="Upper Stack View">
+                                <rect key="frame" x="66" y="54" width="188.5" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="保存制限" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrE-o6-Mnp">
+                                        <rect key="frame" x="0.0" y="0.0" width="188.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-購入で可能になること-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkV-10-lL4">
+                                        <rect key="frame" x="0.0" y="28" width="188.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w0r-Yf-Cuh">
+                                        <rect key="frame" x="0.0" y="58.5" width="188.5" height="81.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOW-an-mis">
+                                                <rect key="frame" x="70" y="0.0" width="48" height="24"/>
+                                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" systemColor="systemYellowColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkB-zE-NYx">
+                                                <rect key="frame" x="70" y="34" width="48" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" systemColor="systemYellowColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kep-ZF-Dwa">
+                                                <rect key="frame" x="80" y="68" width="28.5" height="13.5"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Label">
+                                                        <attributes>
+                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <font key="NSFont" metaFont="message" size="11"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="aEK-7y-xcm" userLabel="Lower Stack View">
+                                <rect key="frame" x="54" y="290" width="212" height="160"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kCn-DQ-j0P">
+                                        <rect key="frame" x="0.0" y="0.0" width="212" height="116"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syO-lx-gk0">
+                                                <rect key="frame" x="0.0" y="0.0" width="212" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="復元する">
+                                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="restorePurchases" destination="rh7-k7-evK" eventType="touchUpInside" id="3Js-AL-ASZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cap-uc-TRh">
+                                                <rect key="frame" x="0.0" y="44" width="212" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <state key="normal" title="購入する">
+                                                    <color key="titleColor" red="0.4823529411764706" green="0.69411764705882351" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nonConsumablePurchase" destination="rh7-k7-evK" eventType="touchUpInside" id="STq-SH-JIf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3a-Hb-wGj">
+                                                <rect key="frame" x="0.0" y="88" width="212" height="28"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                <state key="normal" title="購入を中止する">
+                                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pressCancel:" destination="rh7-k7-evK" eventType="touchUpInside" id="z4W-dk-iql"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QU7-vN-rfd">
+                                        <rect key="frame" x="0.0" y="128" width="212" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ler-7e-9kc">
+                                                <rect key="frame" x="0.0" y="0.0" width="212" height="16"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="料金は、購入確認時に">
+                                                        <attributes>
+                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <font key="NSFont" usesAppearanceFont="YES"/>
+                                                            <font key="NSOriginalFont" metaFont="system"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egI-6l-e8n">
+                                                <rect key="frame" x="0.0" y="16" width="212" height="16"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="iTunes">
+                                                        <attributes>
+                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <font key="NSFont" metaFont="system"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="アカウントに請求されます。">
+                                                        <attributes>
+                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <font key="NSFont" usesAppearanceFont="YES"/>
+                                                            <font key="NSOriginalFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uvm-SX-lfm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Uvm-SX-lfm" firstAttribute="bottom" secondItem="aEK-7y-xcm" secondAttribute="bottom" constant="20" id="EIq-DT-iUy"/>
+                            <constraint firstItem="sOn-ho-07A" firstAttribute="centerX" secondItem="Uvm-SX-lfm" secondAttribute="centerX" id="PQC-ss-kmB"/>
+                            <constraint firstItem="sOn-ho-07A" firstAttribute="top" secondItem="Uvm-SX-lfm" secondAttribute="top" constant="10" id="SsX-03-SFH"/>
+                            <constraint firstItem="aEK-7y-xcm" firstAttribute="centerX" secondItem="Uvm-SX-lfm" secondAttribute="centerX" id="Zuy-kW-jZh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xRl-zm-TA4">
+                        <barButtonItem key="backBarButtonItem" title="購入中止" id="8WZ-U8-uzS"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="L1" destination="MkV-10-lL4" id="H2b-Dx-BPT"/>
+                        <outlet property="L2" destination="Ler-7e-9kc" id="wYj-pB-VaU"/>
+                        <outlet property="L3" destination="egI-6l-e8n" id="iVb-in-A8M"/>
+                        <outlet property="cancelButton" destination="Y3a-Hb-wGj" id="4qo-Xo-fyZ"/>
+                        <outlet property="localPrice" destination="gkB-zE-NYx" id="bk1-te-JIk"/>
+                        <outlet property="productDesc" destination="kep-ZF-Dwa" id="Rsr-ks-wIr"/>
+                        <outlet property="productName" destination="dOW-an-mis" id="AcT-Xd-pYi"/>
+                        <outlet property="purchaseButton" destination="cap-uc-TRh" id="kzy-5W-ktJ"/>
+                        <outlet property="restoreButton" destination="syO-lx-gk0" id="7hc-lg-eHs"/>
+                        <outlet property="unlockStatus" destination="GrE-o6-Mnp" id="ef8-7U-z7A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xk2-ac-osg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2805" y="-1752.4647887323945"/>
+        </scene>
+        <!--Eval View Controller-->
+        <scene sceneID="ncP-do-ZRT">
+            <objects>
+                <viewController id="olR-Yd-T4M" customClass="EvalViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lSV-hL-Sht">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IrH-uu-ewf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="68Z-XG-HGn">
+                        <barButtonItem key="rightBarButtonItem" title="完了" style="done" id="b9t-hg-gT1">
+                            <connections>
+                                <segue destination="Ru9-1K-wZ7" kind="unwind" unwindAction="unwindToHomeViewWithSender:" id="LeZ-iz-GFC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="BackToDataEntry" destination="b9t-hg-gT1" id="ilQ-ZS-Jjf"/>
+                        <segue destination="kyD-9V-beK" kind="show" identifier="showConfigOnTour" id="ceL-Hm-DdU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDh-LP-sGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Ru9-1K-wZ7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-4151" y="24"/>
+        </scene>
+        <!--Dat Entry View Controller-->
+        <scene sceneID="n2k-Pt-G3l">
+            <objects>
+                <viewController id="bBt-8y-dQ0" customClass="DatEntryViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ag6-Im-D9G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Ln-wT-krI">
+                                <rect key="frame" x="40" y="382" width="240" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYY-9d-P2u" userLabel="NoDrink">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <state key="normal" title="休肝日です。">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressNoDrinkBtn:" destination="bBt-8y-dQ0" eventType="touchUpInside" id="ahR-vQ-sqV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rC8-MN-Mzw">
+                                        <rect key="frame" x="0.0" y="39" width="240" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <state key="normal" title="レビュー画面へ移動">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressMoveButton:" destination="bBt-8y-dQ0" eventType="touchUpInside" id="Y5c-Zt-7gd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="bs5-HM-gII"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V6b-Iw-e0c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Ln-wT-krI" firstAttribute="leading" secondItem="V6b-Iw-e0c" secondAttribute="leading" constant="40" id="o0J-jJ-cK5"/>
+                            <constraint firstItem="V6b-Iw-e0c" firstAttribute="bottom" secondItem="1Ln-wT-krI" secondAttribute="bottom" constant="20" id="x3V-KX-UyC"/>
+                            <constraint firstItem="V6b-Iw-e0c" firstAttribute="trailing" secondItem="1Ln-wT-krI" secondAttribute="trailing" constant="40" id="z6a-j9-aAU"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ndL-rZ-lL0">
+                        <barButtonItem key="leftBarButtonItem" image="Cancel" style="done" id="7qm-q5-EdX">
+                            <connections>
+                                <action selector="cancelButton:" destination="bBt-8y-dQ0" id="mFs-dn-sLA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cancelBtn" destination="7qm-q5-EdX" id="bQU-9K-02X"/>
+                        <outlet property="moveToReview" destination="rC8-MN-Mzw" id="fLW-1K-N0w"/>
+                        <outlet property="noButton" destination="oYY-9d-P2u" id="fP3-Cy-gtd"/>
+                        <outlet property="viewBackGround" destination="ag6-Im-D9G" id="k3T-Tq-YFy"/>
+                        <segue destination="olR-Yd-T4M" kind="show" identifier="showEvalViewSegue" id="Mfk-RA-HVM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N6H-BT-4Ep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3009" y="-893"/>
+        </scene>
+        <!--Chart View Controller-->
+        <scene sceneID="0pc-kK-JUh">
+            <objects>
+                <viewController id="cC7-0t-L4l" customClass="ChartViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MzK-qV-xQE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CXc-mT-ndi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0zL-4b-iRK">
+                        <barButtonItem key="rightBarButtonItem" title="習慣へ" id="3bb-2O-61d">
+                            <connections>
+                                <segue destination="16L-Ya-r4b" kind="show" identifier="showSecondChart" id="h2h-Dk-KB6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="21w-uU-mtZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-733.125" y="-892.6056338028169"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="Xq3-7L-GpX">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="CAN-gk-tn9" customClass="TabViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="rXz-r0-0cU"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E2g-lq-Bsf">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Our-34-kF8" kind="relationship" relationship="viewControllers" id="rrk-uN-yVF"/>
+                        <segue destination="Zue-RV-Qzg" kind="relationship" relationship="viewControllers" id="PKt-CT-QdH"/>
+                        <segue destination="kyD-9V-beK" kind="relationship" relationship="viewControllers" id="3ih-Xg-13R"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHi-J1-Sa3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1620" y="-1829"/>
+        </scene>
+        <!--ホーム-->
+        <scene sceneID="dTl-T9-7eY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Our-34-kF8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ホーム" image="Home" id="4Ij-eb-yNa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tke-sG-JgO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ubL-kc-hMd" kind="relationship" relationship="rootViewController" id="zgJ-nb-wjm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSQ-UE-M7p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191.25" y="-1752.4647887323945"/>
+        </scene>
+        <!--グラフ-->
+        <scene sceneID="d48-fa-4bC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zue-RV-Qzg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="グラフ" image="ChartBarIcon" id="uJS-1s-B0n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AOA-6L-2bP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cC7-0t-L4l" kind="relationship" relationship="rootViewController" id="acd-HC-jR0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOL-wb-EIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1730.625" y="-892.6056338028169"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="WfH-RN-pLg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kyD-9V-beK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="設定" image="SettingBarIcon" id="3jP-cI-RDE"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="yxx-Ow-ApA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1bt-7A-ISK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xEh-S3-8X9" kind="relationship" relationship="rootViewController" id="hXp-ts-DdP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w1A-Nb-DVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481.25" y="-894.71830985915494"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ceL-Hm-DdU"/>
+        <segue reference="IxI-Sn-DpE"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Add" width="128" height="128"/>
+        <image name="Cancel" width="24" height="24"/>
+        <image name="ChartBarIcon" width="22" height="22"/>
+        <image name="Edit" width="24" height="24"/>
+        <image name="Home" width="24" height="24"/>
+        <image name="SettingBarIcon" width="24" height="24"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

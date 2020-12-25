@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NtC-MT-r1o">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ようこそ-->
+        <scene sceneID="3A6-xt-tqr">
+            <objects>
+                <viewController title="ようこそ" id="NtC-MT-r1o" customClass="Tutorial4ViewController" customModule="lastDrink" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D2a-Bn-3c0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="23" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gac-eI-PVw">
+                                <rect key="frame" x="10" y="20" width="300" height="416"/>
+                                <mutableString key="text">ご購入ありがとうごさいます。  本アプリ『適量君』の目的は、いろんな種類のお酒を飲んだ場合、飲んだ量を、自分の適量と簡単に比較できるようにすることです。お酒によってアルコール濃度は違うので、量ではなく純アルコール量を計算し比べます。 
+本アプリの製作では、厚生労働省のHPを参考にしました。飲酒と健康について有益な情報満載なので一読をお勧めします。（厚生労働省 e-ヘルスネット www.e-healthnet.mhlw.go.jp/information/alcohol)  当アプリはご自身の責任で、設定ご利用ください。ご利用の結果や影響については、当アプリの制作者は一切責任を負いません。適量を守り長くお酒を楽しみましょう。</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6J-0q-lob">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="9GE-pa-Lci"/>
+                                    <constraint firstAttribute="height" constant="44" id="sgY-zT-eae"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="説明を理解し利用を開始する。" width="335" id="FT7-Lg-ZJv">
+                                        <connections>
+                                            <action selector="start:" destination="NtC-MT-r1o" id="LGp-9F-yDc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z6J-0q-lob" firstAttribute="trailing" secondItem="pKN-FX-Jst" secondAttribute="trailing" id="614-e2-gvK"/>
+                            <constraint firstItem="Z6J-0q-lob" firstAttribute="top" secondItem="gac-eI-PVw" secondAttribute="bottom" id="F9w-Q7-3Cf"/>
+                            <constraint firstItem="Z6J-0q-lob" firstAttribute="bottom" secondItem="pKN-FX-Jst" secondAttribute="bottom" id="OUo-EN-sMT"/>
+                            <constraint firstItem="gac-eI-PVw" firstAttribute="top" secondItem="pKN-FX-Jst" secondAttribute="top" id="gB9-bw-J4k"/>
+                            <constraint firstItem="Z6J-0q-lob" firstAttribute="leading" secondItem="pKN-FX-Jst" secondAttribute="leading" id="nb4-NU-deB"/>
+                            <constraint firstItem="gac-eI-PVw" firstAttribute="leading" secondItem="pKN-FX-Jst" secondAttribute="leading" constant="10" id="nui-zy-ZhU"/>
+                            <constraint firstItem="pKN-FX-Jst" firstAttribute="trailing" secondItem="gac-eI-PVw" secondAttribute="trailing" constant="10" id="t5j-Yu-PFt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pKN-FX-Jst"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="irX-Zy-NJf">
+                        <barButtonItem key="leftBarButtonItem" title="戻る" id="nTS-3Y-Gua">
+                            <connections>
+                                <action selector="back:" destination="NtC-MT-r1o" id="us4-9E-CXH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6c9-Ea-Feg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6487.5" y="-460"/>
+        </scene>
+    </scenes>
+</document>

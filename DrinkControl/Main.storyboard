@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EeD-vc-FS7">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--減酒くんの紹介-->
+        <scene sceneID="3VV-ti-g3f">
+            <objects>
+                <viewController id="fuP-sH-rQA" customClass="ViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CfK-vM-ndg"/>
+                        <viewControllerLayoutGuide type="bottom" id="d5g-W7-B9J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i4p-rL-09Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jKP-XO-hro" userLabel="UpperPart">
+                                <rect key="frame" x="60" y="84" width="200" height="142"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="FLO-nH-1Bc">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="65.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="飲酒量の代わりに" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-8w-r5M">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.1118983105" green="0.45902961489999999" blue="0.73870784040000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="純アルコール量に基づく" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6M-GK-2ku">
+                                                <rect key="frame" x="0.0" y="22.5" width="200" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ドリンク数に換算" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="US0-vS-GF2">
+                                                <rect key="frame" x="0.0" y="45" width="200" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jn5-hA-rxY">
+                                        <rect key="frame" x="0.0" y="70.5" width="200" height="71.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☑️　正確な飲酒を記録。" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ8-Io-xO9">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.10980392156862745" green="0.45882352941176469" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☑️　減酒のお手伝い" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huZ-WJ-bQX">
+                                                <rect key="frame" x="0.0" y="25.5" width="200" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.85043728350000003" green="0.21816034619999999" blue="0.15920260550000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☑️　飲酒習慣を改善。" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0w-mY-Xf7">
+                                                <rect key="frame" x="0.0" y="51" width="200" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.97647058823529409" green="0.65098039215686276" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.97557228799999995" green="0.65252286199999998" blue="0.2178660929" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FLO-nH-1Bc" firstAttribute="centerX" secondItem="jKP-XO-hro" secondAttribute="centerX" id="bcr-gR-pLf"/>
+                                    <constraint firstItem="jn5-hA-rxY" firstAttribute="top" secondItem="FLO-nH-1Bc" secondAttribute="bottom" constant="15" id="jPU-Eh-j6h"/>
+                                    <constraint firstItem="jn5-hA-rxY" firstAttribute="centerX" secondItem="jKP-XO-hro" secondAttribute="centerX" id="kGj-VA-my3"/>
+                                    <constraint firstAttribute="width" constant="200" id="rCj-6P-rvq"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FS1-Z3-ftt" userLabel="MiddlePart">
+                                <rect key="frame" x="36" y="256" width="248" height="37"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disclaimer" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L55-ZO-2Mv">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSe-iu-JtS" userLabel="Help">
+                                        <rect key="frame" x="0.0" y="21" width="248" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOj-cW-ugy">
+                                <rect key="frame" x="36" y="498" width="248" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zWG-Mr-6H3" userLabel="height = 40"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="MoveToHome"/>
+                                <connections>
+                                    <action selector="backToMain:" destination="fuP-sH-rQA" eventType="touchUpInside" id="ghN-1n-bPh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8a-M6-WTv">
+                                <rect key="frame" x="36" y="428" width="248" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Svj-GI-Ws0" userLabel="height = 40"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="ShowTutor"/>
+                                <connections>
+                                    <segue destination="UwL-F0-Jta" kind="show" id="tuJ-zb-ULF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FS1-Z3-ftt" firstAttribute="leading" secondItem="i4p-rL-09Y" secondAttribute="leadingMargin" constant="20" id="2e7-SM-sIa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XOj-cW-ugy" secondAttribute="trailing" constant="20" id="9uY-qz-yw4"/>
+                            <constraint firstItem="FS1-Z3-ftt" firstAttribute="top" secondItem="jKP-XO-hro" secondAttribute="bottom" constant="30" id="PVK-kB-NcX" userLabel="MiddlePart.top = UpperPart.bottom + 10"/>
+                            <constraint firstItem="d5g-W7-B9J" firstAttribute="top" secondItem="XOj-cW-ugy" secondAttribute="bottom" constant="20" id="X1v-3U-9Tg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FS1-Z3-ftt" secondAttribute="trailing" constant="20" id="ZGN-u5-3hn"/>
+                            <constraint firstItem="P8a-M6-WTv" firstAttribute="leading" secondItem="i4p-rL-09Y" secondAttribute="leadingMargin" constant="20" id="hW8-wY-wRL"/>
+                            <constraint firstItem="jKP-XO-hro" firstAttribute="centerX" secondItem="i4p-rL-09Y" secondAttribute="centerX" id="j80-Eo-kpB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P8a-M6-WTv" secondAttribute="trailing" constant="20" id="jAW-Jj-RsD"/>
+                            <constraint firstItem="jKP-XO-hro" firstAttribute="top" secondItem="CfK-vM-ndg" secondAttribute="bottom" constant="40" id="lst-E1-UUy" userLabel="UpperPart.top = Top Layout Guide.bottom + 10"/>
+                            <constraint firstItem="XOj-cW-ugy" firstAttribute="top" secondItem="P8a-M6-WTv" secondAttribute="bottom" constant="20" id="m43-GU-wlZ"/>
+                            <constraint firstItem="XOj-cW-ugy" firstAttribute="leading" secondItem="i4p-rL-09Y" secondAttribute="leadingMargin" constant="20" id="vMI-9C-C2P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="減酒くんの紹介" id="Wyb-Ez-swu"/>
+                    <connections>
+                        <outlet property="backToMain" destination="XOj-cW-ugy" id="c2M-4w-dRv"/>
+                        <outlet property="disclmaimer" destination="L55-ZO-2Mv" id="wMV-sv-DBB"/>
+                        <outlet property="showWT" destination="P8a-M6-WTv" id="N07-hD-dhZ"/>
+                        <outlet property="whereIsHelp" destination="tSe-iu-JtS" id="Nzy-E7-pg6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TQd-gd-Z6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489" y="502"/>
+        </scene>
+        <!--ドリンク数とは？-->
+        <scene sceneID="vg2-S0-dMf">
+            <objects>
+                <viewController id="UwL-F0-Jta" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O1j-MJ-0gS"/>
+                        <viewControllerLayoutGuide type="bottom" id="0oX-ZJ-xlI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U8k-Gy-MXM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="x4r-b9-5zm">
+                                <rect key="frame" x="26" y="64" width="268" height="393.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xLd-Kb-FbO">
+                                        <rect key="frame" x="0.0" y="0.0" width="268" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="「酔い」をもたらすアルコールの" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faF-w5-8wq">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="濃度はお酒で異なります。" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COJ-qb-3ZD">
+                                                <rect key="frame" x="0.0" y="20.5" width="268" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JPk-vH-L4H">
+                                        <rect key="frame" x="0.0" y="61" width="268" height="102.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="そこで、飲酒の影響を、飲んだ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysn-3s-GPO" userLabel="そこで国際的標準では、">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お酒の量の代わりに、摂取した" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqO-Og-TMS">
+                                                <rect key="frame" x="0.0" y="20.5" width="268" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="摂取した純アルコール量で測定、" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbj-cx-hxB">
+                                                <rect key="frame" x="0.0" y="41" width="268" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ドリンク数で表示します。" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruu-mL-HzF" userLabel="その際の指標が、ドリンク数。">
+                                                <rect key="frame" x="0.0" y="61.5" width="268" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 式：1ドリンク=アルコール10g" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiG-QR-5Fm">
+                                                <rect key="frame" x="0.0" y="82" width="268" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wRY-UK-Q9T">
+                                        <rect key="frame" x="0.0" y="183.5" width="268" height="61.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="その上で厚生労働省は、平均的" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xaf-Rm-kOw">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本人の飲酒適量を、1日平均" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mM0-Gp-7xv">
+                                                <rect key="frame" x="0.0" y="20.5" width="268" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="２ドリンク程度としています。*" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Km-nf-zAc">
+                                                <rect key="frame" x="0.0" y="41" width="268" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xgX-Rs-T2A">
+                                        <rect key="frame" x="0.0" y="265" width="268" height="58.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="「減酒くん」でも「１日の上限" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXq-SF-ULv">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標」として採用していますが、" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOg-e1-XwI">
+                                                <rect key="frame" x="0.0" y="19.5" width="268" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定画面で変更できます。" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKR-ez-8ab">
+                                                <rect key="frame" x="0.0" y="39" width="268" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rNh-QO-2jK">
+                                        <rect key="frame" x="0.0" y="343.5" width="268" height="50"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*詳細は【飲酒｜e-ヘルスネット】で検索！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bb-As-3aN">
+                                <rect key="frame" x="26" y="412" width="268" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="x4r-b9-5zm" firstAttribute="top" secondItem="O1j-MJ-0gS" secondAttribute="bottom" constant="20" id="CTU-nd-e3o"/>
+                            <constraint firstItem="x4r-b9-5zm" firstAttribute="leading" secondItem="U8k-Gy-MXM" secondAttribute="leadingMargin" constant="10" id="K5U-eV-2vV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x4r-b9-5zm" secondAttribute="trailing" constant="10" id="X2H-NC-Dyt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ドリンク数とは？" id="i53-ye-sL0">
+                        <barButtonItem key="rightBarButtonItem" title="機能へ" id="rhl-f9-loK">
+                            <connections>
+                                <segue destination="N0m-27-pnJ" kind="show" id="NQe-jG-Xj4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qEg-lJ-Dvn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2303" y="502"/>
+        </scene>
+        <!--入力画面-->
+        <scene sceneID="MZC-5W-GSX">
+            <objects>
+                <viewController id="thZ-Y9-eju" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QO1-Ix-OTS"/>
+                        <viewControllerLayoutGuide type="bottom" id="krl-oG-CjB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QWR-Kk-IPq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qd7-ux-cnr">
+                                <rect key="frame" x="38.5" y="64" width="243" height="42"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AZD-Vj-P99" userLabel="TextView">
+                                        <rect key="frame" x="0.0" y="0.0" width="243" height="42"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="uj2-QE-Rx3" userLabel="Description">
+                                                <rect key="frame" x="0.0" y="0.0" width="243" height="42"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="飲んだお酒の記録とレビュー。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePY-7d-ayh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="243" height="42"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AZD-Vj-P99" firstAttribute="centerX" secondItem="qd7-ux-cnr" secondAttribute="centerX" id="Ech-Nu-etS"/>
+                                    <constraint firstAttribute="height" constant="42" id="Jfj-sR-8Zv"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="入力" translatesAutoresizingMaskIntoConstraints="NO" id="Cw6-No-ldS">
+                                <rect key="frame" x="36" y="126" width="248" height="422"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="krl-oG-CjB" firstAttribute="top" secondItem="Cw6-No-ldS" secondAttribute="bottom" constant="20" id="0Pq-Je-V1f"/>
+                            <constraint firstItem="Cw6-No-ldS" firstAttribute="top" secondItem="qd7-ux-cnr" secondAttribute="bottom" constant="20" id="2Rc-WL-Bqt"/>
+                            <constraint firstItem="qd7-ux-cnr" firstAttribute="top" secondItem="QO1-Ix-OTS" secondAttribute="bottom" constant="20" id="AGI-Ui-lrW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cw6-No-ldS" secondAttribute="trailing" constant="20" id="QfZ-Wa-F3W"/>
+                            <constraint firstItem="Cw6-No-ldS" firstAttribute="leading" secondItem="QWR-Kk-IPq" secondAttribute="leadingMargin" constant="20" id="Ydj-uN-KuL"/>
+                            <constraint firstItem="qd7-ux-cnr" firstAttribute="centerX" secondItem="QWR-Kk-IPq" secondAttribute="centerX" id="fU4-ys-FxN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="入力画面" id="e04-ZL-J7j"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8X0-NP-zn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3892.5" y="505.98591549295776"/>
+        </scene>
+        <!--ホーム画面-->
+        <scene sceneID="Fc9-Qa-YvV">
+            <objects>
+                <viewController id="N0m-27-pnJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A9h-bA-jW0"/>
+                        <viewControllerLayoutGuide type="bottom" id="0IX-MU-ewH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g3g-yr-lbk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FRD-tQ-Fr4" userLabel="TextView">
+                                <rect key="frame" x="36" y="64" width="248" height="42"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="XSI-ZS-o91" userLabel="Description">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="42"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="飲んだお酒の情報を" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq0-9s-B7E">
+                                                <rect key="frame" x="0.0" y="0.0" width="248" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表示します。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJX-ET-ACK">
+                                                <rect key="frame" x="0.0" y="21.5" width="248" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="wdF-sY-6BB"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ホーム" translatesAutoresizingMaskIntoConstraints="NO" id="Bky-lY-Ulb">
+                                <rect key="frame" x="58" y="114" width="204" height="401"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bky-lY-Ulb" firstAttribute="top" secondItem="FRD-tQ-Fr4" secondAttribute="bottom" constant="8" id="0jb-8A-Xk6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FRD-tQ-Fr4" secondAttribute="trailing" constant="20" id="2GK-pG-QZ8"/>
+                            <constraint firstItem="Bky-lY-Ulb" firstAttribute="centerX" secondItem="FRD-tQ-Fr4" secondAttribute="centerX" id="3xN-Bh-Yhj"/>
+                            <constraint firstItem="Bky-lY-Ulb" firstAttribute="leading" secondItem="g3g-yr-lbk" secondAttribute="leadingMargin" constant="42" id="IUL-aw-3Xn"/>
+                            <constraint firstItem="FRD-tQ-Fr4" firstAttribute="top" secondItem="A9h-bA-jW0" secondAttribute="bottom" constant="20" id="Pl3-2G-yna"/>
+                            <constraint firstItem="0IX-MU-ewH" firstAttribute="top" secondItem="Bky-lY-Ulb" secondAttribute="bottom" constant="53" id="iQg-vz-7u8"/>
+                            <constraint firstItem="FRD-tQ-Fr4" firstAttribute="leading" secondItem="g3g-yr-lbk" secondAttribute="leadingMargin" constant="20" id="uAY-Do-Kbp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ホーム画面" id="pcB-kw-IYj">
+                        <barButtonItem key="rightBarButtonItem" title="次へ" id="NYR-tC-lzG">
+                            <connections>
+                                <segue destination="thZ-Y9-eju" kind="show" id="DUg-8b-7Im"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Mn-aJ-eQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3121.875" y="505.98591549295776"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0G1-WW-Kmi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EeD-vc-FS7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="POK-pB-LEq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fuP-sH-rQA" kind="relationship" relationship="rootViewController" id="A1z-UC-FUq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUo-Dr-ZNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656.25" y="498.59154929577466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ホーム" width="828" height="1792"/>
+        <image name="入力" width="828" height="1792"/>
+    </resources>
+</document>
