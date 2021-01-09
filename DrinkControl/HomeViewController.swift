@@ -286,28 +286,27 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
 */
    // MARK:- 新しいバージョンの情報を表示する
     
-    func showWhatsNew() {
-        let titl = "Ver."+appVersion!+"の新機能"
-        let msg:[(title:String,subtitle:String,icon:String)] = [("ホーム画面を一新しました。","過去の飲酒データをタップしても、編集画面に飛べます。","wine"),
-                                                    ("通知機能","指定時刻に、飲酒の反省を読むよう促します。（設定＞通知の設定）","bell"),("休肝日の入力","タップするだけで飲酒ゼロを入力します。","dash"),
-                                                    ("その他","追加・編集できるお酒の種類を増やしました。他にも多くの改良があります。","beer")]
+    func showWhatsNew(titl:String,compButtonTitle:String,  msg:[(title:String,subtitle:String,icon:String)]) {
+        
         // Initialize default Configuration
         
         let configuration = WhatsNewViewController.Configuration(
             theme: .default,
             completionButton: .init(
                 // Completion Button Title
-                title: "使ってみる",
+                title: compButtonTitle,
                 // Completion Button Action
                 action: .dismiss
             )
         )
+        
         
         // Initialize WhatsNew
         let whatsNew = WhatsNew(
             // The Title
             title: titl,
             // The features you want to showcase
+            
             items: [
                 WhatsNew.Item(
                     title: msg[0].title,
@@ -341,7 +340,8 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         // Present it 🤩
         self.present(whatsNewViewController, animated: true)
     }
-   
+    
+    
     // MARK: - View Rotation
     
     override func viewDidLoad() {
@@ -380,7 +380,12 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         drinkCalendar.reloadData()
         //MARK:-　バージョンの情報
      if !shouldShowCoarch, !(userType == .newUser) , shouldShowVerInfo  {
-        showWhatsNew()
+        let titl = "Ver."+appVersion!+"の新機能"
+        let compButtonTitle = "続ける"
+        let msg:[(title:String,subtitle:String,icon:String)] = [("ホーム画面を一新しました。","過去の飲酒データをタップしても、編集画面に飛べます。","wine"),
+                                                    ("通知機能","指定時刻に、飲酒の反省を読むよう促します。（設定＞通知の設定）","bell"),("休肝日の入力","タップするだけで飲酒ゼロを入力します。","dash"),
+                                                    ("その他","追加・編集できるお酒の種類を増やしました。他にも多くの改良があります。","beer")]
+        showWhatsNew(titl: titl, compButtonTitle: compButtonTitle, msg: msg)
         shouldShowVerInfo = false
      }
     }
@@ -441,12 +446,12 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
                 case .currentUser:
                     titl = "新Ver."+appVersion!+"の使用ガイドを開始。"
                     msg = "操作画面が一部変更し新規機能も追加されました。\nなお、無料版の保存回数は最大2回に変更されています。\nこれを機会にご購入を是非ご検討ください。"
+                    self.present(.okAlert(title:titl, message:msg ,astyle: .alert, okstr:"ツアーを開始(約2分）", okHandler: {(action) -> Void in  self.coachMarksController.start(in: .currentWindow(of: self))}))
                 case .purchasedUser:
                     titl = "新Ver."+appVersion!+"の使用ガイドを開始。"
                     msg = "操作画面が一部変更し新規機能も追加されました。。\n少しの間お付き合いください。"
-                    
+                    self.present(.okAlert(title:titl, message:msg ,astyle: .alert, okstr:"ツアーを開始(約2分）", okHandler: {(action) -> Void in  self.coachMarksController.start(in: .currentWindow(of: self))}))
                 }
-                self.present(.okAlert(title:titl, message:msg ,astyle: .alert, okstr:"ツアーを開始(約2分）", okHandler: {(action) -> Void in  self.coachMarksController.start(in: .currentWindow(of: self))}))
             }
             return
         }

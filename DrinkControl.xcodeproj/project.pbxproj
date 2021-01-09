@@ -11,9 +11,7 @@
 		FF05078F25358319002D6BED /* IntroInPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05078E25358318002D6BED /* IntroInPurchaseViewController.swift */; };
 		FF0AC42E2575EC1300A80400 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0AC42D2575EC1300A80400 /* TabViewController.swift */; };
 		FF0AC43025771F7500A80400 /* 782-check-mark-success.json in Resources */ = {isa = PBXBuildFile; fileRef = FF0AC42F25771F7500A80400 /* 782-check-mark-success.json */; };
-		FF0FA5982592D33500253816 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0FA5972592D33500253816 /* testViewController.swift */; };
 		FF138FC124B8031000799829 /* EvalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF138FC024B8031000799829 /* EvalViewController.swift */; };
-		FF15D0ED24C14EB300ADA952 /* WT01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF15D0EC24C14EB300ADA952 /* WT01ViewController.swift */; };
 		FF15D0F124C163C900ADA952 /* WT03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF15D0F024C163C900ADA952 /* WT03ViewController.swift */; };
 		FF237C91258C4276009E4E83 /* lf30_editor_st8bizys.json in Resources */ = {isa = PBXBuildFile; fileRef = FF237C90258C4276009E4E83 /* lf30_editor_st8bizys.json */; };
 		FF23F479258EBE5A00B1349C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FF23F478258EBE5A00B1349C /* Realm */; };
@@ -76,9 +74,7 @@
 		FF0AC42D2575EC1300A80400 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		FF0AC42F25771F7500A80400 /* 782-check-mark-success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "782-check-mark-success.json"; sourceTree = "<group>"; };
 		FF0D781B23F0D90700D03F50 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		FF0FA5972592D33500253816 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		FF138FC024B8031000799829 /* EvalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvalViewController.swift; sourceTree = "<group>"; };
-		FF15D0EC24C14EB300ADA952 /* WT01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT01ViewController.swift; sourceTree = "<group>"; };
 		FF15D0F024C163C900ADA952 /* WT03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT03ViewController.swift; sourceTree = "<group>"; };
 		FF1AFC5524BADF65002005BA /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		FF237C90258C4276009E4E83 /* lf30_editor_st8bizys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lf30_editor_st8bizys.json; sourceTree = "<group>"; };
@@ -218,10 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				FF04AEF8246D189B00F19D36 /* StartUp.storyboard */,
-				FF0FA5972592D33500253816 /* testViewController.swift */,
 				FF87D02A24C2A7E300EF8F4D /* WT04ViewController.swift */,
 				FF15D0F024C163C900ADA952 /* WT03ViewController.swift */,
-				FF15D0EC24C14EB300ADA952 /* WT01ViewController.swift */,
 				FFDA937925426A530064ED6C /* WT02ViewController.swift */,
 				FFDA937B25426C5F0064ED6C /* WT02AViewController.swift */,
 			);
@@ -461,7 +455,6 @@
 				FFE56C7F2395EDDD00873D09 /* SettingViewController.swift in Sources */,
 				FFD4A04D23A0B8FD008C7043 /* NetworkActivityIndicatorManager.swift in Sources */,
 				FF138FC124B8031000799829 /* EvalViewController.swift in Sources */,
-				FF0FA5982592D33500253816 /* testViewController.swift in Sources */,
 				FF5B359A20931186009AB396 /* Drink.swift in Sources */,
 				FFD5ED5125085F21008BADA7 /* NamingViewController.swift in Sources */,
 				FFD4A04B23A0B464008C7043 /* InPurchaseViewController.swift in Sources */,
@@ -478,7 +471,6 @@
 				FF0AC42E2575EC1300A80400 /* TabViewController.swift in Sources */,
 				FFD23FFE24B5A01500988934 /* SecondChartViewController.swift in Sources */,
 				FF76A06B2585AEE50065E6E8 /* NotificationViewController.swift in Sources */,
-				FF15D0ED24C14EB300ADA952 /* WT01ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

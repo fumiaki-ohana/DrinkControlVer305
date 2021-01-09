@@ -9,7 +9,6 @@ import UIKit
 import RealmSwift
 import SwiftyStoreKit
 import SwiftTheme
-//import Siren
 import UserNotifications
 import StoreKit
 
