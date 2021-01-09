@@ -212,14 +212,14 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgB-2a-iqY" userLabel="L4">
                                         <rect key="frame" x="12.333333333333343" y="120.66666666666669" width="349.66666666666663" height="54"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="それでは、">
+                                            <fragment content="最初に">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="27" name="HiraginoSans-W3"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="具体的な減酒の目標">
+                                            <fragment content="減酒の目標">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="27" name="HiraginoSans-W3"/>
@@ -338,141 +338,10 @@
                                     <constraint firstAttribute="width" constant="60" id="ogv-7W-0Uv"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AA-Ow-ntg" userLabel="L1">
-                                <rect key="frame" x="20" y="100" width="374" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="eSl-B3-hhZ"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="使い方">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="24"/>
-                                            <font key="NSOriginalFont" metaFont="system" size="24"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuC-dA-vfH" userLabel="L2">
-                                <rect key="frame" x="20" y="150" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="eUQ-Rb-pSo"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="①毎朝、静かな環境で前日分を">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="19" name="HiraMaruProN-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="一括入力。">
-                                        <attributes>
-                                            <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="19" name="HiraMaruProN-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZp-jE-f65" userLabel="L3">
-                                <rect key="frame" x="20" y="200" width="374" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="BJy-Mm-NEU"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="翌朝入力に備え、飲んでる最中でも量に意識が向かいます。">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="13" name="HiraMaruProN-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eil-JR-8m4" userLabel="L4">
-                                <rect key="frame" x="20" y="225" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="C8N-f5-tbq"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="飲みながら飲酒量を入力しすると、ただの記録だけで終わりがち。">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="menu" size="14"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uj2-U0-0uq" userLabel="L5">
-                                <rect key="frame" x="20" y="280" width="374" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="kjI-Ye-GKB"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="②">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="HiraMaruProN-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="目標">
-                                        <attributes>
-                                            <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="HiraMaruProN-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="と比べます。">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="HiraMaruProN-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSm-T1-Bwj" userLabel="L6">
-                                <rect key="frame" x="20" y="315" width="374" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="DOJ-R0-M0i"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="③">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="HiraMaruProN-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="反省">
-                                        <attributes>
-                                            <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="HiraMaruProN-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="を入力します。">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="HiraMaruProN-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOE-15-HVW">
-                                <rect key="frame" x="20" y="758" width="374" height="44"/>
+                                <rect key="frame" x="40" y="371" width="334" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="hee-3T-dvg" userLabel="height = 40"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="mTC-gW-sgX"/>
+                                    <constraint firstAttribute="height" constant="100" id="6DH-vu-uTg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="test"/>
@@ -480,57 +349,19 @@
                                     <segue destination="V6Y-10-PUs" kind="show" identifier="moveToMain" id="XfS-e8-BOa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mY-Cb-adw" userLabel="L7">
-                                <rect key="frame" x="20" y="354" width="216" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="④飲む前に">
-                                        <attributes>
-                                            <font key="NSFont" size="18" name="HiraMaruProN-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="読み返します。">
-                                        <attributes>
-                                            <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="HiraMaruProN-W4"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="63A-l5-qlr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OAu-Ya-NBP" firstAttribute="trailing" secondItem="63A-l5-qlr" secondAttribute="trailing" id="0Gu-Gf-edq"/>
-                            <constraint firstItem="uj2-U0-0uq" firstAttribute="top" secondItem="eil-JR-8m4" secondAttribute="bottom" constant="15" id="2hz-1D-Pbz"/>
-                            <constraint firstItem="63A-l5-qlr" firstAttribute="trailing" secondItem="vuC-dA-vfH" secondAttribute="trailing" constant="20" id="8Ze-js-Y7n"/>
                             <constraint firstItem="n9b-PZ-J8F" firstAttribute="top" secondItem="63A-l5-qlr" secondAttribute="top" constant="20" id="9vl-aH-3oH"/>
-                            <constraint firstItem="vuC-dA-vfH" firstAttribute="leading" secondItem="63A-l5-qlr" secondAttribute="leading" constant="20" id="AHF-zo-8iq"/>
-                            <constraint firstItem="eil-JR-8m4" firstAttribute="top" secondItem="fZp-jE-f65" secondAttribute="bottom" constant="10" id="BR7-mV-dMN"/>
-                            <constraint firstItem="63A-l5-qlr" firstAttribute="trailing" secondItem="eil-JR-8m4" secondAttribute="trailing" constant="20" id="DyF-05-dds"/>
-                            <constraint firstItem="63A-l5-qlr" firstAttribute="trailing" secondItem="1AA-Ow-ntg" secondAttribute="trailing" constant="20" id="EFL-It-Kwp"/>
+                            <constraint firstItem="hOE-15-HVW" firstAttribute="leading" secondItem="63A-l5-qlr" secondAttribute="leading" constant="40" id="C9x-1n-Ddx"/>
                             <constraint firstItem="OAu-Ya-NBP" firstAttribute="bottom" secondItem="63A-l5-qlr" secondAttribute="bottom" id="KpQ-FF-u6P"/>
-                            <constraint firstItem="uj2-U0-0uq" firstAttribute="leading" secondItem="63A-l5-qlr" secondAttribute="leading" constant="20" id="LDQ-wG-Lbc"/>
-                            <constraint firstItem="fZp-jE-f65" firstAttribute="top" secondItem="vuC-dA-vfH" secondAttribute="bottom" constant="10" id="RaX-sz-zNa"/>
-                            <constraint firstItem="eil-JR-8m4" firstAttribute="leading" secondItem="63A-l5-qlr" secondAttribute="leading" constant="20" id="Wq4-ex-Oz1"/>
-                            <constraint firstItem="63A-l5-qlr" firstAttribute="trailing" secondItem="YSm-T1-Bwj" secondAttribute="trailing" constant="20" id="bGr-0W-4Ol"/>
+                            <constraint firstItem="hOE-15-HVW" firstAttribute="centerY" secondItem="9ku-jR-d64" secondAttribute="centerY" id="Onp-DJ-fnc"/>
+                            <constraint firstItem="63A-l5-qlr" firstAttribute="trailing" secondItem="hOE-15-HVW" secondAttribute="trailing" constant="40" id="QiU-mT-Lkq"/>
                             <constraint firstItem="OAu-Ya-NBP" firstAttribute="leading" secondItem="63A-l5-qlr" secondAttribute="leading" id="eOp-hg-ylP"/>
-                            <constraint firstItem="63A-l5-qlr" firstAttribute="trailing" secondItem="fZp-jE-f65" secondAttribute="trailing" constant="20" id="ecp-Op-BlK"/>
-                            <constraint firstItem="1AA-Ow-ntg" firstAttribute="leading" secondItem="63A-l5-qlr" secondAttribute="leading" constant="20" id="hvt-Ut-Oz2"/>
-                            <constraint firstItem="hOE-15-HVW" firstAttribute="leading" secondItem="9ku-jR-d64" secondAttribute="leading" constant="20" id="kDF-n8-mPR"/>
                             <constraint firstItem="OAu-Ya-NBP" firstAttribute="top" secondItem="63A-l5-qlr" secondAttribute="top" id="n1c-3h-hwq"/>
-                            <constraint firstItem="YSm-T1-Bwj" firstAttribute="leading" secondItem="63A-l5-qlr" secondAttribute="leading" constant="20" id="n4G-DL-men"/>
-                            <constraint firstAttribute="trailing" secondItem="hOE-15-HVW" secondAttribute="trailing" constant="20" id="w2O-Oy-DXZ"/>
-                            <constraint firstItem="YSm-T1-Bwj" firstAttribute="top" secondItem="uj2-U0-0uq" secondAttribute="bottom" constant="15" id="wAK-fd-TBf"/>
-                            <constraint firstAttribute="bottom" secondItem="hOE-15-HVW" secondAttribute="bottom" constant="40" id="wAv-tJ-ejF"/>
                             <constraint firstItem="n9b-PZ-J8F" firstAttribute="centerX" secondItem="9ku-jR-d64" secondAttribute="centerX" id="ye9-XO-32T"/>
-                            <constraint firstItem="1AA-Ow-ntg" firstAttribute="top" secondItem="n9b-PZ-J8F" secondAttribute="bottom" constant="20" id="ymA-oL-wCw"/>
-                            <constraint firstItem="fZp-jE-f65" firstAttribute="leading" secondItem="63A-l5-qlr" secondAttribute="leading" constant="20" id="yu5-ed-fP2"/>
-                            <constraint firstItem="63A-l5-qlr" firstAttribute="trailing" secondItem="uj2-U0-0uq" secondAttribute="trailing" constant="20" id="zSX-1B-quj"/>
-                            <constraint firstItem="vuC-dA-vfH" firstAttribute="top" secondItem="1AA-Ow-ntg" secondAttribute="bottom" constant="20" id="zv4-ZO-cAZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NJD-oR-qGv"/>

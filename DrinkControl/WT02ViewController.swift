@@ -13,14 +13,17 @@ class WT02ViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     let titleStr = "続く"
+    let buttonTitle = "目標を設定してみる"
+    
     //MARK:- What's New
     
     func showWhatsNew() {
-        let titl = "減酒くんの機能"
+        let titl = "減酒くんについて"
+       
         let msg:[(title:String,subtitle:String,icon:String)] =
-            [("習慣づけをお手伝い","『一括入力→目標と比べる→反省→飲む前に読み返す。』記録だけではお酒は減りません！","good"),
-             ("お酒を見える化","お酒の種類に関わらず、純アルコール量に換算。休肝日や飲み過ぎ日もグラフ表示","ChartBarIcon"),("かんたん入力","ワンタップで入力する量を自由に設定。入力の指定時間を通知","dash"),
-             ("自分好みに変える","豊富なカスタマイズ機能。よく飲むお酒を選び、アルコール濃度も個別調整。7種類のアプリ色テーマ・・ほんの一例です。","Paint")]
+            [("記録だけでは減りません！","一括入力→目標と比べる→反省→飲む前に読み返す。習慣づけをお手伝い","good"),
+             ("お酒を見える化","飲んだお酒を純アルコール量に換算。休肝日や飲み過ぎ日もグラフ表示","ChartBarIcon"),("かんたん入力","ワンタップで好みの入力量を設定。休肝日は一発入力","dash"),
+             ("自分好みに変える","お酒の変更、アルコール濃度も個別調整。7種類のアプリ色テーマETC・・カスタマイズ可能。","Paint")]
         
         // Initialize default Configuration
         
@@ -71,19 +74,17 @@ class WT02ViewController: UIViewController {
         // Present it 🤩
         self.present(whatsNewViewController, animated: true)
     }
-    
-    
-    
+  
+    // MARK:- View Rotation
     override func viewDidAppear(_ animated: Bool) {
         showWhatsNew()
     }
-    
-    
+     
     override func viewDidLoad() {
         self.overrideUserInterfaceStyle = .light
         super.viewDidLoad()
         setButtonProperties(button: nextButton,rgbaStr:"#F99F48" )
-        nextButton.setTitle( "減酒のための目標設定へ", for: .normal)
+        nextButton.setTitle( buttonTitle, for: .normal)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

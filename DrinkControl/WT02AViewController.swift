@@ -17,7 +17,7 @@ class WT02AViewController: UIViewController {
         super.viewDidLoad()
         showAnimation(parentView:self.view, lottieJason: "3152-star-success",fullScreen:true)
         setButtonProperties(button: nextButton,rgbaStr:"#F99F48" )
-        nextButton.setTitle( "アプリの使い方ツアーへ", for: .normal)
+        nextButton.setTitle( "ホーム画面へ", for: .normal)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -14,12 +14,13 @@ class WT04ViewController: FormViewController {
     @IBOutlet weak var nextButton: UIButton!
     let header1 = "休肝日は一週間の目標日数、多量飲酒は適量の倍数を設定してください。"
     let footer1 = "厚生労働省の「健康日本21」は、平均１日あたり純アルコール量60g(通常適量20gの3倍）飲む人を多量飲酒者と呼びます。ただし大きな個人差はあります。"
+    let buttonTitle = "次で最後です"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.overrideUserInterfaceStyle = .light
         setButtonProperties(button: nextButton,rgbaStr:"#F99F48" )
-        nextButton.setTitle( "次で最後です", for: .normal)
+        nextButton.setTitle(buttonTitle , for: .normal)
         tableView.frame =
             CGRect(x:10, y: 160, width: self.view.frame.width-20, height: self.view.frame.height - 290)
         self.tableView?.rowHeight = 40.0
