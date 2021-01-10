@@ -31,8 +31,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
     // Coarch properties
        private var pointOfInterest:UIView!
        let coachMarksController = CoachMarksController()
-      let hintStr  = ["豊富な設定オプションの中から一部だけを紹介します。\nお好きな色テーマが５種類から選べます。","カレンダーの移動方向など細かな設定ができます。","表示するお酒を、20種類のお酒の中から選べます。(2種類を変更可能)",
-        "アルコール濃度、上限、休肝日、飲み過ぎ基準などなど自分好みで設定できます。","飲酒のレビュー時間や、前回の飲酒の反省を通知機能で表示します。希望の場合は次のダイアログで許可を選んでください。iPhoneの設定＞通知画面から後から変更もできます。"]
+      let hintStr  = ["お好きな色テーマやお酒の変更、などなど豊富な設定オプションがあります。\n試してみてください。"]
     
     // MARK:- Methods
     
@@ -110,9 +109,12 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
         //指し示す場所を決める。　今回はpointOfInterestすなわちButtonga指し示される
         var point:UIView!
         switch index {
+      //  case 0:
+     //       point = navigationItem.titleView
         case 0:
-            let p = form.rowBy(tag: "theme")
-            point = p?.baseCell
+           let p = form.rowBy(tag: "theme")
+          point = p?.baseCell
+        /*
         case 1:
             let p = form.rowBy(tag: "calendar")
             point = p?.baseCell
@@ -125,7 +127,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
         case 4:
             let p = form.rowBy(tag: "AlchoolDetail")
             point = p?.baseCell
- 
+        */
         default:break
         }
         return coachMarksController.helper.makeCoachMark(for: point)
@@ -158,18 +160,19 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
         }
     }
  */
- /*
+ 
     func coachMarksController(_ coachMarksController: CoachMarksController,
                               willShow coachMark: inout CoachMark,
                               beforeChanging change: ConfigurationChange,
                               at index: Int) {
       //  var  point:UIView!
-        if index == 4 {
+        if index == 0 {
             coachMark.arrowOrientation = .top
+            
 
         }
     }
- */
+
 /*
     func coachMarksController(_ coachMarksController: CoachMarksController,
                               willLoadCoachMarkAt index: Int) -> Bool {
@@ -210,17 +213,12 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
     }
     
     func coarchWrapUp() {
-        
-        
-          
         let actionSheet = UIAlertController(
             title: "🎊ツアーが完了しました。",
             message: "🛒保存回数の上限ロック（２回まで）解除は、【App内購入の説明】をご覧ください。説明だけで課金はされません。",
             preferredStyle: .alert)
         
         if unlocked {
-        
-            
             actionSheet.addAction(
                 UIAlertAction(
                     title:OKstr,
@@ -260,6 +258,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
      
             self.tableView.reloadData()
             guard !shouldShowCoarch else {
+          
             DispatchQueue.main.async { // テーブルをスクロールする。
               let indexPath = IndexPath(row: 0, section: 1)
                 self.tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.top, animated: false)

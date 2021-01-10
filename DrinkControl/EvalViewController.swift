@@ -97,15 +97,13 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
         return (bodyView: coachViews.bodyView, arrowView: coachViews.arrowView)
     }
       
-     func coachMarksController(_ coachMarksController: CoachMarksController,
-                               didEndShowingBySkipping skipped: Bool) {
+    func coachMarksController(_ coachMarksController: CoachMarksController,
+                              didEndShowingBySkipping skipped: Bool) {
         justFinishedCoachCources = .dataEntry
-       let index = navigationController!.viewControllers.count - 3
+        let index = navigationController!.viewControllers.count - 3
         navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)
-     
-        }
-
-    
+        
+    }
 
     // MARK:- View Rotation
     

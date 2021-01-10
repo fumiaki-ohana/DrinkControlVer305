@@ -320,59 +320,6 @@
             </objects>
             <point key="canvasLocation" x="-100.00000000000001" y="654.91071428571422"/>
         </scene>
-        <!--Page2-->
-        <scene sceneID="mnW-pu-9zh">
-            <objects>
-                <viewController title="Page2" id="VKR-KW-TT4" customClass="WT02AViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9ku-jR-d64">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="halftone-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="OAu-Ya-NBP">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="n9b-PZ-J8F">
-                                <rect key="frame" x="177" y="20" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="GEE-JH-Yul"/>
-                                    <constraint firstAttribute="width" constant="60" id="ogv-7W-0Uv"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOE-15-HVW">
-                                <rect key="frame" x="40" y="371" width="334" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="6DH-vu-uTg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="test"/>
-                                <connections>
-                                    <segue destination="V6Y-10-PUs" kind="show" identifier="moveToMain" id="XfS-e8-BOa"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="63A-l5-qlr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="OAu-Ya-NBP" firstAttribute="trailing" secondItem="63A-l5-qlr" secondAttribute="trailing" id="0Gu-Gf-edq"/>
-                            <constraint firstItem="n9b-PZ-J8F" firstAttribute="top" secondItem="63A-l5-qlr" secondAttribute="top" constant="20" id="9vl-aH-3oH"/>
-                            <constraint firstItem="hOE-15-HVW" firstAttribute="leading" secondItem="63A-l5-qlr" secondAttribute="leading" constant="40" id="C9x-1n-Ddx"/>
-                            <constraint firstItem="OAu-Ya-NBP" firstAttribute="bottom" secondItem="63A-l5-qlr" secondAttribute="bottom" id="KpQ-FF-u6P"/>
-                            <constraint firstItem="hOE-15-HVW" firstAttribute="centerY" secondItem="9ku-jR-d64" secondAttribute="centerY" id="Onp-DJ-fnc"/>
-                            <constraint firstItem="63A-l5-qlr" firstAttribute="trailing" secondItem="hOE-15-HVW" secondAttribute="trailing" constant="40" id="QiU-mT-Lkq"/>
-                            <constraint firstItem="OAu-Ya-NBP" firstAttribute="leading" secondItem="63A-l5-qlr" secondAttribute="leading" id="eOp-hg-ylP"/>
-                            <constraint firstItem="OAu-Ya-NBP" firstAttribute="top" secondItem="63A-l5-qlr" secondAttribute="top" id="n1c-3h-hwq"/>
-                            <constraint firstItem="n9b-PZ-J8F" firstAttribute="centerX" secondItem="9ku-jR-d64" secondAttribute="centerX" id="ye9-XO-32T"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="NJD-oR-qGv"/>
-                    <connections>
-                        <outlet property="nextButton" destination="hOE-15-HVW" id="7NU-Tw-hc8"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IX1-Cp-pdR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2502.898550724638" y="654.91071428571422"/>
-        </scene>
         <!--Page4-->
         <scene sceneID="P0g-tL-GCj">
             <objects>
@@ -452,7 +399,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <connections>
-                                    <segue destination="VKR-KW-TT4" kind="show" id="cmA-wm-hnV"/>
+                                    <action selector="pressButton:" destination="0Kl-if-nVd" eventType="touchUpInside" id="bhc-Zz-6oo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -476,6 +423,7 @@
                     <navigationItem key="navigationItem" id="hm6-05-CoP"/>
                     <connections>
                         <outlet property="nextButton" destination="9Jh-hR-UNh" id="goN-M3-AXI"/>
+                        <segue destination="V6Y-10-PUs" kind="show" identifier="moveToMain" id="o7N-jw-k58"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBU-Wf-lWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

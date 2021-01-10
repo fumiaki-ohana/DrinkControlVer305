@@ -45,8 +45,8 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
     private var pointOfInterest:UIView!
     private var tableCellView:UIView!
     let hintStr =
-    ["ホーム画面は📅カレンダーを表示します。","日付の下の点は、飲酒量（純アルコール量）です。",
-         "カレンダーで日付を選ぶと、🍷飲酒データが表示されます。","セルをタップすると編集できます。\n右上の📝ボタンのクリックでしてもOKです。","詳細は📈グラフで表示します"]
+    ["⏰90秒クイックツアーを始めます。最初はデータの表示です。","📅の下の点は、飲酒量（一つが純アルコール量10g）です。",
+         "カレンダーで日付を選ぶと、🍷飲酒データが表示されます。","編集は、セルか右上の📝ボタンをタップします。","詳細は📈グラフで表示します"]
  
     // MARK: -IB Action📝
     
@@ -300,7 +300,6 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
             )
         )
         
-        
         // Initialize WhatsNew
         let whatsNew = WhatsNew(
             // The Title
@@ -427,9 +426,8 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
                 tableview.isHidden = false
                 let SettingTabItem = self.tabBarController?.tabBar.items?[2].value(forKey: "view") as? UIView
                 addAnimation(view: SettingTabItem!)
-                self.present(.okAlert(title:"お疲れ様でした！ツアーも終盤、残り約20秒です", message: "⚙️設定オプションを主な機能に絞って説明します。",astyle: .alert, okstr:"進む", okHandler: {(action) -> Void in  //self.performSegue(withIdentifier: "showConfig", sender: Any.self)}))
-                    
-                    
+                self.present(.okAlert(title:"🎊ツアーが完了しました。", message: "",astyle: .alert, okstr:"⚙️設定画面へ", okHandler: {(action) -> Void in  //self.performSegue(withIdentifier: "showConfig", sender: Any.self)}))
+            
                     self.tabBarController?.selectedIndex = 2}))
             case .none :
                 EmptyStateView.isHidden = true
@@ -442,7 +440,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
                 case .newUser :
                     titl = "ガイドツアー開始の前にお読みください。"
                     msg = disclaimer
-                    
+                    self.present(.okAlert(title:titl, message:msg ,astyle: .alert, okstr:"ツアーを開始(約2分）", okHandler: {(action) -> Void in  self.coachMarksController.start(in: .currentWindow(of: self))}))
                 case .currentUser:
                     titl = "新Ver."+appVersion!+"の使用ガイドを開始。"
                     msg = "操作画面が一部変更し新規機能も追加されました。\nなお、無料版の保存回数は最大2回に変更されています。\nこれを機会にご購入を是非ご検討ください。"
