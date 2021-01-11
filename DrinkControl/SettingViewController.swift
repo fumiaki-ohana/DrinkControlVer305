@@ -31,7 +31,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
     // Coarch properties
        private var pointOfInterest:UIView!
        let coachMarksController = CoachMarksController()
-      let hintStr  = ["お好きな色テーマやお酒の変更、などなど豊富な設定オプションがあります。\n試してみてください。"]
+      let hintStr  = ["豊富な設定⚙️オプションがあります。例えば：\n\n- 🎨アプリのテーマ色\n\n- 🍷お酒の名前やアルコール濃度\n\n- 📅カレンダー詳細\n\n- 🚰入力量の調整ETC.\n\n自分好みに変えてみましょう"]
     
     // MARK:- Methods
     
@@ -213,9 +213,10 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
     }
     
     func coarchWrapUp() {
+         
         let actionSheet = UIAlertController(
-            title: "🎊ツアーが完了しました。",
-            message: "🛒保存回数の上限ロック（２回まで）解除は、【App内購入の説明】をご覧ください。説明だけで課金はされません。",
+            title: "無料版のデータ保存回数は２回までです。",
+            message: "くわしくは【🛒App内購入の説明】をご覧ください。\nここでは説明だけで、課金はされません。",
             preferredStyle: .alert)
         
         if unlocked {
@@ -230,6 +231,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
                 UIAlertAction(
                     title: "🛒　App内購入の説明",
                     style: .default,
+                    
                     handler:{(action) -> Void in self.performSegue(withIdentifier: "showPurchaseIntro", sender: Any?.self)}
             ))
             
@@ -242,6 +244,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
                         self.present(.okAlert(title: "無料試用での保存回数", message: "最大2回までです。\n制限解除は、⚙️設定画面＞🛒App内課金の説明からどうぞ"))}
             ))
         }
+        actionSheet.setMessageAlignment(.left)
         actionSheet.pruneNegativeWidthConstraints()
         self.present(actionSheet,animated:true, completion: nil)
     }

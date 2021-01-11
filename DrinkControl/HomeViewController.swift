@@ -45,7 +45,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
     private var pointOfInterest:UIView!
     private var tableCellView:UIView!
     let hintStr =
-    ["⏰90秒クイックツアーを始めます。最初はデータの表示です。","📅の下の点は、飲酒量（一つが純アルコール量10g）です。",
+    ["📅の下の点は、飲酒量（一つが純アルコール量10g）です。",
          "カレンダーで日付を選ぶと、🍷飲酒データが表示されます。","編集は、セルか右上の📝ボタンをタップします。","詳細は📈グラフで表示します"]
  
     // MARK: -IB Action📝
@@ -134,17 +134,19 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         //指し示す場所を決める。
         var point:UIView!
         switch index {
+        /*
         case 0:
            // point = navigationController?.navigationBar
             point = self.tabBarController?.tabBar.items?[0].value(forKey: "view") as? UIView
             addAnimation(view: point)
-        case 1:
+        */
+        case 0:
             point = drinkCalendar
-        case 2:
+        case 1:
           point = tableview
-        case 3:
+        case 2:
             point = tableCellView
-        case 4: point = self.tabBarController?.tabBar.items?[1].value(forKey: "view") as? UIView
+        case 3: point = self.tabBarController?.tabBar.items?[1].value(forKey: "view") as? UIView
             addAnimation(view: point)
         default:break
         }
@@ -419,7 +421,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
                 EmptyStateView.isHidden = false
                 tableview.isHidden = true
                 addAnimation(view: addButton)
-                self.present(.okAlert(title:"お疲れ様でした！次は、お酒のデータを入力してみましょう。", message: "カレンダーで日付を選び、➕にタッチすると入力画面へ移動します。",astyle: .alert, okstr:"進む", okHandler: {(action) -> Void in  self.performSegue(withIdentifier: "showDailyDrinkRecord", sender: Any.self)}))
+                self.present(.okAlert(title:"飲んだお酒を入力してみましょう。", message: "まずカレンダーで日付を選び、➕にタッチすると入力画面へ移動します。",astyle: .alert, okstr:"進む", okHandler: {(action) -> Void in  self.performSegue(withIdentifier: "showDailyDrinkRecord", sender: Any.self)}))
             case .dataEntry :
                 navigationItem.title = dailyDrinkDummy.dDate.mediumStr
                 EmptyStateView.isHidden = true
@@ -438,9 +440,9 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
                 
                 switch userType {
                 case .newUser :
-                    titl = "ガイドツアー開始の前にお読みください。"
+                    titl = "使用開始前にお読みください。"
                     msg = disclaimer
-                    self.present(.okAlert(title:titl, message:msg ,astyle: .alert, okstr:"ツアーを開始(約2分）", okHandler: {(action) -> Void in  self.coachMarksController.start(in: .currentWindow(of: self))}))
+                    self.present(.okAlert(title:titl, message:msg ,astyle: .alert, okstr:"了解して⏰90秒クイックツアーを開始", okHandler: {(action) -> Void in  self.coachMarksController.start(in: .currentWindow(of: self))}))
                 case .currentUser:
                     titl = "新Ver."+appVersion!+"の使用ガイドを開始。"
                     msg = "操作画面が一部変更し新規機能も追加されました。\nなお、無料版の保存回数は最大2回に変更されています。\nこれを機会にご購入を是非ご検討ください。"
