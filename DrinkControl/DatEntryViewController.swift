@@ -220,7 +220,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         */
        
         tableView.frame =
-                 CGRect(x: 10, y: 70,  width: self.view.bounds.size.width-20, height: (self.view.bounds.size.height - 170))
+                 CGRect(x: 10, y: 70,  width: self.view.bounds.size.width-20, height: (self.view.bounds.size.height - 200))
        
         view.theme_backgroundColor = GlobalPicker.barTintColor
         tableView.theme_backgroundColor = GlobalPicker.backgroundColor

@@ -135,12 +135,12 @@
                         <outlet property="editButton" destination="Au5-Za-ZS2" id="6vk-72-Y37"/>
                         <outlet property="tableview" destination="TAi-AK-kuZ" id="sK3-vH-U3U"/>
                         <segue destination="bBt-8y-dQ0" kind="show" identifier="showDailyDrinkRecord" id="sVY-RF-nhB"/>
-                        <segue destination="zUu-fa-g1d" kind="show" identifier="showPurchaseFromHome" id="IxI-Sn-DpE"/>
+                        <segue destination="rh7-k7-evK" kind="show" identifier="showPurchaseFromHome" id="w38-MZ-6TF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhE-gh-09e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806.25" y="-1752.4647887323945"/>
+            <point key="canvasLocation" x="-3671" y="-729"/>
         </scene>
         <!--設定-->
         <scene sceneID="TFo-PC-5sv">
@@ -167,130 +167,14 @@
                         <segue destination="SxK-62-ECn" kind="show" identifier="alchoolSettingSegue" id="KrQ-ac-XVg"/>
                         <segue destination="HSZ-z4-scU" kind="show" identifier="showCalendarSettingSegue" id="rje-IV-fzq"/>
                         <segue destination="FYB-4b-9ug" kind="show" identifier="showNamingSegue" id="Azc-K8-qbS"/>
-                        <segue destination="zUu-fa-g1d" kind="show" identifier="showPurchaseIntro" id="f3U-Qc-WDM"/>
                         <segue destination="xWQ-mT-JoM" kind="show" identifier="showNotificationSettingSegue" id="HZC-mP-3Rc"/>
+                        <segue destination="rh7-k7-evK" kind="show" identifier="showPurchaseIntro" id="1UG-AI-a1u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QmM-gZ-QOX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="oQ9-No-gcP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2478.75" y="-894.71830985915494"/>
-        </scene>
-        <!--Intro In Purchase View Controller-->
-        <scene sceneID="IgB-LQ-ne6">
-            <objects>
-                <viewController id="zUu-fa-g1d" customClass="IntroInPurchaseViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tns-M8-wGl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DMa-HH-jJX">
-                                <rect key="frame" x="20" y="64" width="280" height="256"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="APP内課金の説明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obA-5p-P2U">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="次の画面に進み、１度だけApp内課金を購入すると、保存回数の制限が解除されます。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ev-cF-EV9">
-                                        <rect key="frame" x="0.0" y="50" width="280" height="61"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqg-NO-npX">
-                                        <rect key="frame" x="0.0" y="131" width="280" height="30"/>
-                                        <state key="normal" title="App内購入画面へ進む"/>
-                                        <connections>
-                                            <segue destination="rh7-k7-evK" kind="show" identifier="showPurchase" id="71a-Qd-OfF"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWF-Ts-p7S">
-                                        <rect key="frame" x="0.0" y="181" width="280" height="54"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="上のボタンを押しても、すぐに">
-                                                <attributes>
-                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" metaFont="system" size="15"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="課金はされません。">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="14" name="HiraginoSans-W3"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="次の画面に進んでも、">
-                                                <attributes>
-                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" metaFont="system" size="15"/>
-                                                    <font key="NSOriginalFont" metaFont="system" size="15"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="購入ボタンを押すまでは">
-                                                <attributes>
-                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" metaFont="system" size="15"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="中止">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" metaFont="system" size="15"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="できます。">
-                                                <attributes>
-                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" metaFont="system" size="15"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="既に購入済みのかたは、次の画面で【復元する】を選んでください。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-AP-cfd">
-                                        <rect key="frame" x="0.0" y="255" width="280" height="1"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="iOJ-1f-A4d"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="iOJ-1f-A4d" firstAttribute="bottom" secondItem="DMa-HH-jJX" secondAttribute="bottom" constant="150" id="0ik-sR-8SI"/>
-                            <constraint firstItem="DMa-HH-jJX" firstAttribute="top" secondItem="iOJ-1f-A4d" secondAttribute="top" constant="20" id="aCu-Ee-T4w"/>
-                            <constraint firstItem="DMa-HH-jJX" firstAttribute="leading" secondItem="iOJ-1f-A4d" secondAttribute="leading" constant="20" id="j5U-Yk-ZNm"/>
-                            <constraint firstItem="iOJ-1f-A4d" firstAttribute="trailing" secondItem="DMa-HH-jJX" secondAttribute="trailing" constant="20" id="p2g-Ng-nD0"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="d7N-xm-Q9F">
-                        <barButtonItem key="leftBarButtonItem" image="Cancel" id="4Dv-cS-2dL">
-                            <connections>
-                                <action selector="pressCancel:" destination="zUu-fa-g1d" id="BWz-Ys-DWP"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="L1" destination="obA-5p-P2U" id="QrH-lh-cuO"/>
-                        <outlet property="L2" destination="9ev-cF-EV9" id="BwU-i9-7HY"/>
-                        <outlet property="L3" destination="CcO-AP-cfd" id="Phz-ha-SdA"/>
-                        <outlet property="L4" destination="AWF-Ts-p7S" id="fXd-VX-YjQ"/>
-                        <outlet property="purchaseButton" destination="yqg-NO-npX" id="0I0-PB-C36"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DLj-Dc-Y3o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2056.875" y="-1752.4647887323945"/>
+            <point key="canvasLocation" x="-2734" y="-730"/>
         </scene>
         <!--Third Chart View Controller-->
         <scene sceneID="pMU-GK-ldA">
@@ -312,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ik2-I5-eHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2629" y="986"/>
+            <point key="canvasLocation" x="-4779" y="997"/>
         </scene>
         <!--Second Chart View Controller-->
         <scene sceneID="dfp-AU-SjA">
@@ -339,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1p-qz-wWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1924" y="176"/>
+            <point key="canvasLocation" x="-4778" y="114"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="Oik-C7-Tzn">
@@ -358,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LON-JG-tU3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1221" y="181"/>
+            <point key="canvasLocation" x="-1894" y="112"/>
         </scene>
         <!--Setting Alchool View Controller-->
         <scene sceneID="iA0-44-Xmg">
@@ -376,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwO-dF-Oco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-511" y="177"/>
+            <point key="canvasLocation" x="-1103" y="113"/>
         </scene>
         <!--Calander Setting View Controller-->
         <scene sceneID="v5A-8n-ME8">
@@ -392,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SjM-2x-yls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="268" y="181"/>
+            <point key="canvasLocation" x="-311" y="113"/>
         </scene>
         <!--Naming View Controller-->
         <scene sceneID="mDM-t8-fdd">
@@ -414,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnZ-HL-3OZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="178"/>
+            <point key="canvasLocation" x="501" y="112"/>
         </scene>
         <!--Notification View Controller-->
         <scene sceneID="JYJ-DR-w8N">
@@ -438,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1I-Tn-VdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1794" y="179"/>
+            <point key="canvasLocation" x="1260" y="112"/>
         </scene>
         <!--Tutor View Controller-->
         <scene sceneID="coJ-Lj-RBr">
@@ -454,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vz-IX-oGT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1489" y="953"/>
+            <point key="canvasLocation" x="-1896" y="995"/>
         </scene>
         <!--In Purchase View Controller-->
         <scene sceneID="h0Y-AJ-z9x">
@@ -622,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xk2-ac-osg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2805" y="-1752.4647887323945"/>
+            <point key="canvasLocation" x="-2756" y="112"/>
         </scene>
         <!--Eval View Controller-->
         <scene sceneID="ncP-do-ZRT">
@@ -643,13 +527,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="BackToDataEntry" destination="b9t-hg-gT1" id="ilQ-ZS-Jjf"/>
-                        <segue destination="kyD-9V-beK" kind="show" identifier="showConfigOnTour" id="ceL-Hm-DdU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDh-LP-sGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ru9-1K-wZ7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-4151" y="24"/>
+            <point key="canvasLocation" x="-3671" y="996"/>
         </scene>
         <!--Dat Entry View Controller-->
         <scene sceneID="n2k-Pt-G3l">
@@ -715,7 +598,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6H-BT-4Ep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3009" y="-893"/>
+            <point key="canvasLocation" x="-3671" y="113"/>
         </scene>
         <!--Chart View Controller-->
         <scene sceneID="0pc-kK-JUh">
@@ -737,7 +620,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21w-uU-mtZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-733.125" y="-892.6056338028169"/>
+            <point key="canvasLocation" x="-4776" y="-716"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="Xq3-7L-GpX">
@@ -758,7 +641,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHi-J1-Sa3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1620" y="-1829"/>
+            <point key="canvasLocation" x="-3225" y="-2356"/>
         </scene>
         <!--ホーム-->
         <scene sceneID="dTl-T9-7eY">
@@ -777,7 +660,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSQ-UE-M7p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191.25" y="-1752.4647887323945"/>
+            <point key="canvasLocation" x="-3671" y="-1564"/>
         </scene>
         <!--グラフ-->
         <scene sceneID="d48-fa-4bC">
@@ -796,7 +679,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOL-wb-EIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1730.625" y="-892.6056338028169"/>
+            <point key="canvasLocation" x="-4774" y="-1564"/>
         </scene>
         <!--設定-->
         <scene sceneID="WfH-RN-pLg">
@@ -816,12 +699,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1A-Nb-DVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1481.25" y="-894.71830985915494"/>
+            <point key="canvasLocation" x="-2732" y="-1577"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ceL-Hm-DdU"/>
-        <segue reference="IxI-Sn-DpE"/>
+        <segue reference="1UG-AI-a1u"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Add" width="128" height="128"/>

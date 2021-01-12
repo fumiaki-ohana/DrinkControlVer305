@@ -16,14 +16,8 @@ class WT02ViewController: UIViewController {
     let buttonTitle = "目標を設定してみる"
     
     //MARK:- What's New
-    
+   /*
     func showWhatsNew() {
-        let titl = "減酒くんについて"
-       
-        let msg:[(title:String,subtitle:String,icon:String)] =
-            [("記録するだけでは減りません！","一括入力→目標と比べる→反省→飲む前に読み返す。習慣づけをお手伝い","good"),
-             ("お酒を見える化","飲んだお酒を純アルコール量に換算。休肝日や飲み過ぎ日もグラフ表示","ChartBarIcon"),("かんたん入力","ワンタップで好みの入力量を設定。休肝日は一発入力","dash"),
-             ("自分好みに変える","お酒の変更、アルコール濃度も個別調整。7種類のアプリ色テーマETC・・カスタマイズ可能。","Paint")]
         
         // Initialize default Configuration
         
@@ -74,10 +68,20 @@ class WT02ViewController: UIViewController {
         // Present it 🤩
         self.present(whatsNewViewController, animated: true)
     }
+ */
   
     // MARK:- View Rotation
     override func viewDidAppear(_ animated: Bool) {
-        showWhatsNew()
+        let titl = "減酒くんについて"
+        let compButtonTitle = "続ける"
+        let detailButtonTitle = "参考：厚生労働省e-ヘルスネット"
+        let detailWebSite = "https://www.e-healthnet.mhlw.go.jp/information/alcohol"
+        let msg:[(title:String,subtitle:String,icon:String)] =
+            [("記録するだけでは減りません！","一括入力→目標と比べる→反省→飲む前に読み返す。習慣づけをお手伝い","good"),
+             ("お酒を見える化","飲んだお酒を純アルコール量に換算。休肝日や飲み過ぎ日もグラフ表示","ChartBarIcon"),("かんたん入力","ワンタップで好みの入力量を設定。休肝日は一発入力","dash"),
+             ("自分好みに変える","お酒の変更、アルコール濃度も個別調整。7種類のアプリ色テーマETC・・カスタマイズ可能。","Paint")]
+        let item = showWhatsNewPlus(titl: titl, compButtonTitle: compButtonTitle, detailButtonTitle:detailButtonTitle,webStr:detailWebSite, msg: msg)
+        present(item,animated: true)
     }
      
     override func viewDidLoad() {

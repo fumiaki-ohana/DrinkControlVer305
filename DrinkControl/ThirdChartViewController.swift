@@ -21,7 +21,7 @@ class ThirdChartViewController: UIViewController,CoachMarksControllerDataSource,
        var barChartForCoarch = BarChartView()
        var pieChartForCoarch = PieChartView()
        
-       let hintStr  = ["グラフ面の最後は、飲酒の評価です。📊棒グラフは過去三週間...","...⭕️円グラフは全期間です。"]
+       let hintStr  = ["グラフ面の最後は、飲酒の評価です。📊は期間ごとの平均で","...⭕️グラフは全期間です。"]
        private var pointOfInterest:UIView!
        let coachMarksController = CoachMarksController()
     

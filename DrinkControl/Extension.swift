@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import SwiftTheme
 import Lottie
+import WhatsNewKit
 
 //Extension
 //MARK:- Debugging
@@ -50,7 +51,7 @@ func showAnimation(parentView:UIView, lottieJason:String, scale:CGFloat = 100, f
             animationView.removeFromSuperview()
          }
      }
-                     
+            
  }
 
 func addAnimation(view:UIView) {
@@ -395,11 +396,11 @@ extension UIAlertController {
         return alert
     }
     
-    static func okAlert(title: String?,
+    static func okAlert(alignment:NSTextAlignment = .center, title: String?,
                         message: String?,astyle:Style = .actionSheet,okstr:String = OKstr,
                         okHandler: ((UIAlertAction) -> Void)? = nil) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: astyle)
-        alert.setMessageAlignment(.left)
+        alert.setMessageAlignment(alignment)
         alert.addAction(.init(title: okstr, style: .default, handler: okHandler))
         alert.pruneNegativeWidthConstraints()
         
@@ -424,6 +425,125 @@ extension UIViewController {
     
 }
 
+func showWhatsNewPlus(titl:String,compButtonTitle:String,detailButtonTitle: String, webStr:String,  msg:[(title:String,subtitle:String,icon:String)]) -> WhatsNewViewController{
+    // Initialize default Configuration
+    
+    let completionButton = WhatsNewViewController.CompletionButton(
+        title: compButtonTitle,
+        action: .dismiss
+    )
+    
+    let detailButton = WhatsNewViewController.DetailButton(
+        title: detailButtonTitle,
+        action: .website(url: webStr)
+    )
+    
+    let configuration = WhatsNewViewController.Configuration(
+        theme: .default,
+        detailButton: detailButton,
+        completionButton: completionButton
+        )
+            /*
+            .init(
+
+            // Completion Button Title
+            title: compButtonTitle,
+            // Completion Button Action
+            action: .dismiss
+        )*/
+    
+    // Initialize WhatsNew
+    let whatsNew = WhatsNew(
+        // The Title
+        title: titl,
+        // The features you want to showcase
+        
+        items: [
+            WhatsNew.Item(
+                title: msg[0].title,
+                subtitle: msg[0].subtitle,
+                image: UIImage(named: msg[0].icon)
+            ),
+            WhatsNew.Item(
+                title:  msg[1].title,
+                subtitle: msg[1].subtitle,
+                image: UIImage(named: msg[1].icon)
+            ),
+            WhatsNew.Item(
+                title:  msg[2].title,
+                subtitle: msg[2].subtitle,
+                image: UIImage(named: msg[2].icon)
+            ),
+            WhatsNew.Item(
+                title:  msg[3].title,
+                subtitle: msg[3].subtitle,
+                image: UIImage(named: msg[3].icon)
+            )
+        ]
+    )
+
+    // Initialize WhatsNewViewController with WhatsNew
+    let whatsNewViewController = WhatsNewViewController(
+        whatsNew: whatsNew,
+        configuration: configuration
+    )
+    
+    return whatsNewViewController
+}
+
+func showWhatsNew(titl:String,compButtonTitle:String,detailButtonTitle: String? = nil, webStr:String? = nil,  msg:[(title:String,subtitle:String,icon:String)]) -> WhatsNewViewController{
+    
+    // Initialize default Configuration
+    
+    let configuration = WhatsNewViewController.Configuration(
+        theme: .default,
+        completionButton: .init(
+
+            // Completion Button Title
+            title: compButtonTitle,
+            // Completion Button Action
+            action: .dismiss
+        )
+    )
+    
+    // Initialize WhatsNew
+    let whatsNew = WhatsNew(
+        // The Title
+        title: titl,
+        // The features you want to showcase
+        
+        items: [
+            WhatsNew.Item(
+                title: msg[0].title,
+                subtitle: msg[0].subtitle,
+                image: UIImage(named: msg[0].icon)
+            ),
+            WhatsNew.Item(
+                title:  msg[1].title,
+                subtitle: msg[1].subtitle,
+                image: UIImage(named: msg[1].icon)
+            ),
+            WhatsNew.Item(
+                title:  msg[2].title,
+                subtitle: msg[2].subtitle,
+                image: UIImage(named: msg[2].icon)
+            ),
+            WhatsNew.Item(
+                title:  msg[3].title,
+                subtitle: msg[3].subtitle,
+                image: UIImage(named: msg[3].icon)
+            )
+        ]
+    )
+
+    // Initialize WhatsNewViewController with WhatsNew
+    let whatsNewViewController = WhatsNewViewController(
+        whatsNew: whatsNew,
+        configuration: configuration
+    )
+    
+    return whatsNewViewController
+}
 /*
  
  　　使い方

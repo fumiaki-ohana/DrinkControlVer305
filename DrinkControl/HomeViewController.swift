@@ -45,7 +45,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
     private var pointOfInterest:UIView!
     private var tableCellView:UIView!
     let hintStr =
-    ["📅の下の点は、飲酒量（一つが純アルコール量10g）です。",
+    ["📅の点は、飲酒量（一つが純アルコール量10g）です。",
          "カレンダーで日付を選ぶと、🍷飲酒データが表示されます。","編集は、セルか右上の📝ボタンをタップします。","詳細は📈グラフで表示します"]
  
     // MARK: -IB Action📝
@@ -158,7 +158,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
                               beforeChanging change: ConfigurationChange,
                               at index: Int) {
         switch index {
-        case 0: coachMark.arrowOrientation = .bottom
+        case 0: coachMark.arrowOrientation = .top
         case 1:coachMark.arrowOrientation = .top
         case 2: coachMark.arrowOrientation = .bottom
         case 3: coachMark.arrowOrientation = .bottom
@@ -286,62 +286,6 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         self.present(actionSheet,animated:true, completion: nil)
     }
 */
-   // MARK:- 新しいバージョンの情報を表示する
-    
-    func showWhatsNew(titl:String,compButtonTitle:String,  msg:[(title:String,subtitle:String,icon:String)]) {
-        
-        // Initialize default Configuration
-        
-        let configuration = WhatsNewViewController.Configuration(
-            theme: .default,
-            completionButton: .init(
-                // Completion Button Title
-                title: compButtonTitle,
-                // Completion Button Action
-                action: .dismiss
-            )
-        )
-        
-        // Initialize WhatsNew
-        let whatsNew = WhatsNew(
-            // The Title
-            title: titl,
-            // The features you want to showcase
-            
-            items: [
-                WhatsNew.Item(
-                    title: msg[0].title,
-                    subtitle: msg[0].subtitle,
-                    image: UIImage(named: msg[0].icon)
-                ),
-                WhatsNew.Item(
-                    title:  msg[1].title,
-                    subtitle: msg[1].subtitle,
-                    image: UIImage(named: msg[1].icon)
-                ),
-                WhatsNew.Item(
-                    title:  msg[2].title,
-                    subtitle: msg[2].subtitle,
-                    image: UIImage(named: msg[2].icon)
-                ),
-                WhatsNew.Item(
-                    title:  msg[3].title,
-                    subtitle: msg[3].subtitle,
-                    image: UIImage(named: msg[3].icon)
-                )
-            ]
-        )
-
-        // Initialize WhatsNewViewController with WhatsNew
-        let whatsNewViewController = WhatsNewViewController(
-            whatsNew: whatsNew,
-            configuration: configuration
-        )
-
-        // Present it 🤩
-        self.present(whatsNewViewController, animated: true)
-    }
-    
     
     // MARK: - View Rotation
     
@@ -383,10 +327,13 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
      if !shouldShowCoarch, !(userType == .newUser) , shouldShowVerInfo  {
         let titl = "Ver."+appVersion!+"の新機能"
         let compButtonTitle = "続ける"
+        let detailButtonTitle = "e-ヘルスネット（お酒）"
+        let detailWebSite = "https://www.e-healthnet.mhlw.go.jp/information/alcohol"
         let msg:[(title:String,subtitle:String,icon:String)] = [("ホーム画面を一新しました。","過去の飲酒データをタップしても、編集画面に飛べます。","wine"),
                                                     ("通知機能","指定時刻に、飲酒の反省を読むよう促します。（設定＞通知の設定）","bell"),("休肝日の入力","タップするだけで飲酒ゼロを入力します。","dash"),
                                                     ("その他","追加・編集できるお酒の種類を増やしました。他にも多くの改良があります。","beer")]
-        showWhatsNew(titl: titl, compButtonTitle: compButtonTitle, msg: msg)
+        let item = showWhatsNewPlus(titl: titl, compButtonTitle: compButtonTitle, detailButtonTitle:detailButtonTitle,webStr:detailWebSite, msg: msg)
+        present(item,animated: true)
         shouldShowVerInfo = false
      }
     }
@@ -411,7 +358,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
     override func viewDidAppear(_ animated: Bool) {
         var titl:String = ""
         var msg:String  = ""
-        let disclaimer = "飲酒による健康への影響は性別、年齢、健康状態、妊娠、体質等々、様々な要因で異なり、大きな個人差があります。ご自身に適した設定を判断しアプリで計算・表示される数字等の意味と限界をご理解の上でご自身の責任でご利用ください。独力で減酒が難しい場合は専門家に相談してください。厚生労働省のhttps://www.e-healthnet.mhlw.go.jp/には飲酒に参考となる情報があります。\n当アプリの使用の結果や健康等への影響に対してアプリ製作者は一切責任を負いません。"
+        let disclaimer = "【開始の前にお読みください。】\n　飲酒による健康への影響は性別、年齢、健康状態、妊娠、体質等々、様々な要因で異なり、大きな個人差があります。ご自身に適した設定を判断しアプリで計算・表示される数字等の意味と限界をご理解の上でご自身の責任でご利用ください。\n　独力で減酒が難しい場合は専門家に相談してください。厚生労働省のhttps://www.e-healthnet.mhlw.go.jp/には飲酒に参考となる情報があります。\n　当アプリの使用の結果や健康等への影響に対してアプリ製作者は一切責任を負いません。"
         
         super.viewDidAppear(animated)
         
@@ -440,9 +387,9 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
                 
                 switch userType {
                 case .newUser :
-                    titl = "使用開始前にお読みください。"
+                    titl = "⏰90秒クイックツアーを開始"
                     msg = disclaimer
-                    self.present(.okAlert(title:titl, message:msg ,astyle: .alert, okstr:"了解して⏰90秒クイックツアーを開始", okHandler: {(action) -> Void in  self.coachMarksController.start(in: .currentWindow(of: self))}))
+                    self.present(.okAlert(alignment:.left, title:titl, message:msg ,astyle: .alert, okstr:"了解", okHandler: {(action) -> Void in  self.coachMarksController.start(in: .currentWindow(of: self))}))
                 case .currentUser:
                     titl = "新Ver."+appVersion!+"の使用ガイドを開始。"
                     msg = "操作画面が一部変更し新規機能も追加されました。\nなお、無料版の保存回数は最大2回に変更されています。\nこれを機会にご購入を是非ご検討ください。"

@@ -30,9 +30,12 @@ class InPurchaseViewController: UIViewController {
     // MARK: IB actions
     
     @IBAction func pressCancel(_ sender: UIButton) {
-       let index = navigationController!.viewControllers.count - 3
+    /*
+       let index = navigationController!.viewControllers.count - 2
        navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)
-     //   self.tabBarController?.selectedIndex = 0
+    */
+        self.navigationController?.popToRootViewController(animated: true)
+      // self.tabBarController?.selectedIndex = 0
     }
     
     @IBAction func nonConsumablePurchase() { // 購入
@@ -60,6 +63,17 @@ class InPurchaseViewController: UIViewController {
     
     // MARK: View rotation
     
+    override func viewDidAppear(_ animated: Bool) {
+        let titl = "App内課金の説明"
+        let compButtonTitle = "App内購入画面へ進む"
+        let msg:[(title:String,subtitle:String,icon:String)] =
+            [("データの保存制限（２回）を解除","購入画面に進み、１度だけApp内課金を購入すると、保存回数の制限が解除されます。","Buy"),
+             ("まだ課金はされません。","購入画面に進んでも、すぐに課金はされません。最終的に購入ボタンを押すまではいつでも中止できます。","NotBuy"),("中止する","購入画面で、「購入を中止する」を選んでください。","Cancel"),
+             ("既に購入済みの方へ","購入画面で【復元する】をタッチすると保存制限が解除されます。","Restore")]
+        let item = showWhatsNew(titl: titl, compButtonTitle: compButtonTitle, msg: msg)
+        present(item,animated: true)
+    }
+   
     override func viewDidLoad() {
         //        初期設定
         self.navigationItem.hidesBackButton = true
