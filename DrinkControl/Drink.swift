@@ -43,7 +43,6 @@ enum eval: String {
     case veryBad  = "😱要改善"
     case no = "レビュー無し"
 }
-
 //MARK: - 初期画面管理のためのUserDefaultなど
 
 var flagReadMeV3:Bool { //  V3以降のdisclaimerを読んだか？ //エラーによりVer3.06 と　3.07のユーザーで読んだにも関わらずFalseのままのユーザーがいる。

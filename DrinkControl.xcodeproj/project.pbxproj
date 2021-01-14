@@ -12,6 +12,7 @@
 		FF0AC43025771F7500A80400 /* 782-check-mark-success.json in Resources */ = {isa = PBXBuildFile; fileRef = FF0AC42F25771F7500A80400 /* 782-check-mark-success.json */; };
 		FF138FC124B8031000799829 /* EvalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF138FC024B8031000799829 /* EvalViewController.swift */; };
 		FF15D0F124C163C900ADA952 /* WT03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF15D0F024C163C900ADA952 /* WT03ViewController.swift */; };
+		FF1EA82A25AE87DF00D40036 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1EA82925AE87DF00D40036 /* GraphViewController.swift */; };
 		FF237C91258C4276009E4E83 /* lf30_editor_st8bizys.json in Resources */ = {isa = PBXBuildFile; fileRef = FF237C90258C4276009E4E83 /* lf30_editor_st8bizys.json */; };
 		FF23F479258EBE5A00B1349C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FF23F478258EBE5A00B1349C /* Realm */; };
 		FF23F47B258EBE5A00B1349C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF23F47A258EBE5A00B1349C /* RealmSwift */; };
@@ -30,6 +31,10 @@
 		FF4B5D24230A38FD0065A456 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4B5D23230A38FD0065A456 /* HomeViewController.swift */; };
 		FF5B359A20931186009AB396 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5B359920931186009AB396 /* Drink.swift */; };
 		FF618AC224D3E06D008CD84B /* CalanderSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF618AC124D3E06D008CD84B /* CalanderSettingViewController.swift */; };
+		FF630B1C25AFBD5F0041E152 /* Tutor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF630B1B25AFBD5F0041E152 /* Tutor.storyboard */; };
+		FF630B1E25AFBE540041E152 /* OnTourChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF630B1D25AFBE540041E152 /* OnTourChartViewController.swift */; };
+		FF630B2025AFBE770041E152 /* OnTourSecondChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF630B1F25AFBE770041E152 /* OnTourSecondChartViewController.swift */; };
+		FF630B2225AFBE860041E152 /* OnTourThirdChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF630B2125AFBE860041E152 /* OnTourThirdChartViewController.swift */; };
 		FF6399462392022F008A50CE /* DatEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6399452392022F008A50CE /* DatEntryViewController.swift */; };
 		FF76A06B2585AEE50065E6E8 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76A06A2585AEE50065E6E8 /* NotificationViewController.swift */; };
 		FF87D02B24C2A7E300EF8F4D /* WT04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF87D02A24C2A7E300EF8F4D /* WT04ViewController.swift */; };
@@ -75,6 +80,7 @@
 		FF138FC024B8031000799829 /* EvalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvalViewController.swift; sourceTree = "<group>"; };
 		FF15D0F024C163C900ADA952 /* WT03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT03ViewController.swift; sourceTree = "<group>"; };
 		FF1AFC5524BADF65002005BA /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		FF1EA82925AE87DF00D40036 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		FF237C90258C4276009E4E83 /* lf30_editor_st8bizys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lf30_editor_st8bizys.json; sourceTree = "<group>"; };
 		FF24E2602574C64C00058235 /* 11272-party-popper.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "11272-party-popper.json"; sourceTree = "<group>"; };
 		FF25E266241B1314000C3179 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +100,10 @@
 		FF603773245520BC00E703AC /* DrinkControl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DrinkControl.entitlements; sourceTree = "<group>"; };
 		FF618AC124D3E06D008CD84B /* CalanderSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalanderSettingViewController.swift; sourceTree = "<group>"; };
 		FF62A0FD23D18FAE004B422E /* HEXColor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HEXColor.framework; path = Carthage/Build/iOS/HEXColor.framework; sourceTree = "<group>"; };
+		FF630B1B25AFBD5F0041E152 /* Tutor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutor.storyboard; sourceTree = "<group>"; };
+		FF630B1D25AFBE540041E152 /* OnTourChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnTourChartViewController.swift; sourceTree = "<group>"; };
+		FF630B1F25AFBE770041E152 /* OnTourSecondChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnTourSecondChartViewController.swift; sourceTree = "<group>"; };
+		FF630B2125AFBE860041E152 /* OnTourThirdChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnTourThirdChartViewController.swift; sourceTree = "<group>"; };
 		FF6399452392022F008A50CE /* DatEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatEntryViewController.swift; sourceTree = "<group>"; };
 		FF76A06A2585AEE50065E6E8 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		FF83E27623C6E4B000539CDA /* LTMorphingLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LTMorphingLabel.framework; path = Carthage/Build/iOS/LTMorphingLabel.framework; sourceTree = "<group>"; };
@@ -208,6 +218,17 @@
 			name = SwiftTheme;
 			sourceTree = "<group>";
 		};
+		FF630B2325AFBE970041E152 /* Tour */ = {
+			isa = PBXGroup;
+			children = (
+				FF630B1B25AFBD5F0041E152 /* Tutor.storyboard */,
+				FF630B1D25AFBE540041E152 /* OnTourChartViewController.swift */,
+				FF630B1F25AFBE770041E152 /* OnTourSecondChartViewController.swift */,
+				FF630B2125AFBE860041E152 /* OnTourThirdChartViewController.swift */,
+			);
+			name = Tour;
+			sourceTree = "<group>";
+		};
 		FF83E27523C6D76A00539CDA /* Walkthrough */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,14 +277,15 @@
 				FF603773245520BC00E703AC /* DrinkControl.entitlements */,
 				FF9B76A5208DB02B00B7A80A /* PageMain.storyboard */,
 				FF03CD21241C714A00F55570 /* Global Declaration */,
-				FF4B5D23230A38FD0065A456 /* HomeViewController.swift */,
 				FF0AC42D2575EC1300A80400 /* TabViewController.swift */,
+				FF4B5D23230A38FD0065A456 /* HomeViewController.swift */,
 				FFD32A6E24BD4E920070D4E7 /* Data Entry */,
 				FFD32A6D24BD4E810070D4E7 /* Charts */,
 				FFD4A04E23A0B916008C7043 /* App In-Purchase */,
 				FF03CD20241C6FB000F55570 /* Setting */,
 				FF83E27523C6D76A00539CDA /* Walkthrough */,
 				FFE37608231B9C06008414AD /* Launch */,
+				FF630B2325AFBE970041E152 /* Tour */,
 				FF2B754423CEA89900F5AD6E /* SwiftTheme */,
 				FF9B769F208DB02B00B7A80A /* AppDelegate.swift */,
 				FF9B76AD208DB02C00B7A80A /* Info.plist */,
@@ -287,6 +309,7 @@
 		FFD32A6D24BD4E810070D4E7 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				FF1EA82925AE87DF00D40036 /* GraphViewController.swift */,
 				FF29F9F6237FD05800917E20 /* ChartViewController.swift */,
 				FFD23FFD24B5A01500988934 /* SecondChartViewController.swift */,
 				FFA52D55251C777000307AC8 /* ThirdChartViewController.swift */,
@@ -411,6 +434,7 @@
 				FF24E2612574C64C00058235 /* 11272-party-popper.json in Resources */,
 				FF237C91258C4276009E4E83 /* lf30_editor_st8bizys.json in Resources */,
 				FF9B76A9208DB02C00B7A80A /* Assets.xcassets in Resources */,
+				FF630B1C25AFBD5F0041E152 /* Tutor.storyboard in Resources */,
 				FF04AEF9246D189B00F19D36 /* StartUp.storyboard in Resources */,
 				FF0AC43025771F7500A80400 /* 782-check-mark-success.json in Resources */,
 				FFE30D3223C1AEA200A96D2B /* LaunchScreen.storyboard in Resources */,
@@ -441,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF1EA82A25AE87DF00D40036 /* GraphViewController.swift in Sources */,
 				FF29F9F7237FD05800917E20 /* ChartViewController.swift in Sources */,
 				FFE8D65F24457CB600180F34 /* TutorViewController.swift in Sources */,
 				FFCB3423237637D40089128D /* Extension.swift in Sources */,
@@ -448,6 +473,7 @@
 				FF618AC224D3E06D008CD84B /* CalanderSettingViewController.swift in Sources */,
 				FF6399462392022F008A50CE /* DatEntryViewController.swift in Sources */,
 				FFDA937A25426A530064ED6C /* WT02ViewController.swift in Sources */,
+				FF630B2225AFBE860041E152 /* OnTourThirdChartViewController.swift in Sources */,
 				FFE56C7F2395EDDD00873D09 /* SettingViewController.swift in Sources */,
 				FFD4A04D23A0B8FD008C7043 /* NetworkActivityIndicatorManager.swift in Sources */,
 				FF138FC124B8031000799829 /* EvalViewController.swift in Sources */,
@@ -461,11 +487,13 @@
 				FF25E267241B1314000C3179 /* AboutViewController.swift in Sources */,
 				FF9B76A0208DB02B00B7A80A /* AppDelegate.swift in Sources */,
 				FF15D0F124C163C900ADA952 /* WT03ViewController.swift in Sources */,
+				FF630B2025AFBE770041E152 /* OnTourSecondChartViewController.swift in Sources */,
 				FF87D02B24C2A7E300EF8F4D /* WT04ViewController.swift in Sources */,
 				FF25E26B241B43E3000C3179 /* SettingAlchoolViewController.swift in Sources */,
 				FFA52D56251C777000307AC8 /* ThirdChartViewController.swift in Sources */,
 				FF0AC42E2575EC1300A80400 /* TabViewController.swift in Sources */,
 				FFD23FFE24B5A01500988934 /* SecondChartViewController.swift in Sources */,
+				FF630B1E25AFBE540041E152 /* OnTourChartViewController.swift in Sources */,
 				FF76A06B2585AEE50065E6E8 /* NotificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

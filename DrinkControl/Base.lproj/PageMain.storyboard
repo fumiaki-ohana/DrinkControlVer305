@@ -136,11 +136,12 @@
                         <outlet property="tableview" destination="TAi-AK-kuZ" id="sK3-vH-U3U"/>
                         <segue destination="bBt-8y-dQ0" kind="show" identifier="showDailyDrinkRecord" id="sVY-RF-nhB"/>
                         <segue destination="rh7-k7-evK" kind="show" identifier="showPurchaseFromHome" id="w38-MZ-6TF"/>
+                        <segue destination="xql-rS-saI" kind="show" identifier="moveToChartOnTutor" id="Hqv-pD-dcp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhE-gh-09e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3671" y="-729"/>
+            <point key="canvasLocation" x="-6973" y="-732"/>
         </scene>
         <!--設定-->
         <scene sceneID="TFo-PC-5sv">
@@ -174,7 +175,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QmM-gZ-QOX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="oQ9-No-gcP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2734" y="-730"/>
+            <point key="canvasLocation" x="-2734" y="-731"/>
         </scene>
         <!--Third Chart View Controller-->
         <scene sceneID="pMU-GK-ldA">
@@ -189,14 +190,14 @@
                     <navigationItem key="navigationItem" id="2DO-7l-oqg">
                         <barButtonItem key="leftBarButtonItem" image="Cancel" id="y8a-lW-U9r">
                             <connections>
-                                <action selector="pushCancel:" destination="lRS-Lx-KRR" id="VAm-eG-XQh"/>
+                                <action selector="pressCancel:" destination="lRS-Lx-KRR" id="wAa-Wm-yeJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ik2-I5-eHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4779" y="997"/>
+            <point key="canvasLocation" x="-3859" y="112"/>
         </scene>
         <!--Second Chart View Controller-->
         <scene sceneID="dfp-AU-SjA">
@@ -214,16 +215,11 @@
                                 <action selector="pushCancel:" destination="16L-Ya-r4b" id="AMJ-h8-PMk"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="反省へ" id="iuQ-CQ-u66">
-                            <connections>
-                                <segue destination="lRS-Lx-KRR" kind="show" identifier="showThirdChart" id="S07-Fw-Qd0"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1p-qz-wWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4778" y="114"/>
+            <point key="canvasLocation" x="-4770" y="112"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="Oik-C7-Tzn">
@@ -532,7 +528,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDh-LP-sGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ru9-1K-wZ7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3671" y="996"/>
+            <point key="canvasLocation" x="-6973" y="1201"/>
         </scene>
         <!--Dat Entry View Controller-->
         <scene sceneID="n2k-Pt-G3l">
@@ -598,7 +594,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6H-BT-4Ep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3671" y="113"/>
+            <point key="canvasLocation" x="-6973" y="112"/>
+        </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="bHo-do-0oD">
+            <objects>
+                <viewController id="vNB-Ot-CkF" customClass="GraphViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J3y-7b-6hT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AN8-GQ-DX7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EkM-JG-13G"/>
+                    <connections>
+                        <segue destination="cC7-0t-L4l" kind="show" identifier="showChart1" id="9EJ-Ck-TJh"/>
+                        <segue destination="16L-Ya-r4b" kind="show" identifier="showChart2" id="uK5-aY-Fia"/>
+                        <segue destination="lRS-Lx-KRR" kind="show" identifier="showChart3" id="6cd-A6-uaw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D2i-ba-I2z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3859" y="-732"/>
+        </scene>
+        <!--Tutor-->
+        <scene sceneID="UnY-fk-Gds">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tutor" id="xql-rS-saI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5MJ-y5-fph"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A0v-Fx-UkC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5819" y="-681"/>
         </scene>
         <!--Chart View Controller-->
         <scene sceneID="0pc-kK-JUh">
@@ -611,16 +638,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="0zL-4b-iRK">
-                        <barButtonItem key="rightBarButtonItem" title="習慣へ" id="3bb-2O-61d">
+                        <barButtonItem key="leftBarButtonItem" image="Cancel" id="sRW-tL-dfW">
                             <connections>
-                                <segue destination="16L-Ya-r4b" kind="show" identifier="showSecondChart" id="h2h-Dk-KB6"/>
+                                <action selector="pressCancel:" destination="cC7-0t-L4l" id="Rjf-fW-1Ui"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21w-uU-mtZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4776" y="-716"/>
+            <point key="canvasLocation" x="-5736" y="112"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="Xq3-7L-GpX">
@@ -635,7 +662,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Our-34-kF8" kind="relationship" relationship="viewControllers" id="rrk-uN-yVF"/>
-                        <segue destination="Zue-RV-Qzg" kind="relationship" relationship="viewControllers" id="PKt-CT-QdH"/>
+                        <segue destination="Lui-p1-F8D" kind="relationship" relationship="viewControllers" id="Po7-D7-Ges"/>
                         <segue destination="kyD-9V-beK" kind="relationship" relationship="viewControllers" id="3ih-Xg-13R"/>
                     </connections>
                 </tabBarController>
@@ -660,26 +687,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSQ-UE-M7p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3671" y="-1564"/>
-        </scene>
-        <!--グラフ-->
-        <scene sceneID="d48-fa-4bC">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zue-RV-Qzg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="グラフ" image="ChartBarIcon" id="uJS-1s-B0n"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AOA-6L-2bP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="cC7-0t-L4l" kind="relationship" relationship="rootViewController" id="acd-HC-jR0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eOL-wb-EIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4774" y="-1564"/>
+            <point key="canvasLocation" x="-6973" y="-1577"/>
         </scene>
         <!--設定-->
         <scene sceneID="WfH-RN-pLg">
@@ -701,9 +709,28 @@
             </objects>
             <point key="canvasLocation" x="-2732" y="-1577"/>
         </scene>
+        <!--グラフ-->
+        <scene sceneID="WIa-dz-DkK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lui-p1-F8D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="グラフ" image="ChartBarIcon" id="QHu-7h-Zqq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1sa-PW-s8H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vNB-Ot-CkF" kind="relationship" relationship="rootViewController" id="XYg-h2-fJK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MKS-Ls-NZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3857" y="-1577"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1UG-AI-a1u"/>
+        <segue reference="w38-MZ-6TF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Add" width="128" height="128"/>

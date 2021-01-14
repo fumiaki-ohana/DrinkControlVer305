@@ -2,17 +2,17 @@
 //  TabViewController.swift
 //  DrinkControl
 //
-//  Created by 鶴見文明 on 2020/12/01.
-//  Copyright © 2020 OHANA Inc. All rights reserved.
+//  Created by 鶴見文明 on 2021/01/12.
+//  Copyright © 2021 OHANA Inc. All rights reserved.
 //
 
 import UIKit
 
 class TabViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
         // Do any additional setup after loading the view.
     }
     

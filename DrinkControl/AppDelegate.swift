@@ -56,6 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          shouldWarningOnRatingGraph = true
          */
       //MARK:-FIXME
+        saveTimes = 0
         shouldShowCoarch = true
         shouldShowVerInfo = true
         unlocked = false

@@ -40,7 +40,6 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
     var saveStatus = true
     
     //MARK:- Coach Properties
-   
     let coachMarksController = CoachMarksController()
     private var pointOfInterest:UIView!
     private var tableCellView:UIView!
@@ -49,7 +48,6 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
          "カレンダーで日付を選ぶと、🍷飲酒データが表示されます。","編集は、セルか右上の📝ボタンをタップします。","詳細は📈グラフで表示します"]
  
     // MARK: -IB Action📝
-    
     @IBAction func editDataEntry(_ sender: UIBarButtonItem) {
         processDataEntry()
     }
@@ -183,10 +181,9 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
     
     func coachMarksController(_ coachMarksController: CoachMarksController,
                               didEndShowingBySkipping skipped: Bool) {
-        self.tabBarController?.selectedIndex = 1
-       // performSegue(withIdentifier: "showChart", sender: Any?.self)
+    //   self.tabBarController?.selectedIndex = 1
+         performSegue(withIdentifier: "moveToChartOnTutor", sender: Any?.self)
     }
-
     /*
     // MARK: - Review request
     func requestReview() {
@@ -296,18 +293,9 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         self.coachMarksController.delegate = self
         self.tableview.delegate = self
 
-        // トリガー設定
-        
-// TODO
   //     realmのデフォルトのファイル
   //   print(Realm.Configuration.defaultConfiguration.fileURL!)
   
-        /*
-        if processCompletedCountVar > hairCutForReview {
-            requestReview()
-        }
-        */
-        
         drinkCalendar.dataSource = self
         drinkCalendar.delegate = self
         
@@ -476,8 +464,6 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
          //   let prefix = object.totalUnits == 0 ? "0":String(round(object.totalUnits*10)/10)
      //       print(object.totalUnits)
               let prefix = object.totalUnits == 0 ? "休肝日💖お酒は飲みませんでした！":(object.totalUnits*10.0).decimalStr
-            if object.totalUnits == 0{
-                showAnimation(parentView: self.view, lottieJason: "lf30_editor_st8bizys")}
         //     let prefix = object.totalUnits == 0 ? "0g":(object.totalUnits).decimalStr            //      let title = drinkDaily.emojiStr + " " + prefix
             let title = drinkDaily.emojiStr
             let desc =  prefix

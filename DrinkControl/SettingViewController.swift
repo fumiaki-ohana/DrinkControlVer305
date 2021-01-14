@@ -34,9 +34,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
       let hintStr  = ["豊富な設定⚙️オプションがあります。例えば：\n\n- 🎨アプリのテーマ色\n\n- 🍷お酒の名前やアルコール濃度\n\n- 📅カレンダー詳細\n\n- 🚰入力量の調整ETC.\n\n自分好みに変えてみましょう"]
     
     // MARK:- Methods
-    
-    
-    func reversedEmojiStr(emoji:drinkSet) -> String {
+     func reversedEmojiStr(emoji:drinkSet) -> String {
         switch emoji {
         case .item_def: return optionEmojiStr[0]+String(repeating:drinkSet.item_def.rawValue, count: 3)
         case .item_plain: return optionEmojiStr[1]+String(repeating:drinkSet.item_plain.rawValue, count: 3)
@@ -47,9 +45,8 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
         default: return optionEmojiStr[6]+""
         }
     }
-   
+   // MARK:- Eureka table management
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-
         return 44.0
     }
 

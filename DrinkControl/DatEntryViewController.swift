@@ -17,7 +17,6 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
     @IBOutlet weak var cancelBtn: UIBarButtonItem!
     @IBOutlet weak var moveToReview: UIButton!
     @IBOutlet var viewBackGround: UIView!
-    
     @IBOutlet weak var noButton: UIButton!
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
         if flagChanged {
@@ -30,12 +29,16 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
            performSegue(withIdentifier: "showEvalViewSegue", sender: Any?.self)
        }
     
-    
     @IBAction func pressNoDrinkBtn(_ sender: UIButton) {
         noDrinkDay()
     }
     
-   
+    // MARK:- Coarch properties
+    private var pointOfInterest:UIView!
+    let coachMarksController = CoachMarksController()
+    let hintStr  = ["🍷ワインを200cc。\n💡設定でお酒の種類を変更可能です。","🍺ビールを350cc、🍶日本酒も200cc飲みました。\n💡(±50)はワンクリックの増減量で変更可能です。","純アルコール量の合計を、自動的に計算します。",
+        "💡休肝日㊗️はここをタップ！",
+         "☝️入力が完了したら、レビュー画面に移動です。"]
     
     // MARK:- Properties
     var stepValue:Double = 0.0
@@ -47,43 +50,37 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
     let attributes: [NSAttributedString.Key : Any] = [
         .font : UIFont.systemFont(ofSize: 11.0), // 文字色
     ]
-    
+    //MARK:- Methods
     func noDrinkDay() {
-           
-           let oldData = drinkDaily
-           var zeroDrinkDay = drinkDaily
-           for (key, _) in zeroDrinkDay.drinks {
-                              zeroDrinkDay.drinks[key] = 0
-                          }
-           let data = setDataArray(rawdata: generateRawData(modifiedData: zeroDrinkDay))
-           let noDrinkDaysFor7days = "過去７日間"+(excessOrNoDrinkLatest1week(array: data, calc: Ecalc.noDrink)).decimalStrPlain+"日"
-           let noDrinkDaysFor30days = "過去30日間"+(excessOrNoDrinkLatest1week(array: data, calc: Ecalc.noDrink)).decimalStrPlain+"日"
-           
-           
-           showAnimation(parentView:self.view, lottieJason: "782-check-mark-success",scale:80)
-       
-           DispatchQueue.main.asyncAfter(deadline: .now() + 3.0){
-           let msg = "全部0ccにリセットします。"+"\n"+"休肝日は:"+"\n"+noDrinkDaysFor7days+"\n"+noDrinkDaysFor30days
-               self.present(.okPlusAlert(title:"やりましたね!", message: msg,astyle: .alert,okstr:"レビュー画面に進む",
-                   okHandler: {(action) -> Void in
-                    self.drinkDaily = zeroDrinkDay
-                    self.tableView.reloadData()
-                    self.performSegue(withIdentifier: "showEvalViewSegue", sender: Any.self)},
-                   cancelHandler:{(action) -> Void in
-                    self.drinkDaily = oldData
-                    self.tableView.reloadData()
-               }
-               ))
+        
+        let oldData = drinkDaily
+        var zeroDrinkDay = drinkDaily
+        for (key, _) in zeroDrinkDay.drinks {
+            zeroDrinkDay.drinks[key] = 0
         }
-       }
+        let data = setDataArray(rawdata: generateRawData(modifiedData: zeroDrinkDay))
+        let noDrinkDaysFor7days = "過去７日間"+(excessOrNoDrinkLatest1week(array: data, calc: Ecalc.noDrink)).decimalStrPlain+"日"
+        let noDrinkDaysFor30days = "過去30日間"+(excessOrNoDrinkLatest1week(array: data, calc: Ecalc.noDrink)).decimalStrPlain+"日"
+        
+        
+        showAnimation(parentView:self.view, lottieJason: "lf30_editor_st8bizys",scale:80)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0){
+            let msg = "全部0ccにリセットします。"+"\n"+"休肝日は:"+"\n"+noDrinkDaysFor7days+"\n"+noDrinkDaysFor30days
+            self.present(.okPlusAlert(title:"やりましたね!", message: msg,astyle: .alert,okstr:"レビュー画面に進む",
+                                      okHandler: {(action) -> Void in
+                                        self.drinkDaily = zeroDrinkDay
+                                        self.tableView.reloadData()
+                                        self.performSegue(withIdentifier: "showEvalViewSegue", sender: Any.self)},
+                                      cancelHandler:{(action) -> Void in
+                                        self.drinkDaily = oldData
+                                        self.tableView.reloadData()
+                                      }
+            ))
+        }
+    }
     
     // MARK:- Coarch
-    // Coarch properties
-    private var pointOfInterest:UIView!
-    let coachMarksController = CoachMarksController()
-    let hintStr  = ["🍷ワインを200cc。\n💡設定でお酒の種類を変更可能です。","🍺ビールを350cc、🍶日本酒も200cc飲みました。\n💡(±50)はワンクリックの増減量で変更可能です。","純アルコール量の合計を、自動的に計算します。",
-        "💡休肝日㊗️はここをタップ！",
-         "☝️入力が完了したら、レビュー画面に移動です。"]
     
     func numberOfCoachMarks(for coachMarksController: CoachMarksController) -> Int {
         return hintStr.count
@@ -176,12 +173,12 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
             }
             return true }
     }
-     
-   //MARK:- table
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-           return 40.0
-       }
     
+    //MARK:- Eureka Table
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40.0
+    }
+     
      //MARK:- View Rotation
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -209,15 +206,6 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         
         self.coachMarksController.dataSource = self
         self.coachMarksController.delegate = self
-        
-        /*
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        //制約を追加 top:150 left:50 width:70 height:70
-        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 59.0).isActive = true
-        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0.0).isActive = true
-        tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0.0).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -119.0).isActive = true
-        */
        
         tableView.frame =
                  CGRect(x: 10, y: 70,  width: self.view.bounds.size.width-20, height: (self.view.bounds.size.height - 200))
@@ -230,6 +218,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         cancelBtn.isEnabled = true
    //     self.moveToReview.tintColor = UIColor.white
         
+     
     //MARK:- Eureka
         LabelRow.defaultCellUpdate = { cell, row in
             cell.theme_backgroundColor = GlobalPicker.cellBackGround_dataEntry
@@ -435,19 +424,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                totalUnitRow.reload()
            }
     }
-   /*
-    func reflectRowValue() {
-        
-        for item in drinkDaily.drinks {
-            let tagName = item.key.rawValue+"Entry"
-            if let rowRef = self.form.rowBy(tag: tagName) {
-                rowRef.updateCell()
-                rowRef.reload()
-            }
-        }
-        update()
-       }
-    */
+   
     //MARK:-User interface
     
     func showAlert(title: String?, message: String?)  {
