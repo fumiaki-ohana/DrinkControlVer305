@@ -36,9 +36,9 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
     // MARK:- Coarch properties
     private var pointOfInterest:UIView!
     let coachMarksController = CoachMarksController()
-    let hintStr  = ["🍷ワインを200cc。\n💡設定でお酒の種類を変更可能です。","🍺ビールを350cc、🍶日本酒も200cc飲みました。\n💡(±50)はワンクリックの増減量で変更可能です。","純アルコール量の合計を、自動的に計算します。",
-        "💡休肝日㊗️はここをタップ！",
-         "☝️入力が完了したら、レビュー画面に移動です。"]
+    let hintStr  = ["🍷ワインを200cc。","🍺ビールも350cc、🍶日本酒も200cc飲みました。\n💡TIP(±50)はワンクリックでの増減量ccで、変更できます。","純アルコール量の合計を、自動的に計算します。\n\n💡TIP:お酒の種類や、ワンクリックでの入力量は【⚙️設定】で変えられます。",
+        "💡休肝日㊗️だった時は、ここをタップ！",
+         "☝️入力が完了したら、レビュー画面に移動します。"]
     
     // MARK:- Properties
     var stepValue:Double = 0.0

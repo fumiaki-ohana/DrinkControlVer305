@@ -28,11 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = Realm.Configuration(schemaVersion: UInt64(schemaVer), deleteRealmIfMigrationNeeded: false)
         Realm.Configuration.defaultConfiguration = config
         
-        /*
-        // MARK:- Siren
-        window?.makeKeyAndVisible()
-        forceUpdate()
-  */
         // MARK:- Review request
         if  (processCompletedCountVar > hairCutForReview),#available(iOS 10.3, *) {
             SKStoreReviewController.requestReview()
@@ -40,11 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          // FIXME: UserDefaultをリセットを変えろ
         //        unlocked = true
         
-        /*
+        
          if let bundleId = Bundle.main.bundleIdentifier {
          UserDefaults.standard.removePersistentDomain(forName: bundleId)
          }
-         
+        
+        /*
          unlocked = false
          
          flagReadMeV3 = false
@@ -54,12 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          shouldShowVerInfo = true
          shouldShowCoarch = true
          shouldWarningOnRatingGraph = true
-         */
-      //MARK:-FIXME
+        //MARK:-FIXME
         saveTimes = 0
         shouldShowCoarch = true
         shouldShowVerInfo = true
         unlocked = false
+        */
+    
         //ユーザータイプの判定
         
         if unlocked {

@@ -51,7 +51,6 @@
 		FFD4A04D23A0B8FD008C7043 /* NetworkActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD4A04C23A0B8FD008C7043 /* NetworkActivityIndicatorManager.swift */; };
 		FFD5ED5125085F21008BADA7 /* NamingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD5ED5025085F21008BADA7 /* NamingViewController.swift */; };
 		FFDA937A25426A530064ED6C /* WT02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDA937925426A530064ED6C /* WT02ViewController.swift */; };
-		FFDA937C25426C5F0064ED6C /* WT02AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDA937B25426C5F0064ED6C /* WT02AViewController.swift */; };
 		FFE30D3223C1AEA200A96D2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE30D3123C1AEA200A96D2B /* LaunchScreen.storyboard */; };
 		FFE56C7F2395EDDD00873D09 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE56C7E2395EDDD00873D09 /* SettingViewController.swift */; };
 		FFE8D65F24457CB600180F34 /* TutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE8D65E24457CB600180F34 /* TutorViewController.swift */; };
@@ -131,7 +130,6 @@
 		FFD4A04C23A0B8FD008C7043 /* NetworkActivityIndicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManager.swift; sourceTree = "<group>"; };
 		FFD5ED5025085F21008BADA7 /* NamingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingViewController.swift; sourceTree = "<group>"; };
 		FFDA937925426A530064ED6C /* WT02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT02ViewController.swift; sourceTree = "<group>"; };
-		FFDA937B25426C5F0064ED6C /* WT02AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT02AViewController.swift; sourceTree = "<group>"; };
 		FFDBFEB9237F93CD00852BB6 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 		FFE30D3123C1AEA200A96D2B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFE56C7E2395EDDD00873D09 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -236,7 +234,6 @@
 				FF87D02A24C2A7E300EF8F4D /* WT04ViewController.swift */,
 				FF15D0F024C163C900ADA952 /* WT03ViewController.swift */,
 				FFDA937925426A530064ED6C /* WT02ViewController.swift */,
-				FFDA937B25426C5F0064ED6C /* WT02AViewController.swift */,
 			);
 			name = Walkthrough;
 			sourceTree = "<group>";
@@ -469,7 +466,6 @@
 				FF29F9F7237FD05800917E20 /* ChartViewController.swift in Sources */,
 				FFE8D65F24457CB600180F34 /* TutorViewController.swift in Sources */,
 				FFCB3423237637D40089128D /* Extension.swift in Sources */,
-				FFDA937C25426C5F0064ED6C /* WT02AViewController.swift in Sources */,
 				FF618AC224D3E06D008CD84B /* CalanderSettingViewController.swift in Sources */,
 				FF6399462392022F008A50CE /* DatEntryViewController.swift in Sources */,
 				FFDA937A25426A530064ED6C /* WT02ViewController.swift in Sources */,

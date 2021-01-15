@@ -17,11 +17,6 @@ class WT04ViewController: FormViewController {
     let buttonTitle = "ホーム画面へ移動"
     
     @IBAction func pressButton(_ sender: UIButton) {
-        /*
-        let titl = "ご使用の前にお読みください。"
-        let disclaimer = "飲酒による健康への影響は性別、年齢、健康状態、妊娠、体質等々、様々な要因で異なり、大きな個人差があります。ご自身に適した設定を判断しアプリで計算・表示される数字等の意味と限界をご理解の上でご自身の責任でご利用ください。独力で減酒が難しい場合は専門家に相談してください。厚生労働省のhttps://www.e-healthnet.mhlw.go.jp/には飲酒に参考となる情報があります。\n当アプリの使用の結果や健康等への影響に対してアプリ製作者は一切責任を負いません。"
-        self.present(.okAlert(title:titl, message:disclaimer ,astyle: .alert, okstr:"了解", okHandler: {(action) -> Void in  self.performSegue(withIdentifier: "moveToMain", sender: Any?.self)}))
-        */
         self.performSegue(withIdentifier: "moveToMain", sender: Any?.self)
     }
     
@@ -66,7 +61,7 @@ class WT04ViewController: FormViewController {
                 $0.value = Double(excessDrinkHairCut)
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return "多量飲酒：適量の"+"\(Int(v))"+"倍 (" + (targetUnit*10*v).decimalStr+")"
+                    return "飲みすぎ：適量の"+"\(Int(v))"+"倍 (" + (targetUnit*10*v).decimalStr+")"
                 }
             }
             .onChange {

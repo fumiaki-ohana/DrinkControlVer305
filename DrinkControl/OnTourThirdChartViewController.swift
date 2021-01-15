@@ -21,7 +21,7 @@ class OnTourThirdChartViewController: UIViewController,CoachMarksControllerDataS
        var barChartForCoarch = BarChartView()
        var pieChartForCoarch = PieChartView()
        
-       let hintStr  = ["グラフ面の最後は、飲酒の評価です。📊は期間ごとの平均で","...⭕️グラフは全期間です。"]
+       let hintStr  = ["最後は、飲酒の評価です。📊は期間の平均で","...⭕️は全期間です。"]
        private var pointOfInterest:UIView!
        let coachMarksController = CoachMarksController()
     

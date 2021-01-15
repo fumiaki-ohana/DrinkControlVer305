@@ -34,6 +34,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
     var mySections = [String]()
     var twoDimArray = [tableArray]()
     var sectionTitleArray = ["１日の上限目標","合計の純アルコール量", "飲んだお酒の内訳"]
+    let disclaimer = "【開始の前にお読みください。】\n　飲酒による健康への影響には大きな個人差があり特に妊婦や持病のある人は要注意です。自分に合った設定をして、アプリで計算・表示される数字等の意味と限界をご理解の上でご自身の責任でご利用ください。\n　独力で減酒が難しい場合は専門家に相談してください。厚生労働省のhttps://www.e-healthnet.mhlw.go.jp/には飲酒に参考となる情報があります。\n　当アプリの開発では正しい数字が計算・表示されるように注意しましたが誤りの可能性は完全には排除できません。\n　当アプリの使用の結果や健康等への影響に対してアプリ製作者は一切責任を負いません。"
     
     var drinkDaily = DrinkDailyRecord(dDate: Date())
     var selectedDate = Date()
@@ -44,7 +45,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
     private var pointOfInterest:UIView!
     private var tableCellView:UIView!
     let hintStr =
-    ["📅の点は、飲酒量（一つが純アルコール量10g）です。",
+    ["📅の点は飲酒量で、ひとつが純アルコール量10gを示します。",
          "カレンダーで日付を選ぶと、🍷飲酒データが表示されます。","編集は、セルか右上の📝ボタンをタップします。","詳細は📈グラフで表示します"]
  
     // MARK: -IB Action📝
@@ -346,7 +347,6 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
     override func viewDidAppear(_ animated: Bool) {
         var titl:String = ""
         var msg:String  = ""
-        let disclaimer = "【開始の前にお読みください。】\n　飲酒による健康への影響は性別、年齢、健康状態、妊娠、体質等々、様々な要因で異なり、大きな個人差があります。ご自身に適した設定を判断しアプリで計算・表示される数字等の意味と限界をご理解の上でご自身の責任でご利用ください。\n　独力で減酒が難しい場合は専門家に相談してください。厚生労働省のhttps://www.e-healthnet.mhlw.go.jp/には飲酒に参考となる情報があります。\n　当アプリの使用の結果や健康等への影響に対してアプリ製作者は一切責任を負いません。"
         
         super.viewDidAppear(animated)
         
@@ -356,7 +356,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
                 EmptyStateView.isHidden = false
                 tableview.isHidden = true
                 addAnimation(view: addButton)
-                self.present(.okAlert(title:"飲んだお酒を入力してみましょう。", message: "まずカレンダーで日付を選び、➕にタッチすると入力画面へ移動します。",astyle: .alert, okstr:"進む", okHandler: {(action) -> Void in  self.performSegue(withIdentifier: "showDailyDrinkRecord", sender: Any.self)}))
+                self.present(.okAlert(title:"飲んだお酒を入力します。", message: "まずカレンダーで日付を選び、➕にタッチします。",astyle: .alert, okstr:"進む", okHandler: {(action) -> Void in  self.performSegue(withIdentifier: "showDailyDrinkRecord", sender: Any.self)}))
             case .dataEntry :
                 navigationItem.title = dailyDrinkDummy.dDate.mediumStr
                 EmptyStateView.isHidden = true

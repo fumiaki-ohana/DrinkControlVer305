@@ -24,7 +24,7 @@ class OnTourChartViewController: UIViewController,CoachMarksControllerDataSource
     }
   
     //MARK:-  Coarch
-    let hintStr  = ["グラフビューは、あなたの飲酒習慣を３つの画面で【見える化】します。。\n最初は「飲酒量」の画面です\n📈は、時系列の飲酒量（純アルコール量）","📊は、平均の飲酒量です。"]
+    let hintStr  = ["あなたの飲酒習慣を３つのグラフ画面で【見える化】します。\n\n最初の画面の📈は純アルコール量。","📊は、平均です。"]
     private var pointOfInterest:UIView!
     let coachMarksController = CoachMarksController()
     var lineChartForCoach = LineChartView()

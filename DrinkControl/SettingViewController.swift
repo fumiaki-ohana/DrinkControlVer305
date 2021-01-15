@@ -31,7 +31,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
     // Coarch properties
        private var pointOfInterest:UIView!
        let coachMarksController = CoachMarksController()
-      let hintStr  = ["豊富な設定⚙️オプションがあります。例えば：\n\n- 🎨アプリのテーマ色\n\n- 🍷お酒の名前やアルコール濃度\n\n- 📅カレンダー詳細\n\n- 🚰入力量の調整ETC.\n\n自分好みに変えてみましょう"]
+      let hintStr  = ["設定⚙️で自分好みに変えてみましょう。\n\n- 🎨アプリのテーマ色や絵文字\n\n- 🍷お酒の名前やアルコール濃度\n\n- 📅カレンダー詳細\n\n- 🚰入力量の調整ETC.\n\n- 🥇休肝日や飲みすぎ"]
     
     // MARK:- Methods
      func reversedEmojiStr(emoji:drinkSet) -> String {
