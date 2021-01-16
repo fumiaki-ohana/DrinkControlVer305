@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if  (processCompletedCountVar > hairCutForReview),#available(iOS 10.3, *) {
             SKStoreReviewController.requestReview()
         }
+       
          // FIXME: UserDefaultをリセットを変えろ
         //        unlocked = true
         

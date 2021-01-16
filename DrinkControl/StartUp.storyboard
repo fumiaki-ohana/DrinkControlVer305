@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xNU-2o-mSP">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -24,24 +24,24 @@
             <objects>
                 <viewController title="Page3" id="1zy-rk-7Xh" customClass="WT03ViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E0e-Hz-0w1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="halftone-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="EfL-wz-UkQ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0BZ-Sv-2jB">
-                                <rect key="frame" x="177" y="20" width="60" height="60"/>
+                                <rect key="frame" x="130" y="20" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="O7g-Vf-Ddi"/>
                                     <constraint firstAttribute="width" constant="60" id="nK6-UD-dR6"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="p2j-TN-Q85">
-                                <rect key="frame" x="20" y="90" width="374" height="60"/>
+                                <rect key="frame" x="20" y="90" width="280" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9K-cG-y7q" userLabel="L1">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="GUJ-l6-MYZ"/>
                                         </constraints>
@@ -57,7 +57,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3V-zT-xRs" userLabel="L2">
-                                        <rect key="frame" x="0.0" y="46" width="374" height="14"/>
+                                        <rect key="frame" x="0.0" y="46" width="280" height="14"/>
                                         <attributedString key="attributedText">
                                             <fragment content="後から設定画面で">
                                                 <attributes>
@@ -90,7 +90,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUM-No-UAb">
-                                <rect key="frame" x="20" y="728" width="374" height="40"/>
+                                <rect key="frame" x="20" y="468" width="280" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="kI6-N7-V1A"/>
                                 </constraints>
@@ -132,24 +132,24 @@
             <objects>
                 <viewController title="Page1" id="xNU-2o-mSP" customClass="WT02ViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r71-gU-ZHi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="halftone-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="Pof-fV-fFg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="evx-VM-Bw5">
-                                <rect key="frame" x="177" y="64" width="60" height="60"/>
+                                <rect key="frame" x="130" y="20" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="K0n-go-zHQ"/>
                                     <constraint firstAttribute="width" constant="60" id="ucb-Zt-Sus"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qyk-F6-5s1">
-                                <rect key="frame" x="20" y="201" width="374" height="228"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Qyk-F6-5s1">
+                                <rect key="frame" x="20" y="157" width="280" height="257.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgB-2a-iqY" userLabel="L4">
-                                        <rect key="frame" x="25" y="0.0" width="324" height="27"/>
+                                        <rect key="frame" x="18.5" y="0.0" width="243" height="54"/>
                                         <attributedString key="attributedText">
                                             <fragment content="減酒目標">
                                                 <attributes>
@@ -158,7 +158,7 @@
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="を設定しましょう">
+                                            <fragment content="を設定します。">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="27" name="HiraginoSans-W3"/>
@@ -169,33 +169,33 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMd-3G-h5D" userLabel="L2">
-                                        <rect key="frame" x="0.66666666666665719" y="57" width="373" height="28"/>
+                                        <rect key="frame" x="4.5" y="63" width="271" height="51"/>
                                         <attributedString key="attributedText">
                                             <fragment content="- 当アプリ内で">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="14" name="HiraginoSans-W3"/>
+                                                    <font key="NSFont" size="17" name="HiraginoSans-W3"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment content="広告表示は無く">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="14" name="HiraginoSans-W3"/>
+                                                    <font key="NSFont" size="17" name="HiraginoSans-W3"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment content="、">
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" size="14" name="HiraginoSans-W3"/>
+                                                    <font key="NSFont" size="17" name="HiraginoSans-W3"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="ユーザーの入力やデータは一切外部へ送信されません。">
+                                            <fragment content="ユーザーの入力やデータは一切外部へ送信しません。">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="14" name="HiraginoSans-W3"/>
+                                                    <font key="NSFont" size="17" name="HiraginoSans-W3"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
@@ -203,42 +203,56 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-Z1-h8y" userLabel="L3">
-                                        <rect key="frame" x="1.3333333333333428" y="115.00000000000001" width="371.33333333333326" height="32.666666666666671"/>
+                                        <rect key="frame" x="7" y="123" width="266.5" height="59.5"/>
                                         <attributedString key="attributedText">
                                             <fragment content="- ">
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" size="14" name="HiraginoSans-W4"/>
+                                                    <font key="NSFont" size="17" name="HiraginoSans-W4"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment content="無料">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="14" name="HiraginoSans-W4"/>
+                                                    <font key="NSFont" size="17" name="HiraginoSans-W4"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment content="で試用できます。気に入ったら、App内課金で購入お願いします。">
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" size="14" name="HiraginoSans-W4"/>
+                                                    <font key="NSFont" size="17" name="HiraginoSans-W4"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開発参考　樋口進. 酒量を減らすための方法. e-ヘルスネット. https://www.e-healthnet.mhlw.go.jp/information/alcohol/a-03-002.html 厚生労働省" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRx-m4-NiQ">
-                                        <rect key="frame" x="0.66666666666665719" y="177.66666666666669" width="372.66666666666674" height="50.333333333333343"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gwl-uU-dia">
+                                        <rect key="frame" x="6" y="191.5" width="268.5" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開発参考：樋口進. 酒量を減らすための方法. e-ヘルスネット. 厚生労働省" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRx-m4-NiQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="268.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5Q-cZ-PV9">
+                                                <rect key="frame" x="0.0" y="36" width="268.5" height="30"/>
+                                                <state key="normal" title="詳細へ">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="showWeb:" destination="xNU-2o-mSP" eventType="touchUpInside" id="j6i-Yc-MBA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajt-cw-fjM">
-                                <rect key="frame" x="20" y="778" width="374" height="44"/>
+                                <rect key="frame" x="20" y="484" width="280" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="SiI-Au-JSk"/>
                                 </constraints>
@@ -248,7 +262,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHJ-Ps-sfL" userLabel="L1">
-                                <rect key="frame" x="158" y="144" width="98" height="37"/>
+                                <rect key="frame" x="111" y="100" width="98" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="W1y-gV-TRB"/>
                                     <constraint firstAttribute="width" constant="98" id="wmE-if-K7K"/>
@@ -292,21 +306,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCV-KM-mTN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-100.00000000000001" y="654.91071428571422"/>
+            <point key="canvasLocation" x="-101.25" y="653.87323943661977"/>
         </scene>
         <!--Page4-->
         <scene sceneID="P0g-tL-GCj">
             <objects>
                 <viewController title="Page4" id="0Kl-if-nVd" customClass="WT04ViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vLf-2G-qkN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="halftone-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="IXH-SJ-0Kb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="aQ2-vB-huF">
-                                <rect key="frame" x="177" y="20" width="60" height="60"/>
+                                <rect key="frame" x="130" y="20" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="DwW-k8-Eu8"/>
                                     <constraint firstAttribute="width" constant="60" id="Mc3-ke-utJ"/>
@@ -315,10 +329,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="n3f-3B-3fj">
-                                <rect key="frame" x="20" y="90" width="374" height="60"/>
+                                <rect key="frame" x="20" y="90" width="280" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEM-fA-TUc" userLabel="L1">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="f2R-IM-0Sv"/>
                                         </constraints>
@@ -334,7 +348,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN1-x3-b8G" userLabel="L2">
-                                        <rect key="frame" x="0.0" y="46" width="374" height="14"/>
+                                        <rect key="frame" x="0.0" y="46" width="280" height="14"/>
                                         <attributedString key="attributedText">
                                             <fragment content="後から設定画面で">
                                                 <attributes>
@@ -367,7 +381,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jh-hR-UNh">
-                                <rect key="frame" x="20" y="724" width="374" height="44"/>
+                                <rect key="frame" x="20" y="464" width="280" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="91K-AP-8ke" userLabel="height = 40"/>
                                 </constraints>
@@ -408,6 +422,9 @@
     <resources>
         <image name="LaunchIcon" width="60" height="60"/>
         <image name="halftone-yellow" width="400" height="400"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

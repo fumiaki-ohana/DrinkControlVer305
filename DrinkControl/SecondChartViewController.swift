@@ -16,10 +16,17 @@ class SecondChartViewController: UIViewController{
     }
     //MARK:- View Rotation
     override func viewDidAppear(_ animated: Bool) {
-        self.tabBarController?.tabBar.isHidden = true
         super.viewDidAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+        
     }
    override func viewDidLoad() {
+    super.viewDidLoad()
+    guard !grNoData else {
+        present(.okAlert(title: "データがありません", message: "グラフの表示を中止しました。"))
+        return
+    }
+    
     
         let tempdata = setDataArray(rawdata: generateRawData(reversed: false))
         let data = excessOrNoDrinkFullPeriod(array:tempdata,calc:Ecalc.noDrink)

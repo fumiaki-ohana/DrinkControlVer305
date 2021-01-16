@@ -32,7 +32,15 @@ class ChartViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        guard !grNoData else {
+            present(.okAlert(title: "データがありません", message: "グラフの表示を中止しました。"))
+            return
+        }
+        
         let data = setDataArray(rawdata: generateRawData())
+        
+        
+        
         navigationItem.title = (data.last?.0)!
         navigationItem.leftBarButtonItem?.theme_tintColor = GlobalPicker.naviItemColor
 

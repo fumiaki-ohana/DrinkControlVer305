@@ -31,6 +31,11 @@ class ThirdChartViewController: UIViewController{
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        guard !grNoData else {
+            present(.okAlert(title: "データがありません", message: "グラフの表示を中止しました。"))
+            return
+        }
         
         justFinishedCoachCources = .chart
               

@@ -71,6 +71,17 @@ class GraphViewController: FormViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let data = generateRawData()
+        if data.isEmpty {
+            grNoData = true
+        }
+        else {
+            grNoData = false
+        }
+    }
+    
     //MARK:- Dark mode support
         
         override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

@@ -15,6 +15,8 @@ enum Ecalc {
     case excess
 }
 
+var grNoData = false // データがない場合は、グラフ表示を中止せる
+
 //MARK:- Stacked Bar Charts
 
 func drawStackedBarChart(chartData:StackedChartArray,  legend:String?, rect:CGRect, numXLabels:Int, topOffset: CGFloat = 10, buttomOffset: CGFloat = 30.0, leftOffset:CGFloat = 10.0,rightOffset:CGFloat = 10.0, flagDateType: Bool,addLines:Bool = false,noDrink:Bool = false, showValue:Bool) -> BarChartView{
