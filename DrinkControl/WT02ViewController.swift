@@ -25,7 +25,7 @@ class WT02ViewController: UIViewController {
   
     // MARK:- View Rotation
     override func viewDidAppear(_ animated: Bool) {
-        let titl = "減酒くんについて"
+        let titl = "減酒くん"
         let compButtonTitle = "続ける"
         let detailButtonTitle = "開発参考：厚生労働省e-ヘルスネットへ"
         let detailWebSite = "https://www.e-healthnet.mhlw.go.jp/information/alcohol"
