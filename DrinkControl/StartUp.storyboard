@@ -145,8 +145,8 @@
                                     <constraint firstAttribute="width" constant="60" id="ucb-Zt-Sus"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Qyk-F6-5s1">
-                                <rect key="frame" x="20" y="157" width="280" height="230.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Qyk-F6-5s1">
+                                <rect key="frame" x="20" y="157" width="280" height="239.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgB-2a-iqY" userLabel="L4">
                                         <rect key="frame" x="32" y="0.0" width="216" height="27"/>
@@ -169,7 +169,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMd-3G-h5D" userLabel="L2">
-                                        <rect key="frame" x="4.5" y="36" width="271" height="51"/>
+                                        <rect key="frame" x="4.5" y="39" width="271" height="51"/>
                                         <attributedString key="attributedText">
                                             <fragment content="- 当アプリ内で">
                                                 <attributes>
@@ -203,26 +203,33 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-Z1-h8y" userLabel="L3">
-                                        <rect key="frame" x="7" y="96" width="266.5" height="59.5"/>
+                                        <rect key="frame" x="1" y="102" width="278.5" height="59.5"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="- ">
+                                            <fragment content="- 無料で試用">
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <font key="NSFont" size="17" name="HiraginoSans-W4"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="無料">
+                                            <fragment content="米">
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="12" name="HiraginoSans-W4"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="できます。気に入ったら、App内課金で購入お願いします。">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <font key="NSFont" size="17" name="HiraginoSans-W4"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="で試用できます。気に入ったら、App内課金で購入お願いします。">
+                                            <fragment content="※保存回数制限があります。">
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" size="17" name="HiraginoSans-W4"/>
+                                                    <font key="NSFont" size="12" name="HiraginoSans-W4"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
@@ -230,9 +237,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gwl-uU-dia">
-                                        <rect key="frame" x="6" y="164.5" width="268.5" height="66"/>
+                                        <rect key="frame" x="6" y="173.5" width="268.5" height="66"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開発参考：樋口進. 酒量を減らすための方法. e-ヘルスネット. 厚生労働省" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRx-m4-NiQ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開発参考：酒量を減らすための方法. e-ヘルスネット. 厚生労働省" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRx-m4-NiQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="268.5" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
