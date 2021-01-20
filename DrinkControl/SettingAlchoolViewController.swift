@@ -40,8 +40,6 @@ class SettingAlchoolViewController:FormViewController {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
         reflectOnEurekaTable()
-        
-        //TODO 名前を設定しろ。
         form = Section("お酒別の設定")
             
             <<< SegmentedRow<String>("segments"){

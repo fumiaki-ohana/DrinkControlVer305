@@ -52,7 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          shouldShowVerInfo = true
          shouldShowCoarch = true
          shouldWarningOnRatingGraph = true
-        //MARK:-FIXME
         saveTimes = 0
         shouldShowCoarch = true
         shouldShowVerInfo = true
@@ -95,9 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupIAP()
         
         //ガイド未了の場合は、TUTORに飛ばす
-        //TODO
         let storyboardName = shouldShowCoarch ? "StartUp":"PageMain" //新規ユーザーはイントロへ誘導
-        //    let storyboardName = flagReadMeV3 ? "PageMain": "StartUp" //最初はすべてのユーザーが読む
         let storybord: UIStoryboard = UIStoryboard(name: storyboardName, bundle: nil)
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = storybord.instantiateInitialViewController()
