@@ -39,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          // FIXME: UserDefaultをリセットを変えろ
         //        unlocked = true
         
-        
          if let bundleId = Bundle.main.bundleIdentifier {
          UserDefaults.standard.removePersistentDomain(forName: bundleId)
          }
