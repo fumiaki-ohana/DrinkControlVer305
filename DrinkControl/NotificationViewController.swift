@@ -95,8 +95,8 @@ class NotificationViewController: FormViewController{
         
         let hStrSwitch = "オフにすると通知を一時停止します。"
         let fStrSwitch = "アプリの通知機能自体を無効にしたい場合は、iOSでの設定＞通知で減酒くんをオフにしてください"
-        let hStr = "通知時刻を設定"
-        let fStr = "お酒を飲む前に、反省を読み返すように指定された時間に通知します。\n⚠️通知機能を有効にするには、iOSでの設定＞通知で減酒くんをオンにしてください"
+        let hStr = "通知したい時間"
+        let fStr = "お酒を飲む前に、前回の反省を読み返しましょう。\nアプリを使っていない時に、指定した時間になったら通知します。\n\n⚠️iOSの設定＞通知で、減酒くんがオフになっている場合は通知をしません。"
         
         TimeRow.defaultCellSetup = { cell, row in
         cell.theme_backgroundColor = GlobalPicker.backgroundColor

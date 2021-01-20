@@ -30,9 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK:- Review request
         if  (processCompletedCountVar > hairCutForReview),#available(iOS 10.3, *) {
-            SKStoreReviewController.requestReview()
+   //         SKStoreReviewController.requestReview() // depreciated from iOS14.0
+            if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                SKStoreReviewController.requestReview(in: scene)
+            }
         }
-       
+        /*
          // FIXME: UserDefaultをリセットを変えろ
         //        unlocked = true
         
@@ -40,8 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          if let bundleId = Bundle.main.bundleIdentifier {
          UserDefaults.standard.removePersistentDomain(forName: bundleId)
          }
-        
-        /*
+          
          unlocked = false
          
          flagReadMeV3 = false
@@ -57,7 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         shouldShowVerInfo = true
         unlocked = false
         */
-    
         //ユーザータイプの判定
         
         if unlocked {
@@ -185,8 +186,12 @@ extension AppDelegate: UNUserNotificationCenterDelegate{
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         // アプリ起動中でもアラートと音で通知
-        completionHandler([.alert, .sound])
-        
+    //    completionHandler([.alert, .sound]) // depreciated from iOS14
+        if #available(iOS 14.0, *) {
+                    completionHandler([[.banner, .list, .sound]])
+                } else {
+                    completionHandler([[.alert, .sound]])
+                }
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {

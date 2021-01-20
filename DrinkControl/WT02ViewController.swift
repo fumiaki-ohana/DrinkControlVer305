@@ -30,8 +30,8 @@ class WT02ViewController: UIViewController {
         let detailButtonTitle = "開発参考：厚生労働省e-ヘルスネットへ"
         let detailWebSite = "https://www.e-healthnet.mhlw.go.jp/information/alcohol"
         let msg:[(title:String,subtitle:String,icon:String)] =
-            [("記録だけでは減りません！","入力して反省コメント→飲む前に読み返す。習慣づけをお手伝い","good"),
-             ("飲んだお酒を見える化","純アルコール量で表示、休肝・飲み過ぎ日も表示","ChartBarIcon"),("かんたん入力","ワンタップで好みの入力量を設定。休肝日は一発入力","dash"),
+            [("記録だけでは減らない！","毎朝反省→飲む前に読み返す。習慣づけをお手伝い","good"),
+             ("飲んだお酒を見える化","純アルコール量換算、休肝・飲み過ぎ日","ChartBarIcon"),("かんたん入力","ワンタップで好みの入力量を設定。休肝日は一発入力","dash"),
              ("自分好みに変える","お酒の変更、アルコール濃度も個別調整。7種類のアプリ色テーマETC・・カスタマイズ可能。","Paint")]
         let item = showWhatsNewPlus(titl: titl, compButtonTitle: compButtonTitle, detailButtonTitle:detailButtonTitle,webStr:detailWebSite, msg: msg)
         present(item,animated: true)

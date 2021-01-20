@@ -23,8 +23,8 @@ class ThirdChartViewController: UIViewController{
         super.viewDidAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
         if shouldWarningOnRatingGraph {
-            let titl = "【新機能】過去の感想のグラフです。"
-            let msg = "⚠️入力が無い日は飲酒がゼロとみなし、【🤗良い】の日としてカウントしています。"
+            let titl = "過去の感想（良い、悪いETC)です。"
+            let msg = "⚠️入力が無かった日＝お酒を飲まなかった日とみなして、【🤗良い】としてカウントしています。"
             self.present(.okAlert(title:titl, message:msg ,astyle: .alert) )
             shouldWarningOnRatingGraph = false
         }

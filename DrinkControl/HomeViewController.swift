@@ -313,14 +313,15 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         
         drinkCalendar.reloadData()
         //MARK:-　バージョンの情報
-     if !shouldShowCoarch, !(userType == .newUser) , shouldShowVerInfo  {
+     if !shouldShowCoarch, shouldShowVerInfo  {
         let titl = "Ver."+appVersion!+"の新機能"
         let compButtonTitle = "続ける"
-        let detailButtonTitle = "e-ヘルスネット（お酒）"
+        let detailButtonTitle = "e-ヘルスネット（お酒へ）"
         let detailWebSite = "https://www.e-healthnet.mhlw.go.jp/information/alcohol"
-        let msg:[(title:String,subtitle:String,icon:String)] = [("ホーム画面を一新しました。","過去の飲酒データをタップしても、編集画面に飛べます。","wine"),
-                                                    ("通知機能","指定時刻に、飲酒の反省を読むよう促します。（設定＞通知の設定）","bell"),("休肝日の入力","タップするだけで飲酒ゼロを入力します。","dash"),
-                                                    ("その他","追加・編集できるお酒の種類を増やしました。他にも多くの改良があります。","beer")]
+        let msg:[(title:String,subtitle:String,icon:String)] = [("ホーム画面を刷新","🆕表示をタップしても、編集画面に飛べます。","wine"),
+            ("🆕通知機能","飲む前に反省を読む。（設定＞通知の設定）","bell"),("🆕休肝日の一発入力","タップするだけで飲酒ゼロを入力","dash"),
+            ("他にも多くの改良点","追加・編集できるお酒の種類を増やすなど。\niOS14に対応、全般的により効率的なプログラムに書き換えました。","beer")]
+        
         let item = showWhatsNewPlus(titl: titl, compButtonTitle: compButtonTitle, detailButtonTitle:detailButtonTitle,webStr:detailWebSite, msg: msg)
         present(item,animated: true)
         shouldShowVerInfo = false

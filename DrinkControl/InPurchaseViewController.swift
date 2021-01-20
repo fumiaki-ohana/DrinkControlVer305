@@ -68,7 +68,7 @@ class InPurchaseViewController: UIViewController {
         let compButtonTitle = "App内購入画面へ進む"
         let msg:[(title:String,subtitle:String,icon:String)] =
             [("データの保存制限（２回）を解除","購入画面でApp内課金を購入すると、制限を解除します。","Buy"),
-             ("まだ課金はされません。","購入画面に進むだけでは、課金はされません。購入ボタンを押すまでは中止できます。","NotBuy"),("中止するためには","購入画面で、「購入を中止する」を選んでください。","Cancel"),
+             ("まだ課金はされません。","購入画面に進むだけでは、課金はされません。購入ボタンを押すまでは中止できます。","NotBuy"),("中止するためには","購入画面で、「中止／戻る」を選んでください。","Cancel"),
              ("既に購入済みの方へ","購入画面で【復元する】をタッチすると保存制限が解除されます。","Restore")]
         let item = showWhatsNew(titl: titl, compButtonTitle: compButtonTitle, msg: msg)
         present(item,animated: true)

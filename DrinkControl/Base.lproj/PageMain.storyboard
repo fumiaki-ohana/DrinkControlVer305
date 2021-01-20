@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CAN-gk-tn9">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -422,7 +421,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3a-Hb-wGj">
                                                 <rect key="frame" x="0.0" y="88" width="212" height="28"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                                <state key="normal" title="購入を中止する">
+                                                <state key="normal" title="中止／戻る">
                                                     <color key="titleColor" systemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
@@ -538,41 +537,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Ln-wT-krI">
-                                <rect key="frame" x="40" y="382" width="240" height="68"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYY-9d-P2u" userLabel="NoDrink">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="29"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <state key="normal" title="休肝日です。">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pressNoDrinkBtn:" destination="bBt-8y-dQ0" eventType="touchUpInside" id="ahR-vQ-sqV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rC8-MN-Mzw">
-                                        <rect key="frame" x="0.0" y="39" width="240" height="29"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <state key="normal" title="レビュー画面へ移動">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pressMoveButton:" destination="bBt-8y-dQ0" eventType="touchUpInside" id="Y5c-Zt-7gd"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rC8-MN-Mzw">
+                                <rect key="frame" x="40" y="372" width="240" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="bs5-HM-gII"/>
+                                    <constraint firstAttribute="height" constant="29" id="gUC-78-HRH"/>
                                 </constraints>
-                            </stackView>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="レビュー画面へ移動">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressMoveButton:" destination="bBt-8y-dQ0" eventType="touchUpInside" id="Y5c-Zt-7gd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYY-9d-P2u" userLabel="NoDrink">
+                                <rect key="frame" x="80" y="421" width="160" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="QsT-yf-BwQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="休肝日です。">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressNoDrinkBtn:" destination="bBt-8y-dQ0" eventType="touchUpInside" id="ahR-vQ-sqV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V6b-Iw-e0c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1Ln-wT-krI" firstAttribute="leading" secondItem="V6b-Iw-e0c" secondAttribute="leading" constant="40" id="o0J-jJ-cK5"/>
-                            <constraint firstItem="V6b-Iw-e0c" firstAttribute="bottom" secondItem="1Ln-wT-krI" secondAttribute="bottom" constant="20" id="x3V-KX-UyC"/>
-                            <constraint firstItem="V6b-Iw-e0c" firstAttribute="trailing" secondItem="1Ln-wT-krI" secondAttribute="trailing" constant="40" id="z6a-j9-aAU"/>
+                            <constraint firstItem="oYY-9d-P2u" firstAttribute="top" secondItem="rC8-MN-Mzw" secondAttribute="bottom" constant="20" id="2jk-H7-jhK"/>
+                            <constraint firstItem="rC8-MN-Mzw" firstAttribute="leading" secondItem="V6b-Iw-e0c" secondAttribute="leading" constant="40" id="Eik-tp-cKt"/>
+                            <constraint firstItem="V6b-Iw-e0c" firstAttribute="trailing" secondItem="oYY-9d-P2u" secondAttribute="trailing" constant="80" id="SfN-9d-sMM"/>
+                            <constraint firstItem="oYY-9d-P2u" firstAttribute="leading" secondItem="V6b-Iw-e0c" secondAttribute="leading" constant="80" id="fQG-ZB-ZA3"/>
+                            <constraint firstItem="V6b-Iw-e0c" firstAttribute="bottom" secondItem="oYY-9d-P2u" secondAttribute="bottom" constant="20" id="nQz-4f-ura"/>
+                            <constraint firstItem="V6b-Iw-e0c" firstAttribute="trailing" secondItem="rC8-MN-Mzw" secondAttribute="trailing" constant="40" id="s0U-ZY-BqR"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
