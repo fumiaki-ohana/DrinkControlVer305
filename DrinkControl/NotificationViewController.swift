@@ -13,7 +13,7 @@ import UserNotifications
 class NotificationViewController: FormViewController{
     
     var NotSuspendNotification:Bool = true
-    
+    //左上の閉じるボタンである
     @IBAction func NoticeBtonTapped(_ sender: UIBarButtonItem) {
         if NotSuspendNotification {
         // 通知を管理するクラスのシングルトンを取得
@@ -73,7 +73,7 @@ class NotificationViewController: FormViewController{
                         // code...
                         // 通知の設定が完了した旨の表示を行う
                         self.present(.okAlert(title: "通知を設定", message: "指定時刻に通知を設定しました。",okHandler: {(action) -> Void in
-                            self.buttonPendingList()
+                 //           self.buttonPendingList()
                             self.navigationController?.popViewController(animated: true)}))
                     }
                 })
@@ -88,7 +88,7 @@ class NotificationViewController: FormViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttonPendingList()
+   //     buttonPendingList() // MARK:- Debug
         self.tabBarController?.tabBar.isHidden = true
         tableView.theme_backgroundColor = GlobalPicker.backgroundColor
         tableView.theme_sectionIndexBackgroundColor = GlobalPicker.groupBackground
@@ -118,7 +118,7 @@ class NotificationViewController: FormViewController{
                 if $0.value == false {
                     // 予定されている通知を解除する
                     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-                    self.buttonPendingList()//TODO デバッグ用
+        //            self.buttonPendingList()//MARK:- デバッグ用
                     self.NotSuspendNotification = false
                     // 通知を解除した旨の表示を行う
                     self.present(.okAlert(title: "通知を一時停止", message: "設定済みの通知をいったん削除しました。"))
@@ -156,7 +156,7 @@ class NotificationViewController: FormViewController{
         
     }
 //MARK:- Debug
-    
+    /*
     func buttonPendingList() {
         print("<Pending request identifiers>")
 
@@ -183,6 +183,7 @@ class NotificationViewController: FormViewController{
             }
         }
     }
+ */
 }
 /*
  // MARK: - Navigation
