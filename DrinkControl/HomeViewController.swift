@@ -312,20 +312,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         drinkRecord_Results = realm.objects(DrinkRecord.self)
         
         drinkCalendar.reloadData()
-        //MARK:-　バージョンの情報
-     if !shouldShowCoarch, shouldShowVerInfo  {
-        let titl = "Ver."+appVersion!+"の新機能"
-        let compButtonTitle = "続ける"
-        let detailButtonTitle = "e-ヘルスネット（お酒へ）"
-        let detailWebSite = "https://www.e-healthnet.mhlw.go.jp/information/alcohol"
-        let msg:[(title:String,subtitle:String,icon:String)] = [("ホーム画面を刷新","🆕表示をタップしても、編集画面に飛べます。","wine"),
-            ("🆕通知機能","飲む前に反省を読む。（設定＞通知の設定）","bell"),("🆕休肝日の一発入力","タップするだけで飲酒ゼロを入力","dash"),
-            ("他にも多くの改良点","追加・編集できるお酒の種類を増やすなど。\niOS14に対応、全般的により効率的なプログラムに書き換えました。","beer")]
-        
-        let item = showWhatsNewPlus(titl: titl, compButtonTitle: compButtonTitle, detailButtonTitle:detailButtonTitle,webStr:detailWebSite, msg: msg)
-        present(item,animated: true)
-        shouldShowVerInfo = false
-     }
+     
     }
         
     override func viewWillAppear(_ animated: Bool) {
@@ -351,6 +338,21 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         
         super.viewDidAppear(animated)
         
+        //MARK:-　バージョンの情報
+     if !shouldShowCoarch, shouldShowVerInfo  {
+        let titl = "Ver."+appVersion!+"の新機能"
+        let compButtonTitle = "続ける"
+        let detailButtonTitle = "e-ヘルスネット（お酒へ）"
+        let detailWebSite = "https://www.e-healthnet.mhlw.go.jp/information/alcohol"
+        let msg:[(title:String,subtitle:String,icon:String)] = [("ホーム画面を刷新","🆕表示をタップしても、編集画面に飛べます。","wine"),
+            ("🆕通知機能","飲む前に反省を読む。（設定＞通知の設定）","bell"),("🆕休肝日の一発入力","タップするだけで飲酒ゼロを入力","dash"),
+            ("他にも多くの改良点","追加・編集できるお酒の種類を増やすなど。\niOS14に対応、全般的により効率的なプログラムに書き換えました。","beer")]
+        
+        let item = showWhatsNewPlus(titl: titl, compButtonTitle: compButtonTitle, detailButtonTitle:detailButtonTitle,webStr:detailWebSite, msg: msg)
+        present(item,animated: true)
+        shouldShowVerInfo = false
+     }
+        
         guard !shouldShowCoarch else {
             switch justFinishedCoachCources {
             case .chart :
@@ -372,7 +374,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
                 tableview.isHidden = false
                 twoDimArray = tableDataDummy
                 tableview.reloadData()
-                //   shouldShowVerInfo = false //このバージョンでは既存ユーザーに情報は表示しない。
+
                 
                 switch userType {
                 case .newUser :
