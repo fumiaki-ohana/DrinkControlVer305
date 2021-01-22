@@ -167,7 +167,17 @@ var shouldWarningOnRatingGraph: Bool { //感想のグラフで初回表示
         defaluts.set(newValue, forKey: "RatingGraph")
     }
 }
-
+var shouldWarningAlchool: Bool { //アルコール濃度の設定で初回表示
+    get {
+        UserDefaults.standard.register(defaults: [ "alchoolChange" : true])
+        let n = UserDefaults.standard.bool(forKey:"alchoolChange")
+        return n
+    }
+    set {
+        let defaluts = UserDefaults.standard
+        defaluts.set(newValue, forKey: "alchoolChange")
+    }
+}
 
 // Mark:-　保存可能回数の関連
 

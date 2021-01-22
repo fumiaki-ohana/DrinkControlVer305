@@ -34,7 +34,16 @@ class SettingAlchoolViewController:FormViewController {
                           "飲酒量を入力する時の上限飲酒量",
                           "飲酒量の入力で1回クリックの増減量"]
     let alertTitle = "アルコール濃度の変更"
-    let alertMsg =  "【原則】⭕️新規に入力するデータから適用されます。\n❌過去の入力済みデータには自動的には適用させません。\n【例外】⭕️設定画面に来る直前にホーム画面で選択されていた日付のデータには、戻った時に適用されます。\n【任意】過去のデータでアルコール量を再計算したい場合は、ホーム画面でその日付にタッチしてください。"
+    let alertMsg =  "【原則】\n⭕️新規に入力するデータから適用されます。\n❌過去の入力済みデータには自動的に変更を適用しません。\n【過去データへの強制適用】\n📅過去データでアルコール量を再計算する場合は、ホーム画面でその日付にタッチしてください。\n　なお設定画面に来る直前にホーム画面で選択した日付には、戻った時に適用されます。"
+    
+    override func viewDidAppear(_ animated: Bool) {
+        guard !shouldWarningAlchool else
+        {
+            present(.okAlert(alignment:.left, title:self.alertTitle , message:self.alertMsg ,astyle:.alert))
+            shouldWarningAlchool = false
+            return
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +59,6 @@ class SettingAlchoolViewController:FormViewController {
             +++ Section(){
                 $0.tag = "alchool_s"
                 $0.hidden = "$segments != '濃度'"
-                self.present(.okAlert(title:self.alertTitle , message:self.alertMsg ,astyle:.alert))
             } // .Predicate(NSPredicate(format: "$segments != 'Sport'"))
             
             <<< LabelRow () {
