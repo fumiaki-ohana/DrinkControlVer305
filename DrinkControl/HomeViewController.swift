@@ -340,6 +340,8 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         
         //MARK:-　バージョンの情報
      if !shouldShowCoarch, shouldShowVerInfo  {
+        //このバージョンでは特に表示しない。
+        /*
         let titl = "Ver."+appVersion!+"の新機能"
         let compButtonTitle = "続ける"
         let detailButtonTitle = "e-ヘルスネット（お酒へ）"
@@ -350,6 +352,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         
         let item = showWhatsNewPlus(titl: titl, compButtonTitle: compButtonTitle, detailButtonTitle:detailButtonTitle,webStr:detailWebSite, msg: msg)
         present(item,animated: true)
+         */
         shouldShowVerInfo = false
      }
         

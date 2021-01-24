@@ -33,9 +33,13 @@ class InPurchaseViewController: UIViewController {
     /*
        let index = navigationController!.viewControllers.count - 2
        navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)
-    */
+   
         self.navigationController?.popToRootViewController(animated: true)
       // self.tabBarController?.selectedIndex = 0
+         */
+        MyThemes.restoreLastTheme() // 前のコントローらに来る前のテーマに戻す。
+        self.overrideUserInterfaceStyle = .unspecified
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true) //二つ前のコントローラーに戻る
     }
     
     @IBAction func nonConsumablePurchase() { // 購入
@@ -62,7 +66,7 @@ class InPurchaseViewController: UIViewController {
     }
     
     // MARK: View rotation
-    
+  /*
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -76,7 +80,7 @@ class InPurchaseViewController: UIViewController {
             self.present(item,animated: true)
              }
         }
-    
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         //        初期設定
@@ -85,11 +89,11 @@ class InPurchaseViewController: UIViewController {
         productName.text = ""
         localPrice.text = ""
         productDesc.text = ""
-        
+
         checkUnlockStatus()
-        
+        self.overrideUserInterfaceStyle = .light
+        MyThemes.switchToSimply(theme: .norm) //念の為、強制的にテーマを切り替える
         setColor()
-        
         navigationItem.title = title
         getInfo()// プロダクト情報
         verifyPurchase() // 購入状況のチェック
@@ -345,8 +349,10 @@ extension InPurchaseViewController {
     }
     
 // MARK:- 色の設定
+    
+   
     func setColor() {
-        
+        /*
         func setLabelColorOnDarkMode (){
             productDesc.theme_textColor = GlobalPicker.buttonTintColor3
             productDesc.theme_textColor = GlobalPicker.buttonTintColor3
@@ -357,12 +363,12 @@ extension InPurchaseViewController {
         }
         view.theme_backgroundColor = GlobalPicker.backgroundColor
         if MyThemes.current == .dark {setLabelColorOnDarkMode()}
-        
+        */
         setButtonProperties(button: purchaseButton)
         setButtonProperties(button: restoreButton, backColor: GlobalPicker.buttonTintColor2,titleColorOnDark:GlobalPicker.buttonTitleColor)
         setButtonProperties(button: cancelButton, backColor: GlobalPicker.backgroundColor, titleColor: GlobalPicker.buttonTintColor3,titleColorOnDark:GlobalPicker.buttonTitleColor)
     }
-    
+    /*
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         guard
@@ -387,5 +393,5 @@ extension InPurchaseViewController {
             break
         }
     }
-    
+   */
 }

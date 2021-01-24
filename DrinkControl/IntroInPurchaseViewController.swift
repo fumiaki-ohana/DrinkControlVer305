@@ -8,22 +8,14 @@
 
 import UIKit
 
-
 class IntroInPurchaseViewController: UIViewController {
-
-    @IBOutlet weak var L1: UILabel!
-    @IBOutlet weak var L2: UILabel!
-    @IBOutlet weak var L3: UILabel!
-    @IBOutlet weak var L4: UILabel!
     
     @IBOutlet weak var purchaseButton: UIButton!
-    @IBAction func pressCancel(_ sender: UIBarButtonItem) {
-        let index = navigationController!.viewControllers.count - 2
-        navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.overrideUserInterfaceStyle = .light //強制的にテーマを切り替える
+        MyThemes.switchTo(theme: .norm)
         setColor()
 
         // Do any additional setup after loading the view.
@@ -40,20 +32,10 @@ class IntroInPurchaseViewController: UIViewController {
     */
     
     func setColor() {
-        
-        switch MyThemes.current {
-        case .dark : L1.textColor = .white
-        L2.textColor = .white
-        L3.textColor = . white
-        L4.textColor = . white
-        
-        default:  break
-        }
-        
         setButtonProperties(button: purchaseButton)
-        view.theme_backgroundColor = GlobalPicker.backgroundColor
+     //   view.theme_backgroundColor = GlobalPicker.backgroundColor
     }
-       
+/*
        override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
            super.traitCollectionDidChange(previousTraitCollection)
            guard
@@ -78,6 +60,6 @@ class IntroInPurchaseViewController: UIViewController {
                break
            }
        }
-       
+  */
 
 }

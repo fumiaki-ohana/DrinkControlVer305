@@ -38,6 +38,7 @@
 		FF6399462392022F008A50CE /* DatEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6399452392022F008A50CE /* DatEntryViewController.swift */; };
 		FF76A06B2585AEE50065E6E8 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76A06A2585AEE50065E6E8 /* NotificationViewController.swift */; };
 		FF87D02B24C2A7E300EF8F4D /* WT04ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF87D02A24C2A7E300EF8F4D /* WT04ViewController.swift */; };
+		FF99FF3425BD233A00A77E68 /* IntroInPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF99FF3325BD233A00A77E68 /* IntroInPurchaseViewController.swift */; };
 		FF9B76A0208DB02B00B7A80A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B769F208DB02B00B7A80A /* AppDelegate.swift */; };
 		FF9B76A7208DB02B00B7A80A /* PageMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF9B76A5208DB02B00B7A80A /* PageMain.storyboard */; };
 		FF9B76A9208DB02C00B7A80A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF9B76A8208DB02C00B7A80A /* Assets.xcassets */; };
@@ -109,6 +110,7 @@
 		FF83E2B123C7530600539CDA /* SwiftTheme.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTheme.framework; path = Carthage/Build/iOS/SwiftTheme.framework; sourceTree = "<group>"; };
 		FF864EFE24720B6700A79DAD /* Siren.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Siren.framework; path = Carthage/Build/iOS/Siren.framework; sourceTree = "<group>"; };
 		FF87D02A24C2A7E300EF8F4D /* WT04ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT04ViewController.swift; sourceTree = "<group>"; };
+		FF99FF3325BD233A00A77E68 /* IntroInPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroInPurchaseViewController.swift; sourceTree = "<group>"; };
 		FF9B769C208DB02B00B7A80A /* DrinkControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9B769F208DB02B00B7A80A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF9B76A6208DB02B00B7A80A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PageMain.storyboard; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 		FFD4A04E23A0B916008C7043 /* App In-Purchase */ = {
 			isa = PBXGroup;
 			children = (
+				FF99FF3325BD233A00A77E68 /* IntroInPurchaseViewController.swift */,
 				FFD4A04A23A0B464008C7043 /* InPurchaseViewController.swift */,
 				FFD4A04C23A0B8FD008C7043 /* NetworkActivityIndicatorManager.swift */,
 			);
@@ -458,6 +461,7 @@
 				FF138FC124B8031000799829 /* EvalViewController.swift in Sources */,
 				FF5B359A20931186009AB396 /* Drink.swift in Sources */,
 				FFD5ED5125085F21008BADA7 /* NamingViewController.swift in Sources */,
+				FF99FF3425BD233A00A77E68 /* IntroInPurchaseViewController.swift in Sources */,
 				FFD4A04B23A0B464008C7043 /* InPurchaseViewController.swift in Sources */,
 				FF2B754823CEA97500F5AD6E /* GlobalPicker.swift in Sources */,
 				FF2B754623CEA8EA00F5AD6E /* MyThemes.swift in Sources */,
