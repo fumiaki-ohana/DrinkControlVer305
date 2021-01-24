@@ -20,25 +20,24 @@ class SecondChartViewController: UIViewController{
         self.tabBarController?.tabBar.isHidden = true
         
     }
-   override func viewDidLoad() {
-    super.viewDidLoad()
-    guard !grNoData else {
-        present(.okAlert(title: "データがありません", message: "グラフの表示を中止しました。"))
-        return
-    }
-    
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        guard !grNoData else {
+            present(.okAlert(title: "データがありません", message: "グラフの表示を中止しました。"))
+            return
+        }
+        navigationItem.leftBarButtonItem?.theme_tintColor = GlobalPicker.naviItemColor
         let tempdata = setDataArray(rawdata: generateRawData(reversed: false))
         let data = excessOrNoDrinkFullPeriod(array:tempdata,calc:Ecalc.noDrink)
         navigationItem.title = "習慣" //(data.first!.0)+"〜"+(data.last?.0)!
         let rect = CGRect(x:0, y: 44, width: self.view.frame.width, height: (self.view.frame.height * 0.5 - 22))
         let barChartView = drawBarChart(chartData: data, legend: "休肝日（日数）", rect: rect, numXLabels: data.count,topOffset:40.0, buttomOffset:20.0,flagDateType: false, addLines: true,noDrink:true, showValue: true)
         self.view.addSubview(barChartView)
-    
+        
         let rect1 = CGRect(x:0, y: (self.view.frame.height * 0.5 + 22), width: self.view.frame.width, height:( self.view.frame.height * 0.5 - 69))
         let data1 = excessOrNoDrinkFullPeriod(array:tempdata,calc:Ecalc.excess)
         let barChartView2 = drawBarChart(chartData: data1, legend: "飲み過ぎ（日数）", rect: rect1, numXLabels: data.count,topOffset:20.0, buttomOffset:20.0, flagDateType: false, addLines: false,showValue: true)
-         self.view.addSubview(barChartView2)
+        self.view.addSubview(barChartView2)
     }
     
     /*

@@ -36,7 +36,7 @@ class ThirdChartViewController: UIViewController{
             present(.okAlert(title: "データがありません", message: "グラフの表示を中止しました。"))
             return
         }
-        
+        navigationItem.leftBarButtonItem?.theme_tintColor = GlobalPicker.naviItemColor
         justFinishedCoachCources = .chart
               
         let tempdata = setDataArray(rawdata: generateRawData(reversed: false))

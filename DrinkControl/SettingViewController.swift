@@ -253,20 +253,20 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
     }
     
     override func viewDidAppear(_ animated: Bool) {
-           super.viewDidAppear(animated)
-            self.tabBarController?.tabBar.isHidden = true
-     
-            self.tableView.reloadData()
-            guard !shouldShowCoarch else {
-          
+        super.viewDidAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+        
+        self.tableView.reloadData()
+        guard !shouldShowCoarch else {
+            
             DispatchQueue.main.async { // テーブルをスクロールする。
-              let indexPath = IndexPath(row: 0, section: 1)
+                let indexPath = IndexPath(row: 0, section: 1)
                 self.tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.top, animated: false)
             }
             self.coachMarksController.start(in: .currentWindow(of: self))
             return
         }
-       }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

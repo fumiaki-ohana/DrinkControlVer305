@@ -38,9 +38,7 @@ class ChartViewController: UIViewController {
         }
         
         let data = setDataArray(rawdata: generateRawData())
-        
-        
-        
+          
         navigationItem.title = (data.last?.0)!
         navigationItem.leftBarButtonItem?.theme_tintColor = GlobalPicker.naviItemColor
 
