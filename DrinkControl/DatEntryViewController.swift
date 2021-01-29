@@ -232,10 +232,16 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
             //    cell.theme_tintColor = GlobalPicker.labelTextColor
         }
         
-        form +++
+        form = Section("入力単位")
             
-       //     Section(header:drinkDaily.dDate.mediumStr,footer:"(±設定中のワンクリック増減幅 cc)")
-           Section(drinkDaily.dDate.mediumStr)
+            <<< SegmentedRow<String>("segments"){
+                $0.options = ["CC", "グラスや本数"]
+                $0.value = "CC"
+            }
+            //MARK:- CC entry section
+            +++ Section(drinkDaily.dDate.mediumStr){
+                $0.tag = "cc"
+                $0.hidden = "$segments != 'CC'"}
             <<< StepperRow() {
                 $0.tag = "wineEntry"
                 $0.cell.stepper.stepValue = alc_step[eDname.wine]!
@@ -396,7 +402,172 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                     cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
                 row.value = Double(self.drinkDaily.drinks[eDname.can] ?? 0)
             }
-       
+            
+            //MARK:- quick entry section
+            +++ Section(drinkDaily.dDate.mediumStr){
+                $0.tag = "グラスや本数"
+                $0.hidden = "$segments != 'グラスや本数'"}
+            <<< StepperRow() {
+                $0.tag = "wineEntry1"
+                $0.cell.stepper.stepValue = alc_step[eDname.wine]!
+                $0.cell.stepper.minimumValue = 0
+                $0.cell.stepper.maximumValue = alc_limit[eDname.wine]!
+                $0.displayValueFor = {
+                    guard let v = $0 else {return "0"}
+                    return "\(Int(v))"+"cc"
+                }
+                $0.title = eDname.wine.ctitle (emoji: emojiSwitch)+"(±"+alc_step[eDname.wine]!.decimalStrPlain+")"
+                $0.value = Double(drinkDaily.drinks[eDname.wine] ?? 0)
+            }
+            .onChange {
+                let v = floor(Double($0.value!))
+                self.drinkDaily.drinks[eDname.wine] = Int(v)
+                self.stepValue = alc_step[eDname.wine]!
+                self.dname = eDname.wine.rawValue
+                self.update()
+                
+            }
+            .cellUpdate() {cell, row in
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
+                row.value = Double(self.drinkDaily.drinks[eDname.wine] ?? 0)
+            }
+            
+            <<< StepperRow() {
+                $0.tag = "nihonsyuEntry1"
+                $0.cell.stepper.stepValue = alc_step[eDname.nihonsyu]!
+                $0.cell.stepper.minimumValue = 0
+                $0.cell.stepper.maximumValue = alc_limit[eDname.nihonsyu]!
+                $0.displayValueFor = {
+                    guard let v = $0 else {return "0"}
+                    return "\(Int(v))"+"cc"
+                }
+                $0.title = eDname.nihonsyu.ctitle (emoji: emojiSwitch)+"(±"+alc_step[eDname.nihonsyu]!.decimalStrPlain+")"
+                $0.value = Double(drinkDaily.drinks[eDname.nihonsyu] ?? 0)
+            }
+            .onChange {
+                let v = floor(Double($0.value!))
+                self.drinkDaily.drinks[eDname.nihonsyu] = Int(v)
+                self.stepValue = alc_step[eDname.nihonsyu]!
+                self.dname = eDname.nihonsyu.rawValue
+                self.update()
+            }
+            .cellUpdate() {cell, row in
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
+                row.value = Double(self.drinkDaily.drinks[eDname.nihonsyu] ?? 0)
+            }
+            
+            <<< StepperRow() {
+                 $0.tag = "beerEntry1"
+                $0.cell.stepper.stepValue = alc_step[eDname.beer]!
+                $0.cell.stepper.minimumValue = 0
+                $0.cell.stepper.maximumValue = alc_limit[eDname.beer]!
+                $0.displayValueFor = {
+                    guard let v = $0 else {return "0"}
+                    return "\(Int(v))"+"cc"
+                }
+                $0.title = eDname.beer.ctitle (emoji: emojiSwitch)+"(±"+alc_step[eDname.beer]!.decimalStrPlain+")"
+                $0.value = Double(drinkDaily.drinks[eDname.beer] ?? 0)
+            }
+            .onChange {
+                let v = floor(Double($0.value!))
+                self.drinkDaily.drinks[eDname.beer] = Int(v)
+                self.stepValue = alc_step[eDname.beer]!
+                self.dname = eDname.beer.rawValue
+                self.update()
+                
+            }
+            .cellUpdate() {cell, row in
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
+                row.value = Double(self.drinkDaily.drinks[eDname.beer] ?? 0)
+            }
+            
+            <<< StepperRow() {
+                 $0.tag = "shocyuEntry1"
+                $0.cell.stepper.stepValue = alc_step[eDname.shocyu]!
+                $0.cell.stepper.minimumValue = 0
+                $0.cell.stepper.maximumValue = alc_limit[eDname.shocyu]!
+                $0.displayValueFor = {
+                    guard let v = $0 else {return "0"}
+                    return "\(Int(v))"+"cc"
+                }
+                $0.title = eDname.shocyu.ctitle (emoji: emojiSwitch)+"(±"+alc_step[eDname.shocyu]!.decimalStrPlain+")"
+                $0.value = Double(self.drinkDaily.drinks[eDname.shocyu] ?? 0)
+            }
+            .onChange {
+                let v = floor(Double($0.value!))
+                self.drinkDaily.drinks[eDname.shocyu] = Int(v)
+                self.stepValue = alc_step[eDname.shocyu]!
+                self.dname = eDname.shocyu.rawValue
+                self.update()
+                
+            }
+            .cellUpdate() {cell, row in
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
+                row.value = Double(self.drinkDaily.drinks[eDname.shocyu] ?? 0)
+            }
+            
+            <<< StepperRow() {
+                 $0.tag = "whiskyEntry1"
+                $0.title = eDname.whisky.ctitle (emoji: emojiSwitch)+"(±"+alc_step[eDname.whisky]!.decimalStrPlain+")"
+                $0.cell.stepper.stepValue = alc_step[eDname.whisky]!
+                $0.cell.stepper.minimumValue = 0
+                $0.cell.stepper.maximumValue = alc_limit[eDname.whisky]!
+                $0.displayValueFor = {
+                    guard let v = $0 else {return "0"}
+                    return "\(Int(v))"+"cc"
+                }
+                //    $0.title = eDname.whisky.ctitle (emoji: emojiSwitch)+"("+alc_step[eDname.whisky]!.decimalStrPlain+")"
+                $0.value = Double(self.drinkDaily.drinks[eDname.whisky] ?? 0)
+            }
+                
+            .onChange {
+                let v = floor(Double($0.value!))
+                self.drinkDaily.drinks[eDname.whisky] = Int(v)
+                self.stepValue = alc_step[eDname.whisky]!
+                self.dname = eDname.whisky.rawValue
+                self.update()
+            }
+            .cellUpdate() {cell, row in
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
+                row.value = Double(self.drinkDaily.drinks[eDname.whisky] ?? 0)
+            }
+            
+            <<< StepperRow() {
+                 $0.tag = "canEntry1"
+                $0.cell.stepper.stepValue = alc_step[eDname.can]!
+                $0.cell.stepper.minimumValue = 0
+                $0.cell.stepper.maximumValue = alc_limit[eDname.can]!
+                $0.displayValueFor = {
+                    guard let v = $0 else {return "0"}
+                    return "\(Int(v))"+"cc"
+                }
+                $0.title = eDname.can.ctitle (emoji: emojiSwitch)+"(±"+alc_step[eDname.can]!.decimalStrPlain+")"
+                $0.value = Double(self.drinkDaily.drinks[eDname.can] ?? 0)
+            }
+            .onChange {
+                let v = floor(Double($0.value!))
+                self.drinkDaily.drinks[eDname.can] = Int(v)
+                self.stepValue = alc_step[eDname.can]!
+                self.dname = eDname.can.rawValue
+                self.update()
+            }
+            .cellUpdate() {cell, row in
+                    cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                    cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+                    cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
+                row.value = Double(self.drinkDaily.drinks[eDname.can] ?? 0)
+            }
+            
          +++ Section("計算結果：合計の純アルコール量")
             <<< LabelRow () {
                            
