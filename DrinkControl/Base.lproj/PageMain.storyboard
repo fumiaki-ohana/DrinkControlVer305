@@ -136,6 +136,7 @@
                         <segue destination="bBt-8y-dQ0" kind="show" identifier="showDailyDrinkRecord" id="sVY-RF-nhB"/>
                         <segue destination="xql-rS-saI" kind="show" identifier="moveToChartOnTutor" id="Hqv-pD-dcp"/>
                         <segue destination="VaA-k5-J5C" kind="presentation" identifier="showPurchaseFromHome" id="RL7-xz-yuC"/>
+                        <segue destination="8hc-wi-TOb" kind="show" identifier="showQuickEntryView" id="RCU-Ua-3Re"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhE-gh-09e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -680,7 +681,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDh-LP-sGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ru9-1K-wZ7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-6973" y="1201"/>
+            <point key="canvasLocation" x="-6973" y="973"/>
         </scene>
         <!--Dat Entry View Controller-->
         <scene sceneID="n2k-Pt-G3l">
@@ -881,8 +882,76 @@
             </objects>
             <point key="canvasLocation" x="-3857" y="-1577"/>
         </scene>
+        <!--Quick Data Entry View Controller-->
+        <scene sceneID="EjX-b3-maL">
+            <objects>
+                <viewController id="8hc-wi-TOb" customClass="QuickDataEntryViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xJa-kT-vPs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9N-mI-ypa">
+                                <rect key="frame" x="40" y="372" width="240" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="jbT-5S-amR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="レビュー画面へ移動">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressMoveButton:" destination="8hc-wi-TOb" eventType="touchUpInside" id="E2e-wG-BUT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOg-x6-AzN" userLabel="NoDrink">
+                                <rect key="frame" x="80" y="421" width="160" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="J96-mg-Cgu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="休肝日です。">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressNoDrinkBtn:" destination="8hc-wi-TOb" eventType="touchUpInside" id="2ut-Tm-Msk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IoH-rY-85g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mOg-x6-AzN" firstAttribute="top" secondItem="n9N-mI-ypa" secondAttribute="bottom" constant="20" id="EQs-qF-tIp"/>
+                            <constraint firstItem="mOg-x6-AzN" firstAttribute="leading" secondItem="IoH-rY-85g" secondAttribute="leading" constant="80" id="H6e-hn-vTO"/>
+                            <constraint firstItem="IoH-rY-85g" firstAttribute="trailing" secondItem="mOg-x6-AzN" secondAttribute="trailing" constant="80" id="H6k-vq-YKh"/>
+                            <constraint firstItem="n9N-mI-ypa" firstAttribute="leading" secondItem="IoH-rY-85g" secondAttribute="leading" constant="40" id="MJL-Xq-l0P"/>
+                            <constraint firstItem="IoH-rY-85g" firstAttribute="bottom" secondItem="mOg-x6-AzN" secondAttribute="bottom" constant="20" id="McX-lP-GJZ"/>
+                            <constraint firstItem="IoH-rY-85g" firstAttribute="trailing" secondItem="n9N-mI-ypa" secondAttribute="trailing" constant="40" id="oWE-Im-bqy"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="vAp-J1-FNt">
+                        <barButtonItem key="leftBarButtonItem" image="Cancel" style="done" id="J4F-EL-8Ba">
+                            <connections>
+                                <action selector="cancelButton:" destination="8hc-wi-TOb" id="Eld-Ra-e7Z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cancelBtn" destination="J4F-EL-8Ba" id="3Re-EF-BfO"/>
+                        <outlet property="moveToReview" destination="n9N-mI-ypa" id="VCm-UP-z6C"/>
+                        <outlet property="noButton" destination="mOg-x6-AzN" id="79W-Tc-Iek"/>
+                        <outlet property="viewBackGround" destination="xJa-kT-vPs" id="FIb-CV-ti3"/>
+                        <segue destination="olR-Yd-T4M" kind="show" identifier="showEvalViewFromQuick" id="5PU-RI-jck"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SkA-rA-Tud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7963" y="112"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="5PU-RI-jck"/>
         <segue reference="RL7-xz-yuC"/>
     </inferredMetricsTieBreakers>
     <resources>

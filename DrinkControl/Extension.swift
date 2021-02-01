@@ -169,6 +169,12 @@ extension Double {
         return String(format:decimalFormatter,self)
     }
     
+    var decimalStrPlain1: String {
+        let decimalFormatter = "%.1f"
+    //    let decimalFormatter = "%4d"
+        return String(format:decimalFormatter,self)
+    }
+    
     var decimalStr: String {
         let decimalFormatter = "%.0f"
     //    let decimalFormatter = "%4d"

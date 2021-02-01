@@ -273,6 +273,23 @@ var lastVersionPromtedForReviewVar: String {
         UserDefaults.standard.set(newValue,forKey:lastVersionPromptedForReview)
     }
 }
+
+// MARK:- 入力方法のチョイス
+
+var execQuickDataEntry:Bool{
+    get {
+        UserDefaults.standard.register(defaults: ["shouldQuickEntry" : true])
+        let n = UserDefaults.standard.bool(forKey:"shouldQuickEntry")
+        return n
+    }
+    set {
+        let defaluts = UserDefaults.standard
+        defaluts.set(newValue, forKey: "shouldQuickEntry")
+    }
+}
+
+
+
 /*
 // MARK:- PopTipの設定
 
@@ -637,6 +654,43 @@ var targetUnit:Double {
         UserDefaults.standard.set(newValue, forKey: "target")
     }
 }
+var alc_quick:[eDname:Double] {
+    get {
+        
+        var result:[eDname:Double]=[:]
+        
+        if let data = UserDefaults.standard.dictionary(forKey: "quickShot") {
+            
+            for d in data {
+                let n = eDname(rawValue: d.key)!
+                result[n] = d.value as? Double
+            }
+        }
+        else {
+            
+            result = [
+                eDname.wine: 120 ,
+                eDname.nihonsyu : 180,
+                eDname.beer : 350,
+                eDname.shocyu : 110,
+                eDname.whisky : 60,
+                eDname.can :520
+            ]
+        }
+        
+        return result
+    }
+    set {
+        let defaluts = UserDefaults.standard
+        var result:[String:Double]=[:]
+        for d in newValue {
+            let n_str = d.key.rawValue
+            result[n_str] = d.value
+        }
+        defaluts.set(result, forKey: "quickShot")
+    }
+}
+
 
 var alc_step:[eDname:Double] {
     get {

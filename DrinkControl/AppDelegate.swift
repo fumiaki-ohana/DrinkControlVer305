@@ -35,10 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 SKStoreReviewController.requestReview(in: scene)
             }
         }
-        /*
+       
          // FIXME: UserDefaultをリセットを変えろ
-        //        unlocked = true
-        
+               unlocked = true
+        /*
          if let bundleId = Bundle.main.bundleIdentifier {
          UserDefaults.standard.removePersistentDomain(forName: bundleId)
          }

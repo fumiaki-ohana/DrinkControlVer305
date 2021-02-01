@@ -76,7 +76,8 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
             return
         }
         
-        performSegue(withIdentifier: "showDailyDrinkRecord", sender: Any?.self)
+        let segueName:String = execQuickDataEntry ? "showQuickEntryView" : "showDailyDrinkRecord"
+        performSegue(withIdentifier: segueName, sender: Any?.self)
     }
     
     @IBAction func press_deleteButton(_ sender: UIBarButtonItem) {

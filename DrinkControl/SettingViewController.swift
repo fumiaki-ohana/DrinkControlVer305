@@ -420,6 +420,19 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
             }
+            
+            <<< SwitchRow() {
+                $0.title = "お酒の入力をグラスの数などでする"
+                $0.value = execQuickDataEntry
+            }
+            .onChange{
+                execQuickDataEntry = $0.value!
+            }
+            .cellUpdate() {cell, row in
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+            }
+            
             <<< ButtonRow() {
                 $0.tag = "name"
                 $0.title = "🍷→🍾🍸 お酒の名前変更"
