@@ -155,6 +155,26 @@ extension String {
     }
 }
 
+func setAttribute(title1:String, title2:String ) -> NSAttributedString {
+    let stringAttributes1: [NSAttributedString.Key : Any] = [
+        .font : UIFont.systemFont(ofSize: 18.0)
+    ]
+    let string1 = NSAttributedString(string: title1, attributes: stringAttributes1)
+
+    let stringAttributes2: [NSAttributedString.Key : Any] = [
+       // .foregroundColor : UIColor.red,
+        .font : UIFont.boldSystemFont(ofSize: 12.0)
+    ]
+    let string2 = NSAttributedString(string: title2, attributes: stringAttributes2)
+    
+    let mutableAttributedString = NSMutableAttributedString()
+    mutableAttributedString.append(string1)
+    mutableAttributedString.append(string2)
+
+    return mutableAttributedString
+}
+
+
 extension Double {
     var decimalStrDay: String {
         let decimalFormatter = "%.0f"

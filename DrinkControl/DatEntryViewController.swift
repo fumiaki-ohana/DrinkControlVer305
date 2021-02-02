@@ -45,7 +45,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
     var dname =  ""
     var drinkDaily = DrinkDailyRecord(dDate: Date(), drinks:[eDname:Int]())
     var flagChanged = false
-    
+    let prefix = "(±"
     let maxLimit:Double = 9000
     let attributes: [NSAttributedString.Key : Any] = [
         .font : UIFont.systemFont(ofSize: 11.0), // 文字色
@@ -208,12 +208,12 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         self.coachMarksController.delegate = self
        
         tableView.frame =
-                 CGRect(x: 10, y: 70,  width: self.view.bounds.size.width-20, height: (self.view.bounds.size.height - 220))
+                 CGRect(x: 10, y: 50,  width: self.view.bounds.size.width-20, height: (self.view.bounds.size.height - 160))
        
         view.theme_backgroundColor = GlobalPicker.barTintColor
         tableView.theme_backgroundColor = GlobalPicker.backgroundColor
         tableView.theme_sectionIndexBackgroundColor = GlobalPicker.groupBackground
-        navigationItem.title = "入力"
+        navigationItem.title = "飲酒量を直接入力"
         
         cancelBtn.isEnabled = true
    //     self.moveToReview.tintColor = UIColor.white
@@ -244,7 +244,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                     guard let v = $0 else {return "0"}
                     return "\(Int(v))"+"cc"
                 }
-                $0.title = eDname.wine.ctitle (emoji: emojiSwitch)+"(±"+alc_step[eDname.wine]!.decimalStrPlain+")"
+                $0.title = " "
                 $0.value = Double(drinkDaily.drinks[eDname.wine] ?? 0)
             }
             .onChange {
@@ -259,7 +259,8 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                row.value = Double(self.drinkDaily.drinks[eDname.wine] ?? 0)
+                cell.titleLabel.attributedText = setAttribute(title1: eDname.wine.ctitle (emoji: emojiSwitch)+self.prefix, title2: alc_quick[eDname.wine]!.decimalStrPlain+")")
+           //     row.value = Double(self.drinkDaily.drinks[eDname.wine] ?? 0)
             }
             
             <<< StepperRow() {
@@ -271,7 +272,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                     guard let v = $0 else {return "0"}
                     return "\(Int(v))"+"cc"
                 }
-                $0.title = eDname.nihonsyu.ctitle (emoji: emojiSwitch)+"(±"+alc_step[eDname.nihonsyu]!.decimalStrPlain+")"
+                $0.title = " "
                 $0.value = Double(drinkDaily.drinks[eDname.nihonsyu] ?? 0)
             }
             .onChange {
@@ -285,7 +286,8 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                row.value = Double(self.drinkDaily.drinks[eDname.nihonsyu] ?? 0)
+                cell.titleLabel.attributedText = setAttribute(title1: eDname.nihonsyu.ctitle (emoji: emojiSwitch)+self.prefix, title2: alc_step[eDname.nihonsyu]!.decimalStrPlain+")")
+           //     row.value = Double(self.drinkDaily.drinks[eDname.nihonsyu] ?? 0)
             }
             
             <<< StepperRow() {
@@ -297,7 +299,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                     guard let v = $0 else {return "0"}
                     return "\(Int(v))"+"cc"
                 }
-                $0.title = eDname.beer.ctitle (emoji: emojiSwitch)+"(±"+alc_step[eDname.beer]!.decimalStrPlain+")"
+                $0.title = " "
                 $0.value = Double(drinkDaily.drinks[eDname.beer] ?? 0)
             }
             .onChange {
@@ -312,7 +314,8 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                row.value = Double(self.drinkDaily.drinks[eDname.beer] ?? 0)
+                cell.titleLabel.attributedText = setAttribute(title1: eDname.beer.ctitle (emoji: emojiSwitch)+self.prefix, title2: alc_step[eDname.beer]!.decimalStrPlain+")")
+            //    row.value = Double(self.drinkDaily.drinks[eDname.beer] ?? 0)
             }
             
             <<< StepperRow() {
@@ -324,7 +327,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                     guard let v = $0 else {return "0"}
                     return "\(Int(v))"+"cc"
                 }
-                $0.title = eDname.shocyu.ctitle (emoji: emojiSwitch)+"(±"+alc_step[eDname.shocyu]!.decimalStrPlain+")"
+                $0.title = " "
                 $0.value = Double(self.drinkDaily.drinks[eDname.shocyu] ?? 0)
             }
             .onChange {
@@ -339,12 +342,13 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                row.value = Double(self.drinkDaily.drinks[eDname.shocyu] ?? 0)
+                cell.titleLabel.attributedText = setAttribute(title1: eDname.shocyu.ctitle (emoji: emojiSwitch)+self.prefix, title2: alc_step[eDname.shocyu]!.decimalStrPlain+")")
+            //    row.value = Double(self.drinkDaily.drinks[eDname.shocyu] ?? 0)
             }
             
             <<< StepperRow() {
                  $0.tag = "whiskyEntry"
-                $0.title = eDname.whisky.ctitle (emoji: emojiSwitch)+"(±"+alc_step[eDname.whisky]!.decimalStrPlain+")"
+                $0.title = " "
                 $0.cell.stepper.stepValue = alc_step[eDname.whisky]!
                 $0.cell.stepper.minimumValue = 0
                 $0.cell.stepper.maximumValue = alc_limit[eDname.whisky]!
@@ -352,7 +356,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                     guard let v = $0 else {return "0"}
                     return "\(Int(v))"+"cc"
                 }
-                //    $0.title = eDname.whisky.ctitle (emoji: emojiSwitch)+"("+alc_step[eDname.whisky]!.decimalStrPlain+")"
+                $0.title = " "
                 $0.value = Double(self.drinkDaily.drinks[eDname.whisky] ?? 0)
             }
                 
@@ -367,7 +371,8 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                row.value = Double(self.drinkDaily.drinks[eDname.whisky] ?? 0)
+                cell.titleLabel.attributedText = setAttribute(title1: eDname.whisky.ctitle (emoji: emojiSwitch)+self.prefix, title2: alc_step[eDname.whisky]!.decimalStrPlain+")")
+             //   row.value = Double(self.drinkDaily.drinks[eDname.whisky] ?? 0)
             }
             
             <<< StepperRow(){
@@ -379,7 +384,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                     guard let v = $0 else {return "0"}
                     return "\(Int(v))"+"cc"
                 }
-                $0.title = eDname.can.ctitle (emoji: emojiSwitch)+"(±"+alc_step[eDname.can]!.decimalStrPlain+")"
+                $0.title = " "
                 $0.value = Double(self.drinkDaily.drinks[eDname.can] ?? 0)
             }
             .onChange {
@@ -393,8 +398,23 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                     cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                     cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                     cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                row.value = Double(self.drinkDaily.drinks[eDname.can] ?? 0)
+                cell.titleLabel.attributedText = setAttribute(title1: eDname.can.ctitle (emoji: emojiSwitch)+self.prefix, title2: alc_step[eDname.can]!.decimalStrPlain+")")
+           //     row.value = Double(self.drinkDaily.drinks[eDname.can] ?? 0)
             }
+        
+            +++ Section("計算結果：合計の純アルコール量")
+               <<< LabelRow () {
+                            
+                              $0.tag = "totalUnits"
+                              $0.title = drinkDaily.emojiStr
+                              $0.value = drinkDaily.totalAlchool.decimalStr
+                          }
+                              .cellUpdate { cell, row in             // .updateCellで実行される
+                                  row.value = self.drinkDaily.totalAlchool.decimalStr
+                                  row.title = self.drinkDaily.emojiStr
+                                  cell.theme_backgroundColor = GlobalPicker.cellBackGround_dataEntry
+                                  cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                          }
     }
            
     func update() {
