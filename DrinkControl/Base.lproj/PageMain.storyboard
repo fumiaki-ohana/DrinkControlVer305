@@ -170,6 +170,7 @@
                         <segue destination="FYB-4b-9ug" kind="show" identifier="showNamingSegue" id="Azc-K8-qbS"/>
                         <segue destination="xWQ-mT-JoM" kind="show" identifier="showNotificationSettingSegue" id="HZC-mP-3Rc"/>
                         <segue destination="VaA-k5-J5C" kind="presentation" identifier="showPurchaseIntro" id="IJI-qs-NwH"/>
+                        <segue destination="bn1-lu-1Dq" kind="show" identifier="showQuickEntryViewSegue" id="9YS-uH-coY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QmM-gZ-QOX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -472,6 +473,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1I-Tn-VdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1260" y="112"/>
+        </scene>
+        <!--Quick Entryl View Controller-->
+        <scene sceneID="YZa-nz-7QL">
+            <objects>
+                <viewController id="bn1-lu-1Dq" customClass="QuickEntrylViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3xG-Zk-8pg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OfP-dG-1Ym"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HWf-sv-vVx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FbM-NX-ebT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2049" y="101"/>
         </scene>
         <!--Tutor View Controller-->
         <scene sceneID="coJ-Lj-RBr">
@@ -952,7 +969,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="5PU-RI-jck"/>
-        <segue reference="RL7-xz-yuC"/>
+        <segue reference="IJI-qs-NwH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Add" width="128" height="128"/>

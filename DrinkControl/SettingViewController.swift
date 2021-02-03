@@ -14,10 +14,11 @@ import WhatsNewKit
 
 class SettingViewController: FormViewController,CoachMarksControllerDataSource,CoachMarksControllerDelegate {
  // MARK:- Properties
-    private let secHeader0 = "一般"
-    private let secHeader1 = "表示"
-    private let secHeader2 = "目標値の設定　"+"¹純アルコール量、²適量の倍数"
-    private let secHeader3 = "個別のお酒の設定"
+    private let secHeader_gen = "一般"
+    private let secHeader_display = "表示"
+    private let secHeader_target = "目標値の設定　"+"¹純アルコール量、²適量の倍数"
+    private let secHeader_eacg = "個別のお酒の設定"
+    private let secHeader_quick = "お酒の変更と入力"
     let emoji = entryFormPara(tag: "お酒の絵文字を表示")
     var emojiStrPara = entryFormPara(
         tag:"ドリンク数の表示形式",
@@ -295,7 +296,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
 //MARK:- Eureka
         
         form +++
-            Section(secHeader0) //一般
+            Section(secHeader_gen) //一般
      
             <<< ButtonRow() {
                 $0.title = "減酒くんについて"
@@ -337,7 +338,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
             }
             */
             
-            +++ Section(secHeader1)// 表示
+            +++ Section(secHeader_display)// 表示
             
             <<< ActionSheetRow<String>() {
                 $0.tag = "theme"
@@ -421,18 +422,6 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
             }
             
-            <<< SwitchRow() {
-                $0.title = "お酒の入力をグラスの数などでする"
-                $0.value = execQuickDataEntry
-            }
-            .onChange{
-                execQuickDataEntry = $0.value!
-            }
-            .cellUpdate() {cell, row in
-                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
-                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
-            }
-            
             <<< ButtonRow() {
                 $0.tag = "name"
                 $0.title = "🍷→🍾🍸 お酒の名前変更"
@@ -442,7 +431,47 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
             }
-            +++ Section(secHeader2) //目標値の設定
+            +++ Section(secHeader_quick)
+            <<< SwitchRow() {
+                $0.title = "飲酒のクイック入力"
+                $0.value = execQuickDataEntry
+                $0.tag = "quickEntryEnabled"
+            }
+            .onChange{
+                $0.title = ($0.value ?? false) ? "CCの代わりにグラス数" : "飲酒のクイック入力"
+           //     $0.updateCell()
+                execQuickDataEntry = $0.value!
+                
+            }
+            .cellUpdate() {cell, row in
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+            }
+            
+            <<< ButtonRow() {
+           //     $0.tag = "quickSetting"
+           /*
+                $0.hidden = .function(["quickEntryEnabled"], { form -> Bool in
+                    let row: RowOf<Bool>! = form.rowBy(tag: "quickEntryEnabled")
+                    return row.value ?? false == false
+                })
+            */
+                $0.title = "単位量を設定"
+                $0.presentationMode = .segueName(segueName: "showQuickEntryViewSegue", onDismiss: nil)
+            }
+            .cellUpdate() {cell, row in
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+            }
+            
+            .cellSetup{cell, row in
+                row.hidden = .function(["quickEntryEnabled"], { form -> Bool in
+                    let row: RowOf<Bool>! = form.rowBy(tag: "quickEntryEnabled")
+                    return row.value ?? false == false
+                })
+            }
+
+            +++ Section(secHeader_target) //目標値の設定
             <<< StepperRow() {
                 $0.tag = "totalUnit"
                 $0.cell.stepper.isContinuous = true
@@ -458,7 +487,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
             }
             .onChange {
                 targetUnit = floor(Double($0.value!)/10)
-                update()
+              //  update()
             }
             .cellUpdate() {cell, row in
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
@@ -511,7 +540,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
                 cell.theme_backgroundColor = GlobalPicker.backgroundColor
             }
             
-            +++ Section(secHeader3)//個別のお酒の設定
+            +++ Section(secHeader_eacg)//個別のお酒の設定
             <<< ButtonRow() {
                 $0.tag = "AlchoolDetail"
                 $0.title = "濃度・上限・増減"
@@ -522,14 +551,18 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
         }
         
-        func update() {
+        /*
+       func update() {
+        
+        
             if let excessDrink = self.form.rowBy(tag: "excessDrink") {
                 // 対象のセレクトボックスにデータを入れるために.cellUpdateを呼ぶ
                 excessDrink.updateCell()
                 excessDrink.reload()
             }
+       
         }
-        
+         */
     }
     
 

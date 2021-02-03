@@ -24,6 +24,7 @@
 		FF25E267241B1314000C3179 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF25E266241B1314000C3179 /* AboutViewController.swift */; };
 		FF25E26B241B43E3000C3179 /* SettingAlchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF25E26A241B43E3000C3179 /* SettingAlchoolViewController.swift */; };
 		FF29F9F7237FD05800917E20 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29F9F6237FD05800917E20 /* ChartViewController.swift */; };
+		FF2A0D2725CA3A5600DB2FF6 /* QuickEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2A0D2625CA3A5600DB2FF6 /* QuickEntryViewController.swift */; };
 		FF2B754623CEA8EA00F5AD6E /* MyThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B754523CEA8EA00F5AD6E /* MyThemes.swift */; };
 		FF2B754823CEA97500F5AD6E /* GlobalPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B754723CEA97500F5AD6E /* GlobalPicker.swift */; };
 		FF39559F25906413003844E2 /* WhatsNewKit in Frameworks */ = {isa = PBXBuildFile; productRef = FF39559E25906413003844E2 /* WhatsNewKit */; };
@@ -90,6 +91,7 @@
 		FF28B96224A1DC020043D0EC /* Instructions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Instructions.framework; path = Carthage/Build/iOS/Instructions.framework; sourceTree = "<group>"; };
 		FF28B96324A1DC020043D0EC /* InstructionsAppExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InstructionsAppExtensions.framework; path = Carthage/Build/iOS/InstructionsAppExtensions.framework; sourceTree = "<group>"; };
 		FF29F9F6237FD05800917E20 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		FF2A0D2625CA3A5600DB2FF6 /* QuickEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickEntryViewController.swift; sourceTree = "<group>"; };
 		FF2B754523CEA8EA00F5AD6E /* MyThemes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyThemes.swift; sourceTree = "<group>"; };
 		FF2B754723CEA97500F5AD6E /* GlobalPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalPicker.swift; sourceTree = "<group>"; };
 		FF3DD457241C74A3007AC38E /* 3152-star-success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "3152-star-success.json"; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 		FF864F03247265EA00A79DAD /* Children */ = {
 			isa = PBXGroup;
 			children = (
+				FF2A0D2625CA3A5600DB2FF6 /* QuickEntryViewController.swift */,
 				FFE8D65E24457CB600180F34 /* TutorViewController.swift */,
 				FF76A06A2585AEE50065E6E8 /* NotificationViewController.swift */,
 				FF25E266241B1314000C3179 /* AboutViewController.swift */,
@@ -458,6 +461,7 @@
 				FF618AC224D3E06D008CD84B /* CalanderSettingViewController.swift in Sources */,
 				FFDA937A25426A530064ED6C /* WT02ViewController.swift in Sources */,
 				FF630B2225AFBE860041E152 /* OnTourThirdChartViewController.swift in Sources */,
+				FF2A0D2725CA3A5600DB2FF6 /* QuickEntryViewController.swift in Sources */,
 				FFE56C7F2395EDDD00873D09 /* SettingViewController.swift in Sources */,
 				FFD4A04D23A0B8FD008C7043 /* NetworkActivityIndicatorManager.swift in Sources */,
 				FF138FC124B8031000799829 /* EvalViewController.swift in Sources */,
