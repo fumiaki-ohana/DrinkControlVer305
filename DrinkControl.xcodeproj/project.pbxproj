@@ -10,6 +10,7 @@
 		FF04AEF9246D189B00F19D36 /* StartUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF04AEF8246D189B00F19D36 /* StartUp.storyboard */; };
 		FF0AC42E2575EC1300A80400 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0AC42D2575EC1300A80400 /* TabViewController.swift */; };
 		FF0AC43025771F7500A80400 /* 782-check-mark-success.json in Resources */ = {isa = PBXBuildFile; fileRef = FF0AC42F25771F7500A80400 /* 782-check-mark-success.json */; };
+		FF0DE89C25CE676B00484A04 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FF0DE89B25CE676B00484A04 /* SnapKit */; };
 		FF138FC124B8031000799829 /* EvalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF138FC024B8031000799829 /* EvalViewController.swift */; };
 		FF15D0F124C163C900ADA952 /* WT03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF15D0F024C163C900ADA952 /* WT03ViewController.swift */; };
 		FF18511025C4FB4D00206156 /* QuickDataEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18510F25C4FB4D00206156 /* QuickDataEntryViewController.swift */; };
@@ -158,6 +159,7 @@
 				FF39988F258EB42600F7BB90 /* Eureka in Frameworks */,
 				FF23F488258EC70B00B1349C /* SwiftTheme in Frameworks */,
 				FF23F485258EC6C800B1349C /* Lottie in Frameworks */,
+				FF0DE89C25CE676B00484A04 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +379,7 @@
 				FF9EE76E258EDAFB00D0B867 /* Instructions */,
 				FF9EE774258EDB4D00D0B867 /* FSCalendar */,
 				FF39559E25906413003844E2 /* WhatsNewKit */,
+				FF0DE89B25CE676B00484A04 /* SnapKit */,
 			);
 			productName = lastDrink;
 			productReference = FF9B769C208DB02B00B7A80A /* DrinkControl.app */;
@@ -420,6 +423,7 @@
 				FF9EE76D258EDAFB00D0B867 /* XCRemoteSwiftPackageReference "Instructions" */,
 				FF9EE773258EDB4D00D0B867 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				FF39559D25906413003844E2 /* XCRemoteSwiftPackageReference "WhatsNewKit" */,
+				FF0DE89A25CE676B00484A04 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = FF9B769D208DB02B00B7A80A /* Products */;
 			projectDirPath = "";
@@ -693,6 +697,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FF0DE89A25CE676B00484A04 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 		FF23F477258EBE5A00B1349C /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa.git";
@@ -769,6 +781,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FF0DE89B25CE676B00484A04 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF0DE89A25CE676B00484A04 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		FF23F478258EBE5A00B1349C /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FF23F477258EBE5A00B1349C /* XCRemoteSwiftPackageReference "realm-cocoa" */;

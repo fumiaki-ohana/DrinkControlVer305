@@ -8,6 +8,7 @@
 
 import UIKit
 import Eureka
+import SnapKit
 //import AMPopTip
 import Instructions
 
@@ -15,7 +16,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
 
  //MARK:- IB Properties and Functions
     @IBOutlet weak var cancelBtn: UIBarButtonItem!
-    @IBOutlet weak var moveToReview: UIButton!
+   @IBOutlet weak var moveToReview: UIButton!
     @IBOutlet var viewBackGround: UIView!
     @IBOutlet weak var noButton: UIButton!
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
@@ -206,9 +207,30 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         
         self.coachMarksController.dataSource = self
         self.coachMarksController.delegate = self
-       
-        tableView.frame =
-                 CGRect(x: 10, y: 50,  width: self.view.bounds.size.width-20, height: (self.view.bounds.size.height - 160))
+   
+        noButton.snp.makeConstraints { (make) -> Void in
+            make.height.equalTo(35)
+            make.left.equalTo(self.view).offset(80)
+            make.right.equalTo(self.view).offset(-80)
+            make.bottom.equalTo(self.view).offset(-15)
+        }
+        
+        moveToReview.snp.makeConstraints { (make) -> Void in
+            make.height.equalTo(35)
+            make.left.equalTo(self.view).offset(40)
+            make.right.equalTo(self.view).offset(-40)
+            make.bottom.equalTo(noButton.snp.top).offset(-15)
+        }
+    
+        tableView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(self.view).offset(50)
+            make.left.equalTo(self.view).offset(5)
+            make.right.equalTo(self.view).offset(-5)
+            make.bottom.equalTo(moveToReview.snp.top).offset(-15)
+        }
+        
+      //  tableView.frame =
+      //          CGRect(x: 10, y: 50,  width: self.view.bounds.size.width-20, height: //(self.view.bounds.size.height - 360))
        
         view.theme_backgroundColor = GlobalPicker.barTintColor
         tableView.theme_backgroundColor = GlobalPicker.backgroundColor
@@ -259,7 +281,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                cell.titleLabel.attributedText = setAttribute(title1: eDname.wine.ctitle (emoji: emojiSwitch)+self.prefix, title2: alc_quick[eDname.wine]!.decimalStrPlain+")")
+                cell.titleLabel.attributedText = setAttribute(title1: eDname.wine.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_quick[eDname.wine]!.decimalStrPlain+")")
            //     row.value = Double(self.drinkDaily.drinks[eDname.wine] ?? 0)
             }
             
@@ -286,7 +308,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                cell.titleLabel.attributedText = setAttribute(title1: eDname.nihonsyu.ctitle (emoji: emojiSwitch)+self.prefix, title2: alc_step[eDname.nihonsyu]!.decimalStrPlain+")")
+                cell.titleLabel.attributedText = setAttribute(title1: eDname.nihonsyu.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[eDname.nihonsyu]!.decimalStrPlain+")")
            //     row.value = Double(self.drinkDaily.drinks[eDname.nihonsyu] ?? 0)
             }
             
@@ -314,7 +336,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                cell.titleLabel.attributedText = setAttribute(title1: eDname.beer.ctitle (emoji: emojiSwitch)+self.prefix, title2: alc_step[eDname.beer]!.decimalStrPlain+")")
+                cell.titleLabel.attributedText = setAttribute(title1: eDname.beer.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[eDname.beer]!.decimalStrPlain+")")
             //    row.value = Double(self.drinkDaily.drinks[eDname.beer] ?? 0)
             }
             
@@ -342,7 +364,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                cell.titleLabel.attributedText = setAttribute(title1: eDname.shocyu.ctitle (emoji: emojiSwitch)+self.prefix, title2: alc_step[eDname.shocyu]!.decimalStrPlain+")")
+                cell.titleLabel.attributedText = setAttribute(title1: eDname.shocyu.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[eDname.shocyu]!.decimalStrPlain+")")
             //    row.value = Double(self.drinkDaily.drinks[eDname.shocyu] ?? 0)
             }
             
@@ -371,7 +393,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                cell.titleLabel.attributedText = setAttribute(title1: eDname.whisky.ctitle (emoji: emojiSwitch)+self.prefix, title2: alc_step[eDname.whisky]!.decimalStrPlain+")")
+                cell.titleLabel.attributedText = setAttribute(title1: eDname.whisky.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[eDname.whisky]!.decimalStrPlain+")")
              //   row.value = Double(self.drinkDaily.drinks[eDname.whisky] ?? 0)
             }
             
@@ -398,7 +420,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                     cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                     cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                     cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                cell.titleLabel.attributedText = setAttribute(title1: eDname.can.ctitle (emoji: emojiSwitch)+self.prefix, title2: alc_step[eDname.can]!.decimalStrPlain+")")
+                cell.titleLabel.attributedText = setAttribute(title1: eDname.can.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[eDname.can]!.decimalStrPlain+")")
            //     row.value = Double(self.drinkDaily.drinks[eDname.can] ?? 0)
             }
         

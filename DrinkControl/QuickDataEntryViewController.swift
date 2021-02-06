@@ -209,9 +209,31 @@ class QuickDataEntryViewController: FormViewController,CoachMarksControllerDataS
         
         self.coachMarksController.dataSource = self
         self.coachMarksController.delegate = self
+        
+        noButton.snp.makeConstraints { (make) -> Void in
+            make.height.equalTo(35)
+            make.left.equalTo(self.view).offset(80)
+            make.right.equalTo(self.view).offset(-80)
+            make.bottom.equalTo(self.view).offset(-15)
+        }
+        
+        moveToReview.snp.makeConstraints { (make) -> Void in
+            make.height.equalTo(35)
+            make.left.equalTo(self.view).offset(40)
+            make.right.equalTo(self.view).offset(-40)
+            make.bottom.equalTo(noButton.snp.top).offset(-15)
+        }
+    
+        tableView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(self.view).offset(50)
+            make.left.equalTo(self.view).offset(10)
+            make.right.equalTo(self.view).offset(-10)
+            make.bottom.equalTo(moveToReview.snp.top).offset(-15)
+        }
        
-        tableView.frame =
-                 CGRect(x: 10, y: 50,  width: self.view.bounds.size.width-20, height: (self.view.bounds.size.height - 160))
+     //   tableView.frame =
+     //            CGRect(x: 10, y: 50,  width: self.view.bounds.size.width-20, height: // (self.view.bounds.size.height - 160))
+        
         view.theme_backgroundColor = GlobalPicker.barTintColor
         tableView.theme_backgroundColor = GlobalPicker.backgroundColor
         tableView.theme_sectionIndexBackgroundColor = GlobalPicker.groupBackground
