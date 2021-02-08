@@ -10,13 +10,13 @@ import UIKit
 import Eureka
 import Charts
 import Instructions
+import SnapKit
 
 class EvalViewController: FormViewController,CoachMarksControllerDataSource,CoachMarksControllerDelegate {
     
     //MARK:- Properties
     var drinkDaily = DrinkDailyRecord(dDate: Date(), drinks:[eDname:Int]())
     var twoDimArray = [tableArray]() // UITable
-    let navTitle =  "飲酒のレビュー"
     let unitStr:String = "g"
     let xChar = "\u{1F167}"
     var coarchChartView = LineChartView()
@@ -121,8 +121,8 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
         self.navigationItem.hidesBackButton = true
         data = shouldShowCoarch ? chartDataArrayDummy: setDataArray(rawdata: generateRawData(modifiedData: drinkDaily))
         let lastDateStr = data.last!.xval
-        let sectionHeader:[String] = [drinkDaily.dDate.mediumStr+"の純アルコール量は"+drinkDaily.totalAlchool.decimalStr+"でした。",lastDateStr+"付"+"直近7日間の状況"]
-        navigationItem.title = navTitle
+        let sectionHeader:[String] = ["この日の純アルコール量:"+drinkDaily.totalAlchool.decimalStr,lastDateStr+"付"+"直近7日間の状況"]
+        navigationItem.title = drinkDaily.dDate.mediumStr
       
         
         //MARK:- Eureka form
@@ -154,7 +154,17 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
     
     //MARK:- Eureka
         form +++
-            Section(sectionHeader[0])
+            Section(){section in
+                var header = HeaderFooterView<UILabel>(.class)
+                header.height = { 44.0 }
+                header.onSetupView = {view, _ in
+                    view.textColor = .red
+                    view.text = sectionHeader[0]
+                    view.font = UIFont.boldSystemFont(ofSize: 20)
+                    view.textAlignment = .center
+                }
+                section.header = header
+            }
 
             <<< SegmentedRow<String>() {
                 $0.tag = "evaluation"
@@ -221,6 +231,14 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
             cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
         }
         
+        tableView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(self.view).offset(20)
+            make.left.equalTo(self.view).offset(10)
+            make.right.equalTo(self.view).offset(-10)
+            make.height.equalToSuperview().multipliedBy(0.5)
+        }
+        // TODO:- CGRectをとる
+        
         let rect = CGRect(x: 0, y: self.view.frame.height * 0.7,  width: self.view.bounds.size.width, height: (self.view.bounds.size.height * 0.3)-59)
                switch graphType {
 
@@ -230,9 +248,17 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
                case 1: let lineChartView = drawLineChart(chartData: data, legend: "",rect: rect, numXLabels: 5, topOffset:10,buttomOffset:20, flagDateType: true, addLines: true,showValue: false,showlegend:false)
                 self.view.addSubview(lineChartView)
                 coarchChartView = lineChartView
+                
+                lineChartView.snp.makeConstraints { (make) -> Void in
+                    make.top.equalTo(tableView.snp.bottom).offset(20)
+                    make.left.equalTo(self.view).offset(10)
+                    make.right.equalTo(self.view).offset(-10)
+                    make.bottom.equalToSuperview().offset(10) }
                default:break
                }
-            }
+        
+        }
+    
     
     //MARK:- Segue
     
