@@ -306,13 +306,39 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         self.drinkCalendar.firstWeekday = 1
         self.drinkCalendar.scrollDirection = FSCalendarScrollDirection(rawValue:UInt(cal_direction))!
         
+        drinkCalendar.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(10)
+            make.left.equalTo(self.view).offset(10)
+            make.right.equalTo(self.view).offset(-10)
+            make.height.equalToSuperview().multipliedBy(0.27)
+        }
+        
+        tableview.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(drinkCalendar.snp.bottom).offset(10)
+            make.left.equalTo(self.view).offset(10)
+            make.right.equalTo(self.view).offset(-10)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)
+        }
+        
+        EmptyStateView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(drinkCalendar.snp.bottom).offset(10)
+            make.left.equalTo(self.view).offset(10)
+            make.right.equalTo(self.view).offset(-10)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)
+        }
+        
+        addButton.snp.makeConstraints { (make) -> Void in
+            make.centerX.equalTo(EmptyStateView)
+            make.centerY.equalTo(EmptyStateView)
+        }
+        
         mySections = sectionTitleArray
         twoDimArray = loadDataForTable(date: Date())
         
         let realm = try! Realm()
         drinkRecord_Results = realm.objects(DrinkRecord.self)
-        
         drinkCalendar.reloadData()
+        
      
     }
         
