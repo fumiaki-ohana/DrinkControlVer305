@@ -22,6 +22,7 @@ let nextLabel = "OK" // Coach
 
 let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
 var lastDate = Date()//グラフの最終日
+let ml = "㎖"
 
 //var lastDataCoachStr = "2020/08/25"
 

@@ -41,7 +41,7 @@ class QuickEntrylViewController:FormViewController {
                 $0.cell.stepper.maximumValue = max
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    //                           return "\(Int(v))"+"cc"
+                    //                           return "\(Int(v))"+ml
                     return (Int(v)).decimalStr
                 }
                 $0.title = eDname.wine.ctitle(emoji: emojiSwitch)

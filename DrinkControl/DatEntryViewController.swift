@@ -39,7 +39,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
     let coachMarksController = CoachMarksController()
     let hintStr  = ["🍷ワインを200cc。","🍺ビールも350cc、🍶日本酒も200cc飲みました。\n💡TIP(±50)はワンクリックでの増減量ccで、変更できます。","純アルコール量の合計を、自動的に計算します。\n\n💡TIP:お酒の種類や、ワンクリックでの入力量は【⚙️設定】で変えられます。",
         "💡休肝日㊗️だった時は、ここをタップ！",
-         "☝️入力が完了したら、レビュー画面に移動します。"]
+         "☝️入力が完了したら、レビュー画面に移動します。","設定で、グラス数などで入力する方法に変えれます。"]
     
     // MARK:- Properties
     var stepValue:Double = 0.0
@@ -105,6 +105,8 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
             point = p?.baseCell
         case 4:
             point = moveToReview
+        case 5:
+            point = navigationController?.navigationBar
         default:break
         }
         return coachMarksController.helper.makeCoachMark(for: point)
@@ -250,7 +252,6 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         
         form +++
             Section(drinkDaily.dDate.mediumStr)
-            
             <<< StepperRow() {
                 $0.tag = "wineEntry"
                 $0.cell.stepper.stepValue = alc_step[eDname.wine]!
@@ -258,7 +259,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 $0.cell.stepper.maximumValue = alc_limit[eDname.wine]!
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return "\(Int(v))"+"cc"
+                    return "\(Int(v))"+ml
                 }
                 $0.title = " "
                 $0.value = Double(drinkDaily.drinks[eDname.wine] ?? 0)
@@ -286,7 +287,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 $0.cell.stepper.maximumValue = alc_limit[eDname.nihonsyu]!
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return "\(Int(v))"+"cc"
+                    return "\(Int(v))"+ml
                 }
                 $0.title = " "
                 $0.value = Double(drinkDaily.drinks[eDname.nihonsyu] ?? 0)
@@ -313,7 +314,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 $0.cell.stepper.maximumValue = alc_limit[eDname.beer]!
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return "\(Int(v))"+"cc"
+                    return "\(Int(v))"+ml
                 }
                 $0.title = " "
                 $0.value = Double(drinkDaily.drinks[eDname.beer] ?? 0)
@@ -341,7 +342,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 $0.cell.stepper.maximumValue = alc_limit[eDname.shocyu]!
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return "\(Int(v))"+"cc"
+                    return "\(Int(v))"+ml
                 }
                 $0.title = " "
                 $0.value = Double(self.drinkDaily.drinks[eDname.shocyu] ?? 0)
@@ -370,7 +371,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 $0.cell.stepper.maximumValue = alc_limit[eDname.whisky]!
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return "\(Int(v))"+"cc"
+                    return "\(Int(v))"+ml
                 }
                 $0.title = " "
                 $0.value = Double(self.drinkDaily.drinks[eDname.whisky] ?? 0)
@@ -398,7 +399,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 $0.cell.stepper.maximumValue = alc_limit[eDname.can]!
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return "\(Int(v))"+"cc"
+                    return "\(Int(v))"+ml
                 }
                 $0.title = " "
                 $0.value = Double(self.drinkDaily.drinks[eDname.can] ?? 0)

@@ -204,7 +204,7 @@ extension Double {
     var decimalStrCC: String {
         let decimalFormatter = "%.0f"
     //    let decimalFormatter = "%4d"
-        return String(format:decimalFormatter,self)+"cc"
+        return String(format:decimalFormatter,self)+ml
     }
     
     
