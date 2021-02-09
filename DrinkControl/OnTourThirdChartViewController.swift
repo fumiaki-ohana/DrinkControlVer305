@@ -9,6 +9,7 @@
 import UIKit
 import Charts
 import Instructions
+import SnapKit
 
 class OnTourThirdChartViewController: UIViewController,CoachMarksControllerDataSource,CoachMarksControllerDelegate {
     
@@ -123,16 +124,26 @@ class OnTourThirdChartViewController: UIViewController,CoachMarksControllerDataS
        // navigationItem.title = (data.first!.0)+"〜"+(data.last?.0)!
         navigationItem.title = "反省"
         
-        let rect = CGRect(x:0, y: 22, width: self.view.frame.width, height: (self.view.frame.height / 2 - 22))
+      //  let rect = CGRect(x:0, y: 22, width: self.view.frame.width, height: (self.view.frame.height / 2 - 22))
         let threeWeeksData = [data[0],data[1],data[2]]
-        let barChartView = drawStackedBarChart(chartData: threeWeeksData, legend: "", rect: rect, numXLabels: data.count,topOffset:40.0, buttomOffset:20.0,flagDateType: false, addLines: true,noDrink:true, showValue: true)
+        let barChartView = drawStackedBarChart(chartData: threeWeeksData, legend: "",  numXLabels: data.count,topOffset:40.0, buttomOffset:20.0,flagDateType: false, addLines: true,noDrink:true, showValue: true)
         self.view.addSubview(barChartView)
+        barChartView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(10)
+            make.left.equalTo(self.view).offset(10)
+            make.right.equalTo(self.view).offset(-10)
+            make.height.equalToSuperview().multipliedBy(0.4) }
         if shouldShowCoarch {barChartForCoarch = barChartView}
         
         let wholePeriodData = [data[3]]
-        let rect1 = CGRect(x:0, y: (self.view.frame.height / 2), width: self.view.frame.width, height: (self.view.frame.height / 2 - 22))
-        let pieChartView = drawPieChart(chartData: wholePeriodData, legend: "全期間", rect: rect1, topOffset:40.0, buttomOffset:20.0,centerText: "全期間")
+    //    let rect1 = CGRect(x:0, y: (self.view.frame.height / 2), width: self.view.frame.width, height: (self.view.frame.height / 2 - 22))
+        let pieChartView = drawPieChart(chartData: wholePeriodData, legend: "全期間",  topOffset:40.0, buttomOffset:20.0,centerText: "全期間")
         self.view.addSubview(pieChartView)
+        pieChartView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(barChartView.snp.bottom).offset(10)
+            make.left.equalTo(self.view).offset(10)
+            make.right.equalTo(self.view).offset(-10)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(10)}
         if shouldShowCoarch {pieChartForCoarch = pieChartView}
         
     }

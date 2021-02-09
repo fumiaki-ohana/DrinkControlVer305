@@ -57,6 +57,7 @@ enum GlobalPicker {
     // Mark:- Button
     static let buttonTintColor2: ThemeColorPicker = [tc[0][0], tc[1][1],tc[2][3],tc[3][0],tc[4][0],tc[5][2],tc[5][2],tc[6][3]]//
     static let buttonTintColor3: ThemeColorPicker = [tc[0][3], tc[1][0],tc[2][0],tc[3][3],tc[4][2],tc[5][0],tc[5][2],tc[6][2]]
+    static let buttonTintColor4: ThemeColorPicker = [tc[0][3], tc[1][0],tc[2][0],tc[3][3],tc[4][2],tc[5][0],tc[5][2],tc_black]
     
     static let buttonTitleColor: ThemeColorPicker = [tc_white, tc_white,tc_white, tc_white,tc_white,tc_orange,tc_white,tc_white]
     // Mark:-Data Entry Cell

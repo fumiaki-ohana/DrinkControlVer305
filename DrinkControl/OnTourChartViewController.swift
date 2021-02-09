@@ -9,6 +9,7 @@
 import UIKit
 import Charts
 import Instructions
+import SnapKit
 
 class OnTourChartViewController: UIViewController,CoachMarksControllerDataSource,CoachMarksControllerDelegate {
     
@@ -96,22 +97,26 @@ class OnTourChartViewController: UIViewController,CoachMarksControllerDataSource
         let data = chartDataArrayDummy
         navigationItem.title = (data.last?.0)!
 
-        let rect = CGRect(x:0, y: 44, width: self.view.frame.width, height: (self.view.frame.height * 0.5 - 22))
-        switch graphType {
-        case 0: let barChartView = drawBarChart(chartData: data, legend: "純アルコール量(g)", rect: rect, numXLabels: 5, topOffset: 35.0,flagDateType: true, addLines: true,showValue: false)
-            self.view.addSubview(barChartView)
-           // barChartForCoarch = barChartView
-            
-        case 1: let lineChartView = drawLineChart(chartData: data, legend: "純アルコール量(g)", rect: rect, numXLabels: 5,topOffset: 35.0, flagDateType: true, addLines: true,showValue: false)
+       // let rect = CGRect(x:0, y: 44, width: self.view.frame.width, height: (self.view.frame.height * 0.5 - 22))
+        let lineChartView = drawLineChart(chartData: data, legend: "純アルコール量(g)",  numXLabels: 5,topOffset: 35.0, flagDateType: true, addLines: true,showValue: false)
             self.view.addSubview(lineChartView)
-            if shouldShowCoarch {lineChartForCoach = lineChartView} //コーチの対象にする。
-        default:break
-        }
+            if shouldShowCoarch {lineChartForCoach = lineChartView}
+        lineChartView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(10)
+            make.left.equalTo(self.view).offset(10)
+            make.right.equalTo(self.view).offset(-10)
+            make.height.equalToSuperview().multipliedBy(0.4)}//コーチの対象にする。
         
         let data1 = avgDrinkFullPeriods(array: data)
-        let rect1 = CGRect(x:0, y: (self.view.frame.height * 0.5 + 22), width: self.view.frame.width, height:( self.view.frame.height * 0.5 - 69))
-        let barChartView = drawBarChart(chartData: data1, legend: "純アルコール量の期間別平均（g）", rect: rect1, numXLabels:data1.count,topOffset:20.0, buttomOffset:30, flagDateType: false, addLines: true,noDrink:false, showValue: true)
+      //  let rect1 = CGRect(x:0, y: (self.view.frame.height * 0.5 + 22), width: self.view.frame.width, height:( self.view.frame.height * 0.5 - 69))
+        let barChartView = drawBarChart(chartData: data1, legend: "純アルコール量の期間別平均（g）",  numXLabels:data1.count,topOffset:20.0, buttomOffset:30, flagDateType: false, addLines: true,noDrink:false, showValue: true)
         self.view.addSubview(barChartView)
+        
+        barChartView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(lineChartView.snp.bottom).offset(10)
+            make.left.equalTo(self.view).offset(10)
+            make.right.equalTo(self.view).offset(-10)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(10) }
         if shouldShowCoarch {barChartForCoarch = barChartView} //コーチの対象にする。
     }
     

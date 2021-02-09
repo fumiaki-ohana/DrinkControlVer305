@@ -8,6 +8,7 @@
 
 import UIKit
 import WhatsNewKit
+import SnapKit
 
 class WT02ViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!

@@ -11,6 +11,7 @@ import Eureka
 import SnapKit
 //import AMPopTip
 import Instructions
+import SnapKit
 
 class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,CoachMarksControllerDelegate {
 
@@ -18,7 +19,6 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
     @IBOutlet weak var cancelBtn: UIBarButtonItem!
    @IBOutlet weak var moveToReview: UIButton!
     @IBOutlet var viewBackGround: UIView!
-    @IBOutlet weak var noButton: UIButton!
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
         if flagChanged {
             showAlert(title: "データが入力/変更されています",message: "保存しないで続行しますか？") }
@@ -101,7 +101,8 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
             let p = form.rowBy(tag: "totalUnits")
             point = p?.baseCell
         case 3:
-            point = noButton
+            let p = form.rowBy(tag: "noDrink")
+            point = p?.baseCell
         case 4:
             point = moveToReview
         default:break
@@ -193,7 +194,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         self.tabBarController?.tabBar.isHidden = true
         
         viewBackGround.theme_backgroundColor = GlobalPicker.backgroundColor
-        setButtonProperties(button: noButton)
+      //  setButtonProperties(button: noButton)
         setButtonProperties(button:moveToReview,backColor:GlobalPicker.buttonTintColor2,titleColorOnDark:GlobalPicker.buttonTintColor3)
         
         if shouldShowCoarch {
@@ -207,19 +208,12 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         
         self.coachMarksController.dataSource = self
         self.coachMarksController.delegate = self
-   
-        noButton.snp.makeConstraints { (make) -> Void in
-            make.height.equalTo(35)
-            make.left.equalTo(self.view).offset(80)
-            make.right.equalTo(self.view).offset(-80)
-            make.bottom.equalTo(self.view).offset(-15)
-        }
         
         moveToReview.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(35)
             make.left.equalTo(self.view).offset(40)
             make.right.equalTo(self.view).offset(-40)
-            make.bottom.equalTo(noButton.snp.top).offset(-15)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)
         }
     
         tableView.snp.makeConstraints { (make) -> Void in
@@ -423,7 +417,22 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 cell.titleLabel.attributedText = setAttribute(title1: eDname.can.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[eDname.can]!.decimalStrPlain+")")
            //     row.value = Double(self.drinkDaily.drinks[eDname.can] ?? 0)
             }
-        
+            
+            <<< ButtonRow() {
+                $0.tag = "noDrink"
+                $0.title = "休肝日はここをタップ!"
+                $0.cellStyle = .default
+               // $0.cell.theme_tintColor = GlobalPicker.buttonTintColor3
+            }
+            .cellSetup() {cell ,row in
+                cell.textLabel?.textAlignment = .center
+                cell.theme_backgroundColor = GlobalPicker.buttonTintColor4
+            }
+           
+            .onCellSelection { cell, row in
+                self.noDrinkDay()
+            }
+         
             +++ Section("計算結果：合計の純アルコール量")
                <<< LabelRow () {
                             

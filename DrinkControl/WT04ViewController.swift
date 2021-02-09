@@ -8,6 +8,7 @@
 
 import UIKit
 import Eureka
+import SnapKit
 
 class WT04ViewController: FormViewController {
     
@@ -25,9 +26,22 @@ class WT04ViewController: FormViewController {
         self.overrideUserInterfaceStyle = .light
         setButtonProperties(button: nextButton,rgbaStr:"#F99F48" )
         nextButton.setTitle(buttonTitle , for: .normal)
-        tableView.frame =
-            CGRect(x:10, y: 160, width: self.view.frame.width-20, height: self.view.frame.height - 290)
+     //   tableView.frame =
+    //        CGRect(x:10, y: 160, width: self.view.frame.width-20, height: self.view.frame.height - 290)
         self.tableView?.rowHeight = 40.0
+        
+        tableView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(10)
+            make.left.equalTo(self.view).offset(10)
+            make.right.equalTo(self.view).offset(-10)
+            make.bottom.equalTo(nextButton.snp.top).offset(-20)
+        }
+        nextButton.snp.makeConstraints { (make) -> Void in
+            make.height.equalTo(35)
+            make.left.equalTo(self.view).offset(40)
+            make.right.equalTo(self.view).offset(-40)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-15)
+        }
         form +++
             Section(header:header1,footer:footer1)
             <<< StepperRow() {

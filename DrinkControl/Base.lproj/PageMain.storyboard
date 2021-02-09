@@ -695,17 +695,6 @@
                                     <action selector="pressMoveButton:" destination="bBt-8y-dQ0" eventType="touchUpInside" id="Y5c-Zt-7gd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYY-9d-P2u" userLabel="NoDrink">
-                                <rect key="frame" x="80" y="421" width="160" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <state key="normal" title="休肝日です。">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressNoDrinkBtn:" destination="bBt-8y-dQ0" eventType="touchUpInside" id="ahR-vQ-sqV"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V6b-Iw-e0c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -722,7 +711,6 @@
                     <connections>
                         <outlet property="cancelBtn" destination="7qm-q5-EdX" id="bQU-9K-02X"/>
                         <outlet property="moveToReview" destination="rC8-MN-Mzw" id="fLW-1K-N0w"/>
-                        <outlet property="noButton" destination="oYY-9d-P2u" id="fP3-Cy-gtd"/>
                         <outlet property="viewBackGround" destination="ag6-Im-D9G" id="k3T-Tq-YFy"/>
                         <segue destination="olR-Yd-T4M" kind="show" identifier="showEvalViewSegue" id="Mfk-RA-HVM"/>
                     </connections>

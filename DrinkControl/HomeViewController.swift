@@ -13,6 +13,7 @@ import StoreKit
 import SwiftTheme
 import Instructions
 import WhatsNewKit
+import SnapKit
 
 class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSource,FSCalendarDelegateAppearance, UITableViewDataSource,UITableViewDelegate,CoachMarksControllerDataSource, CoachMarksControllerDelegate {
     
@@ -317,14 +318,14 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
             make.top.equalTo(drinkCalendar.snp.bottom).offset(10)
             make.left.equalTo(self.view).offset(10)
             make.right.equalTo(self.view).offset(-10)
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
         }
         
         EmptyStateView.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(drinkCalendar.snp.bottom).offset(10)
             make.left.equalTo(self.view).offset(10)
             make.right.equalTo(self.view).offset(-10)
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
         }
         
         addButton.snp.makeConstraints { (make) -> Void in

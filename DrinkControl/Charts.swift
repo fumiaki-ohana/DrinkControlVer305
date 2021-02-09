@@ -19,7 +19,7 @@ var grNoData = false // データがない場合は、グラフ表示を中止�
 
 //MARK:- Stacked Bar Charts
 
-func drawStackedBarChart(chartData:StackedChartArray,  legend:String?, rect:CGRect, numXLabels:Int, topOffset: CGFloat = 10, buttomOffset: CGFloat = 30.0, leftOffset:CGFloat = 10.0,rightOffset:CGFloat = 10.0, flagDateType: Bool,addLines:Bool = false,noDrink:Bool = false, showValue:Bool) -> BarChartView{
+func drawStackedBarChart(chartData:StackedChartArray,  legend:String?,  numXLabels:Int, topOffset: CGFloat = 10, buttomOffset: CGFloat = 30.0, leftOffset:CGFloat = 10.0,rightOffset:CGFloat = 10.0, flagDateType: Bool,addLines:Bool = false,noDrink:Bool = false, showValue:Bool) -> BarChartView{
     
     let chartDataArray = chartData
     
@@ -41,7 +41,7 @@ func drawStackedBarChart(chartData:StackedChartArray,  legend:String?, rect:CGRe
     //   self.title = " 純アルコール量の推移"
     //    let rect = CGRect(x:0, y: 30, width: self.view.frame.width, height: self.view.frame.height * 0.5)
     
-    let chartView = BarChartView(frame:rect)
+    let chartView = BarChartView()
     
     chartView.dragEnabled = false
     chartView.pinchZoomEnabled = false
@@ -134,7 +134,7 @@ func drawStackedBarChart(chartData:StackedChartArray,  legend:String?, rect:CGRe
 
 //MARK:- Pie Chart
 
-func drawPieChart(chartData:StackedChartArray,  legend:String?, rect:CGRect,topOffset: CGFloat = 10, buttomOffset: CGFloat = 10.0, leftOffset:CGFloat = 10.0,rightOffset:CGFloat = 10.0,centerText:String = "") -> PieChartView{
+func drawPieChart(chartData:StackedChartArray,  legend:String?, topOffset: CGFloat = 10, buttomOffset: CGFloat = 10.0, leftOffset:CGFloat = 10.0,rightOffset:CGFloat = 10.0,centerText:String = "") -> PieChartView{
     
     let chartDataArray = chartData
     
@@ -144,7 +144,7 @@ func drawPieChart(chartData:StackedChartArray,  legend:String?, rect:CGRect,topO
    
   //  self.title = " 全期間"
     
-    let chartView = PieChartView(frame:rect)
+    let chartView = PieChartView()
     /*
     let l = chartView.legend
     l.horizontalAlignment = .right
@@ -210,7 +210,7 @@ func drawPieChart(chartData:StackedChartArray,  legend:String?, rect:CGRect,topO
 }
 // MARK:- 棒グラフ
       
-func drawBarChart(chartData:ChartArray,  legend:String?, rect:CGRect, numXLabels:Int, topOffset: CGFloat = 10, buttomOffset: CGFloat = 30.0, leftOffset:CGFloat = 10.0,rightOffset:CGFloat = 10.0, flagDateType: Bool,addLines:Bool = false,noDrink:Bool = false, showValue:Bool,showlegend:Bool = true) -> BarChartView{
+func drawBarChart(chartData:ChartArray,  legend:String?, numXLabels:Int, topOffset: CGFloat = 10, buttomOffset: CGFloat = 30.0, leftOffset:CGFloat = 10.0,rightOffset:CGFloat = 10.0, flagDateType: Bool,addLines:Bool = false,noDrink:Bool = false, showValue:Bool,showlegend:Bool = true) -> BarChartView{
           
           let chartDataArray = chartData
           var dateStr:[String] = []
@@ -231,7 +231,7 @@ func drawBarChart(chartData:ChartArray,  legend:String?, rect:CGRect, numXLabels
           //   self.title = " 純アルコール量の推移"
           //    let rect = CGRect(x:0, y: 30, width: self.view.frame.width, height: self.view.frame.height * 0.5)
           
-          let chartView = BarChartView(frame:rect)
+          let chartView = BarChartView()
           
           chartView.dragEnabled = false
           chartView.pinchZoomEnabled = false
@@ -374,7 +374,7 @@ func drawBarChart(chartData:ChartArray,  legend:String?, rect:CGRect, numXLabels
       }
       
    // MARK:- 線グラフ
-    func drawLineChart(chartData:ChartArray,  legend:String?, rect:CGRect, numXLabels:Int,topOffset: CGFloat = 10.0, buttomOffset: CGFloat = 30.0, leftOffset:CGFloat = 10.0,rightOffset:CGFloat = 10.0, flagDateType: Bool,addLines:Bool,showValue: Bool,showlegend:Bool = true) -> LineChartView {
+    func drawLineChart(chartData:ChartArray,  legend:String?, numXLabels:Int,topOffset: CGFloat = 10.0, buttomOffset: CGFloat = 30.0, leftOffset:CGFloat = 10.0,rightOffset:CGFloat = 10.0, flagDateType: Bool,addLines:Bool,showValue: Bool,showlegend:Bool = true) -> LineChartView {
         // グラフのX軸用に日付を加工する
         var dateStr:[String] = []
         if flagDateType {
@@ -393,7 +393,7 @@ func drawBarChart(chartData:ChartArray,  legend:String?, rect:CGRect, numXLabels
         
         //     self.title = " 純アルコール量の推移"
      //   let rect = CGRect(x:0, y: 30, width: view.frame.width, height: self.view.frame.height * 0.5)
-        let chartView = LineChartView(frame: rect)
+        let chartView = LineChartView()
         
         chartView.dragEnabled = false
         chartView.pinchZoomEnabled = false

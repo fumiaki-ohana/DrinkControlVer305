@@ -8,10 +8,9 @@
 
 import UIKit
 import Eureka
-//import AMPopTip
-import Instructions
+import SnapKit
 
-class QuickDataEntryViewController: FormViewController,CoachMarksControllerDataSource,CoachMarksControllerDelegate {
+class QuickDataEntryViewController: FormViewController {
     
     let evalViewSegue  = "showEvalViewFromQuick"
 
@@ -30,18 +29,6 @@ class QuickDataEntryViewController: FormViewController,CoachMarksControllerDataS
     @IBAction func pressMoveButton(_ sender: UIButton) {
            performSegue(withIdentifier: evalViewSegue, sender: Any?.self)
        }
-    
-    @IBAction func pressNoDrinkBtn(_ sender: UIButton) {
-        noDrinkDay()
-    }
-    
-    
-    // MARK:- Coarch properties
-    private var pointOfInterest:UIView!
-    let coachMarksController = CoachMarksController()
-    let hintStr  = ["🍷ワインを200cc。","🍺ビールも350cc、🍶日本酒も200cc飲みました。\n💡TIP(±50)はワンクリックでの増減量ccで、変更できます。","純アルコール量の合計を、自動的に計算します。\n\n💡TIP:お酒の種類や、ワンクリックでの入力量は【⚙️設定】で変えられます。",
-        "💡休肝日㊗️だった時は、ここをタップ！",
-         "☝️入力が完了したら、レビュー画面に移動します。"]
     
     // MARK:- Properties
     var stepValue:Double = 0.0
@@ -82,78 +69,6 @@ class QuickDataEntryViewController: FormViewController,CoachMarksControllerDataS
             ))
         }
     }
-    
-    // MARK:- Coarch
-    
-    func numberOfCoachMarks(for coachMarksController: CoachMarksController) -> Int {
-        return hintStr.count
-    }
-        
-    func coachMarksController(_ coachMarksController: CoachMarksController,
-                              coachMarkAt index: Int) -> CoachMark {
-        var point:UIView!
-        switch index {
-        case 0:
-            let p = form.rowBy(tag: "wineEntry")
-            point = p?.baseCell
-        case 1:
-            let p = form.rowBy(tag: "beerEntry")
-            point = p?.baseCell
-        case 2:
-            let p = form.rowBy(tag: "totalUnits")
-            point = p?.baseCell
-        case 3:
-            point = noButton
-        case 4:
-            point = moveToReview
-        default:break
-        }
-        return coachMarksController.helper.makeCoachMark(for: point)
-    }
-    
-    func coachMarksController(_ coachMarksController: CoachMarksController, coachMarkViewsAt index: Int, madeFrom coachMark: CoachMark) -> (bodyView: (UIView & CoachMarkBodyView), arrowView: (UIView & CoachMarkArrowView)?) {
-      
-        let coachViews = coachMarksController.helper.makeDefaultCoachViews(withArrow: true, withNextText: true, arrowOrientation: coachMark.arrowOrientation)
-        coachViews.bodyView.hintLabel.text = hintStr[index]
-        coachViews.bodyView.nextLabel.text = nextLabel
-        coachViews.bodyView.background.cornerRadius = 20
-        coachViews.bodyView.background.borderColor = UIColor(hexRGB:"#F99F48" )!
-        coachViews.bodyView.hintLabel.textColor = .black
-        
-        return (bodyView: coachViews.bodyView, arrowView: coachViews.arrowView)
-    }
-    
-    func coachMarksController(_ coachMarksController: CoachMarksController,
-                              willShow coachMark: inout CoachMark,
-                              beforeChanging change: ConfigurationChange,
-                              at index: Int) {
-        var  point:UIView!
-        switch index {
-        case 0:
-            let p = form.rowBy(tag: "wineEntry")
-            point = p?.baseCell
-            addAnimation(view: point)
-        case 1:
-            let p = form.rowBy(tag: "beerEntry")
-            point = p?.baseCell
-            addAnimation(view: point)
-        case 2:
-            let p = form.rowBy(tag: "totalUnits")
-            point = p?.baseCell
-            addAnimation(view: point)
-        case 3:
-            point = moveToReview
-            addAnimation(view: point)
-        default:break
-        }
-    }
-    
-       func coachMarksController(_ coachMarksController: CoachMarksController,
-                                 didEndShowingBySkipping skipped: Bool) {
-           
-        performSegue(withIdentifier: evalViewSegue, sender: Any?.self)
-          
-       }
    
    //MARK:- Segue
     
@@ -183,19 +98,13 @@ class QuickDataEntryViewController: FormViewController,CoachMarksControllerDataS
     }
      
      //MARK:- View Rotation
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-         guard !shouldShowCoarch else {
-            self.coachMarksController.start(in: .currentWindow(of: self))
-            return
-        }
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
         
         viewBackGround.theme_backgroundColor = GlobalPicker.backgroundColor
-        setButtonProperties(button: noButton)
+    //    setButtonProperties(button: noButton)
         setButtonProperties(button:moveToReview,backColor:GlobalPicker.buttonTintColor2,titleColorOnDark:GlobalPicker.buttonTintColor3)
         
         if shouldShowCoarch {
@@ -206,16 +115,6 @@ class QuickDataEntryViewController: FormViewController,CoachMarksControllerDataS
         }
 
      //   doneBtn.isEnabled = false
-        
-        self.coachMarksController.dataSource = self
-        self.coachMarksController.delegate = self
-        
-        noButton.snp.makeConstraints { (make) -> Void in
-            make.height.equalTo(35)
-            make.left.equalTo(self.view).offset(80)
-            make.right.equalTo(self.view).offset(-80)
-            make.bottom.equalTo(self.view).offset(-15)
-        }
         
         moveToReview.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(35)
@@ -420,6 +319,21 @@ class QuickDataEntryViewController: FormViewController,CoachMarksControllerDataS
                     cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                     cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
                     cell.titleLabel.attributedText = setAttribute(title1: eDname.can.ctitle (emoji: emojiSwitch)+" ", title2: alc_quick[eDname.can]!.decimalStrCC)
+                }
+                
+                <<< ButtonRow() {
+                    $0.tag = "noDrink"
+                    $0.title = "休肝日はここをタップ!"
+                    $0.cellStyle = .default
+                   // $0.cell.theme_tintColor = GlobalPicker.buttonTintColor3
+                }
+                .cellSetup() {cell ,row in
+                    cell.textLabel?.textAlignment = .center
+                    cell.theme_backgroundColor = GlobalPicker.buttonTintColor4
+                }
+               
+                .onCellSelection { cell, row in
+                    self.noDrinkDay()
                 }
          
                 +++ Section("計算結果：合計の純アルコール量")
