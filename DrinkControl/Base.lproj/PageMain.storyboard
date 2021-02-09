@@ -870,17 +870,6 @@
                                     <action selector="pressMoveButton:" destination="8hc-wi-TOb" eventType="touchUpInside" id="E2e-wG-BUT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOg-x6-AzN" userLabel="NoDrink">
-                                <rect key="frame" x="80" y="421" width="160" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <state key="normal" title="休肝日です。">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressNoDrinkBtn:" destination="8hc-wi-TOb" eventType="touchUpInside" id="2ut-Tm-Msk"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IoH-rY-85g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -897,7 +886,6 @@
                     <connections>
                         <outlet property="cancelBtn" destination="J4F-EL-8Ba" id="3Re-EF-BfO"/>
                         <outlet property="moveToReview" destination="n9N-mI-ypa" id="VCm-UP-z6C"/>
-                        <outlet property="noButton" destination="mOg-x6-AzN" id="79W-Tc-Iek"/>
                         <outlet property="viewBackGround" destination="xJa-kT-vPs" id="FIb-CV-ti3"/>
                         <segue destination="olR-Yd-T4M" kind="show" identifier="showEvalViewFromQuick" id="5PU-RI-jck"/>
                     </connections>

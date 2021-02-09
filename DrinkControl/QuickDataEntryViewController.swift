@@ -120,7 +120,7 @@ class QuickDataEntryViewController: FormViewController {
             make.height.equalTo(35)
             make.left.equalTo(self.view).offset(40)
             make.right.equalTo(self.view).offset(-40)
-            make.bottom.equalTo(noButton.snp.top).offset(-15)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)
         }
     
         tableView.snp.makeConstraints { (make) -> Void in
@@ -168,15 +168,13 @@ class QuickDataEntryViewController: FormViewController {
                        guard let v = $0 else {return "0"}
                        return v.decimalStrPlain1
                    }
-                $0.title = " "
-               //$0.title = eDname.wine.ctitle (emoji: emojiSwitch)+" "+alc_quick[eDname.wine]!.decimalStrCC
-                   $0.value = Double(drinkDaily.drinks[eDname.wine] ?? 0) / alc_quick[eDname.wine]!
+                $0.title = eDname.wine.rawValue
+                $0.value = eDname.wine.Amount2Glasses(damount: self.drinkDaily.drinks[eDname.wine] ?? 0)
                }
                .onChange {
                    let v = $0.value!
-                   self.drinkDaily.drinks[eDname.wine] = Int(round(v * alc_quick[eDname.wine]!))
-                   print(self.drinkDaily.drinks)
-                   self.dname = eDname.wine.rawValue
+                   self.drinkDaily.drinks[eDname.wine] = eDname.wine.Glasses2Amount(numGlass: v)
+                self.dname = eDname.wine.rawValue
                    self.update()
                }
                
@@ -184,7 +182,7 @@ class QuickDataEntryViewController: FormViewController {
                    cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                    cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                    cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                cell.titleLabel.attributedText = setAttribute(title1: eDname.wine.ctitle (emoji: emojiSwitch)+" ", title2: alc_quick[eDname.wine]!.decimalStrCC)
+                   cell.titleLabel.attributedText = setAttribute(title1: eDname.wine.ctitle (emoji: emojiSwitch)+" ", title2: alc_quick[eDname.wine]!.decimalStrCC)
                }
        
                <<< StepperRow() {
@@ -196,13 +194,12 @@ class QuickDataEntryViewController: FormViewController {
                      guard let v = $0 else {return "0"}
                      return v.decimalStrPlain1
                  }
-                 $0.title = " "
-                 $0.value = Double(drinkDaily.drinks[eDname.nihonsyu] ?? 0) / alc_quick[eDname.nihonsyu]!
+                 $0.title = eDname.nihonsyu.rawValue
+                 $0.value = eDname.nihonsyu.Amount2Glasses(damount: self.drinkDaily.drinks[eDname.nihonsyu] ?? 0)
                }
                .onChange {
                  let v = $0.value!
-                 self.drinkDaily.drinks[eDname.nihonsyu] = Int(round(v * alc_quick[eDname.nihonsyu]!))
-                 print(self.drinkDaily.drinks)
+                 self.drinkDaily.drinks[eDname.nihonsyu] = eDname.nihonsyu.Glasses2Amount(numGlass: v)
                  self.dname = eDname.nihonsyu.rawValue
                  self.update()
                }
@@ -211,7 +208,7 @@ class QuickDataEntryViewController: FormViewController {
                    cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                    cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.titleLabel.attributedText = setAttribute(title1: eDname.nihonsyu.ctitle (emoji: emojiSwitch)+" ", title2: alc_quick[eDname.nihonsyu]!.decimalStrCC)
-            //       row.value = Double(self.drinkDaily.drinks[eDname.nihonsyu] ?? 0)
+         //           row.value = Double(self.drinkDaily.drinks[eDname.nihonsyu] ?? 0)
                }
                
                 <<< StepperRow() {
@@ -223,12 +220,12 @@ class QuickDataEntryViewController: FormViewController {
                       guard let v = $0 else {return "0"}
                       return v.decimalStrPlain1
                   }
-                  $0.title = " "
-                  $0.value = Double(drinkDaily.drinks[eDname.beer] ?? 0) / alc_quick[eDname.beer]!
+                  $0.title = eDname.beer.rawValue
+                  $0.value = eDname.beer.Amount2Glasses(damount: self.drinkDaily.drinks[eDname.beer] ?? 0)
                 }
                 .onChange {
                   let v = $0.value!
-                  self.drinkDaily.drinks[eDname.beer] = Int(round(v * alc_quick[eDname.beer]!))
+                  self.drinkDaily.drinks[eDname.beer] = eDname.beer.Glasses2Amount(numGlass: v)
                   print(self.drinkDaily.drinks)
                   self.dname = eDname.beer.rawValue
                   self.update()
@@ -250,13 +247,12 @@ class QuickDataEntryViewController: FormViewController {
                       guard let v = $0 else {return "0"}
                       return v.decimalStrPlain1
                   }
-                  $0.title = " "
-                  $0.value = Double(drinkDaily.drinks[eDname.shocyu] ?? 0) / alc_quick[eDname.shocyu]!
+                  $0.title = eDname.shocyu.rawValue
+                  $0.value = eDname.shocyu.Amount2Glasses(damount: self.drinkDaily.drinks[eDname.shocyu] ?? 0)
                 }
                 .onChange {
                   let v = $0.value!
-                  self.drinkDaily.drinks[eDname.shocyu] = Int(round(v * alc_quick[eDname.shocyu]!))
-                  print(self.drinkDaily.drinks)
+                  self.drinkDaily.drinks[eDname.shocyu] = eDname.shocyu.Glasses2Amount(numGlass: v)
                   self.dname = eDname.shocyu.rawValue
                   self.update()
                 }
@@ -278,13 +274,12 @@ class QuickDataEntryViewController: FormViewController {
                       guard let v = $0 else {return "0"}
                       return v.decimalStrPlain1
                   }
-                  $0.title = " "
-                  $0.value = Double(drinkDaily.drinks[eDname.whisky] ?? 0) / alc_quick[eDname.whisky]!
+                  $0.title = eDname.whisky.rawValue
+                  $0.value = eDname.whisky.Amount2Glasses(damount: self.drinkDaily.drinks[eDname.whisky] ?? 0)
                 }
                 .onChange {
                   let v = $0.value!
-                  self.drinkDaily.drinks[eDname.whisky] = Int(round(v * alc_quick[eDname.whisky]!))
-                  print(self.drinkDaily.drinks)
+                  self.drinkDaily.drinks[eDname.whisky] = eDname.whisky.Glasses2Amount(numGlass: v)
                   self.dname = eDname.whisky.rawValue
                   self.update()
                 }
@@ -304,13 +299,12 @@ class QuickDataEntryViewController: FormViewController {
                       guard let v = $0 else {return "0"}
                       return v.decimalStrPlain1
                   }
-                  $0.title = " "
-                  $0.value = Double(drinkDaily.drinks[eDname.can] ?? 0) / alc_quick[eDname.can]!
+                  $0.title = eDname.can.rawValue
+                  $0.value = eDname.can.Amount2Glasses(damount: self.drinkDaily.drinks[eDname.can] ?? 0)
                 }
                 .onChange {
                   let v = $0.value!
                   self.drinkDaily.drinks[eDname.can] = Int(round(v * alc_quick[eDname.can]!))
-                  print(self.drinkDaily.drinks)
                   self.dname = eDname.can.rawValue
                   self.update()
                 }

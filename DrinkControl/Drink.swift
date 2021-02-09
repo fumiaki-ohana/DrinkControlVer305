@@ -410,6 +410,29 @@ enum eDname: String {
         return Int (10 / (alc! / 100) / 0.8)
     }
     
+    func Amount2Glasses(damount:Int) -> Double {
+        if let perGlass = alc_quick[self] {
+            guard !(perGlass == 0) else {
+                return 0
+            }
+            let numGlasses = Double(damount) / perGlass
+            return numGlasses
+        }
+      return 0
+    }
+    
+    func Glasses2Amount(numGlass:Double) -> Int {
+        if let perGlass = alc_quick[self] {
+            guard !(perGlass == 0) else {
+                return 0
+            }
+            let amount = floor(numGlass * perGlass)
+            return Int(amount)
+        }
+      return 0
+    }
+     
+    
     func emojiStrPerDrink(damount:Double) -> String {
         guard self.numOfDrinkUnit(damount:damount) > 0.0 else {return ""}
         //            let t = Int(self.TU.rounded(.toNearestOrEven))

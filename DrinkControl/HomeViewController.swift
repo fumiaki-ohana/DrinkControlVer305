@@ -609,6 +609,9 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         case "showDailyDrinkRecord":
             let controller = segue.destination as!  DatEntryViewController
             controller.drinkDaily =  shouldShowCoarch ? dailyDrinkDummy :  self.drinkDaily
+        case "showQuickEntryView":
+            let controller = segue.destination as! QuickDataEntryViewController
+            controller.drinkDaily =  shouldShowCoarch ? dailyDrinkDummy :  self.drinkDaily
         default:break
         }
     }
