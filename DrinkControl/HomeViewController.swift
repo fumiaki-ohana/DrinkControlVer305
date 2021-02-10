@@ -47,7 +47,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
     private var tableCellView:UIView!
     let hintStr =
     ["📅の点は飲酒量で、ひとつが純アルコール量10gを示します。",
-         "カレンダーで日付を選ぶと、🍷飲酒データが表示されます。","編集は、セルか右上の📝ボタンをタップします。","詳細は📈グラフで表示します"]
+         "カレンダーで日付を選ぶと、🍷飲酒データが表示されます。","編集は、セルか右上の📝ボタンをタップします。","詳細を📈グラフで表示します"]
  
     // MARK: -IB Action📝
     @IBAction func editDataEntry(_ sender: UIBarButtonItem) {
@@ -339,8 +339,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         let realm = try! Realm()
         drinkRecord_Results = realm.objects(DrinkRecord.self)
         drinkCalendar.reloadData()
-        
-     
+    
     }
         
     override func viewWillAppear(_ animated: Bool) {
@@ -390,7 +389,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
                 EmptyStateView.isHidden = false
                 tableview.isHidden = true
                 addAnimation(view: addButton)
-                self.present(.okAlert(title:"飲んだお酒を入力します。", message: "まずカレンダーで日付を選び、➕にタッチします。",astyle: .alert, okstr:"進む", okHandler: {(action) -> Void in  self.performSegue(withIdentifier: "showDailyDrinkRecord", sender: Any.self)}))
+                self.present(.okAlert(title:"それでは飲酒を入力しましょう。", message: "まずカレンダーで日付を選び、➕にタッチします。",astyle: .alert, okstr:"進む", okHandler: {(action) -> Void in  self.performSegue(withIdentifier: "showDailyDrinkRecord", sender: Any.self)}))
             case .dataEntry :
                 navigationItem.title = dailyDrinkDummy.dDate.mediumStr
                 EmptyStateView.isHidden = true

@@ -37,9 +37,9 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
     // MARK:- Coarch properties
     private var pointOfInterest:UIView!
     let coachMarksController = CoachMarksController()
-    let hintStr  = ["🍷ワインを200cc。","🍺ビールも350cc、🍶日本酒も200cc飲みました。\n💡TIP(±50)はワンクリックでの増減量ccで、変更できます。","純アルコール量の合計を、自動的に計算します。\n\n💡TIP:お酒の種類や、ワンクリックでの入力量は【⚙️設定】で変えられます。",
-        "💡休肝日㊗️だった時は、ここをタップ！",
-         "☝️入力が完了したら、レビュー画面に移動します。","設定で、グラス数などで入力する方法に変えれます。"]
+    let hintStr  = ["🍷昨夜はワインを200㎖。","🍺ビールも350㎖、🍶日本酒も200㎖飲みました。\n💡TIP(±50)はワンクリックでの増減量ccで、変更できます。","純アルコール量の合計を、自動的に計算します。\n\n💡ヒント:お酒の種類や、ワンクリックでの入力量は【⚙️設定】で変えられます。",
+        "💡休肝日㊗️だった時は、ここをタップ！","好みでグラスの数での入力にも変更できます。（設定＞クイック入力）",
+         "☝️入力が完了したら、レビュー画面に移動します。"]
     
     // MARK:- Properties
     var stepValue:Double = 0.0
@@ -104,9 +104,9 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
             let p = form.rowBy(tag: "noDrink")
             point = p?.baseCell
         case 4:
-            point = moveToReview
-        case 5:
             point = navigationController?.navigationBar
+        case 5:
+            point = moveToReview
         default:break
         }
         return coachMarksController.helper.makeCoachMark(for: point)

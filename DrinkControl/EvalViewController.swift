@@ -28,7 +28,7 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
         private var pointOfInterest:UIView!
         let coachMarksController = CoachMarksController()
     let hintStr=["あなたの飲酒量の推移です。"
-        ,"直近7日間の状況です。","☝️昨夜のお酒は、どう思いますか？感想を選びましょう。\n\nここでは適量を超えた飲酒量なので「悪い」を選びましたが、ご自身の基準でOK。","☝️コメントも残して次にお酒を飲む前に読み返しましょう。"]
+        ,"直近7日間の状況です。","☝️昨夜のお酒は、どう思いますか？\n\nここでは適量を超えた飲酒量なので「悪い」を選びましたが、ご自身の基準でOK。","☝️コメントも残してお酒を飲む前に読み返しましょう。\n\n通知機能でお知らせも設定できます。"]
             
     func numberOfCoachMarks(for coachMarksController: CoachMarksController) -> Int {
         //表示するスポットライトの数。チュートリアルの数。
@@ -121,16 +121,12 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
         self.navigationItem.hidesBackButton = true
         data = shouldShowCoarch ? chartDataArrayDummy: setDataArray(rawdata: generateRawData(modifiedData: drinkDaily))
         let lastDateStr = data.last!.xval
-        let sectionHeader:[String] = ["この日の純アルコール量:"+drinkDaily.totalAlchool.decimalStr,lastDateStr+"付"+"直近7日間の状況"]
+        let sectionHeader:[String] = ["この日の純アルコール量:"+drinkDaily.totalAlchool.decimalStr,lastDateStr+"直近7日間"]
         navigationItem.title = drinkDaily.dDate.mediumStr
-      
         
         //MARK:- Eureka form
-        tableView.frame =
-           CGRect(x:0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 0.7)
         self.tableView?.rowHeight = 40.0
         
-        //view.theme_backgroundColor = GlobalPicker.barTintColor
         view.theme_backgroundColor = GlobalPicker.backgroundColor
         tableView.theme_backgroundColor = GlobalPicker.backgroundColor
         tableView.theme_sectionIndexBackgroundColor = GlobalPicker.groupBackground
@@ -158,7 +154,7 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
                 var header = HeaderFooterView<UILabel>(.class)
                 header.height = { 44.0 }
                 header.onSetupView = {view, _ in
-                    view.textColor = .red
+                    view.theme_textColor = GlobalPicker.buttonTintColor4
                     view.text = sectionHeader[0]
                     view.font = UIFont.boldSystemFont(ofSize: 20)
                     view.textAlignment = .center
@@ -208,7 +204,17 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
  */
  }
             
-            +++ Section(sectionHeader[1]) // "平均純アルコール量は"+terminalAverageDouble(num: 7, array: data).decimalStr)
+            +++ Section() {section in // "平均純アルコール量は"+terminalAverageDouble(num: 7, array: data).decimalStr)
+            var header = HeaderFooterView<UILabel>(.class)
+            header.height = { 44.0 }
+            header.onSetupView = {view, _ in
+                view.theme_textColor = GlobalPicker.buttonTintColor4
+                view.text = sectionHeader[1]
+                view.font = UIFont.boldSystemFont(ofSize: 20)
+                view.textAlignment = .center
+            }
+            section.header = header
+        }
    
             <<< LabelRow () {
                 $0.title = "休肝日は"+excessOrNoDrinkLatest1week(array: data, calc: Ecalc.noDrink).decimalStrPlain+"日"
@@ -244,6 +250,11 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
 
                case 0: let barChartView = drawBarChart(chartData: data, legend: "", numXLabels: 5, topOffset: 10,buttomOffset: 20, flagDateType: true, addLines: true,showValue: false,showlegend:false)
                 self.view.addSubview(barChartView)
+                barChartView.snp.makeConstraints { (make) -> Void in
+                    make.top.equalTo(tableView.snp.bottom).offset(20)
+                    make.left.equalTo(self.view).offset(10)
+                    make.right.equalTo(self.view).offset(-10)
+                    make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)}
                 
                case 1: let lineChartView = drawLineChart(chartData: data, legend: "", numXLabels: 5, topOffset:10,buttomOffset:20, flagDateType: true, addLines: true,showValue: false,showlegend:false)
                 self.view.addSubview(lineChartView)
@@ -253,7 +264,7 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
                     make.top.equalTo(tableView.snp.bottom).offset(20)
                     make.left.equalTo(self.view).offset(10)
                     make.right.equalTo(self.view).offset(-10)
-                    make.bottom.equalToSuperview().offset(10) }
+                    make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)}
                default:break
                }
         

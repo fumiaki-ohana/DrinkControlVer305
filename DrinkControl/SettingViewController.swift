@@ -32,7 +32,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
     // Coarch properties
        private var pointOfInterest:UIView!
        let coachMarksController = CoachMarksController()
-      let hintStr  = ["設定⚙️で自分好みに変えてみましょう。\n\n- 🎨アプリのテーマ色や絵文字\n\n- 🍷お酒の名前やアルコール濃度\n\n- 📅カレンダー詳細\n\n- 🚰入力量の調整ETC.\n\n- 🥇休肝日や飲みすぎ"]
+      let hintStr  = ["使いながら設定⚙️で自分好みに変えてみましょう。\n\n- 🔔反省を読み返す時間を通知\n\n- 🎨アプリのテーマ色や絵文字\n\n- 🍷お酒の名前やアルコール濃度\n\n- 📅カレンダー詳細\n\n- 🏇飲酒のクイック入力\n\n- 🚰入力量の調整ETC.\n\n- 🥇休肝日や飲みすぎ"]
     
     // MARK:- Methods
      func reversedEmojiStr(emoji:drinkSet) -> String {
@@ -214,7 +214,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
          
         let actionSheet = UIAlertController(
             title: "無料版のデータ保存回数は２回までです。",
-            message: "くわしくは【🛒App内購入の説明】をご覧ください。\nここでは説明だけで、課金はされません。",
+            message: "制限の解除は【🛒App内購入の説明】をご覧ください。",
             preferredStyle: .alert)
         
         if unlocked {
