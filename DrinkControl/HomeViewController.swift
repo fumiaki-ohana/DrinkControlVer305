@@ -68,15 +68,20 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
             present(.okAlert(title: nil, message: "未来の日付では入力できません。"))
             return
         }
-        guard canSave else {
-            promptForPurchaseAlert(titleStr:"購入をご検討ください（⚙️設定＞🛒App内課金）", msgStr:"保存可能な回数を超えました", flag:false)
-            return
-        }
-        guard unlocked || (remainSaveTime > haircutForNotice) else {
-            promptForPurchaseAlert(titleStr:"購入をご検討ください（⚙️設定＞🛒App内課金）", msgStr: "保存可能な回数は残り"+String(remainSaveTime)+"回です。",flag:true)
-            return
-        }
         
+        guard unlocked else {
+        self.present(.okPlusAlert(title:"購入をご検討ください（⚙️設定＞🛒App内課金）", message: "保存可能な回数は残り"+String(remainSaveTime)+"回です。",astyle: .alert,okstr:"App内課金の説明へ",
+                                  okHandler: {(action) -> Void in
+                                    self.performSegue(withIdentifier: "showPurchaseFromHome", sender: Any?.self)
+                                    },
+                                  cancelstr: "今は入力画面に進む",
+                                  cancelHandler:{(action) -> Void in
+                                    let segueName:String = execQuickDataEntry ? "showQuickEntryView" : "showDailyDrinkRecord"
+                                    self.performSegue(withIdentifier: segueName, sender: Any?.self)
+                                  }
+        ))
+        return
+        }
         let segueName:String = execQuickDataEntry ? "showQuickEntryView" : "showDailyDrinkRecord"
         performSegue(withIdentifier: segueName, sender: Any?.self)
     }
@@ -618,6 +623,19 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
     @IBAction func unwindToHomeView(sender: UIStoryboardSegue) {
         
         if let sourceViewController = sender.source as? EvalViewController {
+            
+            guard canSave else {
+                self.present(.okPlusAlert(title:"購入をご検討ください（⚙️設定＞🛒App内課金）", message: "保存回数の上限を超えています。",astyle: .alert,okstr:"App内課金の説明へ",
+                                          okHandler: {(action) -> Void in
+                                            self.performSegue(withIdentifier: "showPurchaseFromHome", sender: Any?.self)
+                                          },cancelstr: "保存しないで終了",
+                                          cancelHandler:{(action) -> Void in
+                                            self.navigationController?.popViewController(animated: true)
+                                          }
+                ))
+                return
+            }
+            
             let object = sourceViewController.drinkDaily
             let data = DrinkRecord()
             data.id = object.dDate.toHashStr
@@ -649,6 +667,16 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         }
             
         else if let sourceViewController = sender.source as? DatEntryViewController {
+            guard canSave else {
+                self.present(.okPlusAlert(title:"購入をご検討ください（⚙️設定＞🛒App内課金）", message: "データ保存回数の上限を超えています。",astyle: .alert,okstr:"App内課金の説明へ",
+                                          okHandler: {(action) -> Void in
+                                            self.performSegue(withIdentifier: "showPurchaseFromHome", sender: Any?.self)
+                                          },cancelstr: "保存しないで進む",cancelHandler:{(action) -> Void in
+                                            self.navigationController?.popViewController(animated: true)
+                                          }
+                ))
+                return
+            }
             let object = sourceViewController.drinkDaily
             let data = DrinkRecord()
             data.id = object.dDate.toHashStr
