@@ -632,7 +632,7 @@
 				CODE_SIGN_ENTITLEMENTS = DrinkControl/DrinkControl.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8.02;
+				CURRENT_PROJECT_VERSION = 8.03;
 				DEVELOPMENT_TEAM = CDMS73DTWZ;
 				INFOPLIST_FILE = DrinkControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
@@ -640,7 +640,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.01;
+				MARKETING_VERSION = 4.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ohanainc.drinkcontrol;
 				PRODUCT_NAME = DrinkControl;
 				SWIFT_VERSION = 5.0;
@@ -656,7 +656,7 @@
 				CODE_SIGN_ENTITLEMENTS = DrinkControl/DrinkControl.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8.02;
+				CURRENT_PROJECT_VERSION = 8.03;
 				DEVELOPMENT_TEAM = CDMS73DTWZ;
 				INFOPLIST_FILE = DrinkControl/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
@@ -664,7 +664,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.01;
+				MARKETING_VERSION = 4.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ohanainc.drinkcontrol;
 				PRODUCT_NAME = DrinkControl;
 				SWIFT_VERSION = 5.0;

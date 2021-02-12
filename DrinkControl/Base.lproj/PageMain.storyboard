@@ -246,7 +246,7 @@
                                             <constraint firstAttribute="height" constant="44" id="s9O-0s-fkd"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購入画面に進むだけでは、課金されません。" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrj-L4-mwW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="次の画面に進むだけでは、課金されません。" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrj-L4-mwW">
                                         <rect key="frame" x="64" y="0.0" width="176" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="z3j-J5-PWJ"/>
@@ -313,7 +313,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nYi-ZB-XT8"/>
                                 </constraints>
-                                <state key="normal" title="購入画面へ"/>
+                                <state key="normal" title="次へ"/>
                                 <connections>
                                     <segue destination="rh7-k7-evK" kind="presentation" identifier="showPurchase" id="QBl-95-CWM"/>
                                 </connections>

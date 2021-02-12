@@ -210,7 +210,7 @@ func drawPieChart(chartData:StackedChartArray,  legend:String?, topOffset: CGFlo
 }
 // MARK:- 棒グラフ
       
-func drawBarChart(chartData:ChartArray,  legend:String?, numXLabels:Int, topOffset: CGFloat = 10, buttomOffset: CGFloat = 30.0, leftOffset:CGFloat = 10.0,rightOffset:CGFloat = 10.0, flagDateType: Bool,addLines:Bool = false,noDrink:Bool = false, showValue:Bool,showlegend:Bool = true) -> BarChartView{
+func drawBarChart(chartData:ChartArray,  legend:String?, numXLabels:Int, topOffset: CGFloat = 10, buttomOffset: CGFloat = 30.0, leftOffset:CGFloat = 10.0,rightOffset:CGFloat = 10.0, flagDateType: Bool,addLines:Bool = false,noDrink:Bool = false, showValue:Bool,showlegend:Bool = true,avgLabel:String = "期間平均") -> BarChartView{
           
           let chartDataArray = chartData
           var dateStr:[String] = []

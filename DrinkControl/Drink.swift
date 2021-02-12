@@ -147,7 +147,7 @@ var shouldShowCoarch: Bool { //コーチを走らせるべきか？
 let thisVerStr = appVersion!
 var shouldShowVerInfo: Bool { //バージョン情報を見せる？
     get {
-        UserDefaults.standard.register(defaults: [ thisVerStr : true]) //このバージョンでは既存ユーザーにお知らせは表示しない。
+        UserDefaults.standard.register(defaults: [ thisVerStr : true])
         let n = UserDefaults.standard.bool(forKey:thisVerStr)
         return n
     }

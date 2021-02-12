@@ -70,17 +70,17 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         }
         
         guard unlocked else {
-        self.present(.okPlusAlert(title:"購入をご検討ください（⚙️設定＞🛒App内課金）", message: "保存可能な回数は残り"+String(remainSaveTime)+"回です。",astyle: .alert,okstr:"App内課金の説明へ",
-                                  okHandler: {(action) -> Void in
-                                    self.performSegue(withIdentifier: "showPurchaseFromHome", sender: Any?.self)
-                                    },
-                                  cancelstr: "今は入力画面に進む",
-                                  cancelHandler:{(action) -> Void in
-                                    let segueName:String = execQuickDataEntry ? "showQuickEntryView" : "showDailyDrinkRecord"
-                                    self.performSegue(withIdentifier: segueName, sender: Any?.self)
-                                  }
-        ))
-        return
+            self.present(.okPlusAlert(title:"購入をご検討ください（⚙️設定＞🛒App内課金）", message: "保存可能な回数は残り"+String(remainSaveTime)+"回です。",astyle: .alert,okstr:"App内課金の説明へ",
+                                      okHandler: {(action) -> Void in
+                                        self.performSegue(withIdentifier: "showPurchaseFromHome", sender: Any?.self)
+                                      },
+                                      cancelstr: "今は入力画面に進む",
+                                      cancelHandler:{(action) -> Void in
+                                        let segueName:String = execQuickDataEntry ? "showQuickEntryView" : "showDailyDrinkRecord"
+                                        self.performSegue(withIdentifier: segueName, sender: Any?.self)
+                                      }
+            ))
+            return
         }
         let segueName:String = execQuickDataEntry ? "showQuickEntryView" : "showDailyDrinkRecord"
         performSegue(withIdentifier: segueName, sender: Any?.self)
@@ -372,19 +372,17 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         
         //MARK:-　バージョンの情報
      if !shouldShowCoarch, shouldShowVerInfo  {
-        //このバージョンでは特に表示しない。
-        /*
         let titl = "Ver."+appVersion!+"の新機能"
         let compButtonTitle = "続ける"
         let detailButtonTitle = "e-ヘルスネット（お酒へ）"
         let detailWebSite = "https://www.e-healthnet.mhlw.go.jp/information/alcohol"
-        let msg:[(title:String,subtitle:String,icon:String)] = [("ホーム画面を刷新","🆕表示をタップしても、編集画面に飛べます。","wine"),
-            ("🆕通知機能","飲む前に反省を読む。（設定＞通知の設定）","bell"),("🆕休肝日の一発入力","タップするだけで飲酒ゼロを入力","dash"),
-            ("他にも多くの改良点","追加・編集できるお酒の種類を増やすなど。\niOS14に対応、全般的により効率的なプログラムに書き換えました。","beer")]
+        let msg:[(title:String,subtitle:String,icon:String)] = [("クイック入力機能","🆕グラスの数などでも入力可能（設定＞クイック入力）","dash"),
+            ("レイアウト改良","画面サイズの違いにも、より柔軟に対応","screen"),
+            ("見やすさ改良","飲酒量の単位をccからmlに統一など","cup"),
+            ("その他","無料版で保存が制限された後も、アルコール量計算を可能に。","calc")]
         
         let item = showWhatsNewPlus(titl: titl, compButtonTitle: compButtonTitle, detailButtonTitle:detailButtonTitle,webStr:detailWebSite, msg: msg)
         present(item,animated: true)
-         */
         shouldShowVerInfo = false
      }
         
