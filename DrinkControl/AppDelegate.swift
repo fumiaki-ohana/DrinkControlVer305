@@ -41,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          if let bundleId = Bundle.main.bundleIdentifier {
          UserDefaults.standard.removePersistentDomain(forName: bundleId)
          }
+        shouldShowCoarch = false
         /*
          unlocked = false
          

@@ -13,7 +13,7 @@ import SnapKit
 class WT03ViewController: FormViewController {
     @IBOutlet weak var nextButton: UIButton!
     let header1 = "１日の適量を、純アルコール量で設定してみましょう。"
-    let footer1 = "◦ 厚生労働省の「健康日本21」では節度ある適度な飲酒は20gとされます。女性はその半分から2/3程度です。\n\n◦ 目安はビールでロング缶1本、ワイングラス２杯弱、日本酒一合、ウイスキーダブル相当です。\n㊟ 年齢、妊娠、体質等々で大きい個人差があるので自分にあう数値を設定してください。"
+    let footer1 = "◦ 厚生労働省の「健康日本21」では節度ある適度な飲酒は20gとされます。女性はその半分から2/3程度とされます。\n\n◦ 目安はビールでロング缶1本、ワイングラス２杯弱、日本酒一合、ウイスキーダブル相当です。\n㊟ 年齢、妊娠、体質等々で大きい個人差があるので、必ず自分にあう数値を設定してください。"
     let buttonTitle = "休肝日の目標"
         
     override func viewDidLoad() {
@@ -21,8 +21,7 @@ class WT03ViewController: FormViewController {
         self.overrideUserInterfaceStyle = .light
         setButtonProperties(button: nextButton,rgbaStr:"#F99F48" )
         nextButton.setTitle(buttonTitle , for: .normal)
-    //    tableView.frame =
-    //              CGRect(x:10, y: 160, width: self.view.frame.width-20, height: self.view.frame.height  - 290)
+   
         self.tableView?.rowHeight = 40.0
         tableView.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(10)

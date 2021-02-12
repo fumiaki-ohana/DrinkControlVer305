@@ -231,7 +231,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         view.theme_backgroundColor = GlobalPicker.barTintColor
         tableView.theme_backgroundColor = GlobalPicker.backgroundColor
         tableView.theme_sectionIndexBackgroundColor = GlobalPicker.groupBackground
-        navigationItem.title = "飲酒量を直接入力"
+        navigationItem.title = "飲酒量(㎖)を直接入力"
         
         cancelBtn.isEnabled = true
    //     self.moveToReview.tintColor = UIColor.white

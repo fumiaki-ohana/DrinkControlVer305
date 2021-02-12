@@ -241,7 +241,7 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
             make.top.equalTo(self.view).offset(20)
             make.left.equalTo(self.view).offset(10)
             make.right.equalTo(self.view).offset(-10)
-            make.height.equalToSuperview().multipliedBy(0.5)
+            make.height.equalToSuperview().multipliedBy(0.6)
         }
         // TODO:- CGRectをとる
         

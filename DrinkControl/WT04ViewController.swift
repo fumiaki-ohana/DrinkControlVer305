@@ -26,8 +26,7 @@ class WT04ViewController: FormViewController {
         self.overrideUserInterfaceStyle = .light
         setButtonProperties(button: nextButton,rgbaStr:"#F99F48" )
         nextButton.setTitle(buttonTitle , for: .normal)
-     //   tableView.frame =
-    //        CGRect(x:10, y: 160, width: self.view.frame.width-20, height: self.view.frame.height - 290)
+     
         self.tableView?.rowHeight = 40.0
         
         tableView.snp.makeConstraints { (make) -> Void in
