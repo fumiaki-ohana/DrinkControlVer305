@@ -82,15 +82,7 @@ class OnTourThirdChartViewController: UIViewController,CoachMarksControllerDataS
     //  let layere_number = navigationController!.viewControllers.count
         
     self.navigationController?.popToRootViewController(animated: true)
-    //   self.navigationController?.popToViewController(navigationController!.viewControllers[layere_number-3], animated: true)
-    //   self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
-     //   self.dismiss(animated: true, completion: nil)
-     //   self.tabBarController?.selectedIndex = 0
-    //navigationController!.viewControllers[layere_number-1].dismiss(animated: true, completion: nil)
-        
-        //   self.navigationController?.popToRootViewController(animated: true)
-        //  navigationController?.popToViewController(navigationController!.viewControllers[index], animated: true)
-        //  self.tabBarController?.selectedIndex = 0
+    
     }
        
        //MARK:- View Rotation

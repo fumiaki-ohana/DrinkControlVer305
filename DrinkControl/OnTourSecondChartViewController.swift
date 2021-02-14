@@ -100,7 +100,7 @@ class OnTourSecondChartViewController: UIViewController,CoachMarksControllerData
         let tempdata = chartDataArrayDummy
         let data = excessOrNoDrinkFullPeriod(array:tempdata,calc:Ecalc.noDrink)
         navigationItem.title = "習慣" //(data.first!.0)+"〜"+(data.last?.0)!
-     //   let rect = CGRect(x:0, y: 44, width: self.view.frame.width, height: (self.view.frame.height * 0.5 - 22))
+   
         let barChartView = drawBarChart(chartData: data, legend: "休肝日（日数）",  numXLabels: data.count,topOffset:40.0, buttomOffset:20.0,flagDateType: false, addLines: true,noDrink:true, showValue: true)
         self.view.addSubview(barChartView)
         barChartView.snp.makeConstraints { (make) -> Void in
@@ -110,7 +110,6 @@ class OnTourSecondChartViewController: UIViewController,CoachMarksControllerData
             make.height.equalToSuperview().multipliedBy(0.4) }
         if shouldShowCoarch {barChartForCoarch0 = barChartView }
         
-     //   let rect1 = CGRect(x:0, y: (self.view.frame.height * 0.5 + 22), width: self.view.frame.width, height:( self.view.frame.height * 0.5 - 69))
         let data1 = excessOrNoDrinkFullPeriod(array:tempdata,calc:Ecalc.excess)
         let barChartView2 = drawBarChart(chartData: data1, legend: "飲み過ぎ（日数）", numXLabels: data.count,topOffset:20.0, buttomOffset:20.0, flagDateType: false, addLines: false,showValue: true)
          self.view.addSubview(barChartView2)
@@ -118,7 +117,7 @@ class OnTourSecondChartViewController: UIViewController,CoachMarksControllerData
             make.top.equalTo(barChartView.snp.bottom).offset(10)
             make.left.equalTo(self.view).offset(10)
             make.right.equalTo(self.view).offset(-10)
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(10)}
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)}
          if shouldShowCoarch {barChartForCoarch1 = barChartView2 }
         // Do any additional setup after loading the view.
     }

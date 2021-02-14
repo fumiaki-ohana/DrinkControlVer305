@@ -72,7 +72,7 @@ class ChartViewController: UIViewController {
                 make.height.equalToSuperview().multipliedBy(0.4)}
             
             let data1 = avgDrinkFullPeriods(array: data)
-         //   let rect1 = CGRect(x:0, y: (self.view.frame.height * 0.5 + 22), width: self.view.frame.width, height:( self.view.frame.height * 0.5 - 69))
+        
             let barChartView = drawBarChart(chartData: data1, legend: "純アルコール量の期間別平均（g）", numXLabels:data1.count,topOffset:20.0, buttomOffset:30, flagDateType: false, addLines: true,noDrink:false, showValue: true,avgLabel:"各期間の平均")
             self.view.addSubview(barChartView)
             barChartView.snp.makeConstraints { (make) -> Void in

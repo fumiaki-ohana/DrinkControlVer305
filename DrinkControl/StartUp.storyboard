@@ -18,114 +18,6 @@
             </objects>
             <point key="canvasLocation" x="3158" y="1149"/>
         </scene>
-        <!--Page3-->
-        <scene sceneID="wHa-8E-JDB">
-            <objects>
-                <viewController title="Page3" id="1zy-rk-7Xh" customClass="WT03ViewController" customModule="DrinkControl" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="E0e-Hz-0w1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="halftone-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="EfL-wz-UkQ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0BZ-Sv-2jB">
-                                <rect key="frame" x="130" y="20" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="O7g-Vf-Ddi"/>
-                                    <constraint firstAttribute="width" constant="60" id="nK6-UD-dR6"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="p2j-TN-Q85">
-                                <rect key="frame" x="20" y="90" width="280" height="60"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9K-cG-y7q" userLabel="L1">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="GUJ-l6-MYZ"/>
-                                        </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="飲酒量の目標">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="HiraMaruProN-W4"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3V-zT-xRs" userLabel="L2">
-                                        <rect key="frame" x="0.0" y="46" width="280" height="14"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="後から設定画面で">
-                                                <attributes>
-                                                    <font key="NSFont" size="14" name="HiraMaruProN-W4"/>
-                                                    <font key="NSOriginalFont" size="14" name="HiraMaruProN-W4"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="変更可能">
-                                                <attributes>
-                                                    <font key="NSFont" size="14" name="HiraMaruProN-W4"/>
-                                                    <font key="NSOriginalFont" size="14" name="HiraMaruProN-W4"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    <integer key="NSUnderline" value="1"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="です。">
-                                                <attributes>
-                                                    <font key="NSFont" size="14" name="HiraMaruProN-W4"/>
-                                                    <font key="NSOriginalFont" size="14" name="HiraMaruProN-W4"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Fg3-O0-pvy"/>
-                                </constraints>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUM-No-UAb">
-                                <rect key="frame" x="20" y="468" width="280" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="kI6-N7-V1A"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <connections>
-                                    <segue destination="0Kl-if-nVd" kind="show" id="cLT-rn-7I3"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="D1r-sf-VHa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="vUM-No-UAb" firstAttribute="leading" secondItem="D1r-sf-VHa" secondAttribute="leading" constant="20" id="4KL-dL-oDP"/>
-                            <constraint firstItem="D1r-sf-VHa" firstAttribute="bottom" secondItem="EfL-wz-UkQ" secondAttribute="bottom" id="4gA-V8-9gw"/>
-                            <constraint firstItem="D1r-sf-VHa" firstAttribute="trailing" secondItem="vUM-No-UAb" secondAttribute="trailing" constant="20" id="573-7N-dtc"/>
-                            <constraint firstItem="p2j-TN-Q85" firstAttribute="leading" secondItem="D1r-sf-VHa" secondAttribute="leading" constant="20" id="9oJ-Y5-tPB"/>
-                            <constraint firstItem="EfL-wz-UkQ" firstAttribute="trailing" secondItem="D1r-sf-VHa" secondAttribute="trailing" id="Awi-1w-hf7"/>
-                            <constraint firstItem="EfL-wz-UkQ" firstAttribute="top" secondItem="D1r-sf-VHa" secondAttribute="top" id="Kcb-pw-ihD"/>
-                            <constraint firstItem="D1r-sf-VHa" firstAttribute="bottom" secondItem="vUM-No-UAb" secondAttribute="bottom" constant="40" id="T6n-K0-8Y3"/>
-                            <constraint firstItem="D1r-sf-VHa" firstAttribute="trailing" secondItem="p2j-TN-Q85" secondAttribute="trailing" constant="20" id="ayH-76-hqJ"/>
-                            <constraint firstItem="0BZ-Sv-2jB" firstAttribute="centerX" secondItem="E0e-Hz-0w1" secondAttribute="centerX" id="bjb-Pa-5xi"/>
-                            <constraint firstItem="EfL-wz-UkQ" firstAttribute="leading" secondItem="D1r-sf-VHa" secondAttribute="leading" id="cBZ-K4-tnU"/>
-                            <constraint firstItem="0BZ-Sv-2jB" firstAttribute="top" secondItem="D1r-sf-VHa" secondAttribute="top" constant="20" id="pgT-3t-8oZ"/>
-                            <constraint firstItem="p2j-TN-Q85" firstAttribute="top" secondItem="0BZ-Sv-2jB" secondAttribute="bottom" constant="10" id="t0N-0V-ZWe"/>
-                            <constraint firstItem="p2j-TN-Q85" firstAttribute="centerX" secondItem="E0e-Hz-0w1" secondAttribute="centerX" id="vB1-Y8-2df"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="3eM-jv-NpO"/>
-                    <connections>
-                        <outlet property="nextButton" destination="vUM-No-UAb" id="sIh-y8-Lld"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mRl-t1-YhW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="722" y="655"/>
-        </scene>
         <!--Page1-->
         <scene sceneID="vcV-nN-BPl">
             <objects>
@@ -258,7 +150,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <connections>
-                                    <segue destination="1zy-rk-7Xh" kind="show" id="Svf-in-gfE"/>
+                                    <segue destination="0Kl-if-nVd" kind="show" id="ycQ-th-GM6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHJ-Ps-sfL" userLabel="L1">
@@ -416,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBU-Wf-lWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1620" y="655"/>
+            <point key="canvasLocation" x="969" y="654"/>
         </scene>
     </scenes>
     <resources>

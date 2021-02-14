@@ -12,7 +12,6 @@
 		FF0AC43025771F7500A80400 /* 782-check-mark-success.json in Resources */ = {isa = PBXBuildFile; fileRef = FF0AC42F25771F7500A80400 /* 782-check-mark-success.json */; };
 		FF0DE89C25CE676B00484A04 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FF0DE89B25CE676B00484A04 /* SnapKit */; };
 		FF138FC124B8031000799829 /* EvalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF138FC024B8031000799829 /* EvalViewController.swift */; };
-		FF15D0F124C163C900ADA952 /* WT03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF15D0F024C163C900ADA952 /* WT03ViewController.swift */; };
 		FF18511025C4FB4D00206156 /* QuickDataEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18510F25C4FB4D00206156 /* QuickDataEntryViewController.swift */; };
 		FF1EA82A25AE87DF00D40036 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1EA82925AE87DF00D40036 /* GraphViewController.swift */; };
 		FF237C91258C4276009E4E83 /* lf30_editor_st8bizys.json in Resources */ = {isa = PBXBuildFile; fileRef = FF237C90258C4276009E4E83 /* lf30_editor_st8bizys.json */; };
@@ -81,7 +80,6 @@
 		FF0AC42F25771F7500A80400 /* 782-check-mark-success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "782-check-mark-success.json"; sourceTree = "<group>"; };
 		FF0D781B23F0D90700D03F50 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FF138FC024B8031000799829 /* EvalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvalViewController.swift; sourceTree = "<group>"; };
-		FF15D0F024C163C900ADA952 /* WT03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT03ViewController.swift; sourceTree = "<group>"; };
 		FF18510F25C4FB4D00206156 /* QuickDataEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickDataEntryViewController.swift; sourceTree = "<group>"; };
 		FF1AFC5524BADF65002005BA /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		FF1EA82925AE87DF00D40036 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 			children = (
 				FF04AEF8246D189B00F19D36 /* StartUp.storyboard */,
 				FF87D02A24C2A7E300EF8F4D /* WT04ViewController.swift */,
-				FF15D0F024C163C900ADA952 /* WT03ViewController.swift */,
 				FFDA937925426A530064ED6C /* WT02ViewController.swift */,
 			);
 			name = Walkthrough;
@@ -480,7 +477,6 @@
 				FF4B5D24230A38FD0065A456 /* HomeViewController.swift in Sources */,
 				FF25E267241B1314000C3179 /* AboutViewController.swift in Sources */,
 				FF9B76A0208DB02B00B7A80A /* AppDelegate.swift in Sources */,
-				FF15D0F124C163C900ADA952 /* WT03ViewController.swift in Sources */,
 				FF630B2025AFBE770041E152 /* OnTourSecondChartViewController.swift in Sources */,
 				FF87D02B24C2A7E300EF8F4D /* WT04ViewController.swift in Sources */,
 				FF25E26B241B43E3000C3179 /* SettingAlchoolViewController.swift in Sources */,

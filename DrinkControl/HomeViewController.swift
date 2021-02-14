@@ -628,7 +628,9 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
                                             self.performSegue(withIdentifier: "showPurchaseFromHome", sender: Any?.self)
                                           },cancelstr: "保存しないで終了",
                                           cancelHandler:{(action) -> Void in
-                                            self.navigationController?.popViewController(animated: true)
+                                 //           self.navigationController?.popViewController(animated:
+                                            self.navigationController?.popToRootViewController(animated:
+                                            true)
                                           }
                 ))
                 return

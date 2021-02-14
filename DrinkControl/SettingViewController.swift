@@ -277,9 +277,7 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
         tableView.frame =
                         CGRect(x: 0, y: 44,  width: self.view.bounds.size.width, height: (self.view.bounds.size.height - 44))
         
-      //  navigationItem.leftBarButtonItem?.theme_tintColor = GlobalPicker.naviItemColor
         reflectOnEurekaTable()
-     //   self.tableView.rowHeight = UITableView.automaticDimension
         emojiStrPara.options  = [
             
             optionEmojiStr[0]+String(repeating:drinkSet.item_def.rawValue, count: 3),

@@ -97,7 +97,6 @@ class OnTourChartViewController: UIViewController,CoachMarksControllerDataSource
         let data = chartDataArrayDummy
         navigationItem.title = (data.last?.0)!
 
-       // let rect = CGRect(x:0, y: 44, width: self.view.frame.width, height: (self.view.frame.height * 0.5 - 22))
         let lineChartView = drawLineChart(chartData: data, legend: "純アルコール量(g)",  numXLabels: 5,topOffset: 35.0, flagDateType: true, addLines: true,showValue: false)
             self.view.addSubview(lineChartView)
             if shouldShowCoarch {lineChartForCoach = lineChartView}
@@ -108,7 +107,7 @@ class OnTourChartViewController: UIViewController,CoachMarksControllerDataSource
             make.height.equalToSuperview().multipliedBy(0.4)}//コーチの対象にする。
         
         let data1 = avgDrinkFullPeriods(array: data)
-      //  let rect1 = CGRect(x:0, y: (self.view.frame.height * 0.5 + 22), width: self.view.frame.width, height:( self.view.frame.height * 0.5 - 69))
+     
         let barChartView = drawBarChart(chartData: data1, legend: "純アルコール量の期間別平均（g）",  numXLabels:data1.count,topOffset:20.0, buttomOffset:30, flagDateType: false, addLines: true,noDrink:false, showValue: true)
         self.view.addSubview(barChartView)
         
