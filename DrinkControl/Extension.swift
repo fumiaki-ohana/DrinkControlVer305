@@ -155,15 +155,15 @@ extension String {
     }
 }
 
-func setAttribute(title1:String, title2:String ) -> NSAttributedString {
+func setAttribute(title1:String, title2:String, t1:CGFloat=18.0, t2:CGFloat=12.0) -> NSAttributedString {
     let stringAttributes1: [NSAttributedString.Key : Any] = [
-        .font : UIFont.systemFont(ofSize: 18.0)
+        .font : UIFont.systemFont(ofSize: t1)
     ]
     let string1 = NSAttributedString(string: title1, attributes: stringAttributes1)
 
     let stringAttributes2: [NSAttributedString.Key : Any] = [
        // .foregroundColor : UIColor.red,
-        .font : UIFont.boldSystemFont(ofSize: 12.0)
+        .font : UIFont.boldSystemFont(ofSize: t2)
     ]
     let string2 = NSAttributedString(string: title2, attributes: stringAttributes2)
     

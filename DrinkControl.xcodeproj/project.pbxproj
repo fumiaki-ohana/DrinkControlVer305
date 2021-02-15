@@ -53,7 +53,6 @@
 		FFD4A04B23A0B464008C7043 /* InPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD4A04A23A0B464008C7043 /* InPurchaseViewController.swift */; };
 		FFD4A04D23A0B8FD008C7043 /* NetworkActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD4A04C23A0B8FD008C7043 /* NetworkActivityIndicatorManager.swift */; };
 		FFD5ED5125085F21008BADA7 /* NamingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD5ED5025085F21008BADA7 /* NamingViewController.swift */; };
-		FFDA937A25426A530064ED6C /* WT02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDA937925426A530064ED6C /* WT02ViewController.swift */; };
 		FFE30D3223C1AEA200A96D2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE30D3123C1AEA200A96D2B /* LaunchScreen.storyboard */; };
 		FFE56C7F2395EDDD00873D09 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE56C7E2395EDDD00873D09 /* SettingViewController.swift */; };
 		FFE8D65F24457CB600180F34 /* TutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE8D65E24457CB600180F34 /* TutorViewController.swift */; };
@@ -134,7 +133,6 @@
 		FFD4A04A23A0B464008C7043 /* InPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InPurchaseViewController.swift; sourceTree = "<group>"; };
 		FFD4A04C23A0B8FD008C7043 /* NetworkActivityIndicatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManager.swift; sourceTree = "<group>"; };
 		FFD5ED5025085F21008BADA7 /* NamingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingViewController.swift; sourceTree = "<group>"; };
-		FFDA937925426A530064ED6C /* WT02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT02ViewController.swift; sourceTree = "<group>"; };
 		FFDBFEB9237F93CD00852BB6 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 		FFE30D3123C1AEA200A96D2B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFE56C7E2395EDDD00873D09 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 			children = (
 				FF04AEF8246D189B00F19D36 /* StartUp.storyboard */,
 				FF87D02A24C2A7E300EF8F4D /* WT04ViewController.swift */,
-				FFDA937925426A530064ED6C /* WT02ViewController.swift */,
 			);
 			name = Walkthrough;
 			sourceTree = "<group>";
@@ -460,7 +457,6 @@
 				FFE8D65F24457CB600180F34 /* TutorViewController.swift in Sources */,
 				FFCB3423237637D40089128D /* Extension.swift in Sources */,
 				FF618AC224D3E06D008CD84B /* CalanderSettingViewController.swift in Sources */,
-				FFDA937A25426A530064ED6C /* WT02ViewController.swift in Sources */,
 				FF630B2225AFBE860041E152 /* OnTourThirdChartViewController.swift in Sources */,
 				FF2A0D2725CA3A5600DB2FF6 /* QuickEntryViewController.swift in Sources */,
 				FFE56C7F2395EDDD00873D09 /* SettingViewController.swift in Sources */,
