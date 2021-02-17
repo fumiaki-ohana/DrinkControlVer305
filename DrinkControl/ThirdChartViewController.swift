@@ -43,8 +43,7 @@ class ThirdChartViewController: UIViewController{
         let data = countRating(array:tempdata)
         navigationItem.leftBarButtonItem?.theme_tintColor = GlobalPicker.naviItemColor
         navigationItem.title = "反省"
-        
-     //   let rect = CGRect(x:0, y: 22, width: self.view.frame.width, height: (self.view.frame.height / 2 - 22))
+
         let threeWeeksData = [data[0],data[1],data[2]]
         let barChartView = drawStackedBarChart(chartData: threeWeeksData, legend: "", numXLabels: data.count,topOffset:40.0, buttomOffset:20.0,flagDateType: false, addLines: true,noDrink:true, showValue: true)
         self.view.addSubview(barChartView)
@@ -55,7 +54,6 @@ class ThirdChartViewController: UIViewController{
             make.height.equalToSuperview().multipliedBy(0.4) }
 
         let wholePeriodData = [data[3]]
-    //    let rect1 = CGRect(x:0, y: (self.view.frame.height / 2), width: self.view.frame.width, height: (self.view.frame.height / 2 - 22))
         let pieChartView = drawPieChart(chartData: wholePeriodData, legend: "全期間", topOffset:40.0, buttomOffset:20.0,centerText: "全期間")
         self.view.addSubview(pieChartView)
         

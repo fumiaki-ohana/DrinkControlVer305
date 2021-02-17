@@ -301,8 +301,8 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         self.coachMarksController.delegate = self
         self.tableview.delegate = self
 
-  //     realmのデフォルトのファイル
-  //   print(Realm.Configuration.defaultConfiguration.fileURL!)
+   //   realmのデフォルトのファイル
+    //print(Realm.Configuration.defaultConfiguration.fileURL!)
   
         drinkCalendar.dataSource = self
         drinkCalendar.delegate = self

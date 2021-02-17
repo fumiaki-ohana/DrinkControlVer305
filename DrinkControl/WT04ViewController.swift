@@ -24,12 +24,14 @@ class WT04ViewController: FormViewController {
         }
     }
     
-    let header1 = "最初に１日の適量、休肝日の数、飲みすぎ基準を設定してみましょう。\n⚠️当アプリはユーザーの情報を、一切外部に送信しません。"
+  //  let header1 = "使用前に適量、休肝日の数、飲みすぎ基準を設定しましょう。\n⚠️当アプリはユーザーの情報を、一切外部に送信しません。"
+    let header1 = "使用前に適量、休肝日の数、飲みすぎ基準を設定しましょう。"
+    let header2 = "詳しくはこちら"
     let targetAlcDesc = "厚生労働省の「健康日本21」では節度ある適度な飲酒は20gとされます。女性はその半分から2/3程度とされます。㊟ 年齢、妊娠、体質等々で大きい個人差があるので、自分にあう数値を設定してください。"
     let excessAlcDesc = "厚生労働省の「健康日本21」は、平均１日あたり純アルコール量60g飲む人を多量飲酒者と呼びます。ただし大きな個人差はあります。"
     let buttonTitle = "ホーム画面へ移動"
     let indicatedAmount = "ビール(5度）ー＞ロング缶（500ml)\n日本酒（15度）ー＞ お銚子１合（180ml)\n焼酎（25度）ー＞コップ１杯0.6合（110ml)\nウイスキー（43度）ー＞ダブル１杯（60ml)\nワイン（14度）ー＞グラス１杯（180ml)\n缶チューハイ(5度）ー＞1.5缶（520ml)"
-    let confirm = "お酒の影響には大きな個人差があります。自分の健康状態などを考えて適切な量を設定してください。\n設定画面でいつでも変更できます。"
+    let confirm = "お酒の影響には大きな個人差があります。自分の健康状態などを考えて適切な量を設定してください。\nアプリの⚙️設定画面でいつでも変更できます。"
     let ref1 = "開発参考：eヘルスネット厚生労働省"
     let ref2 = "飲酒を減らすための方法"
     
@@ -94,18 +96,7 @@ class WT04ViewController: FormViewController {
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
             }
-            <<< ButtonRow() {
-                $0.title = "純アルコール量とは？" //TODO
-                $0.cellStyle = .default
-                $0.cell.accessoryType = .detailDisclosureButton
-                $0.onCellSelection{ [self]_,_ in self.present(.okAlert(alignment:.left, title: "純アルコール量について",
-                                                                message:targetAlcDesc+"\n\n"+indicatedAmount,astyle:.alert))}
-            }
-            .cellUpdate() {cell, row in
-                cell.accessoryType = .detailButton
-                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
-                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
-            }
+            
             <<< StepperRow() {
             //    $0.tag = "selection"
                 $0.cell.stepper.isContinuous = true
@@ -146,6 +137,22 @@ class WT04ViewController: FormViewController {
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
         }
+            
+          
+            +++
+                Section(header2)
+            <<< ButtonRow() {
+                $0.title = "純アルコール量とは？" //TODO
+                $0.cellStyle = .default
+                $0.cell.accessoryType = .detailDisclosureButton
+                $0.onCellSelection{ [self]_,_ in self.present(.okAlert(alignment:.left, title: "純アルコール量について",
+                                                                message:targetAlcDesc+"\n\n"+indicatedAmount,astyle:.alert))}
+            }
+            .cellUpdate() {cell, row in
+                cell.accessoryType = .detailButton
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+            }
             <<< ButtonRow() {
                 $0.title = "飲み過ぎとは？" //TODO
                 $0.cellStyle = .default
@@ -157,7 +164,7 @@ class WT04ViewController: FormViewController {
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
             }
-        
+            
             <<< ButtonRow() {
                 $0.title = ""
 //TODO
