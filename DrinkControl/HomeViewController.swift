@@ -440,12 +440,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
  */
     
 // MARK: - Calendar
-   /*
-    func swapEntryButtons(newData:Bool){
-        editButton.isEnabled = !newData
-    }
- */
-    
+     
     private func loadDataForTable(date: Date)  ->  [[(title: String, desc: String)]]{
         drinkDaily = DrinkDailyRecord(dDate: date)
         let id = (date.toHashStr)
@@ -485,7 +480,6 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
             if !(drinkDaily.TU == object.totalUnits) {
                 let realm = try! Realm()
                 try! realm.write {
- //                   let value:[String:Any] = ["id":object.dDate!.toHashStr, "totalUnits":drinkDaily.totalAlchool]
                     let value:[String:Any] = ["id":object.dDate!.toHashStr, "totalUnits":drinkDaily.TU]
                     realm.create(DrinkRecord.self, value:value, update: .modified)
                 }
@@ -494,13 +488,8 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
             //Section 1 for tableview　「ドリンク数」
             deleteButton.isEnabled = true
             editButton.isEnabled = true
-            //      let desc:String = ""
-          //  let diff = round((object.totalUnits - targetUnit*10)*10)/10
-         //   let diff = object.totalUnits*10 - targetUnit*10
-         //   let prefix = object.totalUnits == 0 ? "0":String(round(object.totalUnits*10)/10)
-     //       print(object.totalUnits)
+        
               let prefix = object.totalUnits == 0 ? "休肝日💖お酒は飲みませんでした！":(object.totalUnits*10.0).decimalStr
-        //     let prefix = object.totalUnits == 0 ? "0g":(object.totalUnits).decimalStr            //      let title = drinkDaily.emojiStr + " " + prefix
             let title = drinkDaily.emojiStr
             let desc =  prefix
             let array_1 = [(title: title, desc: desc)]
@@ -525,10 +514,6 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
             EmptyStateView.isHidden = false
             deleteButton.isEnabled = false
             editButton.isEnabled = false
-        //    swapEntryButtons(newData: true)
-
-            // Section 0 and 1 for table
-            //            let title:String = ""
             let desc:String = "無し"
             let array_0 = [(title:"", desc:desc)]
             let array_1 = [(title: "", desc: "0")]
@@ -538,7 +523,6 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-//        popTip.hide()
         selectedDate = date
         twoDimArray = loadDataForTable(date: date)
         tableview.reloadData()

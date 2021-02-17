@@ -12,7 +12,7 @@ import RealmSwift
 
 // MARK: - Const
 
-let defaultTint = UIColor.init(red: 242/255, green: 5/255, blue: 92/255, alpha: 94/100)
+//let defaultTint = UIColor.init(red: 242/255, green: 5/255, blue: 92/255, alpha: 94/100)
 
 let etcStr = "\u{2026}"
 let cancelTitleStr = "キャンセル"
@@ -66,6 +66,7 @@ var flagReadMe:Bool { //  V2以前のdisclaimerを読んだか？
        }
    }
 
+// MARK:- 通知関連
 var reviewReadNotifyTime:Date {
     get {
         var time = Date()
@@ -144,6 +145,8 @@ var shouldShowCoarch: Bool { //コーチを走らせるべきか？
     }
 }
 
+// MARK:- バージョン情報を開示
+
 let thisVerStr = appVersion!
 var shouldShowVerInfo: Bool { //バージョン情報を見せる？
     get {
@@ -157,6 +160,7 @@ var shouldShowVerInfo: Bool { //バージョン情報を見せる？
     }
 }
 
+// MARK:- データ表示の注意
 var shouldWarningOnRatingGraph: Bool { //感想のグラフで初回表示
     get {
         UserDefaults.standard.register(defaults: [ "RatingGraph" : true])
@@ -289,35 +293,7 @@ var execQuickDataEntry:Bool{
     }
 }
 
-
-
-/*
-// MARK:- PopTipの設定
-
-func initPopTip(popObj:PopTip) {
-    
-    popObj.font = UIFont.systemFont(ofSize: 13.0)
-    popObj.textColor = UIColor.black
-    popObj.textAlignment = .left
-    popObj.shouldDismissOnTap = true
-    popObj.shouldDismissOnTapOutside = true
-    popObj.shouldDismissOnSwipeOutside = true
-    popObj.edgeMargin = 5
-    popObj.offset = 2
-    popObj.bubbleOffset = 0
-    popObj.edgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-    popObj.arrowRadius = 0
-    popObj.bubbleColor = UIColor.white
-    
-    popObj.borderWidth = 2
-    popObj.borderColor = UIColor.gray
-    popObj.shadowOpacity = 0.4
-    popObj.shadowRadius = 3
-    popObj.shadowOffset = CGSize(width: 1, height: 1)
-    popObj.shadowColor = .black
-}
-*/
-//MARK: - 飲酒ガイドラインの設定
+//MARK: - 飲酒習慣についての設定
 
 var numOfNoDrinkDays: Int { //休肝日
     
@@ -411,6 +387,13 @@ enum eDname: String {
         return Int (10 / (alc! / 100) / 0.8)
     }
     
+    func numOfDrinkUnit(damount:Double) -> Double {
+        let unitN = self.unitAm // ドリンクごとの基準量
+        let N1:Double = damount / Double(unitN)
+        return N1
+    }
+// CCとグラスの数のコンバージョン
+    
     func Amount2Glasses(damount:Int) -> Double {
         if let perGlass = alc_quick[self] {
             guard !(perGlass == 0) else {
@@ -432,8 +415,9 @@ enum eDname: String {
         }
       return 0
     }
-     
     
+     
+// 絵文字など
     func emojiStrPerDrink(damount:Double) -> String {
         guard self.numOfDrinkUnit(damount:damount) > 0.0 else {return ""}
         //            let t = Int(self.TU.rounded(.toNearestOrEven))
@@ -445,18 +429,8 @@ enum eDname: String {
         return result
     }
     
-    func numOfDrinkUnit(damount:Double) -> Double {
-        let unitN = self.unitAm // ドリンクごとの基準量
-        let N1:Double = damount / Double(unitN)
-        return N1
-    }
-    
-    func altMeasured(damount:Double) -> String {
-        let N1:Double = Double(damount)/Double(self.approx)
-        let result = damount == 0 ? "無し": self.desc+N1.decimalStr+self.unit
-        return result
-    }
-    
+   
+ 
     var emoji: String {
         get {
             switch self {
@@ -480,6 +454,26 @@ enum eDname: String {
         }
         return result
     }
+    
+    var defAlc: Double {
+        get {
+            switch self {
+            case .wine: return 12.0
+            case.nihonsyu: return 15.0
+            case.beer:return 5.0
+            case.shocyu:return 25.0
+            case.whisky:return 40.0
+            case.can:return 7.0
+            }
+        }
+    }
+/* グラスの数などでの表示も意図したが現在は開発ストップ
+     
+        func altMeasured(damount:Double) -> String {
+            let N1:Double = Double(damount)/Double(self.approx)
+            let result = damount == 0 ? "無し": self.desc+N1.decimalStr+self.unit
+            return result
+        }
     
     var desc:String {
         get {
@@ -508,6 +502,7 @@ enum eDname: String {
             }
         }
     }
+
     // Mark:- アルコール濃度などデフォルトの数字
   //TODO - 目安の分量だが現在は使用されていない。
     var approx: Int {
@@ -523,23 +518,11 @@ enum eDname: String {
             }
         }
     }
+     */
     
-    var defAlc: Double {
-        get {
-            switch self {
-            case .wine: return 12.0
-            case.nihonsyu: return 15.0
-            case.beer:return 5.0
-            case.shocyu:return 25.0
-            case.whisky:return 40.0
-            case.can:return 7.0
-            }
-        }
-    }
 }
 
 //Mark :- 設定関連
-
 
 // カレンダー
 let optionEmojiStr =
@@ -617,7 +600,7 @@ var graphType:Int {
         UserDefaults.standard.set(newValue, forKey: "graphType")
     }
 }
-
+//カレンダー
 var cal_language:Int {
     get {
         let userDefaults = UserDefaults.standard
@@ -637,7 +620,7 @@ var cal_direction:Int {
         UserDefaults.standard.set(newValue, forKey: "direction")
     }
 }
-
+//絵文字
 var emojiSwitch:Bool {
     get {
         let userDefaults = UserDefaults.standard
@@ -667,7 +650,7 @@ var dEmojiConfig:drinkSet {
     }
     
 }
-
+//目標アルコール
 var targetUnit:Double {
     get {
         let userDefaults = UserDefaults.standard
@@ -678,6 +661,7 @@ var targetUnit:Double {
         UserDefaults.standard.set(newValue, forKey: "target")
     }
 }
+//クイック入力
 var alc_quick:[eDname:Double] {
     get {
         
@@ -715,7 +699,7 @@ var alc_quick:[eDname:Double] {
     }
 }
 
-
+//飲酒量入力のステップ値
 var alc_step:[eDname:Double] {
     get {
         
@@ -752,7 +736,7 @@ var alc_step:[eDname:Double] {
         defaluts.set(result, forKey: "step")
     }
 }
-
+//飲酒量入力の上限
 var alc_limit:[eDname:Double] {
             get {
                 
@@ -789,7 +773,8 @@ var alc_limit:[eDname:Double] {
                 defaluts.set(result, forKey: "limit")
             }
         }
-        
+//アルコール濃度
+
 var alc_dic:[eDname:Double] {
             get {
                 
