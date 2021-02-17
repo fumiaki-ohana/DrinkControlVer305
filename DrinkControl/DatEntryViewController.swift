@@ -9,9 +9,7 @@
 import UIKit
 import Eureka
 import SnapKit
-//import AMPopTip
 import Instructions
-import SnapKit
 
 class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,CoachMarksControllerDelegate {
 

@@ -243,9 +243,7 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
             make.right.equalTo(self.view).offset(-10)
             make.height.equalToSuperview().multipliedBy(0.6)
         }
-        // TODO:- CGRectをとる
         
-       // let rect = CGRect(x: 0, y: self.view.frame.height * 0.7,  width: self.view.bounds.size.width, height: (self.view.bounds.size.height * 0.3)-59)
                switch graphType {
 
                case 0: let barChartView = drawBarChart(chartData: data, legend: "", numXLabels: 5, topOffset: 10,buttomOffset: 20, flagDateType: true, addLines: true,showValue: false,showlegend:false)

@@ -142,7 +142,7 @@ class WT04ViewController: FormViewController {
             +++
                 Section(header2)
             <<< ButtonRow() {
-                $0.title = "純アルコール量とは？" //TODO
+                $0.title = "純アルコール量とは？"
                 $0.cellStyle = .default
                 $0.cell.accessoryType = .detailDisclosureButton
                 $0.onCellSelection{ [self]_,_ in self.present(.okAlert(alignment:.left, title: "純アルコール量について",
@@ -154,7 +154,7 @@ class WT04ViewController: FormViewController {
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
             }
             <<< ButtonRow() {
-                $0.title = "飲み過ぎとは？" //TODO
+                $0.title = "飲み過ぎとは？"
                 $0.cellStyle = .default
                 $0.onCellSelection{ [self]_,_ in self.present(.okAlert(alignment:.left, title: "飲み過ぎ（多量飲酒）",
                                                                 message: excessAlcDesc,astyle:.alert))}
@@ -167,7 +167,6 @@ class WT04ViewController: FormViewController {
             
             <<< ButtonRow() {
                 $0.title = ""
-//TODO
                 $0.cellStyle = .default
                 $0.onCellSelection{ [self]_,_ in self.showWeb()}
             }

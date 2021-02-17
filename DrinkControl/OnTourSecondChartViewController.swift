@@ -8,7 +8,6 @@
 
 import UIKit
 import Charts
-//import Eureka
 import Instructions
 import SnapKit
 
