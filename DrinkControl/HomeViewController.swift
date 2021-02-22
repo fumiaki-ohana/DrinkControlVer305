@@ -378,7 +378,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         let detailWebSite = "https://www.e-healthnet.mhlw.go.jp/information/alcohol"
         let msg:[(title:String,subtitle:String,icon:String)] = [("クイック入力機能","🆕グラスの数などでも入力可能（設定＞クイック入力）","dash"),
             ("レイアウト改良","画面サイズの違いにも、より柔軟に対応","screen"),
-            ("見やすさ改良","飲酒量の単位をccからmlに統一など","cup"),
+            ("見やすさ改良","飲酒量の単位をccからmlに統一など","Cup"),
             ("その他","無料版で保存が制限された後も、アルコール量計算を可能に。","calc")]
         
         let item = showWhatsNewPlus(titl: titl, compButtonTitle: compButtonTitle, detailButtonTitle:detailButtonTitle,webStr:detailWebSite, msg: msg)

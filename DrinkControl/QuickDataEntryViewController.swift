@@ -226,7 +226,7 @@ class QuickDataEntryViewController: FormViewController {
                 .onChange {
                   let v = $0.value!
                   self.drinkDaily.drinks[eDname.beer] = eDname.beer.Glasses2Amount(numGlass: v)
-                  print(self.drinkDaily.drinks)
+            //      print(self.drinkDaily.drinks)
                   self.dname = eDname.beer.rawValue
                   self.update()
                 }

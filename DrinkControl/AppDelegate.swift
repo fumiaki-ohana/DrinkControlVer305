@@ -35,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 SKStoreReviewController.requestReview(in: scene)
             }
         }
-       
          // FIXME: UserDefaultをリセットを変えろ
         /*
          if let bundleId = Bundle.main.bundleIdentifier {
@@ -55,10 +54,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         shouldShowCoarch = true
         shouldShowVerInfo = true
         unlocked = false
-        */
+        
         
         shouldShowCoarch = false
         unlocked = true
+         */
         //ユーザータイプの判定
         
         if unlocked {
