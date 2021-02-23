@@ -410,7 +410,8 @@ enum eDname: String {
             guard !(perGlass == 0) else {
                 return 0
             }
-            let amount = floor(numGlass * perGlass)
+           // let amount = floor(numGlass * perGlass)
+            let amount = round(numGlass * perGlass)
             return Int(amount)
         }
       return 0
