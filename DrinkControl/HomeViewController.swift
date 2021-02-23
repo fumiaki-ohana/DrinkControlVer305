@@ -610,7 +610,7 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
                 self.present(.okPlusAlert(title:"購入をご検討ください（⚙️設定＞🛒App内課金）", message: "保存回数の上限を超えています。",astyle: .alert,okstr:"App内課金の説明へ",
                                           okHandler: {(action) -> Void in
                                             self.performSegue(withIdentifier: "showPurchaseFromHome", sender: Any?.self)
-                                          },cancelstr: "保存しないで終了",
+                                          },cancelstr: "保存しないで戻る",
                                           cancelHandler:{(action) -> Void in
                                  //           self.navigationController?.popViewController(animated:
                                             self.navigationController?.popToRootViewController(animated:
