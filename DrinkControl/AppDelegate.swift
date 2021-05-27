@@ -55,10 +55,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         shouldShowVerInfo = true
         unlocked = false
         
-        
+        */
         shouldShowCoarch = false
         unlocked = true
-         */
+         
         //ユーザータイプの判定
         
         if unlocked {

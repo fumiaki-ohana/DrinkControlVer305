@@ -259,7 +259,6 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
         
         self.tableView.reloadData()
         guard !shouldShowCoarch else {
-            
             DispatchQueue.main.async { // テーブルをスクロールする。
                 let indexPath = IndexPath(row: 0, section: 1)
                 self.tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.top, animated: false)

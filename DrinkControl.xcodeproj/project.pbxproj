@@ -15,8 +15,6 @@
 		FF18511025C4FB4D00206156 /* QuickDataEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18510F25C4FB4D00206156 /* QuickDataEntryViewController.swift */; };
 		FF1EA82A25AE87DF00D40036 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1EA82925AE87DF00D40036 /* GraphViewController.swift */; };
 		FF237C91258C4276009E4E83 /* lf30_editor_st8bizys.json in Resources */ = {isa = PBXBuildFile; fileRef = FF237C90258C4276009E4E83 /* lf30_editor_st8bizys.json */; };
-		FF23F479258EBE5A00B1349C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FF23F478258EBE5A00B1349C /* Realm */; };
-		FF23F47B258EBE5A00B1349C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF23F47A258EBE5A00B1349C /* RealmSwift */; };
 		FF23F485258EC6C800B1349C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = FF23F484258EC6C800B1349C /* Lottie */; };
 		FF23F488258EC70B00B1349C /* SwiftTheme in Frameworks */ = {isa = PBXBuildFile; productRef = FF23F487258EC70B00B1349C /* SwiftTheme */; };
 		FF23F48B258EC7AF00B1349C /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = FF23F48A258EC7AF00B1349C /* SwiftyStoreKit */; };
@@ -31,6 +29,7 @@
 		FF39988F258EB42600F7BB90 /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = FF39988E258EB42600F7BB90 /* Eureka */; };
 		FF3DD459241C74A3007AC38E /* 3152-star-success.json in Resources */ = {isa = PBXBuildFile; fileRef = FF3DD457241C74A3007AC38E /* 3152-star-success.json */; };
 		FF4B5D24230A38FD0065A456 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4B5D23230A38FD0065A456 /* HomeViewController.swift */; };
+		FF538FE5265B98C10047DF47 /* EurekaCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF538FE4265B98C10047DF47 /* EurekaCustomClass.swift */; };
 		FF5B359A20931186009AB396 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5B359920931186009AB396 /* Drink.swift */; };
 		FF618AC224D3E06D008CD84B /* CalanderSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF618AC124D3E06D008CD84B /* CalanderSettingViewController.swift */; };
 		FF630B1C25AFBD5F0041E152 /* Tutor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF630B1B25AFBD5F0041E152 /* Tutor.storyboard */; };
@@ -49,6 +48,8 @@
 		FFA52D56251C777000307AC8 /* ThirdChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA52D55251C777000307AC8 /* ThirdChartViewController.swift */; };
 		FFCB3423237637D40089128D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB3422237637D40089128D /* Extension.swift */; };
 		FFCCD6DD25C8C2A2006C10C1 /* DatEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCCD6DC25C8C2A2006C10C1 /* DatEntryViewController.swift */; };
+		FFCE1C532657376300C62091 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FFCE1C522657376300C62091 /* Realm */; };
+		FFCE1C552657376300C62091 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FFCE1C542657376300C62091 /* RealmSwift */; };
 		FFD23FFE24B5A01500988934 /* SecondChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD23FFD24B5A01500988934 /* SecondChartViewController.swift */; };
 		FFD4A04B23A0B464008C7043 /* InPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD4A04A23A0B464008C7043 /* InPurchaseViewController.swift */; };
 		FFD4A04D23A0B8FD008C7043 /* NetworkActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD4A04C23A0B8FD008C7043 /* NetworkActivityIndicatorManager.swift */; };
@@ -98,6 +99,7 @@
 		FF4B5D21230A2D920065A456 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		FF4B5D23230A38FD0065A456 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF52C8E52398A62400D5076C /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyStoreKit.framework; path = Carthage/Build/iOS/SwiftyStoreKit.framework; sourceTree = "<group>"; };
+		FF538FE4265B98C10047DF47 /* EurekaCustomClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EurekaCustomClass.swift; path = ../EurekaCustomClass.swift; sourceTree = "<group>"; };
 		FF5B359920931186009AB396 /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		FF603773245520BC00E703AC /* DrinkControl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DrinkControl.entitlements; sourceTree = "<group>"; };
 		FF618AC124D3E06D008CD84B /* CalanderSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalanderSettingViewController.swift; sourceTree = "<group>"; };
@@ -148,12 +150,12 @@
 				FF9EE76F258EDAFB00D0B867 /* Instructions in Frameworks */,
 				FF9EE775258EDB4D00D0B867 /* FSCalendar in Frameworks */,
 				FF39559F25906413003844E2 /* WhatsNewKit in Frameworks */,
-				FF23F47B258EBE5A00B1349C /* RealmSwift in Frameworks */,
 				FF23F48B258EC7AF00B1349C /* SwiftyStoreKit in Frameworks */,
-				FF23F479258EBE5A00B1349C /* Realm in Frameworks */,
+				FFCE1C532657376300C62091 /* Realm in Frameworks */,
 				FF9EE76C258ED88B00D0B867 /* Charts in Frameworks */,
 				FF39988F258EB42600F7BB90 /* Eureka in Frameworks */,
 				FF23F488258EC70B00B1349C /* SwiftTheme in Frameworks */,
+				FFCE1C552657376300C62091 /* RealmSwift in Frameworks */,
 				FF23F485258EC6C800B1349C /* Lottie in Frameworks */,
 				FF0DE89C25CE676B00484A04 /* SnapKit in Frameworks */,
 			);
@@ -174,6 +176,7 @@
 		FF03CD21241C714A00F55570 /* Global Declaration */ = {
 			isa = PBXGroup;
 			children = (
+				FF538FE4265B98C10047DF47 /* EurekaCustomClass.swift */,
 				FF5B359920931186009AB396 /* Drink.swift */,
 				FFF0240624B9469A009A8ED9 /* Charts.swift */,
 				FFCB3422237637D40089128D /* Extension.swift */,
@@ -364,8 +367,6 @@
 			name = DrinkControl;
 			packageProductDependencies = (
 				FF39988E258EB42600F7BB90 /* Eureka */,
-				FF23F478258EBE5A00B1349C /* Realm */,
-				FF23F47A258EBE5A00B1349C /* RealmSwift */,
 				FF23F484258EC6C800B1349C /* Lottie */,
 				FF23F487258EC70B00B1349C /* SwiftTheme */,
 				FF23F48A258EC7AF00B1349C /* SwiftyStoreKit */,
@@ -374,6 +375,8 @@
 				FF9EE774258EDB4D00D0B867 /* FSCalendar */,
 				FF39559E25906413003844E2 /* WhatsNewKit */,
 				FF0DE89B25CE676B00484A04 /* SnapKit */,
+				FFCE1C522657376300C62091 /* Realm */,
+				FFCE1C542657376300C62091 /* RealmSwift */,
 			);
 			productName = lastDrink;
 			productReference = FF9B769C208DB02B00B7A80A /* DrinkControl.app */;
@@ -409,7 +412,6 @@
 			mainGroup = FF9B7693208DB02B00B7A80A;
 			packageReferences = (
 				FF39988D258EB42600F7BB90 /* XCRemoteSwiftPackageReference "Eureka" */,
-				FF23F477258EBE5A00B1349C /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				FF23F483258EC6C700B1349C /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				FF23F486258EC70B00B1349C /* XCRemoteSwiftPackageReference "SwiftTheme" */,
 				FF23F489258EC7AF00B1349C /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
@@ -418,6 +420,7 @@
 				FF9EE773258EDB4D00D0B867 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				FF39559D25906413003844E2 /* XCRemoteSwiftPackageReference "WhatsNewKit" */,
 				FF0DE89A25CE676B00484A04 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FFCE1C512657376300C62091 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = FF9B769D208DB02B00B7A80A /* Products */;
 			projectDirPath = "";
@@ -479,6 +482,7 @@
 				FFA52D56251C777000307AC8 /* ThirdChartViewController.swift in Sources */,
 				FF18511025C4FB4D00206156 /* QuickDataEntryViewController.swift in Sources */,
 				FF0AC42E2575EC1300A80400 /* TabViewController.swift in Sources */,
+				FF538FE5265B98C10047DF47 /* EurekaCustomClass.swift in Sources */,
 				FFD23FFE24B5A01500988934 /* SecondChartViewController.swift in Sources */,
 				FF630B1E25AFBE540041E152 /* OnTourChartViewController.swift in Sources */,
 				FF76A06B2585AEE50065E6E8 /* NotificationViewController.swift in Sources */,
@@ -551,7 +555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -607,7 +611,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -624,15 +628,15 @@
 				CODE_SIGN_ENTITLEMENTS = DrinkControl/DrinkControl.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8.04;
+				CURRENT_PROJECT_VERSION = 8.06;
 				DEVELOPMENT_TEAM = CDMS73DTWZ;
 				INFOPLIST_FILE = DrinkControl/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.10;
+				MARKETING_VERSION = 4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ohanainc.drinkcontrol;
 				PRODUCT_NAME = DrinkControl;
 				SWIFT_VERSION = 5.0;
@@ -648,15 +652,15 @@
 				CODE_SIGN_ENTITLEMENTS = DrinkControl/DrinkControl.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8.04;
+				CURRENT_PROJECT_VERSION = 8.06;
 				DEVELOPMENT_TEAM = CDMS73DTWZ;
 				INFOPLIST_FILE = DrinkControl/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.10;
+				MARKETING_VERSION = 4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ohanainc.drinkcontrol;
 				PRODUCT_NAME = DrinkControl;
 				SWIFT_VERSION = 5.0;
@@ -695,14 +699,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.1;
-			};
-		};
-		FF23F477258EBE5A00B1349C /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.5.0;
 			};
 		};
 		FF23F483258EC6C700B1349C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
@@ -770,6 +766,14 @@
 				minimumVersion = 2.8.2;
 			};
 		};
+		FFCE1C512657376300C62091 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -777,16 +781,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF0DE89A25CE676B00484A04 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		FF23F478258EBE5A00B1349C /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FF23F477258EBE5A00B1349C /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = Realm;
-		};
-		FF23F47A258EBE5A00B1349C /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FF23F477258EBE5A00B1349C /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
 		};
 		FF23F484258EC6C800B1349C /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -827,6 +821,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF9EE773258EDB4D00D0B867 /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
+		};
+		FFCE1C522657376300C62091 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFCE1C512657376300C62091 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		FFCE1C542657376300C62091 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFCE1C512657376300C62091 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

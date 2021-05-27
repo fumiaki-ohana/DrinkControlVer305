@@ -177,10 +177,11 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
     }
     
     //MARK:- Eureka Table
+    /*
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 40.0
     }
-     
+     */
      //MARK:- View Rotation
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -191,6 +192,9 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        form.inlineRowHideOptions = InlineRowHideOptions.AnotherInlineRowIsShown.union(.FirstResponderChanges)
+        
         self.tabBarController?.tabBar.isHidden = true
         
         viewBackGround.theme_backgroundColor = GlobalPicker.backgroundColor
@@ -230,12 +234,17 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         tableView.theme_backgroundColor = GlobalPicker.backgroundColor
         tableView.theme_sectionIndexBackgroundColor = GlobalPicker.groupBackground
         navigationItem.title = "飲酒量(㎖)を直接入力"
+        tableView.estimatedRowHeight = 40
+        tableView.rowHeight = UITableView.automaticDimension
+
         
         cancelBtn.isEnabled = true
    //     self.moveToReview.tintColor = UIColor.white
         
      
     //MARK:- Eureka
+        
+        
         LabelRow.defaultCellUpdate = { cell, row in
             cell.theme_backgroundColor = GlobalPicker.cellBackGround_dataEntry
             cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
@@ -248,10 +257,43 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
             //    cell.theme_tintColor = GlobalPicker.labelTextColor
         }
         
-        form +++
-            Section(drinkDaily.dDate.mediumStr)
+        let tagDic:[String:String] = ["wine":"wineEntry"]
+        
+        form
+            +++ Section(drinkDaily.dDate.mediumStr)
+
+            <<< PickerInlineRow<Double>("PickerInlineRow") { (row : PickerInlineRow<Double>) -> Void in
+                row.tag = tagDic["wine"]
+                row.displayValueFor = { (rowValue: Double?) in
+                    return rowValue.map { String(Int($0))+ml }
+                }
+                let stepValue:Int = Int(alc_step[eDname.wine]!)
+                let maximumValue:Int = Int(alc_limit[eDname.wine]!)
+                row.value = Double(drinkDaily.drinks[eDname.wine] ?? 0)
+                
+                let minimumValue:Int = 0
+                row.options = []
+                for n in stride(from: minimumValue, to: maximumValue, by: stepValue) {
+                    row.options.append(Double(n)) }
+            }
+            .cellUpdate() {cell, row in
+                cell.textLabel?.attributedText = setAttribute(title1: eDname.wine.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[eDname.wine]!.decimalStrPlain+")")
+                
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.text = "\(Int(row.value!))"+ml
+            }
+            .onChange {
+                self.drinkDaily.drinks[eDname.wine] = Int(floor(Double($0.value!)))
+           //     self.stepValue = alc_step[eDname.wine]!
+           //     self.dname = eDname.wine.rawValue
+                self.update()
+            }
+            
+            +++ Section(drinkDaily.dDate.mediumStr)
             <<< StepperRow() {
-                $0.tag = "wineEntry"
+        //        $0.tag = "wineEntry"
+           
                 $0.cell.stepper.stepValue = alc_step[eDname.wine]!
                 $0.cell.stepper.minimumValue = 0
                 $0.cell.stepper.maximumValue = alc_limit[eDname.wine]!
@@ -274,7 +316,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.valueLabel?.theme_textColor = GlobalPicker.labelTextColor
-                cell.titleLabel.attributedText = setAttribute(title1: eDname.wine.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_quick[eDname.wine]!.decimalStrPlain+")")
+                cell.titleLabel.attributedText = setAttribute(title1: eDname.wine.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[eDname.wine]!.decimalStrPlain+")")
            //     row.value = Double(self.drinkDaily.drinks[eDname.wine] ?? 0)
             }
             
@@ -445,6 +487,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                                   cell.theme_backgroundColor = GlobalPicker.cellBackGround_dataEntry
                                   cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                           }
+            
     }
            
     func update() {
