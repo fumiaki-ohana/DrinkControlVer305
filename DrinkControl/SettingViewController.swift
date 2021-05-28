@@ -428,14 +428,14 @@ class SettingViewController: FormViewController,CoachMarksControllerDataSource,C
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
             }
-            +++ Section(secHeader_quick)
+            +++ Section(header:secHeader_quick,footer:"飲酒量("+ml+")の代わりに、１杯の量をあらかじめ設定してグラス数などで入力します。")
             <<< SwitchRow() {
                 $0.title = "飲酒のクイック入力"
                 $0.value = execQuickDataEntry
                 $0.tag = "quickEntryEnabled"
             }
             .onChange{
-                $0.title = ($0.value ?? false) ? "CCの代わりにグラス数" : "飲酒のクイック入力"
+                $0.title = "クイック入力機能"
            //     $0.updateCell()
                 execQuickDataEntry = $0.value!
                 

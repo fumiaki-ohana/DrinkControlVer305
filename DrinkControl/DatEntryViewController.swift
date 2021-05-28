@@ -257,19 +257,18 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
             //    cell.theme_tintColor = GlobalPicker.labelTextColor
         }
         
-        let tagDic:[String:String] = ["wine":"wineEntry"]
-        
         form
             +++ Section(drinkDaily.dDate.mediumStr)
 
             <<< PickerInlineRow<Double>("PickerInlineRow") { (row : PickerInlineRow<Double>) -> Void in
-                row.tag = tagDic["wine"]
+                let rowId:eDname = eDname.wine
+                row.tag = rowId.tag
                 row.displayValueFor = { (rowValue: Double?) in
                     return rowValue.map { String(Int($0))+ml }
                 }
-                let stepValue:Int = Int(alc_step[eDname.wine]!)
-                let maximumValue:Int = Int(alc_limit[eDname.wine]!)
-                row.value = Double(drinkDaily.drinks[eDname.wine] ?? 0)
+                let stepValue:Int = Int(alc_step[rowId]!)
+                let maximumValue:Int = Int(alc_limit[rowId]!)
+                row.value = Double(drinkDaily.drinks[rowId] ?? 0)
                 
                 let minimumValue:Int = 0
                 row.options = []
@@ -277,20 +276,172 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                     row.options.append(Double(n)) }
             }
             .cellUpdate() {cell, row in
-                cell.textLabel?.attributedText = setAttribute(title1: eDname.wine.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[eDname.wine]!.decimalStrPlain+")")
-                
+                let rowId:eDname = eDname.wine
+                cell.textLabel?.attributedText = setAttribute(title1: rowId.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[rowId]!.decimalStrPlain+ml+")")
                 cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
                 cell.detailTextLabel?.text = "\(Int(row.value!))"+ml
             }
             .onChange {
-                self.drinkDaily.drinks[eDname.wine] = Int(floor(Double($0.value!)))
-           //     self.stepValue = alc_step[eDname.wine]!
+                let rowId:eDname = eDname.wine
+                self.drinkDaily.drinks[rowId] = Int(floor(Double($0.value!)))
+           //     self.stepValue = alc_step[rowId]!
            //     self.dname = eDname.wine.rawValue
                 self.update()
             }
             
-            +++ Section(drinkDaily.dDate.mediumStr)
+            <<< PickerInlineRow<Double>("PickerInlineRow") { (row : PickerInlineRow<Double>) -> Void in
+                let rowId:eDname = eDname.nihonsyu
+                row.tag = rowId.tag
+                row.displayValueFor = { (rowValue: Double?) in
+                    return rowValue.map { String(Int($0))+ml }
+                }
+                let stepValue:Int = Int(alc_step[rowId]!)
+                let maximumValue:Int = Int(alc_limit[rowId]!)
+                row.value = Double(drinkDaily.drinks[rowId] ?? 0)
+                
+                let minimumValue:Int = 0
+                row.options = []
+                for n in stride(from: minimumValue, to: maximumValue, by: stepValue) {
+                    row.options.append(Double(n)) }
+            }
+            .cellUpdate() {cell, row in
+                let rowId:eDname = eDname.nihonsyu
+                cell.textLabel?.attributedText = setAttribute(title1: rowId.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[rowId]!.decimalStrPlain+ml+")")
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.text = "\(Int(row.value!))"+ml
+            }
+            .onChange {
+                let rowId:eDname = eDname.nihonsyu
+                self.drinkDaily.drinks[rowId] = Int(floor(Double($0.value!)))
+           //     self.stepValue = alc_step[rowId]!
+           //     self.dname = eDname.wine.rawValue
+                self.update()
+            }
+            
+            <<< PickerInlineRow<Double>("PickerInlineRow") { (row : PickerInlineRow<Double>) -> Void in
+                let rowId:eDname = eDname.beer
+                row.tag = rowId.tag
+                row.displayValueFor = { (rowValue: Double?) in
+                    return rowValue.map { String(Int($0))+ml }
+                }
+                let stepValue:Int = Int(alc_step[rowId]!)
+                let maximumValue:Int = Int(alc_limit[rowId]!)
+                row.value = Double(drinkDaily.drinks[rowId] ?? 0)
+                
+                let minimumValue:Int = 0
+                row.options = []
+                for n in stride(from: minimumValue, to: maximumValue, by: stepValue) {
+                    row.options.append(Double(n)) }
+            }
+            .cellUpdate() {cell, row in
+                let rowId:eDname = eDname.beer
+                cell.textLabel?.attributedText = setAttribute(title1: rowId.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[rowId]!.decimalStrPlain+ml+")")
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.text = "\(Int(row.value!))"+ml
+            }
+            .onChange {
+                let rowId:eDname = eDname.beer
+                self.drinkDaily.drinks[rowId] = Int(floor(Double($0.value!)))
+           //     self.stepValue = alc_step[rowId]!
+           //     self.dname = eDname.wine.rawValue
+                self.update()
+            }
+            
+            <<< PickerInlineRow<Double>("PickerInlineRow") { (row : PickerInlineRow<Double>) -> Void in
+                let rowId:eDname = eDname.shocyu
+                row.tag = rowId.tag
+                row.displayValueFor = { (rowValue: Double?) in
+                    return rowValue.map { String(Int($0))+ml }
+                }
+                let stepValue:Int = Int(alc_step[rowId]!)
+                let maximumValue:Int = Int(alc_limit[rowId]!)
+                row.value = Double(drinkDaily.drinks[rowId] ?? 0)
+                
+                let minimumValue:Int = 0
+                row.options = []
+                for n in stride(from: minimumValue, to: maximumValue, by: stepValue) {
+                    row.options.append(Double(n)) }
+            }
+            .cellUpdate() {cell, row in
+                let rowId:eDname = eDname.shocyu
+                cell.textLabel?.attributedText = setAttribute(title1: rowId.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[rowId]!.decimalStrPlain+ml+")")
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.text = "\(Int(row.value!))"+ml
+            }
+            .onChange {
+                let rowId:eDname = eDname.shocyu
+                self.drinkDaily.drinks[rowId] = Int(floor(Double($0.value!)))
+           //     self.stepValue = alc_step[rowId]!
+           //     self.dname = eDname.wine.rawValue
+                self.update()
+            }
+            
+            <<< PickerInlineRow<Double>("PickerInlineRow") { (row : PickerInlineRow<Double>) -> Void in
+                let rowId:eDname = eDname.whisky
+                row.tag = rowId.tag
+                row.displayValueFor = { (rowValue: Double?) in
+                    return rowValue.map { String(Int($0))+ml }
+                }
+                let stepValue:Int = Int(alc_step[rowId]!)
+                let maximumValue:Int = Int(alc_limit[rowId]!)
+                row.value = Double(drinkDaily.drinks[rowId] ?? 0)
+                
+                let minimumValue:Int = 0
+                row.options = []
+                for n in stride(from: minimumValue, to: maximumValue, by: stepValue) {
+                    row.options.append(Double(n)) }
+            }
+            .cellUpdate() {cell, row in
+                let rowId:eDname = eDname.whisky
+                cell.textLabel?.attributedText = setAttribute(title1: rowId.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[rowId]!.decimalStrPlain+ml+")")
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.text = "\(Int(row.value!))"+ml
+            }
+            .onChange {
+                let rowId:eDname = eDname.whisky
+                self.drinkDaily.drinks[rowId] = Int(floor(Double($0.value!)))
+           //     self.stepValue = alc_step[rowId]!
+           //     self.dname = eDname.wine.rawValue
+                self.update()
+            }
+            
+            <<< PickerInlineRow<Double>("PickerInlineRow") { (row : PickerInlineRow<Double>) -> Void in
+                let rowId:eDname = eDname.can
+                row.tag = rowId.tag
+                row.displayValueFor = { (rowValue: Double?) in
+                    return rowValue.map { String(Int($0))+ml }
+                }
+                let stepValue:Int = Int(alc_step[rowId]!)
+                let maximumValue:Int = Int(alc_limit[rowId]!)
+                row.value = Double(drinkDaily.drinks[rowId] ?? 0)
+                
+                let minimumValue:Int = 0
+                row.options = []
+                for n in stride(from: minimumValue, to: maximumValue, by: stepValue) {
+                    row.options.append(Double(n)) }
+            }
+            .cellUpdate() {cell, row in
+                let rowId:eDname = eDname.can
+                cell.textLabel?.attributedText = setAttribute(title1: rowId.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[rowId]!.decimalStrPlain+ml+")")
+                cell.textLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.theme_textColor = GlobalPicker.labelTextColor
+                cell.detailTextLabel?.text = "\(Int(row.value!))"+ml
+            }
+            .onChange {
+                let rowId:eDname = eDname.can
+                self.drinkDaily.drinks[rowId] = Int(floor(Double($0.value!)))
+           //     self.stepValue = alc_step[rowId]!
+           //     self.dname = eDname.wine.rawValue
+                self.update()
+            }
+            
+        /*
+              +++ Section(drinkDaily.dDate.mediumStr)
             <<< StepperRow() {
         //        $0.tag = "wineEntry"
            
@@ -458,7 +609,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
                 cell.titleLabel.attributedText = setAttribute(title1: eDname.can.ctitle (emoji: emojiSwitch), title2: self.prefix+alc_step[eDname.can]!.decimalStrPlain+")")
            //     row.value = Double(self.drinkDaily.drinks[eDname.can] ?? 0)
             }
-            
+            */
             <<< ButtonRow() {
                 $0.tag = "noDrink"
                 $0.title = "休肝日はここをタップ!"

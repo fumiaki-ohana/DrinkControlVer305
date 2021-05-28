@@ -12,6 +12,7 @@ import Eureka
 class NamingViewController: FormViewController {
     let nameOptions = [
         "ｽﾄﾛﾝｸﾞ",
+        "微アル",
         "ﾌﾞﾗﾝﾃﾞｰ",
         "ｼｬﾝﾊﾟﾝ",
         "ｶﾊﾞ",

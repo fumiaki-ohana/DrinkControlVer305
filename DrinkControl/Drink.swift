@@ -367,6 +367,17 @@ enum eDname: String {
     case whisky =  "ｳｲｽｷｰ"
     case can =  "酎ハイ"
     
+    var tag:String {
+        switch self {
+        case .wine: return "wineTag"
+        case .nihonsyu: return "nihonsyuTag"
+        case .beer: return "beerTag"
+        case .shocyu: return "shocyuTag"
+        case .whisky: return "whiskyTag"
+        case .can: return "canTag"
+        }
+    }
+    
     var c_order:Int {
         get {
             switch self {
