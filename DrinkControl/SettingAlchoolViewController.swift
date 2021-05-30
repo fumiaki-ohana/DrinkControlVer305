@@ -225,7 +225,7 @@ class SettingAlchoolViewController:FormViewController {
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
                     //                           return "\(Int(v))"+ml
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.wine.ctitle(emoji: emojiSwitch)
                 $0.value = alc_limit[eDname.wine]!
@@ -247,7 +247,7 @@ class SettingAlchoolViewController:FormViewController {
                 $0.cell.stepper.maximumValue = maxLimit
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.nihonsyu.ctitle(emoji: emojiSwitch)
                 $0.value = alc_limit[eDname.nihonsyu]!
@@ -269,7 +269,7 @@ class SettingAlchoolViewController:FormViewController {
                 $0.cell.stepper.maximumValue = maxLimit
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.beer.ctitle(emoji: emojiSwitch)
                 $0.value = alc_limit[eDname.beer]!
@@ -291,7 +291,7 @@ class SettingAlchoolViewController:FormViewController {
                 $0.cell.stepper.maximumValue = maxLimit
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.shocyu.ctitle(emoji: emojiSwitch)
                 $0.value = alc_limit[eDname.shocyu]!
@@ -313,7 +313,7 @@ class SettingAlchoolViewController:FormViewController {
                 $0.cell.stepper.maximumValue = maxLimit
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.whisky.ctitle(emoji: emojiSwitch)
                 $0.value = alc_limit[eDname.whisky]!
@@ -335,7 +335,7 @@ class SettingAlchoolViewController:FormViewController {
                 $0.cell.stepper.maximumValue = maxLimit
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.can.ctitle(emoji: emojiSwitch)
                 $0.value = alc_limit[eDname.can]!
@@ -368,7 +368,7 @@ class SettingAlchoolViewController:FormViewController {
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
                     //                           return "\(Int(v))"+ml
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.wine.ctitle(emoji: emojiSwitch)
                 $0.value = alc_step[eDname.wine]!
@@ -390,7 +390,7 @@ class SettingAlchoolViewController:FormViewController {
                 $0.cell.stepper.maximumValue = alc_limit[eDname.nihonsyu]!
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.nihonsyu.ctitle(emoji: emojiSwitch)
                 $0.value = alc_step[eDname.nihonsyu]!
@@ -412,7 +412,7 @@ class SettingAlchoolViewController:FormViewController {
                 $0.cell.stepper.maximumValue = alc_limit[eDname.beer]!
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.beer.ctitle(emoji: emojiSwitch)
                 $0.value = alc_step[eDname.beer]!
@@ -434,7 +434,7 @@ class SettingAlchoolViewController:FormViewController {
                 $0.cell.stepper.maximumValue = alc_limit[eDname.shocyu]!
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.shocyu.ctitle(emoji: emojiSwitch)
                 $0.value = alc_step[eDname.shocyu]!
@@ -456,7 +456,7 @@ class SettingAlchoolViewController:FormViewController {
                 $0.cell.stepper.maximumValue = alc_limit[eDname.whisky]!
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.whisky.ctitle(emoji: emojiSwitch)
                 $0.value = alc_step[eDname.whisky]!
@@ -478,7 +478,7 @@ class SettingAlchoolViewController:FormViewController {
                 $0.cell.stepper.maximumValue = alc_limit[eDname.can]!
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.can.ctitle(emoji: emojiSwitch)
                 $0.value = alc_step[eDname.can]!

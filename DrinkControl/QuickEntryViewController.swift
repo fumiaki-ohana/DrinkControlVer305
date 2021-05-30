@@ -42,7 +42,7 @@ class QuickEntrylViewController:FormViewController {
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
                     //                           return "\(Int(v))"+ml
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.wine.ctitle(emoji: emojiSwitch)
                 $0.value = alc_quick[eDname.wine]!
@@ -64,7 +64,7 @@ class QuickEntrylViewController:FormViewController {
                 $0.cell.stepper.maximumValue = max
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.nihonsyu.ctitle(emoji: emojiSwitch)
                 $0.value = alc_quick[eDname.nihonsyu]!
@@ -86,7 +86,7 @@ class QuickEntrylViewController:FormViewController {
                 $0.cell.stepper.maximumValue = max
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.beer.ctitle(emoji: emojiSwitch)
                 $0.value = alc_quick[eDname.beer]!
@@ -108,7 +108,7 @@ class QuickEntrylViewController:FormViewController {
                 $0.cell.stepper.maximumValue = max
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.shocyu.ctitle(emoji: emojiSwitch)
                 $0.value = alc_quick[eDname.shocyu]!
@@ -130,7 +130,7 @@ class QuickEntrylViewController:FormViewController {
                 $0.cell.stepper.maximumValue = max
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.whisky.ctitle(emoji: emojiSwitch)
                 $0.value = alc_quick[eDname.whisky]!
@@ -152,7 +152,7 @@ class QuickEntrylViewController:FormViewController {
                 $0.cell.stepper.maximumValue = max
                 $0.displayValueFor = {
                     guard let v = $0 else {return "0"}
-                    return (Int(v)).decimalStr
+                    return (Int(v)).decimalStrMl
                 }
                 $0.title = eDname.can.ctitle(emoji: emojiSwitch)
                 $0.value = alc_quick[eDname.can]!

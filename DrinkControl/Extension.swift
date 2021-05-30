@@ -129,12 +129,12 @@ extension UIColor {
 
 extension Int {
     // Intを三桁ごとにカンマが入ったStringへ
-    var decimalStr: String {
+    var decimalStrMl: String {
         let decimalFormatter = NumberFormatter()
         decimalFormatter.numberStyle = NumberFormatter.Style.decimal
         decimalFormatter.groupingSeparator = ","
         decimalFormatter.groupingSize = 3
-        return decimalFormatter.string(from: self as NSNumber)! + "\u{33C4}" // ㏄
+        return decimalFormatter.string(from: self as NSNumber)! + ml 
     }
     var decimalStrPlain: String {
            let decimalFormatter = NumberFormatter()
