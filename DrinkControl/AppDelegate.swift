@@ -36,11 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
          // FIXME: UserDefaultをリセットを変えろ
-        /*
+        
          if let bundleId = Bundle.main.bundleIdentifier {
          UserDefaults.standard.removePersistentDomain(forName: bundleId)
          }
-      
+        /*
          unlocked = false
          
          flagReadMeV3 = false

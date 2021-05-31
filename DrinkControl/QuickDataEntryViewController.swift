@@ -195,7 +195,7 @@ class QuickDataEntryViewController: FormViewController {
                 //cell.detailTextLabel?.text = "\(Int(row.value!))"+ml
             }
             .onChange {
-                let rowId:eDname = eDname.wine //TODO: 酒の種類を指定する
+                let rowId:eDname = eDname.nihonsyu //TODO: 酒の種類を指定する
                 self.drinkDaily.drinks[rowId] = rowId.Glasses2Amount(numGlass: $0.value!)
                 self.update()
             }

@@ -58,7 +58,6 @@ class WT04ViewController: FormViewController {
         self.overrideUserInterfaceStyle = .light
         setButtonProperties(button: nextButton,rgbaStr:"#F99F48" )
         nextButton.setTitle(buttonTitle , for: .normal)
-  //      navigationItem.title = navTitle
      
         self.tableView?.rowHeight = 40.0
         

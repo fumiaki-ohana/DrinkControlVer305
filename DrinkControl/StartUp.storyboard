@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Kl-if-nVd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Kl-if-nVd">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -90,11 +90,9 @@
                                     <constraint firstAttribute="height" constant="60" id="nIc-dj-rSX"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jh-hR-UNh">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jh-hR-UNh">
                                 <rect key="frame" x="20" y="484" width="280" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="91K-AP-8ke" userLabel="height = 40"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <connections>
                                     <action selector="pressButton:" destination="0Kl-if-nVd" eventType="touchUpInside" id="bhc-Zz-6oo"/>
@@ -107,13 +105,10 @@
                             <constraint firstItem="IXH-SJ-0Kb" firstAttribute="leading" secondItem="GEA-C5-Tl0" secondAttribute="leading" id="56Q-Hn-lQV"/>
                             <constraint firstItem="IXH-SJ-0Kb" firstAttribute="top" secondItem="vLf-2G-qkN" secondAttribute="top" id="5JU-jR-fi8"/>
                             <constraint firstItem="n3f-3B-3fj" firstAttribute="top" secondItem="aQ2-vB-huF" secondAttribute="bottom" constant="10" id="7Gz-2c-uCT"/>
-                            <constraint firstItem="GEA-C5-Tl0" firstAttribute="trailing" secondItem="9Jh-hR-UNh" secondAttribute="trailing" constant="20" id="8CH-bl-69O"/>
                             <constraint firstItem="aQ2-vB-huF" firstAttribute="top" secondItem="GEA-C5-Tl0" secondAttribute="top" constant="20" id="Gn0-Yr-pi4"/>
-                            <constraint firstItem="GEA-C5-Tl0" firstAttribute="bottom" secondItem="9Jh-hR-UNh" secondAttribute="bottom" constant="40" id="PRj-E1-gdJ" userLabel="Safe Area.bottom = Next Button.bottom + 25"/>
                             <constraint firstItem="IXH-SJ-0Kb" firstAttribute="trailing" secondItem="GEA-C5-Tl0" secondAttribute="trailing" id="QJy-kr-rij"/>
                             <constraint firstItem="GEA-C5-Tl0" firstAttribute="trailing" secondItem="n3f-3B-3fj" secondAttribute="trailing" constant="20" id="itT-6B-2nb"/>
                             <constraint firstItem="n3f-3B-3fj" firstAttribute="leading" secondItem="GEA-C5-Tl0" secondAttribute="leading" constant="20" id="lef-a8-wFP"/>
-                            <constraint firstItem="9Jh-hR-UNh" firstAttribute="leading" secondItem="GEA-C5-Tl0" secondAttribute="leading" constant="20" id="n5V-HC-tTS"/>
                             <constraint firstItem="aQ2-vB-huF" firstAttribute="centerX" secondItem="vLf-2G-qkN" secondAttribute="centerX" id="qt9-CA-cUk"/>
                             <constraint firstItem="IXH-SJ-0Kb" firstAttribute="bottom" secondItem="GEA-C5-Tl0" secondAttribute="bottom" id="ylO-JR-dvu"/>
                         </constraints>
