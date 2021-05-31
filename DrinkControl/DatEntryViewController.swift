@@ -232,7 +232,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         navigationItem.title = "飲酒量(㎖)を直接入力"
         tableView.estimatedRowHeight = 40
         tableView.rowHeight = UITableView.automaticDimension
-
+        let entry_instruction = "👉入力したいお酒をタップします。"
         
         cancelBtn.isEnabled = true
    //     self.moveToReview.tintColor = UIColor.white
@@ -254,7 +254,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         }
         
         form
-            +++ Section(drinkDaily.dDate.mediumStr)
+            +++ Section(drinkDaily.dDate.mediumStr+entry_instruction)
 
             <<< PickerInlineRow<Double>("PickerInlineRow") { (row : PickerInlineRow<Double>) -> Void in
                 let rowId:eDname = eDname.wine

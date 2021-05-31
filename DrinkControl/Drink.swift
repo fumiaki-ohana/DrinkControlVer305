@@ -283,7 +283,7 @@ var lastVersionPromtedForReviewVar: String {
 
 var execQuickDataEntry:Bool{
     get {
-        UserDefaults.standard.register(defaults: ["shouldQuickEntry" : true])
+        UserDefaults.standard.register(defaults: ["shouldQuickEntry" : false])
         let n = UserDefaults.standard.bool(forKey:"shouldQuickEntry")
         return n
     }

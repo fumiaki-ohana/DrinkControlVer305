@@ -499,12 +499,13 @@ func showWhatsNewPlus(titl:String,compButtonTitle:String,detailButtonTitle: Stri
                 title:  msg[2].title,
                 subtitle: msg[2].subtitle,
                 image: UIImage(named: msg[2].icon)
-            ),
+            )
+            /*,
             WhatsNew.Item(
                 title:  msg[3].title,
                 subtitle: msg[3].subtitle,
                 image: UIImage(named: msg[3].icon)
-            )
+            )*/
         ]
     )
 

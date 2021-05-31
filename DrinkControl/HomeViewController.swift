@@ -376,10 +376,9 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
         let compButtonTitle = "続ける"
         let detailButtonTitle = "e-ヘルスネット（お酒へ）"
         let detailWebSite = "https://www.e-healthnet.mhlw.go.jp/information/alcohol"
-        let msg:[(title:String,subtitle:String,icon:String)] = [("クイック入力機能","🆕グラスの数などでも入力可能（設定＞クイック入力）","dash"),
-            ("レイアウト改良","画面サイズの違いにも、より柔軟に対応","screen"),
-            ("見やすさ改良","飲酒量の単位をccからmlに統一など","Cup"),
-            ("その他","無料版で保存が制限された後も、アルコール量計算を可能に。","calc")]
+        let msg:[(title:String,subtitle:String,icon:String)] = [("入力方法を刷新","お酒の名前をタップしてみてください。\n入力画面が下にニュッとでます。","screen"),
+            ("見やすさを改良","入力画面でより多くの情報をわかりやすく表示します。","Cup"),
+            ("お酒の種類","「微アル」を追加しました。","calc")]
         
         let item = showWhatsNewPlus(titl: titl, compButtonTitle: compButtonTitle, detailButtonTitle:detailButtonTitle,webStr:detailWebSite, msg: msg)
         present(item,animated: true)

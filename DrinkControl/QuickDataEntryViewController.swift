@@ -99,6 +99,7 @@ class QuickDataEntryViewController: FormViewController {
         viewBackGround.theme_backgroundColor = GlobalPicker.backgroundColor
         setButtonProperties(button:moveToReview,backColor:GlobalPicker.buttonTintColor2,titleColorOnDark:GlobalPicker.buttonTintColor3)
         
+        
         if shouldShowCoarch {
             moveToReview.isEnabled = true
         }
@@ -126,10 +127,9 @@ class QuickDataEntryViewController: FormViewController {
         tableView.estimatedRowHeight = 40
         tableView.rowHeight = UITableView.automaticDimension
         
-        navigationItem.title = "クイック入力"
-        let sectionTitle = drinkDaily.dDate.mediumStr+" -グラスなどの杯/本数で入力"
+        navigationItem.title = "グラスの数でクイック入力"
         cancelBtn.isEnabled = true
-        
+        let entry_instruction = "👉入力したいお酒をタップします。"
         //入力のための数字指定
         let minimumValue:Double = 0.0
         let maximumValue:Double = 10.0
@@ -150,7 +150,7 @@ class QuickDataEntryViewController: FormViewController {
         
         //MARK:- quick entry section
         
-        form = Section(drinkDaily.dDate.mediumStr+":"+sectionTitle)
+        form = Section(drinkDaily.dDate.mediumStr+entry_instruction)
         //MARK:- Wine
             <<< PickerInlineRow<Double>("PickerInlineRow") { (row : PickerInlineRow<Double>) -> Void in
                 let rowId:eDname = eDname.wine //TODO: 酒の種類を指定する
