@@ -34,8 +34,8 @@ class HomeViewController: UIViewController,  FSCalendarDelegate,FSCalendarDataSo
     // MARK: - Properties
     var mySections = [String]()
     var twoDimArray = [tableArray]()
-    var sectionTitleArray = ["１日の上限目標","およその純アルコール量", "飲んだお酒の内訳"]
-    let disclaimer = "【開始の前にお読みください。】\n　飲酒による健康への影響には大きな個人差があり特に妊婦や持病のある人は要注意です。自分に合った設定をして、アプリで計算・表示される数字等の意味と限界をご理解の上でご自身の責任でご利用ください。\n　厚生労働省のhttps://www.e-healthnet.mhlw.go.jp/には飲酒に参考となる情報があります。\n　当アプリの開発では正しい数字が計算・表示されるように注意しましたが誤りの可能性は完全には排除できません。\n　当アプリの使用の結果や健康等への影響に対してアプリ製作者は一切責任を負いません。"
+    var sectionTitleArray = ["１日の上限目標","おおよその純アルコール量", "飲んだお酒の内訳"]
+    let disclaimer = "【開始の前にお読みください。】\n　飲酒による健康への影響には大きな個人差があり特に妊婦や持病のある人は要注意です。自分に合った設定をして、アプリで計算・表示される数字等の意味と限界をご理解の上でご自身の責任でご利用ください。\n　厚生労働省のhttps://www.e-healthnet.mhlw.go.jp/には飲酒に参考となる情報があります。\n　当アプリの開発では正しい数字が計算・表示されるように注意しましたが誤りの可能性は完全には排除できません。\n計算された純アルコール量は設定されたアルコール濃度と比重に基づき計算された推計値ですので、実際に含有されたアルコール量とは異なる場合があります。\n　当アプリの使用の結果や健康等への影響に対してアプリ製作者は一切責任を負いません。"
     
     var drinkDaily = DrinkDailyRecord(dDate: Date())
     var selectedDate = Date()

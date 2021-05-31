@@ -27,8 +27,7 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
     // Coarch properties
         private var pointOfInterest:UIView!
         let coachMarksController = CoachMarksController()
-    let hintStr=["あなたの飲酒量の推移です。"
-        ,"直近7日間の状況です。","☝️昨夜のお酒は、どう思いますか？\n\nここでは適量を超えた飲酒量なので「悪い」を選びましたが、ご自身の基準でOK。","☝️コメントも残してお酒を飲む前に読み返しましょう。\n\n通知機能でお知らせも設定できます。"]
+    let hintStr=["あなたの飲酒量の推移や直近7日間の概要です","さて☝️昨夜のお酒は？\n\nここでは適量を超えた飲酒量なので「悪い」を選びました。","☝️コメントも残してお酒を飲む前に読み返しましょう。\n\n設定＞通知機能をオンにすると、決まった時間にレビューする習慣がつきます。"]
             
     func numberOfCoachMarks(for coachMarksController: CoachMarksController) -> Int {
         //表示するスポットライトの数。チュートリアルの数。
@@ -121,7 +120,7 @@ class EvalViewController: FormViewController,CoachMarksControllerDataSource,Coac
         self.navigationItem.hidesBackButton = true
         data = shouldShowCoarch ? chartDataArrayDummy: setDataArray(rawdata: generateRawData(modifiedData: drinkDaily))
         let lastDateStr = data.last!.xval
-        let sectionHeader:[String] = ["この日の純アルコール量:"+drinkDaily.totalAlchool.decimalStr,lastDateStr+"直近7日間"]
+        let sectionHeader:[String] = ["およその純アルコール量:"+drinkDaily.totalAlchool.decimalStr,lastDateStr+"直近7日間"]
         navigationItem.title = drinkDaily.dDate.mediumStr
         
         //MARK:- Eureka form

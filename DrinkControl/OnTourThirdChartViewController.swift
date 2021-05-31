@@ -22,7 +22,7 @@ class OnTourThirdChartViewController: UIViewController,CoachMarksControllerDataS
        var barChartForCoarch = BarChartView()
        var pieChartForCoarch = PieChartView()
        
-       let hintStr  = ["最後は、飲酒の評価です。📊は期間の平均で","...⭕️は全期間です。"]
+       let hintStr  = ["最後は、飲酒の評価です。📊は期間の平均で円グラフは全期間です。"]
        private var pointOfInterest:UIView!
        let coachMarksController = CoachMarksController()
     
@@ -41,7 +41,7 @@ class OnTourThirdChartViewController: UIViewController,CoachMarksControllerDataS
                           at index: Int) {
     switch index {
     case 0: coachMark.arrowOrientation = .top
-    case 1: coachMark.arrowOrientation = .bottom
+ //   case 1: coachMark.arrowOrientation = .bottom
     
     default:break
     }
@@ -54,8 +54,8 @@ class OnTourThirdChartViewController: UIViewController,CoachMarksControllerDataS
            switch index {
            case 0:
                point = barChartForCoarch
-           case 1:
-               point = pieChartForCoarch
+   //        case 1:
+   //            point = pieChartForCoarch
            default:break
            }
            return coachMarksController.helper.makeCoachMark(for: point)

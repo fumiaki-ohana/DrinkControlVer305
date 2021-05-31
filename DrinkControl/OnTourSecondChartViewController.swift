@@ -20,7 +20,7 @@ class OnTourSecondChartViewController: UIViewController,CoachMarksControllerData
     var barChartForCoarch0 = BarChartView()
     var barChartForCoarch1 = BarChartView()
     
-    let hintStr  = ["次は、「飲酒習慣」の画面です。\n\n一週間の【休肝日】と・・・。","【飲み過ぎ】の日数を表示します。"]
+    let hintStr  = ["次は、「飲酒習慣」の画面です。\n\n一週間の【休肝日】と【飲み過ぎ】の日数を表示します。"]
     private var pointOfInterest:UIView!
     let coachMarksController = CoachMarksController()
     
@@ -48,8 +48,8 @@ class OnTourSecondChartViewController: UIViewController,CoachMarksControllerData
         switch index {
         case 0:
             point = barChartForCoarch0
-        case 1:
-            point = barChartForCoarch1
+  //      case 1:
+ //           point = barChartForCoarch1
         default:break
         }
         return coachMarksController.helper.makeCoachMark(for: point)

@@ -35,8 +35,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
     // MARK:- Coarch properties
     private var pointOfInterest:UIView!
     let coachMarksController = CoachMarksController()
-    let hintStr  = ["🍷昨夜はワインを200㎖。","🍺ビールも350㎖、🍶日本酒も200㎖飲みました。\n💡TIP(±50)はワンクリックでの増減量ccで、変更できます。","純アルコール量の合計を、自動的に計算します。\n\n💡ヒント:お酒の種類や、ワンクリックでの入力量は【⚙️設定】で変えられます。",
-        "💡休肝日㊗️だった時は、ここをタップ！","好みでグラスの数での入力にも変更できます。（設定＞クイック入力）",
+    let hintStr  = ["休肝日㊗️だった時は、最初にタップ！","飲酒量の代わりに、グラス（杯）数の入力にも対応します。（設定＞クイック入力）","🍷お酒をタップすると、入力画面が下に表示されます\n💡名前の横の(±50ml)は入力の時の一目盛の増減量で、後で変更可能です。","おおよその純アルコール量の合計を、自動的に計算します。\n\n💡お酒の種類や、ワンクリックでの入力量は【⚙️設定】で変更可能。",
          "☝️入力が完了したら、レビュー画面に移動します。"]
     
     // MARK:- Properties
@@ -65,7 +64,7 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         showAnimation(parentView:self.view, lottieJason: "lf30_editor_st8bizys",scale:80)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0){
-            let msg = "全部0ccにリセットします。"+"\n"+"休肝日は:"+"\n"+noDrinkDaysFor7days+"\n"+noDrinkDaysFor30days
+            let msg = "全部0"+ml+"にリセットします。"+"\n"+"休肝日は:"+"\n"+noDrinkDaysFor7days+"\n"+noDrinkDaysFor30days
             self.present(.okPlusAlert(title:"やりましたね!", message: msg,astyle: .alert,okstr:"レビュー画面に進む",
                                       okHandler: {(action) -> Void in
                                         self.drinkDaily = zeroDrinkDay
@@ -90,20 +89,17 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         var point:UIView!
         switch index {
         case 0:
-            let p = form.rowBy(tag: "wineEntry")
-            point = p?.baseCell
-        case 1:
-            let p = form.rowBy(tag: "beerEntry")
-            point = p?.baseCell
-        case 2:
-            let p = form.rowBy(tag: "totalUnits")
-            point = p?.baseCell
-        case 3:
             let p = form.rowBy(tag: "noDrink")
             point = p?.baseCell
-        case 4:
+        case 1:
             point = navigationController?.navigationBar
-        case 5:
+        case 2:
+            let p = form.rowBy(tag: eDname.wine.tag)
+            point = p?.baseCell
+        case 3:
+            let p = form.rowBy(tag: "totalUnits")
+            point = p?.baseCell
+        case 4:
             point = moveToReview
         default:break
         }
@@ -129,20 +125,20 @@ class DatEntryViewController: FormViewController,CoachMarksControllerDataSource,
         var  point:UIView!
         switch index {
         case 0:
-            let p = form.rowBy(tag: "wineEntry")
+            let p = form.rowBy(tag: "noDrink")
             point = p?.baseCell
             addAnimation(view: point)
         case 1:
-            let p = form.rowBy(tag: "beerEntry")
-            point = p?.baseCell
+            point = navigationController?.navigationBar
             addAnimation(view: point)
         case 2:
-            let p = form.rowBy(tag: "totalUnits")
+            let p = form.rowBy(tag: eDname.wine.tag)
             point = p?.baseCell
             addAnimation(view: point)
-        case 3:
+        case 4:
             point = moveToReview
             addAnimation(view: point)
+        
         default:break
         }
     }

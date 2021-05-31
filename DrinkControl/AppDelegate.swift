@@ -36,11 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
          // FIXME: UserDefaultをリセットを変えろ
-        /*
+       
          if let bundleId = Bundle.main.bundleIdentifier {
          UserDefaults.standard.removePersistentDomain(forName: bundleId)
          }
-        
+        /*
          unlocked = false
          
          flagReadMeV3 = false
@@ -54,11 +54,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         shouldShowCoarch = true
         shouldShowVerInfo = true
         unlocked = false
-        
-        */
         shouldShowCoarch = false
         unlocked = true
-         
+        */
         //ユーザータイプの判定
         
         if unlocked {

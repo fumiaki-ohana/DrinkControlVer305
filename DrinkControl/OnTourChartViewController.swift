@@ -25,7 +25,7 @@ class OnTourChartViewController: UIViewController,CoachMarksControllerDataSource
     }
   
     //MARK:-  Coarch
-    let hintStr  = ["あなたの飲酒習慣を３つのグラフ画面で【見える化】します。\n\n最初の画面の📈は純アルコール量。","📊は、平均です。"]
+    let hintStr  = ["あなたの飲酒習慣を３つのグラフ画面で【見える化】します。\n\n最初の画面の📈は純アルコール量。📊は、平均です。"]
     private var pointOfInterest:UIView!
     let coachMarksController = CoachMarksController()
     var lineChartForCoach = LineChartView()
@@ -43,8 +43,8 @@ class OnTourChartViewController: UIViewController,CoachMarksControllerDataSource
         switch index {
         case 0:
             point = lineChartForCoach
-        case 1:
-            point = barChartForCoarch
+     //   case 1:
+     //       point = barChartForCoarch
         default:break
         }
         return coachMarksController.helper.makeCoachMark(for: point)
